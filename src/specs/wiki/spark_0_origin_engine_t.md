@@ -4,7 +4,7 @@ aliases:
   - Origin Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_origin_engine_t|Origin]]"
 r1:

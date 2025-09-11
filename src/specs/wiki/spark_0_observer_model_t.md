@@ -4,7 +4,7 @@ aliases:
   - Observer Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_observer_model_t|Observer]]"
 r1:

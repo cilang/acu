@@ -4,13 +4,9 @@ aliases:
   - Spectral Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_spectral_model_t|Spectral]]"
-ra:
-  - "[[Rhythm]]"
-rb:
-  - "[[Pattern]]"
 r1:
   - "[[Mass]]"
 r2:
@@ -29,8 +25,12 @@ r6:
   - "[[Momentum]]"
 r9:
   - "[[Quanta]]"
+ra:
+  - "[[Rhythm]]"
+rb:
+  - "[[Pattern]]"
 rc:
-  - "[[Resonance]]"
+  - "[[Transition]]"
 rd:
   - "[[StateChange]]"
 re:

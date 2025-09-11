@@ -4,7 +4,7 @@ aliases:
   - Reality Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_reality_engine_t|Reality]]"
 r1:

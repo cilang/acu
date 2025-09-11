@@ -4,13 +4,9 @@ aliases:
   - Emergence Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_emergence_model_t|Emergence]]"
-ra:
-  - "[[Essence]]"
-rb:
-  - "[[Presence]]"
 r1:
   - "[[Singularity]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[Threshold]]"
 r9:
   - "[[Actuality]]"
+ra:
+  - "[[Essence]]"
+rb:
+  - "[[Presence]]"
 rc:
   - "[[Interface]]"
 rd:

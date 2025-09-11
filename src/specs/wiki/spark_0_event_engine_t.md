@@ -4,7 +4,7 @@ aliases:
   - Event Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_event_engine_t|Event]]"
 r1:

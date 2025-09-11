@@ -4,13 +4,9 @@ aliases:
   - Alignment
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_alignment_model_t|Alignment]]"
-ra:
-  - "[[Unity]]"
-rb:
-  - "[[Diversity]]"
 r1:
   - "[[Causality]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[Parity]]"
 r9:
   - "[[Time]]"
+ra:
+  - "[[Unity]]"
+rb:
+  - "[[Diversity]]"
 rc:
   - "[[Quantization]]"
 rd:

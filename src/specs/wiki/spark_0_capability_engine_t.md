@@ -4,7 +4,7 @@ aliases:
   - Capability Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_capability_engine_t|Capability]]"
 r1:

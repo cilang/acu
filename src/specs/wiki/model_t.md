@@ -34,6 +34,9 @@ re:
   - "[[spark_0_kratos_model_t|Kratos Model]]"
 rf:
   - "[[spark_0_lurd_model_t|LURD Model]]"
+parallel:
+  - "[[engine_t]]"
+  - "[[view_t]]"
 ---
 
 ## Model

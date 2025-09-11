@@ -4,7 +4,7 @@ aliases:
   - Truth Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_truth_engine_t|Truth]]"
 r1:

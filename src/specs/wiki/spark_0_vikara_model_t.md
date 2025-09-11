@@ -4,21 +4,17 @@ aliases:
   - Vikara Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_vikara_model_t|Vikara]]"
-ra:
-  - "[[Convergence]]"
-rb:
-  - "[[Divergence]]"
 r1:
-  - "[[Probability]]"
+  - "[[Availability]]"
 r2:
   - "[[Chaos]]"
 r4:
   - "[[Destruction]]"
 r8:
-  - "[[Causality]]"
+  - "[[Capacity]]"
 r7:
   - "[[Order]]"
 r5:
@@ -28,7 +24,11 @@ r3:
 r6:
   - "[[Faith]]"
 r9:
-  - "[[Fate]]"
+  - "[[Destiny]]"
+ra:
+  - "[[Convergence]]"
+rb:
+  - "[[Divergence]]"
 rc:
   - "[[Catalysis]]"
 rd:
@@ -36,5 +36,5 @@ rd:
 re:
   - "[[Providence]]"
 rf:
-  - "[[Destiny]]"
+  - "[[Variability]]"
 ---

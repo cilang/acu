@@ -4,13 +4,9 @@ aliases:
   - Dynamis Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_dynamis_model_t|Dynamis]]"
-ra:
-  - "[[Potential]]"
-rb:
-  - "[[Current]]"
 r1:
   - "[[Mana]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[Flow]]"
 r9:
   - "[[Potency]]"
+ra:
+  - "[[Potential]]"
+rb:
+  - "[[Current]]"
 rc:
   - "[[Channel]]"
 rd:

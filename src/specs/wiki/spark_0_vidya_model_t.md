@@ -4,13 +4,9 @@ aliases:
   - Vidya Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_vidya_model_t|Vidya]]"
-ra:
-  - "[[Concept]]"
-rb:
-  - "[[Context]]"
 r1:
   - "[[Inspiration]]"
 r2:
@@ -22,13 +18,17 @@ r8:
 r7:
   - "[[Heuristic]]"
 r5:
-  - "[[model_t]]"
+  - "[[Model]]"
 r3:
   - "[[Hypothesis]]"
 r6:
   - "[[Theory]]"
 r9:
   - "[[Paradigm]]"
+ra:
+  - "[[Concept]]"
+rb:
+  - "[[Context]]"
 rc:
   - "[[Interpretation]]"
 rd:

@@ -4,13 +4,9 @@ aliases:
   - Karsa Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_karsa_model_t|Karsa]]"
-ra:
-  - "[[Fixation]]"
-rb:
-  - "[[Excitation]]"
 r1:
   - "[[Pattern]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[Death]]"
 r9:
   - "[[Life]]"
+ra:
+  - "[[Fixation]]"
+rb:
+  - "[[Excitation]]"
 rc:
   - "[[Initiation]]"
 rd:

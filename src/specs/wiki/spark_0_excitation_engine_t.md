@@ -4,7 +4,7 @@ aliases:
   - Excitation Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_excitation_engine_t|Excitation]]"
 r1:

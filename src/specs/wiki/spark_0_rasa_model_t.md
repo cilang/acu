@@ -4,7 +4,7 @@ aliases:
   - Rasa Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_rasa_model_t|Rasa]]"
 r1:

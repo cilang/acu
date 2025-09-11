@@ -4,13 +4,9 @@ aliases:
   - Kratos Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_kratos_model_t|Kratos]]"
-ra:
-  - "[[Petition]]"
-rb:
-  - "[[Warrant]]"
 r1:
   - "[[Access]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[Earned]]"
 r9:
   - "[[Bestowed]]"
+ra:
+  - "[[Petition]]"
+rb:
+  - "[[Warrant]]"
 rc:
   - "[[Authorization]]"
 rd:

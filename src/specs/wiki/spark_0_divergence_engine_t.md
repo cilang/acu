@@ -4,7 +4,7 @@ aliases:
   - Divergence Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_divergence_engine_t|Divergence]]"
 r1:

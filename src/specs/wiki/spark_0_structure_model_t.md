@@ -4,13 +4,9 @@ aliases:
   - Structure Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_structure_model_t|Structure]]"
-ra:
-  - "[[StructureInterface]]"
-rb:
-  - "[[ColorInterface]]"
 r1:
   - "[[HeartInterface]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[ContinuityInterface]]"
 r9:
   - "[[ConsistencyInterface]]"
+ra:
+  - "[[StructureInterface]]"
+rb:
+  - "[[ColorInterface]]"
 rc:
   - "[[LineageInterface]]"
 rd:

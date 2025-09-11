@@ -4,13 +4,9 @@ aliases:
   - Asha Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_asha_model_t|Asha]]"
-ra:
-  - "[[Truth]]"
-rb:
-  - "[[Wisdom]]"
 r1:
   - "[[Insight]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[Judgement]]"
 r9:
   - "[[Principle]]"
+ra:
+  - "[[Truth]]"
+rb:
+  - "[[Wisdom]]"
 rc:
   - "[[Adjudication]]"
 rd:

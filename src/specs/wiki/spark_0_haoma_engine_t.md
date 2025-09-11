@@ -4,7 +4,7 @@ aliases:
   - Haoma Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_haoma_engine_t|Haoma]]"
 r1:

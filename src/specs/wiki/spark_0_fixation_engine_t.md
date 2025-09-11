@@ -4,7 +4,7 @@ aliases:
   - Fixation Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_fixation_engine_t|Fixation]]"
 r1:

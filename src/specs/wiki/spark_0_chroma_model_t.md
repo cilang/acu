@@ -4,13 +4,9 @@ aliases:
   - Chroma Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_chroma_model_t|Chroma]]"
-ra:
-  - "[[Gold]]"
-rb:
-  - "[[Silver]]"
 r1:
   - "[[Red]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[White]]"
 r9:
   - "[[Gray]]"
+ra:
+  - "[[Golden]]"
+rb:
+  - "[[Silver]]"
 rc:
   - "[[Obsidian-Black]]"
 rd:

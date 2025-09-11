@@ -4,13 +4,9 @@ aliases:
   - Praxis Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_praxis_model_t|Praxis]]"
-ra:
-  - "[[Intent]]"
-rb:
-  - "[[Effect]]"
 r1:
   - "[[Invocation]]"
 r2:
@@ -26,9 +22,13 @@ r5:
 r3:
   - "[[Intuition]]"
 r6:
-  - "[[Theory]]"
+  - "[[Manual]]"
 r9:
   - "[[Mastery]]"
+ra:
+  - "[[Intent]]"
+rb:
+  - "[[Effect]]"
 rc:
   - "[[Method]]"
 rd:

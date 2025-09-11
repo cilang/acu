@@ -4,7 +4,7 @@ aliases:
   - Convergence Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_convergence_engine_t|Convergence]]"
 r1:

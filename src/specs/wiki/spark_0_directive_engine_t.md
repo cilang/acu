@@ -4,7 +4,7 @@ aliases:
   - Directive Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_directive_engine_t|Directive]]"
 r1:

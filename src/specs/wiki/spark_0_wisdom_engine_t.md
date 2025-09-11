@@ -4,7 +4,7 @@ aliases:
   - Wisdom Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_wisdom_engine_t|Wisdom]]"
 r1:

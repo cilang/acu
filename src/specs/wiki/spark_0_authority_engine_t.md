@@ -4,7 +4,7 @@ aliases:
   - Authority Engine
 tags:
   - grade-0
-  - engine
+  - engine/meta
 r0:
   - "[[spark_0_authority_engine_t|Authority]]"
 r1:

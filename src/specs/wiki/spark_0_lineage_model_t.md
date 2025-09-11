@@ -4,13 +4,9 @@ aliases:
   - Lineage Model
 tags:
   - grade-0
-  - model
+  - model/meta
 r0:
   - "[[spark_0_lineage_model_t|Lineage]]"
-ra:
-  - "[[People of Essence|Mineral Lineage]]"
-rb:
-  - "[[People of Presence|Plant Lineage]]"
 r1:
   - "[[People of Truth|Insect Lineage]]"
 r2:
@@ -29,6 +25,10 @@ r6:
   - "[[People of Vikara|Avesix Lineage]]"
 r9:
   - "[[People of Karsa|Draconis Lineage]]"
+ra:
+  - "[[People of Essence|Mineral Lineage]]"
+rb:
+  - "[[People of Presence|Plant Lineage]]"
 rc:
   - "[[People of Desire|Vulpine Lineage]]"
 rd:

@@ -34,6 +34,9 @@ re:
   - "[[spark_0_authority_engine_t|Authority Engine]]"
 rf:
   - "[[spark_0_origin_engine_t|Origin Engine]]"
+parallel:
+  - "[[model_t]]"
+  - "[[view_t]]"
 ---
 
 ## Model
