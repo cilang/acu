@@ -11,8 +11,8 @@ strict digraph View {
     // Spark.{dispatch, commit, serve}(), // Router
     // Spark.exec() // Frontend
     // }
-    
     node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
     splines = true;
     compound = true;
     nodesep = 0.75;
@@ -21,189 +21,92 @@ strict digraph View {
     // ================================================================================================================
     // MythOS
     // ================================================================================================================
-    subgraph cluster_MythOS_View {
-        style = filled;
-        color = lightgray;
-        node [shape = circle; style = filled; color = lightgreen;];
-        edge [color = darkgray;];
-        label = "MythOS View";
-        comment = "Adjective";
-        
-        spark_0_view_t [label = "View.meta(MetaView)";comment = "Abstract: TODO";shape = doublecircle;color = darkgray;];
-        spark_1_view_t [label = "View.r1(InitView)";comment = "Initiation: TODO";color = darkgreen;];
-        spark_2_view_t [label = "View.r2(ResponseView)";comment = "Response: TODO";color = darkgreen;];
-        spark_4_view_t [label = "View.r4(IntegrationView)";comment = "Integration: TODO";color = darkgreen;];
-        spark_8_view_t [label = "View.r8(ReflectionView)";comment = "Reflection: TODO";color = darkgreen;];
-        spark_7_view_t [label = "View.r7(ConsolidationView)";comment = "Consolidation: TODO";color = darkgreen;];
-        spark_5_view_t [label = "View.r5(PropagationView)";comment = "Propagation: TODO";color = darkgreen;];
-        spark_3_view_t [label = "View.r3(ThesisView)";comment = "Thesis: TODO";color = darkblue;];
-        spark_6_view_t [label = "View.r6(AntithesisView)";comment = "Antithesis: TODO";color = darkblue;];
-        spark_9_view_t [label = "View.r9(SynthesisView)";comment = "Synthesis: TODO";color = darkblue;];
-        spark_a_view_t [label = "View.receive(ReceiveView)";comment = "Potential: TODO";shape = invtriangle;color = darkred;];
-        spark_b_view_t [label = "View.send(SendView)";comment = "Manifest: TODO";shape = triangle;color = darkred;];
-        spark_c_view_t [label = "View.dispatch(DispatchView)";comment = "Why-Who: TODO";shape = doublecircle;color = darkred;];
-        spark_d_view_t [label = "View.commit(CommitView)";comment = "What-How: TODO";shape = doublecircle;color = darkgreen;];
-        spark_e_view_t [label = "View.serve(ServeView)";comment = "When-Where: TODO";shape = doublecircle;color = darkblue;];
-        spark_f_view_t [label = "View.exec(ClosureView)";comment = "Which-Closure: TODO";shape = doublecircle;color = lightgray;];
-        
-        spark_a_view_t -> spark_0_view_t [label = "IN"; comment = "todo"; color = darkred; constraint = false;];
-        spark_0_view_t -> spark_b_view_t [label = "OUT"; comment = "todo"; color = darkred;];
-        spark_0_view_t -> spark_3_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
-        spark_0_view_t -> spark_6_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
-        spark_0_view_t -> spark_9_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
-        spark_0_view_t -> spark_1_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_0_view_t -> spark_2_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_0_view_t -> spark_4_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_0_view_t -> spark_8_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_0_view_t -> spark_7_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_0_view_t -> spark_5_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        
-        spark_a_view_t -> spark_c_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
-        spark_b_view_t -> spark_c_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
-        spark_1_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_2_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_4_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_8_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_7_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_5_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_3_view_t -> spark_e_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
-        spark_6_view_t -> spark_e_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
-        spark_9_view_t -> spark_e_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
-        
-        spark_1_view_t -> spark_2_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-        spark_2_view_t -> spark_4_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-        spark_4_view_t -> spark_8_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-        spark_8_view_t -> spark_7_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-        spark_7_view_t -> spark_5_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-        spark_5_view_t -> spark_1_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-        spark_3_view_t -> spark_6_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
-        spark_6_view_t -> spark_9_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
-        spark_9_view_t -> spark_3_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
-        spark_a_view_t -> spark_b_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both; style = dashed; constraint = false;];
-        
-        spark_c_view_t -> spark_f_view_t [label = "OUT"; comment = "todo"; color = darkred; dir = both;];
-        spark_d_view_t -> spark_f_view_t [label = "OUT"; comment = "todo"; color = darkgreen; dir = both;];
-        spark_e_view_t -> spark_f_view_t [label = "OUT"; comment = "todo"; color = darkblue; dir = both;];
-    }
+    subgraph cluster_MythOS_View {}
     
     subgraph cluster_View {
         style = filled;
         color = lightgray;
-        node [shape = circle; style = filled; color = lightgreen;];
-        edge [color = darkgray;];
         label = "View";
         comment = "Adjective, Adverb";
         
         // ============================================================================================================
         // 20
         // ============================================================================================================
-        subgraph cluster_20_MetaView {
-            // 
-        }
+        subgraph cluster_20_MetaView {}
         
         // ============================================================================================================
         // 21
         // ============================================================================================================
-        subgraph cluster_21_InitView {
-            // 
-        }
+        subgraph cluster_21_InitView {}
         
         // ============================================================================================================
         // 22
         // ============================================================================================================
-        subgraph cluster_22_ResponseView {
-            // 
-        }
+        subgraph cluster_22_ResponseView {}
         
         // ============================================================================================================
         // 23
         // ============================================================================================================
-        subgraph cluster_23_IntegrationView {
-            // 
-        }
+        subgraph cluster_23_IntegrationView {}
         
         // ============================================================================================================
         // 24
         // ============================================================================================================
-        subgraph cluster_24_ReflectionView {
-            // 
-        }
+        subgraph cluster_24_ReflectionView {}
         
         // ============================================================================================================
         // 25
         // ============================================================================================================
-        subgraph cluster_25_ConsolidationView {
-            // 
-        }
+        subgraph cluster_25_ConsolidationView {}
         
         // ============================================================================================================
         // 26
         // ============================================================================================================
-        subgraph cluster_26_PropagationView {
-            // 
-        }
+        subgraph cluster_26_PropagationView {}
         
         // ============================================================================================================
         // 27
         // ============================================================================================================
-        subgraph cluster_27_ThesisView {
-            // 
-        }
+        subgraph cluster_27_ThesisView {}
         
         // ============================================================================================================
         // 28
         // ============================================================================================================
-        subgraph cluster_28_AntithesisView {
-            // 
-        }
+        subgraph cluster_28_AntithesisView {}
         
         // ============================================================================================================
         // 29
         // ============================================================================================================
-        subgraph cluster_29_SynthesisView {
-            // 
-        }
+        subgraph cluster_29_SynthesisView {}
         
         // ============================================================================================================
         // 2a
         // ============================================================================================================
-        subgraph cluster_2a_ReceiveView {
-            // 
-        }
+        subgraph cluster_2a_ReceiveView {}
         
         // ============================================================================================================
         // 2b
         // ============================================================================================================
-        subgraph cluster_2b_SendView {
-            // 
-        }
+        subgraph cluster_2b_SendView {}
         
         // ============================================================================================================
         // 2c
         // ============================================================================================================
-        subgraph cluster_2c_DispatchView {
-            // 
-        }
+        subgraph cluster_2c_DispatchView {}
         
         // ============================================================================================================
         // 2d
         // ============================================================================================================
-        subgraph cluster_2d_CommitView {
-            // 
-        }
+        subgraph cluster_2d_CommitView {}
         
         // ============================================================================================================
         // 2e
         // ============================================================================================================
-        subgraph cluster_2e_ServeView {
-            // 
-        }
+        subgraph cluster_2e_ServeView {}
         
         // ============================================================================================================
         // 2f
         // ============================================================================================================
-        subgraph cluster_2f_ClosureView {
-            // 
-        }
+        subgraph cluster_2f_ClosureView {}
     }
 }
