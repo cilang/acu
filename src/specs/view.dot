@@ -289,22 +289,22 @@ strict digraph View {
             label = "Dispatch View";
             comment = "TODO";
             
-            spark_0_dispatch_view_t [label = "TE.meta(Abstract)";comment = "Abstract: TODO";shape = doublecircle;color = darkgray;];
-            spark_1_dispatch_view_t [label = "TE.r1(Initiation)";comment = "Initiation: TODO";color = darkgreen;];
-            spark_2_dispatch_view_t [label = "TE.r2(Response)";comment = "Response: TODO";color = darkgreen;];
-            spark_4_dispatch_view_t [label = "TE.r4(Integration)";comment = "Integration: TODO";color = darkgreen;];
-            spark_8_dispatch_view_t [label = "TE.r8(Reflection)";comment = "Reflection: TODO";color = darkgreen;];
-            spark_7_dispatch_view_t [label = "TE.r7(Consolidation)";comment = "Consolidation: TODO";color = darkgreen;];
-            spark_5_dispatch_view_t [label = "TE.r5(Propagation)";comment = "Propagation: TODO";color = darkgreen;];
-            spark_3_dispatch_view_t [label = "TE.r3(Thesis)";comment = "Thesis: TODO";color = darkblue;];
-            spark_6_dispatch_view_t [label = "TE.r6(Antithesis)";comment = "Antithesis: TODO";color = darkblue;];
-            spark_9_dispatch_view_t [label = "TE.r9(Synthesis)";comment = "Synthesis: TODO";color = darkblue;];
-            spark_a_dispatch_view_t [label = "TE.receive(Potential)";comment = "Potential: TODO";shape = invtriangle;color = darkred;];
-            spark_b_dispatch_view_t [label = "TE.send(Manifest)";comment = "Manifest: TODO";shape = triangle;color = darkred;];
-            spark_c_dispatch_view_t [label = "TE.dispatch(Why-Who)";comment = "Why-Who: TODO";shape = doublecircle;color = darkred;];
-            spark_d_dispatch_view_t [label = "TE.commit(What-How)";comment = "What-How: TODO";shape = doublecircle;color = darkgreen;];
-            spark_e_dispatch_view_t [label = "TE.serve(When-Where)";comment = "When-Where: TODO";shape = doublecircle;color = darkblue;];
-            spark_f_dispatch_view_t [label = "TE.exec(Which-Closure)";comment = "Which-Closure: TODO";shape = doublecircle;color = lightgray;];
+            spark_0_dispatch_view_t [label = "Dispatch.meta(Abstract)";comment = "Abstract: TODO";shape = doublecircle;color = darkgray;];
+            spark_1_dispatch_view_t [label = "Dispatch.r1(Initiation)";comment = "Initiation: TODO";color = darkgreen;];
+            spark_2_dispatch_view_t [label = "Dispatch.r2(Response)";comment = "Response: TODO";color = darkgreen;];
+            spark_4_dispatch_view_t [label = "Dispatch.r4(Integration)";comment = "Integration: TODO";color = darkgreen;];
+            spark_8_dispatch_view_t [label = "Dispatch.r8(Reflection)";comment = "Reflection: TODO";color = darkgreen;];
+            spark_7_dispatch_view_t [label = "Dispatch.r7(Consolidation)";comment = "Consolidation: TODO";color = darkgreen;];
+            spark_5_dispatch_view_t [label = "Dispatch.r5(Propagation)";comment = "Propagation: TODO";color = darkgreen;];
+            spark_3_dispatch_view_t [label = "Dispatch.r3(Thesis)";comment = "Thesis: TODO";color = darkblue;];
+            spark_6_dispatch_view_t [label = "Dispatch.r6(Antithesis)";comment = "Antithesis: TODO";color = darkblue;];
+            spark_9_dispatch_view_t [label = "Dispatch.r9(Synthesis)";comment = "Synthesis: TODO";color = darkblue;];
+            spark_a_dispatch_view_t [label = "Dispatch.receive(Potential)";comment = "Potential: TODO";shape = invtriangle;color = darkred;];
+            spark_b_dispatch_view_t [label = "Dispatch.send(Manifest)";comment = "Manifest: TODO";shape = triangle;color = darkred;];
+            spark_c_dispatch_view_t [label = "Dispatch.dispatch(Why-Who)";comment = "Why-Who: TODO";shape = doublecircle;color = darkred;];
+            spark_d_dispatch_view_t [label = "Dispatch.commit(What-How)";comment = "What-How: TODO";shape = doublecircle;color = darkgreen;];
+            spark_e_dispatch_view_t [label = "Dispatch.serve(When-Where)";comment = "When-Where: TODO";shape = doublecircle;color = darkblue;];
+            spark_f_dispatch_view_t [label = "Dispatch.exec(Which-Closure)";comment = "Which-Closure: TODO";shape = doublecircle;color = lightgray;];
             
             spark_a_dispatch_view_t -> spark_0_dispatch_view_t [label = "IN"; comment = "The injection of a raw, unformalized spark of inspiration into the abstract container of an Idea."; color = darkred; constraint = false;];
             spark_0_dispatch_view_t -> spark_b_dispatch_view_t [label = "OUT"; comment = "The manifestation of a fully formalized Idea into an entangled, publishable theoretical construct."; color = darkred;];
