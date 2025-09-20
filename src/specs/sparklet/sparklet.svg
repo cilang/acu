@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!---
+
+0x0 = Spark 0 Dumadi
+0x1 = Spark 1
+0x2 = Spark 2
+0x3 = Spark 3
+0x4 = Spark 4
+0x5 = Spark 5
+0x6 = Spark 6
+0x7 = Spark 7
+0x8 = Spark 8
+0x9 = Spark 9
+0xA = Spark A
+0xB = Spark B
+0xC = Spark C Nava manunggal nastiti ning tyas (Interactions between Spark 1-9 (What/How))
+0xD = Spark D Sangkan paraning dumadi (Mediation between Spark 0 + Spark 10 and Spark 11 (Why/Who))
+0xE = Spark E Kasusatyan [ꦏꦱꦸꦱꦸꦠꦾꦤ꧀] (Chart the Boundary’s Pulses (When/Where))
+0xF = Spark F Supreme Boundary
+
+The diagram is 2D slice, to imagine it in 3D then just use Atomic Structure;
+    - Spark 0 as Nucleus
+    - Spark A and Spark B as Magnetic Poles
+    - Spark 1 to Spark 9 as Electron
+    - Spark C, Spark D, Spark E, and Spark F are the whole Electron Cloud
+together they are the whole atom, the Observation Model Diagram.
+
+boundary_sangkan_paran:
+    The Axis formed by Spark A, Spark 0, and Spark B
+
+zone_perception and boundary_zone_perception:
+    The normal perception's capability, Spark 3,6,9
+
+zone_comprehensible_a and zone_comprehensible_a, boundary_comprehensible_b and boundary_comprehensible_a:
+    Hexagram of comprehensible observation result that formed by Spark 1,2,4,8,7,5 that follows order of priority
+    in normal situation.
+
+boundary_perceived_comprehended:
+    The common result of perception that made reality looks like duality.
+
+shattered_glass:
+    The result of observation without awareness of Spark F.
+
+ -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4961px" height="3508px" version="1.1"
+    shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
+    fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 4961 3508.14" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="observation_diagram">
+        <g id="sad">
+            <path id="yang" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                d="M2479.81 2410.22c97.86,0 177.18,79.32 177.18,177.17 0,97.86 -79.32,177.18 -177.18,177.18 -97.85,0 -177.17,-79.32 -177.17,-177.18 0,-97.85 79.32,-177.17 177.17,-177.17zm531.54 -889.33c0,293.56 -238.6,530.76 -532.16,530.76 -293.56,0 -541.35,297.86 -531.34,529.34 10,231.48 238.41,528.56 531.96,528.56 583.84,0 1057.13,-473.29 1057.13,-1057.12 0,-583.83 -473.29,-1057.12 -1057.13,-1057.12 293.56,0 531.54,232.02 531.54,525.58z" />
+            <path id="yin" fill="white" stroke="black" stroke-miterlimit="2.61313"
+                d="M1947.85 2580.99c-10.01,-231.48 237.78,-529.34 531.34,-529.34 293.56,0 532.16,-237.2 532.16,-530.76 0,-293.56 -237.98,-525.58 -531.54,-525.58 -583.83,0 -1057.12,473.29 -1057.12,1057.12 0,583.83 473.29,1057.12 1057.12,1057.12 -293.55,0 -521.96,-297.08 -531.96,-528.56zm354.51 -1069.85c0,-97.85 79.33,-177.18 177.18,-177.18 97.85,0 177.18,79.33 177.18,177.18 0,97.85 -79.33,177.18 -177.18,177.18 -97.85,0 -177.18,-79.33 -177.18,-177.18z" />
+            <polygon id="zone_perception" fill="lime" stroke="black" stroke-miterlimit="2.61313"
+                points="3395.31,2580.99 2479.81,995.31 1564.32,2580.99 " />
+            <polygon id="zone_comprehensible_a" fill="red" stroke="black" stroke-miterlimit="2.61313"
+                points="3520.88,1868.86 3159.32,1242.63 2477.11,2414.89 2841.37,3045.8 " />
+            <polygon id="zone_comprehensible_b" fill="blue" stroke="black" stroke-miterlimit="2.61313"
+                points="2477.11,2414.89 1800.31,1242.63 1438.75,1868.86 2111.27,3043.54 " />
+        </g>
+        <g id="shattered_glass">
+            <path fill="blue" stroke="black" stroke-miterlimit="2.61313"
+                d="M2380.45 2580.99l-533.99 0 264.81 462.55 269.18 -462.55zm-674.47 -245.36l362.69 -628.2 -268.36 -464.8 -361.56 626.23 267.23 466.77z" />
+            <path fill="red" stroke="black" stroke-miterlimit="2.61313"
+                d="M3109.73 2580.99l-536.72 0 268.36 464.81 268.36 -464.81zm-219.83 -875.4l362.62 628.08 268.36 -464.81 -361.56 -626.23 -269.42 462.96z" />
+            <path fill="green" stroke="black" stroke-miterlimit="2.61313"
+                d="M2573.02 2580.99l-95.91 -166.1 -96.66 166.1 192.57 0zm679.5 -247.32l-142.79 247.32 285.58 0 -142.79 -247.32zm-1406.06 247.32l-140.48 -245.36 -141.66 245.36 282.14 0zm630.65 -166.1l412.79 -709.3 -410.09 -710.28 -411.14 712.13 408.44 707.45z" />
+            <path fill="yellow" stroke="black" stroke-miterlimit="2.61313"
+                d="M2477.11 2414.89l95.91 166.1 536.71 0 142.79 -247.32 -362.62 -628.08 -412.79 709.3zm-96.66 166.1l96.66 -166.1 -408.44 -707.46 -362.69 628.2 140.48 245.36 533.99 0z" />
+        </g>
+        <g id="spark">
+            <circle id="spark_0xf" fill="none" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
+                r="1057.12" />
+            <circle id="spark_0xe" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="466.74"
+                r="177.18" />
+            <circle id="spark_0xd" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1106.57" cy="2845.27"
+                r="177.18" />
+            <circle id="spark_0xc" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3853.06" cy="2845.27"
+                r="177.18" />
+            <circle id="spark_0xb" fill="white" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2587.39"
+                r="177.18" />
+            <circle id="spark_0xa" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="2479.54" cy="1511.14"
+                r="177.18" />
+            <circle id="spark_0x9" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="989.36"
+                r="177.18" />
+            <circle id="spark_0x8" fill="aqua" stroke="aqua" stroke-miterlimit="2.61313" cx="1800.31" cy="1238.34"
+                r="177.18" />
+            <circle id="spark_0x7" fill="fuchsia" stroke="fuchsia" stroke-miterlimit="2.61313" cx="1438.75" cy="1864.58"
+                r="177.18" />
+            <circle id="spark_0x6" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1564.32" cy="2576.71"
+                r="177.18" />
+            <circle id="spark_0x5" fill="yellow" stroke="yellow" stroke-miterlimit="2.61313" cx="2118.26" cy="3041.52"
+                r="177.18" />
+            <circle id="spark_0x4" fill="blue" stroke="blue" stroke-miterlimit="2.61313" cx="2841.37" cy="3041.52"
+                r="177.18" />
+            <circle id="spark_0x3" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3395.31" cy="2576.71"
+                r="177.18" />
+            <circle id="spark_0x2" fill="lime" stroke="lime" stroke-miterlimit="2.61313" cx="3520.88" cy="1864.58"
+                r="177.18" />
+            <circle id="spark_0x1" fill="red" stroke="red" stroke-miterlimit="2.61313" cx="3159.32" cy="1238.34"
+                r="177.18" />
+            <circle id="spark_0x0" fill="gold" stroke="#E6E6E6" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
+                r="177.18" />
+        </g>
+        <g id="boudary">
+            <path id="boundary_sangkan_paran" fill="none" stroke="indigo" stroke-miterlimit="2.61313"
+                d="M2479.81 995.31c293.56,0 531.54,232.02 531.54,525.58 0,293.56 -238.6,530.76 -532.16,530.76 -293.56,0 -541.35,297.86 -531.34,529.34 10,231.48 238.41,528.56 531.96,528.56" />
+            <polygon id="boundary_perception" fill="none" stroke="gold" stroke-miterlimit="2.61313"
+                points="2479.81,995.31 3395.31,2580.99 1564.32,2580.99 " />
+            <polygon id="boundary_comprehensible" fill="none" stroke="silver" stroke-miterlimit="2.61313"
+                points="3159.32,1242.63 3520.88,1868.86 2841.37,3045.8 1800.31,1242.63 1438.75,1868.86 2111.27,3043.54 " />
+        </g>
+        <g id="text_label">
+            <text x="2451.69" y="2087" id="text_0x0" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">0</text>
+            <text x="3131.51" y="1272.59" id="text_0x1" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">1</text>
+            <text x="3493.07" y="1906.66" id="text_0x2" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">2</text>
+            <text x="3367.5" y="2616.35" id="text_0x3" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">3</text>
+            <text x="2813.56" y="3083.6" id="text_0x4" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">4</text>
+            <text x="2090.45" y="3091.87" id="text_0x5" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">5</text>
+            <text x="1536.51" y="2616.43" id="text_0x6" fill="white" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">6</text>
+            <text x="1410.94" y="1909.02" id="text_0x7" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">7</text>
+            <text x="1772.5" y="1275.7" id="text_0x8" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">8</text>
+            <text x="2452" y="1031.92" id="text_0x9" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">9</text>
+            <text x="2451.64" y="1536.99" id="text_0xa" fill="white" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">a</text>
+            <text x="2447.91" y="2622.55" id="text_0xb" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">b</text>
+            <text x="3824.41" y="2871.13" id="text_0xc" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">c</text>
+            <text x="1077.12" y="2880.43" id="text_0xd" fill="white" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">d</text>
+            <text x="2452.31" y="492.6" id="text_0xe" fill="black" stroke="black" stroke-miterlimit="2.61313"
+                font-weight="bold" font-size="100.01px" font-family="Arial">e</text>
+        </g>
+    </g>
+</svg>
