@@ -21,7 +21,70 @@ strict digraph View {
     // ================================================================================================================
     // MythOS
     // ================================================================================================================
-    subgraph cluster_MythOS_View {}
+    subgraph cluster_MythOS_View {
+        style = filled;
+        color = lightgray;
+        node [shape = circle; style = filled; color = lightgreen;];
+        edge [color = darkgray;];
+        label = "MythOS View";
+        comment = "TODO";
+        
+        spark_0_view_t [label = "View.meta(MetaView)";comment = "Abstract: TODO";shape = doublecircle;color = darkgray;];
+        spark_1_view_t [label = "View.r1(InitView)";comment = "Initiation: TODO";color = darkgreen;];
+        spark_2_view_t [label = "View.r2(ResponseView)";comment = "Response: TODO";color = darkgreen;];
+        spark_4_view_t [label = "View.r4(IntegrationView)";comment = "Integration: TODO";color = darkgreen;];
+        spark_8_view_t [label = "View.r8(ReflectionView)";comment = "Reflection: TODO";color = darkgreen;];
+        spark_7_view_t [label = "View.r7(ConsolidationView)";comment = "Consolidation: TODO";color = darkgreen;];
+        spark_5_view_t [label = "View.r5(PropagationView)";comment = "Propagation: TODO";color = darkgreen;];
+        spark_3_view_t [label = "View.r3(ThesisView)";comment = "Thesis: TODO";color = darkblue;];
+        spark_6_view_t [label = "View.r6(AntithesisView)";comment = "Antithesis: TODO";color = darkblue;];
+        spark_9_view_t [label = "View.r9(SynthesisView)";comment = "Synthesis: TODO";color = darkblue;];
+        spark_a_view_t [label = "View.receive(ReceiveView)";comment = "Potential: TODO";shape = invtriangle;color = darkred;];
+        spark_b_view_t [label = "View.send(SendView)";comment = "Manifest: TODO";shape = triangle;color = darkred;];
+        spark_c_view_t [label = "View.dispatch(DispatchView)";comment = "Why-Who: TODO";shape = doublecircle;color = darkred;];
+        spark_d_view_t [label = "View.commit(CommitView)";comment = "What-How: TODO";shape = doublecircle;color = darkgreen;];
+        spark_e_view_t [label = "View.serve(ServeView)";comment = "When-Where: TODO";shape = doublecircle;color = darkblue;];
+        spark_f_view_t [label = "View.exec(ClosureView)";comment = "Which-Closure: TODO";shape = doublecircle;color = lightgray;];
+        
+        spark_a_view_t -> spark_0_view_t [label = "IN"; comment = "todo"; color = darkred; constraint = false;];
+        spark_0_view_t -> spark_b_view_t [label = "OUT"; comment = "todo"; color = darkred;];
+        spark_0_view_t -> spark_3_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+        spark_0_view_t -> spark_6_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+        spark_0_view_t -> spark_9_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+        spark_0_view_t -> spark_1_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_0_view_t -> spark_2_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_0_view_t -> spark_4_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_0_view_t -> spark_8_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_0_view_t -> spark_7_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_0_view_t -> spark_5_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        
+        spark_a_view_t -> spark_c_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+        spark_b_view_t -> spark_c_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+        spark_1_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_2_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_4_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_8_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_7_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_5_view_t -> spark_d_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_3_view_t -> spark_e_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+        spark_6_view_t -> spark_e_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+        spark_9_view_t -> spark_e_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+        
+        spark_1_view_t -> spark_2_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+        spark_2_view_t -> spark_4_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+        spark_4_view_t -> spark_8_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+        spark_8_view_t -> spark_7_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+        spark_7_view_t -> spark_5_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+        spark_5_view_t -> spark_1_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+        spark_3_view_t -> spark_6_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+        spark_6_view_t -> spark_9_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+        spark_9_view_t -> spark_3_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+        spark_a_view_t -> spark_b_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both; style = dashed; constraint = false;];
+        
+        spark_c_view_t -> spark_f_view_t [label = "OUT"; comment = "todo"; color = darkred; dir = both;];
+        spark_d_view_t -> spark_f_view_t [label = "OUT"; comment = "todo"; color = darkgreen; dir = both;];
+        spark_e_view_t -> spark_f_view_t [label = "OUT"; comment = "todo"; color = darkblue; dir = both;];
+    }
     
     subgraph cluster_View {
         style = filled;
@@ -32,7 +95,70 @@ strict digraph View {
         // ============================================================================================================
         // 20
         // ============================================================================================================
-        subgraph cluster_20_MetaView {}
+        subgraph cluster_20_MetaView {
+            style = filled;
+            color = lightgray;
+            node [shape = circle; style = filled; color = lightgreen;];
+            edge [color = darkgray;];
+            label = "Meta View";
+            comment = "The pattern that defines patterns. The Sparklet of Sparklets. It governs the fundamental questions (6W+1H) and the relationships (IN, OUT, REC) that constitute any event, process, or meaning.";
+            
+            spark_0_meta_view_t [label = "Meta.meta(Meta)";comment = "Abstract: The concept of concept itself. The primordial pattern of abstraction.";shape = doublecircle;color = darkgray;];
+            spark_1_meta_view_t [label = "Meta.r1(What)";comment = "Initiation: The question of essence and substance. Defines the object of action.";color = darkgreen;];
+            spark_2_meta_view_t [label = "Meta.r2(When)";comment = "Response: The question of time and sequence. Defines the temporal context.";color = darkgreen;];
+            spark_4_meta_view_t [label = "Meta.r4(How)";comment = "Integration: The question of method and process. Defines the transformation.";color = darkgreen;];
+            spark_8_meta_view_t [label = "Meta.r8(Why)";comment = "Reflection: The question of cause and purpose. Defines the intent and reason.";color = darkgreen;];
+            spark_7_meta_view_t [label = "Meta.r7(Where)";comment = "Consolidation: The question of place and domain. Defines the spatial context.";color = darkgreen;];
+            spark_5_meta_view_t [label = "Meta.r5(Who)";comment = "Propagation: The question of agency and identity. Defines the actor and recipient.";color = darkgreen;];
+            spark_3_meta_view_t [label = "Meta.r3(IN)";comment = "Thesis: The fundamental principle of Potential and Reception. The beginning.";color = darkblue;];
+            spark_6_meta_view_t [label = "Meta.r6(OUT)";comment = "Antithesis: The fundamental principle of Manifestation and Emission. The end.";color = darkblue;];
+            spark_9_meta_view_t [label = "Meta.r9(REC)";comment = "Synthesis: The fundamental principle of Relationship and Recursion. The cycle that binds IN to OUT.";color = darkblue;];
+            spark_a_meta_view_t [label = "Meta.receive(Whence)";comment = "Potential: The undifferentiated source of all possible patterns and questions.";shape = invtriangle;color = darkred;];
+            spark_b_meta_view_t [label = "Meta.send(Whither)";comment = "Manifest: The emission of a fully resolved and defined pattern, ready for execution.";shape = triangle;color = darkred;];
+            spark_c_meta_view_t [label = "Meta.dispatch(Whether)";comment = "Why-Who: Determines the contextual framework for processing the potential.";shape = doublecircle;color = darkred;];
+            spark_d_meta_view_t [label = "Meta.commit(Which)";comment = "What-How: The act of selection and commitment. Resolves 'Which specific answer to the 6W questions?'";shape = doublecircle;color = darkgreen;];
+            spark_e_meta_view_t [label = "Meta.serve(Relationship)";comment = "When-Where: Serves the web of Relationships between all concepts (IN/OUT, the 6Ws).";shape = doublecircle;color = darkblue;];
+            spark_f_meta_view_t [label = "Meta.exec(Closure)";comment = "Which-Closure: The final binding of a pattern into a manifest, executable unit of reality.";shape = doublecircle;color = lightgray;];
+            
+            spark_a_meta_view_t -> spark_0_meta_view_t [label = "IN"; comment = "todo"; color = darkred; constraint = false;];
+            spark_0_meta_view_t -> spark_b_meta_view_t [label = "OUT"; comment = "todo"; color = darkred;];
+            spark_0_meta_view_t -> spark_3_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_0_meta_view_t -> spark_6_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_0_meta_view_t -> spark_9_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_0_meta_view_t -> spark_1_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_meta_view_t -> spark_2_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_meta_view_t -> spark_4_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_meta_view_t -> spark_8_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_meta_view_t -> spark_7_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_meta_view_t -> spark_5_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            
+            spark_a_meta_view_t -> spark_c_meta_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+            spark_b_meta_view_t -> spark_c_meta_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+            spark_1_meta_view_t -> spark_d_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_2_meta_view_t -> spark_d_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_4_meta_view_t -> spark_d_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_8_meta_view_t -> spark_d_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_7_meta_view_t -> spark_d_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_5_meta_view_t -> spark_d_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_3_meta_view_t -> spark_e_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_6_meta_view_t -> spark_e_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_9_meta_view_t -> spark_e_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            
+            spark_1_meta_view_t -> spark_2_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_2_meta_view_t -> spark_4_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_4_meta_view_t -> spark_8_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_8_meta_view_t -> spark_7_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_7_meta_view_t -> spark_5_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_5_meta_view_t -> spark_1_meta_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_3_meta_view_t -> spark_6_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_6_meta_view_t -> spark_9_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_9_meta_view_t -> spark_3_meta_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_a_meta_view_t -> spark_b_meta_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both; style = dashed; constraint = false;];
+            
+            spark_c_meta_view_t -> spark_f_meta_view_t [label = "OUT"; comment = "todo"; color = darkred; dir = both;];
+            spark_d_meta_view_t -> spark_f_meta_view_t [label = "OUT"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_e_meta_view_t -> spark_f_meta_view_t [label = "OUT"; comment = "todo"; color = darkblue; dir = both;];
+        }
         
         // ============================================================================================================
         // 21
@@ -82,7 +208,70 @@ strict digraph View {
         // ============================================================================================================
         // 2a
         // ============================================================================================================
-        subgraph cluster_2a_ReceiveView {}
+        subgraph cluster_2a_ReceiveView {
+            style = filled;
+            color = lightgray;
+            node [shape = circle; style = filled; color = lightgreen;];
+            edge [color = darkgray;];
+            label = "Receive View";
+            comment = "The Sparklet of Preliminary Identification. The first light of understanding. It performs the initial quantification and qualification of raw potential, answering 'how much?' and 'what kind?' to extract its quintessence.";
+            
+            spark_0_receive_view_t [label = "Receive.meta(Quintessence)";comment = "Abstract: The concept of extracting essential characteristics from raw potential. The first gleam of meaning.";shape = doublecircle;color = darkgray;];
+            spark_1_receive_view_t [label = "Receive.r1(Scope)";comment = "Initiation: Defines the domain or set of the potential. 'Where does this apply?'";color = darkgreen;];
+            spark_2_receive_view_t [label = "Receive.r2(Amount)";comment = "Response: Specifies the quantity or proportion. 'How much is there?'";color = darkgreen;];
+            spark_4_receive_view_t [label = "Receive.r4(Property)";comment = "Integration: Identifies the core quality or attribute. 'What is its primary feature?'";color = darkgreen;];
+            spark_8_receive_view_t [label = "Receive.r8(Degree)";comment = "Reflection: Measures the intensity of the quality. 'To what extent?'";color = darkgreen;];
+            spark_7_receive_view_t [label = "Receive.r7(Modality)";comment = "Consolidation: Assesses possibility, necessity, or permission. 'Is it possible? Must it be?'";color = darkgreen;];
+            spark_5_receive_view_t [label = "Receive.r5(Aggregation)";comment = "Propagation: Determines if it is cumulative or distributed. 'Is it a total? A per-unit measure?'";color = darkgreen;];
+            spark_3_receive_view_t [label = "Receive.r3(Universal)";comment = "Thesis: The principle of totality—does this apply to all in the scope? (∀)";color = darkblue;];
+            spark_6_receive_view_t [label = "Receive.r6(Existential)";comment = "Antithesis: The principle of existence—does this apply to at least one? (∃)";color = darkblue;];
+            spark_9_receive_view_t [label = "Receive.r9(Modal)";comment = "Synthesis: The blend of possibility and actuality—what is its mode of being? (◇/□)";color = darkblue;];
+            spark_a_receive_view_t [label = "Receive.receive(RawPotential)";comment = "Potential: The unfiltered, raw input from the source (EventEngine or void).";shape = invtriangle;color = darkred;];
+            spark_b_receive_view_t [label = "Receive.send(TaggedPotential)";comment = "Manifest: The output—potential now tagged with initial quantity and quality labels.";shape = triangle;color = darkred;];
+            spark_c_receive_view_t [label = "Receive.dispatch(Filter)";comment = "Why-Who: The contextual filter that determines which qualities and quantities to look for.";shape = doublecircle;color = darkred;];
+            spark_d_receive_view_t [label = "Receive.commit(Selection)";comment = "What-How: The act of selecting and applying the specific quantifier and qualifier tags.";shape = doublecircle;color = darkgreen;];
+            spark_e_receive_view_t [label = "Receive.serve(Profile)";comment = "When-Where: Presents the initial identification as a measurable profile or signature.";shape = doublecircle;color = darkblue;];
+            spark_f_receive_view_t [label = "Receive.exec(Identification)";comment = "Which-Closure: The final act of stamping the initial identity onto the potential.";shape = doublecircle;color = lightgray;];
+            
+            spark_a_receive_view_t -> spark_0_receive_view_t [label = "IN"; comment = "todo"; color = darkred; constraint = false;];
+            spark_0_receive_view_t -> spark_b_receive_view_t [label = "OUT"; comment = "todo"; color = darkred;];
+            spark_0_receive_view_t -> spark_3_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_0_receive_view_t -> spark_6_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_0_receive_view_t -> spark_9_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_0_receive_view_t -> spark_1_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_receive_view_t -> spark_2_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_receive_view_t -> spark_4_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_receive_view_t -> spark_8_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_receive_view_t -> spark_7_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_0_receive_view_t -> spark_5_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            
+            spark_a_receive_view_t -> spark_c_receive_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+            spark_b_receive_view_t -> spark_c_receive_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+            spark_1_receive_view_t -> spark_d_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_2_receive_view_t -> spark_d_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_4_receive_view_t -> spark_d_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_8_receive_view_t -> spark_d_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_7_receive_view_t -> spark_d_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_5_receive_view_t -> spark_d_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_3_receive_view_t -> spark_e_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_6_receive_view_t -> spark_e_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            spark_9_receive_view_t -> spark_e_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+            
+            spark_1_receive_view_t -> spark_2_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_2_receive_view_t -> spark_4_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_4_receive_view_t -> spark_8_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_8_receive_view_t -> spark_7_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_7_receive_view_t -> spark_5_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_5_receive_view_t -> spark_1_receive_view_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_3_receive_view_t -> spark_6_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_6_receive_view_t -> spark_9_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_9_receive_view_t -> spark_3_receive_view_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_a_receive_view_t -> spark_b_receive_view_t [label = "REC"; comment = "todo"; color = darkred; dir = both; style = dashed; constraint = false;];
+            
+            spark_c_receive_view_t -> spark_f_receive_view_t [label = "OUT"; comment = "todo"; color = darkred; dir = both;];
+            spark_d_receive_view_t -> spark_f_receive_view_t [label = "OUT"; comment = "todo"; color = darkgreen; dir = both;];
+            spark_e_receive_view_t -> spark_f_receive_view_t [label = "OUT"; comment = "todo"; color = darkblue; dir = both;];
+        }
         
         // ============================================================================================================
         // 2b
@@ -92,7 +281,70 @@ strict digraph View {
         // ============================================================================================================
         // 2c
         // ============================================================================================================
-        subgraph cluster_2c_DispatchView {}
+        subgraph cluster_2c_DispatchView {
+            style = filled;
+            color = lightgray;
+            node [shape = circle; style = filled; color = lightgreen;];
+            edge [color = darkgray;];
+            label = "Dispatch View";
+            comment = "TODO";
+            
+            spark_0_dispatch_view_t [label = "TE.meta(Abstract)";comment = "Abstract: TODO";shape = doublecircle;color = darkgray;];
+            spark_1_dispatch_view_t [label = "TE.r1(Initiation)";comment = "Initiation: TODO";color = darkgreen;];
+            spark_2_dispatch_view_t [label = "TE.r2(Response)";comment = "Response: TODO";color = darkgreen;];
+            spark_4_dispatch_view_t [label = "TE.r4(Integration)";comment = "Integration: TODO";color = darkgreen;];
+            spark_8_dispatch_view_t [label = "TE.r8(Reflection)";comment = "Reflection: TODO";color = darkgreen;];
+            spark_7_dispatch_view_t [label = "TE.r7(Consolidation)";comment = "Consolidation: TODO";color = darkgreen;];
+            spark_5_dispatch_view_t [label = "TE.r5(Propagation)";comment = "Propagation: TODO";color = darkgreen;];
+            spark_3_dispatch_view_t [label = "TE.r3(Thesis)";comment = "Thesis: TODO";color = darkblue;];
+            spark_6_dispatch_view_t [label = "TE.r6(Antithesis)";comment = "Antithesis: TODO";color = darkblue;];
+            spark_9_dispatch_view_t [label = "TE.r9(Synthesis)";comment = "Synthesis: TODO";color = darkblue;];
+            spark_a_dispatch_view_t [label = "TE.receive(Potential)";comment = "Potential: TODO";shape = invtriangle;color = darkred;];
+            spark_b_dispatch_view_t [label = "TE.send(Manifest)";comment = "Manifest: TODO";shape = triangle;color = darkred;];
+            spark_c_dispatch_view_t [label = "TE.dispatch(Why-Who)";comment = "Why-Who: TODO";shape = doublecircle;color = darkred;];
+            spark_d_dispatch_view_t [label = "TE.commit(What-How)";comment = "What-How: TODO";shape = doublecircle;color = darkgreen;];
+            spark_e_dispatch_view_t [label = "TE.serve(When-Where)";comment = "When-Where: TODO";shape = doublecircle;color = darkblue;];
+            spark_f_dispatch_view_t [label = "TE.exec(Which-Closure)";comment = "Which-Closure: TODO";shape = doublecircle;color = lightgray;];
+            
+            spark_a_dispatch_view_t -> spark_0_dispatch_view_t [label = "IN"; comment = "The injection of a raw, unformalized spark of inspiration into the abstract container of an Idea."; color = darkred; constraint = false;];
+            spark_0_dispatch_view_t -> spark_b_dispatch_view_t [label = "OUT"; comment = "The manifestation of a fully formalized Idea into an entangled, publishable theoretical construct."; color = darkred;];
+            spark_0_dispatch_view_t -> spark_3_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of entanglement and continuity, forming a thesis on structure."; color = darkblue; dir = both;];
+            spark_0_dispatch_view_t -> spark_6_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of sensitivity and unpredictability, forming an antithesis to order."; color = darkblue; dir = both;];
+            spark_0_dispatch_view_t -> spark_9_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of communication and data, synthesizing signal from noise."; color = darkblue; dir = both;];
+            spark_0_dispatch_view_t -> spark_1_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of fundamental unified structures, initiating the theoretical cycle."; color = darkgreen; dir = both;];
+            spark_0_dispatch_view_t -> spark_2_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of classifying computational difficulty, forming a response to initiation."; color = darkgreen; dir = both;];
+            spark_0_dispatch_view_t -> spark_4_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of relationships and structures, integrating mathematical concepts."; color = darkgreen; dir = both;];
+            spark_0_dispatch_view_t -> spark_8_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of consciousness, reflecting on the nature of self."; color = darkgreen; dir = both;];
+            spark_0_dispatch_view_t -> spark_7_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of information processing in minds, consolidating models of thought."; color = darkgreen; dir = both;];
+            spark_0_dispatch_view_t -> spark_5_dispatch_view_t [label = "REC"; comment = "The application of abstract ideation to the problem of computation, propagating formal models of algorithms."; color = darkgreen; dir = both;];
+            
+            spark_a_dispatch_view_t -> spark_c_dispatch_view_t [label = "REC"; comment = "The potential of an idea is contextualized by the framework of connections, nodes, and edges provided by Graph Theory."; color = darkred; dir = both;];
+            spark_c_dispatch_view_t -> spark_b_dispatch_view_t [label = "REC"; comment = "The manifested idea provides new raw material and challenges that redefine the contextual framework of Graph Theory."; color = darkred; dir = both; constraint = false;];
+            spark_1_dispatch_view_t -> spark_d_dispatch_view_t [label = "REC"; comment = "The initiatory concept of fundamental strings must be committed to a specific instantiation within a systemic framework like the Sparklet."; color = darkgreen; dir = both;];
+            spark_2_dispatch_view_t -> spark_d_dispatch_view_t [label = "REC"; comment = "The response concept of computational complexity informs the selection and commitment of a specific complexity class for a Sparklet process."; color = darkgreen; dir = both;];
+            spark_4_dispatch_view_t -> spark_d_dispatch_view_t [label = "REC"; comment = "The integrative concept of categories and functors provides the rules for how Sparklet components map and relate to one another."; color = darkgreen; dir = both;];
+            spark_8_dispatch_view_t -> spark_d_dispatch_view_t [label = "REC"; comment = "The reflective concept of consciousness provides the criteria for what constitutes a `mind-like` property in the Sparklet system."; color = darkgreen; dir = both;];
+            spark_7_dispatch_view_t -> spark_d_dispatch_view_t [label = "REC"; comment = "The consolidating concept of cognitive models provides the structural blueprint for how a Sparklet processes information."; color = darkgreen; dir = both;];
+            spark_5_dispatch_view_t -> spark_d_dispatch_view_t [label = "REC"; comment = "The propagating concept of formal computation provides the language and limits (e.g., Turing completeness) for the Sparklet's execution."; color = darkgreen; dir = both;];
+            spark_3_dispatch_view_t -> spark_e_dispatch_view_t [label = "REC"; comment = "The thesis of topological entanglement is served by being visualized concretely through diagrams and invariants."; color = darkblue; dir = both;];
+            spark_6_dispatch_view_t -> spark_e_dispatch_view_t [label = "REC"; comment = "The antithesis of sensitive dependence is served by being visualized through phase spaces and attractors."; color = darkblue; dir = both;];
+            spark_9_dispatch_view_t -> spark_e_dispatch_view_t [label = "REC"; comment = "The synthesis of information flow is served by being visualized through circuits, channels, and entropy landscapes."; color = darkblue; dir = both;];
+            
+            spark_1_dispatch_view_t -> spark_2_dispatch_view_t [label = "REC"; comment = "The initiation of fundamental structures naturally leads to a response analyzing the computational complexity of those structures."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_2_dispatch_view_t -> spark_4_dispatch_view_t [label = "REC"; comment = "The response of classifying difficulty is integrated by categorizing problems and algorithms into formal relationships."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_4_dispatch_view_t -> spark_8_dispatch_view_t [label = "REC"; comment = "The integration of mathematical structures is reflected upon through the categorical nature of thought and perception."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_8_dispatch_view_t -> spark_7_dispatch_view_t [label = "REC"; comment = "The reflection on consciousness is consolidated into testable models of cognition."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_7_dispatch_view_t -> spark_5_dispatch_view_t [label = "REC"; comment = "The consolidated models of cognition are propagated by expressing them as formal computational processes."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_5_dispatch_view_t -> spark_1_dispatch_view_t [label = "REC"; comment = "The propagation of computational models circles back to initiate new questions about the computational nature of fundamental strings."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+            spark_3_dispatch_view_t -> spark_6_dispatch_view_t [label = "REC"; comment = "The thesis of stable entanglement confronts the antithesis of chaotic divergence."; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_6_dispatch_view_t -> spark_9_dispatch_view_t [label = "REC"; comment = "The antithesis of chaos is synthesized by measuring the information content and entropy of chaotic systems."; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_9_dispatch_view_t -> spark_3_dispatch_view_t [label = "REC"; comment = "The synthesis of information flow circles back to form a new thesis on the information-theoretic nature of topological entanglement."; color = darkblue; dir = both; style = dashed; constraint = false;];
+            spark_a_dispatch_view_t -> spark_b_dispatch_view_t [label = "REC"; comment = "The potential of an idea and its final manifestation are in a constant, recursive relationship, each defining the other."; color = darkred; dir = both; style = dashed; constraint = false;];
+            
+            spark_c_dispatch_view_t -> spark_f_dispatch_view_t [label = "OUT"; comment = "The contextual framework defined by Graph Theory is output as a closure, defining the limits of the theoretical landscape."; color = darkred; dir = both;];
+            spark_d_dispatch_view_t -> spark_f_dispatch_view_t [label = "OUT"; comment = "The committed, instantiated model of the Sparklet system is output as a closure, representing a concrete theoretical object."; color = darkgreen; dir = both;];
+            spark_e_dispatch_view_t -> spark_f_dispatch_view_t [label = "OUT"; comment = "The served visualizations of the theories are output as a closure, providing the final, perceivable form of the theoretical limit."; color = darkblue; dir = both;];
+        }
         
         // ============================================================================================================
         // 2d
@@ -107,6 +359,69 @@ strict digraph View {
         // ============================================================================================================
         // 2f
         // ============================================================================================================
-        subgraph cluster_2f_ClosureView {}
+        subgraph cluster_2f_ClosureView {
+            style = filled;
+            color = lightgray;
+            node [shape = circle; style = filled;];
+            edge [color = darkgray;];
+            label = "ClosureView: The Theory of Completion";
+            comment = "The Meta-View for Execution, Termination, and Realization. Governs the .exec() method.";
+            
+            spark_0_closure_view_t [label = "Closure.meta(FixedPoint)";comment = "Abstract: The abstract state of equilibrium and resolution. The concept of a final state.";shape = doublecircle;color = darkgray;];
+            spark_1_closure_view_t [label = "Closure.r1(Equivalence)";comment = "Initiation: Closure as completed relation. Formation of stable equivalence classes.";color = darkgreen;];
+            spark_2_closure_view_t [label = "Closure.r2(Entropy)";comment = "Response: Closure as the state of maximum local order/minimum unresolved potential.";color = darkgreen;];
+            spark_4_closure_view_t [label = "Closure.r4(Completeness)";comment = "Integration: Closure as logical finality. A system where all true statements are provable.";color = darkgreen;];
+            spark_8_closure_view_t [label = "Closure.r8(Identity)";comment = "Reflection: Closure as self-awareness. The system's recognition of its own final state.";color = darkgreen;];
+            spark_7_closure_view_t [label = "Closure.r7(Constraint)";comment = "Consolidation: Closure as fulfilled boundary condition. All constraints are satisfied.";color = darkgreen;];
+            spark_5_closure_view_t [label = "Closure.r5(Invariance)";comment = "Propagation: Closure as stability under transformation. The state is unchanged by further operations.";color = darkgreen;];
+            spark_3_closure_view_t [label = "Closure.r3(Thesis)";comment = "Thesis: The initial state to be resolved. The question posed.";color = darkblue;];
+            spark_6_closure_view_t [label = "Closure.r6(Antithesis)";comment = "Antithesis: The opposing force or conflicting information. The tension that demands resolution.";color = darkblue;];
+            spark_9_closure_view_t [label = "Closure.r9(Synthesis)";comment = "Synthesis: The resolved whole. The answer that transcends and contains the conflict.";color = darkblue;];
+            spark_a_closure_view_t [label = "Closure.receive(Tension)";comment = "Potential: The input of unresolved potential, a problem to be closed.";shape = invtriangle;color = darkred;];
+            spark_b_closure_view_t [label = "Closure.send(Resolution)";comment = "Manifest: The output of the resolved, closed state.";shape = triangle;color = darkred;];
+            spark_c_closure_view_t [label = "Closure.dispatch(HaltCondition)";comment = "Why-Who: Determines the criteria for termination. The 'why' we stop and 'who' (which process) is involved.";shape = doublecircle;color = darkred;];
+            spark_d_closure_view_t [label = "Closure.commit(Selection)";comment = "What-How: The act of selecting the correct resolution from possibilities ('Which').";shape = doublecircle;color = darkgreen;];
+            spark_e_closure_view_t [label = "Closure.serve(Gestalt)";comment = "When-Where: Presents the closed state as a complete, perceivable whole.";shape = doublecircle;color = darkblue;];
+            spark_f_closure_view_t [label = "Closure.exec(Realization)";comment = "Which-Closure: The final, atomic act of binding. The event of closure itself.";shape = doublecircle;color = lightgray;];
+            
+            spark_a_closure_view_t -> spark_0_closure_view_t [label = "IN"; color = darkred; constraint = false;];
+            spark_0_closure_view_t -> spark_b_closure_view_t [label = "OUT"; color = darkred;];
+            spark_0_closure_view_t -> spark_3_closure_view_t [label = "REC"; color = darkblue; dir = both;];
+            spark_0_closure_view_t -> spark_6_closure_view_t [label = "REC"; color = darkblue; dir = both;];
+            spark_0_closure_view_t -> spark_9_closure_view_t [label = "REC"; color = darkblue; dir = both;];
+            spark_0_closure_view_t -> spark_1_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_0_closure_view_t -> spark_2_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_0_closure_view_t -> spark_4_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_0_closure_view_t -> spark_8_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_0_closure_view_t -> spark_7_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_0_closure_view_t -> spark_5_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            
+            spark_a_closure_view_t -> spark_c_closure_view_t [label = "REC"; color = darkred; dir = both;];
+            spark_b_closure_view_t -> spark_c_closure_view_t [label = "REC"; color = darkred; dir = both;];
+            spark_1_closure_view_t -> spark_d_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_2_closure_view_t -> spark_d_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_4_closure_view_t -> spark_d_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_8_closure_view_t -> spark_d_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_7_closure_view_t -> spark_d_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_5_closure_view_t -> spark_d_closure_view_t [label = "REC"; color = darkgreen; dir = both;];
+            spark_3_closure_view_t -> spark_e_closure_view_t [label = "REC"; color = darkblue; dir = both;];
+            spark_6_closure_view_t -> spark_e_closure_view_t [label = "REC"; color = darkblue; dir = both;];
+            spark_9_closure_view_t -> spark_e_closure_view_t [label = "REC"; color = darkblue; dir = both;];
+            
+            spark_1_closure_view_t -> spark_2_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_2_closure_view_t -> spark_4_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_4_closure_view_t -> spark_8_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_8_closure_view_t -> spark_7_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_7_closure_view_t -> spark_5_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_5_closure_view_t -> spark_1_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_3_closure_view_t -> spark_6_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_6_closure_view_t -> spark_9_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_9_closure_view_t -> spark_3_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            spark_a_closure_view_t -> spark_b_closure_view_t [label = "REC"; dir = both; style = dashed; constraint = false;];
+            
+            spark_c_closure_view_t -> spark_f_closure_view_t [label = "OUT"; color = darkred; dir = both;];
+            spark_d_closure_view_t -> spark_f_closure_view_t [label = "OUT"; color = darkgreen; dir = both;];
+            spark_e_closure_view_t -> spark_f_closure_view_t [label = "OUT"; color = darkblue; dir = both;];
+        }
     }
 }
