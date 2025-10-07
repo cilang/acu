@@ -1,0 +1,64 @@
+strict digraph {{name}}Factor {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "{{name}}";
+    comment = "{{descriptions}}";
+    
+    spark_0_t [label = "Sparklet.meta({{title}})";comment = "Abstract: {{descriptions}}";shape = doublecircle;color = darkgray;];
+    spark_1_t [label = "Sparklet.r1({{title}})";comment = "Initiation: todo";color = darkgreen;];
+    spark_2_t [label = "Sparklet.r2(todo)";comment = "Response: todo";color = darkgreen;];
+    spark_4_t [label = "Sparklet.r4(todo)";comment = "Integration: todo";color = darkgreen;];
+    spark_8_t [label = "Sparklet.r8(todo)";comment = "Reflection: todo";color = darkgreen;];
+    spark_7_t [label = "Sparklet.r7(todo)";comment = "Consolidation: todo";color = darkgreen;];
+    spark_5_t [label = "Sparklet.r5(todo)";comment = "Propagation: todo";color = darkgreen;];
+    spark_3_t [label = "Sparklet.r3(todo)";comment = "Thesis: todo";color = darkblue;];
+    spark_6_t [label = "Sparklet.r6(todo)";comment = "Antithesis: todo";color = darkblue;];
+    spark_9_t [label = "Sparklet.r9(todo)";comment = "Synthesis: todo";color = darkblue;];
+    spark_a_t [label = "Sparklet.receive(todo)";comment = "Potential: todo";shape = invtriangle;color = darkred;];
+    spark_b_t [label = "Sparklet.send(todo)";comment = "Manifest: todo";shape = triangle;color = darkred;];
+    spark_c_t [label = "Sparklet.dispatch(todo)";comment = "Why-Who: todo";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "Sparklet.commit(todo)";comment = "What-How: todo";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "Sparklet.serve(todo)";comment = "When-Where: todo";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "Sparklet.exec(todo)";comment = "Which-Closure: todo";shape = doublecircle;color = lightgray;];
+    
+    spark_a_t -> spark_0_t [label = "IN"; comment = "todo"; color = darkred; constraint = false;];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "todo"; color = darkred;];
+    spark_0_t -> spark_3_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    
+    spark_a_t -> spark_c_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+    spark_1_t -> spark_d_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_3_t -> spark_e_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    
+    spark_1_t -> spark_2_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "todo"; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_t -> spark_f_t [label = "OUT"; comment = "todo"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "OUT"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "OUT"; comment = "todo"; color = darkblue; dir = both;];
+}
