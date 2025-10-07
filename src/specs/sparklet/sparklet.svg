@@ -1,148 +1,509 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3253pt" height="1146pt"
+    viewBox="0.00 0.00 3253.36 1146.08">
+    <g id="graph0" class="graph" transform="translate(4,1142.0799560546875) scale(1)" data-name="Sparklet">
 
-<!---
+        <polygon fill="white" stroke="none" points="-4,4 -4,-1142.08 3249.36,-1142.08 3249.36,4 -4,4" style="" />
+        <text text-anchor="middle" x="1622.68" y="-8.2" font-family="Times,serif" font-size="14.00"
+            style="">{{Name}}</text>
+        <g id="node1" class="node" pointer-events="visible" data-name="spark_0_t" data-comment="Abstract: {{todo}}">
 
-0x0 = Spark 0 Dumadi
-0x1 = Spark 1
-0x2 = Spark 2
-0x3 = Spark 3
-0x4 = Spark 4
-0x5 = Spark 5
-0x6 = Spark 6
-0x7 = Spark 7
-0x8 = Spark 8
-0x9 = Spark 9
-0xA = Spark A
-0xB = Spark B
-0xC = Spark C Nava manunggal nastiti ning tyas (Interactions between Spark 1-9 (What/How))
-0xD = Spark D Sangkan paraning dumadi (Mediation between Spark 0 + Spark 10 and Spark 11 (Why/Who))
-0xE = Spark E Kasusatyan [ꦏꦱꦸꦱꦸꦠꦾꦤ꧀] (Chart the Boundary’s Pulses (When/Where))
-0xF = Spark F Supreme Boundary
-
-The diagram is 2D slice, to imagine it in 3D then just use Atomic Structure;
-    - Spark 0 as Nucleus
-    - Spark A and Spark B as Magnetic Poles
-    - Spark 1 to Spark 9 as Electron
-    - Spark C, Spark D, Spark E, and Spark F are the whole Electron Cloud
-together they are the whole atom, the Observation Model Diagram.
-
-boundary_sangkan_paran:
-    The Axis formed by Spark A, Spark 0, and Spark B
-
-zone_perception and boundary_zone_perception:
-    The normal perception's capability, Spark 3,6,9
-
-zone_comprehensible_a and zone_comprehensible_a, boundary_comprehensible_b and boundary_comprehensible_a:
-    Hexagram of comprehensible observation result that formed by Spark 1,2,4,8,7,5 that follows order of priority
-    in normal situation.
-
-boundary_perceived_comprehended:
-    The common result of perception that made reality looks like duality.
-
-shattered_glass:
-    The result of observation without awareness of Spark F.
-
- -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4961px" height="3508px" version="1.1"
-    shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
-    fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 4961 3508.14" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="observation_diagram">
-        <g id="sad">
-            <path id="yang" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                d="M2479.81 2410.22c97.86,0 177.18,79.32 177.18,177.17 0,97.86 -79.32,177.18 -177.18,177.18 -97.85,0 -177.17,-79.32 -177.17,-177.18 0,-97.85 79.32,-177.17 177.17,-177.17zm531.54 -889.33c0,293.56 -238.6,530.76 -532.16,530.76 -293.56,0 -541.35,297.86 -531.34,529.34 10,231.48 238.41,528.56 531.96,528.56 583.84,0 1057.13,-473.29 1057.13,-1057.12 0,-583.83 -473.29,-1057.12 -1057.13,-1057.12 293.56,0 531.54,232.02 531.54,525.58z" />
-            <path id="yin" fill="white" stroke="black" stroke-miterlimit="2.61313"
-                d="M1947.85 2580.99c-10.01,-231.48 237.78,-529.34 531.34,-529.34 293.56,0 532.16,-237.2 532.16,-530.76 0,-293.56 -237.98,-525.58 -531.54,-525.58 -583.83,0 -1057.12,473.29 -1057.12,1057.12 0,583.83 473.29,1057.12 1057.12,1057.12 -293.55,0 -521.96,-297.08 -531.96,-528.56zm354.51 -1069.85c0,-97.85 79.33,-177.18 177.18,-177.18 97.85,0 177.18,79.33 177.18,177.18 0,97.85 -79.33,177.18 -177.18,177.18 -97.85,0 -177.18,-79.33 -177.18,-177.18z" />
-            <polygon id="zone_perception" fill="lime" stroke="black" stroke-miterlimit="2.61313"
-                points="3395.31,2580.99 2479.81,995.31 1564.32,2580.99 " />
-            <polygon id="zone_comprehensible_a" fill="red" stroke="black" stroke-miterlimit="2.61313"
-                points="3520.88,1868.86 3159.32,1242.63 2477.11,2414.89 2841.37,3045.8 " />
-            <polygon id="zone_comprehensible_b" fill="blue" stroke="black" stroke-miterlimit="2.61313"
-                points="2477.11,2414.89 1800.31,1242.63 1438.75,1868.86 2111.27,3043.54 " />
+            <ellipse fill="darkgray" stroke="darkgray" cx="1201.23" cy="-1018.12" rx="115.91" ry="115.91" style="" />
+            <ellipse fill="none" stroke="darkgray" cx="1201.23" cy="-1018.12" rx="119.91" ry="119.91" style="" />
+            <text text-anchor="middle" x="1201.23" y="-1013.92" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.meta({{todo}})</text>
         </g>
-        <g id="shattered_glass">
-            <path fill="blue" stroke="black" stroke-miterlimit="2.61313"
-                d="M2380.45 2580.99l-533.99 0 264.81 462.55 269.18 -462.55zm-674.47 -245.36l362.69 -628.2 -268.36 -464.8 -361.56 626.23 267.23 466.77z" />
-            <path fill="red" stroke="black" stroke-miterlimit="2.61313"
-                d="M3109.73 2580.99l-536.72 0 268.36 464.81 268.36 -464.81zm-219.83 -875.4l362.62 628.08 268.36 -464.81 -361.56 -626.23 -269.42 462.96z" />
-            <path fill="green" stroke="black" stroke-miterlimit="2.61313"
-                d="M2573.02 2580.99l-95.91 -166.1 -96.66 166.1 192.57 0zm679.5 -247.32l-142.79 247.32 285.58 0 -142.79 -247.32zm-1406.06 247.32l-140.48 -245.36 -141.66 245.36 282.14 0zm630.65 -166.1l412.79 -709.3 -410.09 -710.28 -411.14 712.13 408.44 707.45z" />
-            <path fill="yellow" stroke="black" stroke-miterlimit="2.61313"
-                d="M2477.11 2414.89l95.91 166.1 536.71 0 142.79 -247.32 -362.62 -628.08 -412.79 709.3zm-96.66 166.1l96.66 -166.1 -408.44 -707.46 -362.69 628.2 140.48 245.36 533.99 0z" />
+        <g id="node2" class="node" pointer-events="visible" data-name="spark_1_t" data-comment="Initiation: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="105.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="105.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r1({{todo}})</text>
         </g>
-        <g id="spark">
-            <circle id="spark_0xf" fill="none" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
-                r="1057.12" />
-            <circle id="spark_0xe" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="466.74"
-                r="177.18" />
-            <circle id="spark_0xd" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1106.57" cy="2845.27"
-                r="177.18" />
-            <circle id="spark_0xc" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3853.06" cy="2845.27"
-                r="177.18" />
-            <circle id="spark_0xb" fill="white" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2587.39"
-                r="177.18" />
-            <circle id="spark_0xa" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="2479.54" cy="1511.14"
-                r="177.18" />
-            <circle id="spark_0x9" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="989.36"
-                r="177.18" />
-            <circle id="spark_0x8" fill="aqua" stroke="aqua" stroke-miterlimit="2.61313" cx="1800.31" cy="1238.34"
-                r="177.18" />
-            <circle id="spark_0x7" fill="fuchsia" stroke="fuchsia" stroke-miterlimit="2.61313" cx="1438.75" cy="1864.58"
-                r="177.18" />
-            <circle id="spark_0x6" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1564.32" cy="2576.71"
-                r="177.18" />
-            <circle id="spark_0x5" fill="yellow" stroke="yellow" stroke-miterlimit="2.61313" cx="2118.26" cy="3041.52"
-                r="177.18" />
-            <circle id="spark_0x4" fill="blue" stroke="blue" stroke-miterlimit="2.61313" cx="2841.37" cy="3041.52"
-                r="177.18" />
-            <circle id="spark_0x3" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3395.31" cy="2576.71"
-                r="177.18" />
-            <circle id="spark_0x2" fill="lime" stroke="lime" stroke-miterlimit="2.61313" cx="3520.88" cy="1864.58"
-                r="177.18" />
-            <circle id="spark_0x1" fill="red" stroke="red" stroke-miterlimit="2.61313" cx="3159.32" cy="1238.34"
-                r="177.18" />
-            <circle id="spark_0x0" fill="gold" stroke="#E6E6E6" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
-                r="177.18" />
+        <g id="edge6" class="edge" data-name="spark_0_t-&gt;spark_1_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen"
+                d="M1069.84,-1012.31C880.55,-1001.28 523.44,-964.95 246.23,-845.37 228.31,-837.63 210.52,-827.23 193.92,-815.99"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1069.53,-1015.8 1079.72,-1012.87 1069.93,-1008.81 1069.53,-1015.8" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="196.28,-813.37 186.07,-810.53 192.28,-819.11 196.28,-813.37" style="" />
+            <text text-anchor="middle" x="332.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
         </g>
-        <g id="boudary">
-            <path id="boundary_sangkan_paran" fill="none" stroke="indigo" stroke-miterlimit="2.61313"
-                d="M2479.81 995.31c293.56,0 531.54,232.02 531.54,525.58 0,293.56 -238.6,530.76 -532.16,530.76 -293.56,0 -541.35,297.86 -531.34,529.34 10,231.48 238.41,528.56 531.96,528.56" />
-            <polygon id="boundary_perception" fill="none" stroke="gold" stroke-miterlimit="2.61313"
-                points="2479.81,995.31 3395.31,2580.99 1564.32,2580.99 " />
-            <polygon id="boundary_comprehensible" fill="none" stroke="silver" stroke-miterlimit="2.61313"
-                points="3159.32,1242.63 3520.88,1868.86 2841.37,3045.8 1800.31,1242.63 1438.75,1868.86 2111.27,3043.54 " />
+        <g id="node3" class="node" pointer-events="visible" data-name="spark_2_t" data-comment="Response: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="360.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="360.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r2({{todo}})</text>
         </g>
-        <g id="text_label">
-            <text x="2451.69" y="2087" id="text_0x0" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">0</text>
-            <text x="3131.51" y="1272.59" id="text_0x1" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">1</text>
-            <text x="3493.07" y="1906.66" id="text_0x2" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">2</text>
-            <text x="3367.5" y="2616.35" id="text_0x3" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">3</text>
-            <text x="2813.56" y="3083.6" id="text_0x4" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">4</text>
-            <text x="2090.45" y="3091.87" id="text_0x5" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">5</text>
-            <text x="1536.51" y="2616.43" id="text_0x6" fill="white" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">6</text>
-            <text x="1410.94" y="1909.02" id="text_0x7" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">7</text>
-            <text x="1772.5" y="1275.7" id="text_0x8" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">8</text>
-            <text x="2452" y="1031.92" id="text_0x9" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">9</text>
-            <text x="2451.64" y="1536.99" id="text_0xa" fill="white" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">a</text>
-            <text x="2447.91" y="2622.55" id="text_0xb" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">b</text>
-            <text x="3824.41" y="2871.13" id="text_0xc" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">c</text>
-            <text x="1077.12" y="2880.43" id="text_0xd" fill="white" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">d</text>
-            <text x="2452.31" y="492.6" id="text_0xe" fill="black" stroke="black" stroke-miterlimit="2.61313"
-                font-weight="bold" font-size="100.01px" font-family="Arial">e</text>
+        <g id="edge7" class="edge" data-name="spark_0_t-&gt;spark_2_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen"
+                d="M1070.78,-1000.85C926.18,-979.3 688.66,-933.28 501.23,-845.37 483.68,-837.13 466.13,-826.54 449.67,-815.27"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1069.99,-1004.27 1080.39,-1002.27 1071.01,-997.35 1069.99,-1004.27" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="452.08,-812.69 441.88,-809.83 448.07,-818.43 452.08,-812.69" style="" />
+            <text text-anchor="middle" x="586.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node4" class="node" pointer-events="visible" data-name="spark_4_t" data-comment="Integration: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="615.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="615.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r4({{todo}})</text>
+        </g>
+        <g id="edge8" class="edge" data-name="spark_0_t-&gt;spark_4_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen"
+                d="M1074.31,-983.87C994.3,-960.39 890.2,-925.13 804.01,-880.17 780.72,-868.02 777.41,-860.91 756.23,-845.37 740.95,-834.15 724.76,-822.22 709,-810.59"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1072.9,-987.11 1083.48,-986.54 1074.85,-980.38 1072.9,-987.11" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="711.13,-807.81 701.01,-804.69 706.97,-813.44 711.13,-807.81" style="" />
+            <text text-anchor="middle" x="817.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node5" class="node" pointer-events="visible" data-name="spark_8_t" data-comment="Reflection: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="870.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="870.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r8({{todo}})</text>
+        </g>
+        <g id="edge9" class="edge" data-name="spark_0_t-&gt;spark_8_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M1100.92,-933.48C1055.87,-895.92 1003.16,-851.97 959.5,-815.57"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1098.39,-935.93 1108.31,-939.64 1102.87,-930.55 1098.39,-935.93" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="961.98,-813.08 952.06,-809.36 957.5,-818.45 961.98,-813.08" style="" />
+            <text text-anchor="middle" x="1049.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node6" class="node" pointer-events="visible" data-name="spark_7_t"
+            data-comment="Consolidation: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="1125.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="1125.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r7({{todo}})</text>
+        </g>
+        <g id="edge10" class="edge" data-name="spark_0_t-&gt;spark_7_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M1166.6,-891.34C1163.1,-878.65 1159.57,-865.82 1156.12,-853.29"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1163.12,-891.9 1169.15,-900.62 1169.87,-890.05 1163.12,-891.9" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1159.54,-852.54 1153.51,-843.82 1152.79,-854.4 1159.54,-852.54" style="" />
+            <text text-anchor="middle" x="1176.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node7" class="node" pointer-events="visible" data-name="spark_5_t" data-comment="Propagation: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="1380.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="1380.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r5({{todo}})</text>
+        </g>
+        <g id="edge11" class="edge" data-name="spark_0_t-&gt;spark_5_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M1272.3,-907.55C1287.11,-884.71 1302.63,-860.79 1317.13,-838.43"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1269.44,-905.53 1266.93,-915.82 1275.31,-909.34 1269.44,-905.53" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1319.95,-840.52 1322.45,-830.22 1314.08,-836.71 1319.95,-840.52" style="" />
+            <text text-anchor="middle" x="1308.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node8" class="node" pointer-events="visible" data-name="spark_3_t" data-comment="Thesis: {{todo}}">
+
+            <ellipse fill="darkblue" stroke="darkblue" cx="1608.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="1608.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r3({{todo}})</text>
+        </g>
+        <g id="edge3" class="edge" data-name="spark_0_t-&gt;spark_3_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue"
+                d="M1317.5,-956.4C1372.77,-925.69 1438.72,-886.3 1494.23,-845.37 1504.25,-837.98 1514.38,-829.85 1524.26,-821.48"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1316.05,-953.2 1308.99,-961.1 1319.43,-959.33 1316.05,-953.2" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1526.41,-824.24 1531.71,-815.06 1521.85,-818.93 1526.41,-824.24" style="" />
+            <text text-anchor="middle" x="1476.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node9" class="node" pointer-events="visible" data-name="spark_6_t" data-comment="Antithesis: {{todo}}">
+
+            <ellipse fill="darkblue" stroke="darkblue" cx="1863.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="1863.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r6({{todo}})</text>
+        </g>
+        <g id="edge4" class="edge" data-name="spark_0_t-&gt;spark_6_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue"
+                d="M1331.58,-1001.42C1486.38,-980.42 1732.55,-938.92 1803.23,-880.17 1812.93,-872.11 1821.1,-862.19 1827.97,-851.39"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1331.54,-997.89 1322.09,-1002.69 1332.47,-1004.83 1331.54,-997.89" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1830.85,-853.4 1832.91,-843 1824.82,-849.84 1830.85,-853.4" style="" />
+            <text text-anchor="middle" x="1830.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node10" class="node" pointer-events="visible" data-name="spark_9_t" data-comment="Synthesis: {{todo}}">
+
+            <ellipse fill="darkblue" stroke="darkblue" cx="2118.23" cy="-740.13" rx="105.47" ry="105.47" style="" />
+            <text text-anchor="middle" x="2118.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.r9({{todo}})</text>
+        </g>
+        <g id="edge5" class="edge" data-name="spark_0_t-&gt;spark_9_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue"
+                d="M1332.46,-1006.66C1491.81,-989.87 1765.51,-947.65 1977.23,-845.37 1994.7,-836.93 2012.2,-826.24 2028.64,-814.94"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1332.28,-1003.16 1322.69,-1007.67 1333,-1010.13 1332.28,-1003.16" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="2030.25,-818.08 2036.42,-809.47 2026.22,-812.36 2030.25,-818.08" style="" />
+            <text text-anchor="middle" x="1931.85" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node12" class="node" pointer-events="visible" data-name="spark_b_t" data-comment="Manifest: {{todo}}">
+
+            <polygon fill="darkred" stroke="darkred"
+                points="2471.23,-764.73 2241.67,-727.83 2700.8,-727.83 2471.23,-764.73" style="" />
+            <text text-anchor="middle" x="2471.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.send({{todo}})</text>
+        </g>
+        <g id="edge2" class="edge" data-name="spark_0_t-&gt;spark_b_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkred"
+                d="M1320.89,-1006.83C1515.28,-987.98 1910.38,-940.77 2232.23,-845.37 2302.44,-824.56 2379.35,-788.42 2426.46,-764.65"
+                style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2427.95,-767.82 2435.27,-760.16 2424.77,-761.58 2427.95,-767.82" style="" />
+            <text text-anchor="middle" x="2164.62" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">OUT</text>
+        </g>
+        <g id="edge23" class="edge" data-name="spark_1_t-&gt;spark_2_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" stroke-dasharray="5,2"
+                d="M222.34,-740.13C229.32,-740.13 236.35,-740.13 243.33,-740.13" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="222.68,-736.63 212.68,-740.13 222.68,-743.63 222.68,-736.63" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="243.12,-743.63 253.12,-740.13 243.12,-736.63 243.12,-743.63" style="" />
+            <text text-anchor="middle" x="232.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node14" class="node" pointer-events="visible" data-name="spark_d_t" data-comment="What-How: {{todo}}">
+
+            <ellipse fill="darkgreen" stroke="darkgreen" cx="870.23" cy="-448.73" rx="126.88" ry="126.88" style="" />
+            <ellipse fill="none" stroke="darkgreen" cx="870.23" cy="-448.73" rx="130.89" ry="130.89" style="" />
+            <text text-anchor="middle" x="870.23" y="-444.53" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.commit({{todo}})</text>
+        </g>
+        <g id="edge14" class="edge" data-name="spark_1_t-&gt;spark_d_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen"
+                d="M195.01,-665.7C211.43,-654.35 228.88,-643.55 246.23,-634.9 403.58,-556.44 600.16,-504.95 730.17,-476.63"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="193.4,-662.55 187.24,-671.17 197.43,-668.27 193.4,-662.55" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="730.85,-480.07 739.88,-474.53 729.37,-473.22 730.85,-480.07" style="" />
+            <text text-anchor="middle" x="323.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge24" class="edge" data-name="spark_2_t-&gt;spark_4_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" stroke-dasharray="5,2"
+                d="M477.34,-740.13C484.32,-740.13 491.35,-740.13 498.33,-740.13" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="477.68,-736.63 467.68,-740.13 477.68,-743.63 477.68,-736.63" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="498.12,-743.63 508.12,-740.13 498.12,-736.63 498.12,-743.63" style="" />
+            <text text-anchor="middle" x="487.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge15" class="edge" data-name="spark_2_t-&gt;spark_d_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen"
+                d="M451.74,-668C467.9,-656.45 484.82,-644.98 501.23,-634.9 578.23,-587.6 668.88,-541.98 741.06,-507.86"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="450.13,-664.84 444.07,-673.53 454.23,-670.52 450.13,-664.84" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="742.2,-511.19 749.75,-503.76 739.22,-504.86 742.2,-511.19" style="" />
+            <text text-anchor="middle" x="573.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge25" class="edge" data-name="spark_4_t-&gt;spark_8_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" stroke-dasharray="5,2"
+                d="M732.34,-740.13C739.32,-740.13 746.35,-740.13 753.33,-740.13" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="732.68,-736.63 722.68,-740.13 732.68,-743.63 732.68,-736.63" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="753.12,-743.63 763.12,-740.13 753.12,-736.63 753.12,-743.63" style="" />
+            <text text-anchor="middle" x="742.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge16" class="edge" data-name="spark_4_t-&gt;spark_d_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M691.87,-652.16C718.53,-621.9 748.75,-587.6 776.63,-555.96"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="689.56,-649.48 685.58,-659.3 694.81,-654.11 689.56,-649.48" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="779.06,-558.49 783.05,-548.68 773.81,-553.87 779.06,-558.49" style="" />
+            <text text-anchor="middle" x="748.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge26" class="edge" data-name="spark_8_t-&gt;spark_7_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" stroke-dasharray="5,2"
+                d="M987.34,-740.13C994.32,-740.13 1001.35,-740.13 1008.33,-740.13" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="987.68,-736.63 977.68,-740.13 987.68,-743.63 987.68,-736.63" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1008.12,-743.63 1018.12,-740.13 1008.12,-736.63 1008.12,-743.63" style="" />
+            <text text-anchor="middle" x="997.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge17" class="edge" data-name="spark_8_t-&gt;spark_d_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M870.23,-622.98C870.23,-612.58 870.23,-601.98 870.23,-591.4"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="866.73,-622.73 870.23,-632.73 873.73,-622.73 866.73,-622.73" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="873.73,-591.45 870.23,-581.45 866.73,-591.45 873.73,-591.45" style="" />
+            <text text-anchor="middle" x="883.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge27" class="edge" data-name="spark_7_t-&gt;spark_5_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" stroke-dasharray="5,2"
+                d="M1242.34,-740.13C1249.32,-740.13 1256.35,-740.13 1263.33,-740.13" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1242.68,-736.63 1232.68,-740.13 1242.68,-743.63 1242.68,-736.63" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1263.12,-743.63 1273.12,-740.13 1263.12,-736.63 1263.12,-743.63" style="" />
+            <text text-anchor="middle" x="1252.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge18" class="edge" data-name="spark_7_t-&gt;spark_d_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M1048.6,-652.16C1021.94,-621.9 991.72,-587.6 963.84,-555.96"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1045.65,-654.11 1054.89,-659.3 1050.91,-649.48 1045.65,-654.11" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="966.66,-553.87 957.42,-548.68 961.41,-558.49 966.66,-553.87" style="" />
+            <text text-anchor="middle" x="1026.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge28" class="edge" data-name="spark_5_t-&gt;spark_1_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" stroke-dasharray="5,2"
+                d="M1292.82,-817.71C1276.02,-828.91 1257.84,-838.83 1239.23,-845.37 1135.13,-881.92 350.56,-881.27 246.23,-845.37 227.59,-838.95 209.39,-829.08 192.58,-817.9"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1294.51,-820.79 1300.76,-812.23 1290.54,-815.03 1294.51,-820.79" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="194.86,-815.22 184.64,-812.43 190.89,-820.99 194.86,-815.22" style="" />
+            <text text-anchor="middle" x="849.23" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge19" class="edge" data-name="spark_5_t-&gt;spark_d_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen"
+                d="M1288.73,-668C1272.56,-656.45 1255.65,-644.98 1239.23,-634.9 1162.24,-587.6 1071.59,-541.98 999.4,-507.86"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1286.24,-670.52 1296.4,-673.53 1290.33,-664.84 1286.24,-670.52" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1001.25,-504.86 990.71,-503.76 998.27,-511.19 1001.25,-504.86" style="" />
+            <text text-anchor="middle" x="1213.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge29" class="edge" data-name="spark_3_t-&gt;spark_6_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" stroke-dasharray="5,2"
+                d="M1725.34,-740.13C1732.32,-740.13 1739.35,-740.13 1746.33,-740.13" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1725.68,-736.63 1715.68,-740.13 1725.68,-743.63 1725.68,-736.63" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1746.12,-743.63 1756.12,-740.13 1746.12,-736.63 1746.12,-743.63" style="" />
+            <text text-anchor="middle" x="1735.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node15" class="node" pointer-events="visible" data-name="spark_e_t" data-comment="When-Where: {{todo}}">
+
+            <ellipse fill="darkblue" stroke="darkblue" cx="1863.23" cy="-448.73" rx="117.63" ry="117.63" style="" />
+            <ellipse fill="none" stroke="darkblue" cx="1863.23" cy="-448.73" rx="121.63" ry="121.63" style="" />
+            <text text-anchor="middle" x="1863.23" y="-444.53" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.serve({{todo}})</text>
+        </g>
+        <g id="edge20" class="edge" data-name="spark_3_t-&gt;spark_e_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" d="M1684.94,-652.08C1713.52,-619.64 1746.17,-582.59 1775.65,-549.13"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1682.56,-649.48 1678.58,-659.3 1687.81,-654.11 1682.56,-649.48" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1778.09,-551.65 1782.07,-541.84 1772.84,-547.03 1778.09,-551.65" style="" />
+            <text text-anchor="middle" x="1740.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge30" class="edge" data-name="spark_6_t-&gt;spark_9_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" stroke-dasharray="5,2"
+                d="M1980.34,-740.13C1987.32,-740.13 1994.35,-740.13 2001.33,-740.13" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1980.68,-736.63 1970.68,-740.13 1980.68,-743.63 1980.68,-736.63" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="2001.12,-743.63 2011.12,-740.13 2001.12,-736.63 2001.12,-743.63" style="" />
+            <text text-anchor="middle" x="1990.73" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge21" class="edge" data-name="spark_6_t-&gt;spark_e_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" d="M1863.23,-622.98C1863.23,-609.47 1863.23,-595.63 1863.23,-581.93"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1859.73,-622.73 1863.23,-632.73 1866.73,-622.73 1859.73,-622.73" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1866.73,-581.98 1863.23,-571.98 1859.73,-581.98 1866.73,-581.98" style="" />
+            <text text-anchor="middle" x="1876.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge31" class="edge" data-name="spark_9_t-&gt;spark_3_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" stroke-dasharray="5,2"
+                d="M2030.61,-817.12C2013.83,-828.38 1995.71,-838.48 1977.23,-845.37 1884.76,-879.81 1796.42,-864.84 1771.62,-858.23 1744.01,-850.86 1717.38,-836.18 1693.93,-819.59"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="2032.31,-820.2 2038.54,-811.62 2028.32,-814.45 2032.31,-820.2" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1696.13,-816.86 1685.99,-813.79 1692,-822.52 1696.13,-816.86" style="" />
+            <text text-anchor="middle" x="1785.23" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge22" class="edge" data-name="spark_9_t-&gt;spark_e_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" d="M2041.53,-652.08C2012.95,-619.64 1980.3,-582.59 1950.82,-549.13"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="2038.65,-654.11 2047.89,-659.3 2043.91,-649.48 2038.65,-654.11" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1953.63,-547.03 1944.4,-541.84 1948.38,-551.65 1953.63,-547.03" style="" />
+            <text text-anchor="middle" x="2018.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node11" class="node" pointer-events="visible" data-name="spark_a_t" data-comment="Potential: {{todo}}">
+
+            <polygon fill="darkred" stroke="darkred"
+                points="2995.23,-715.53 3245.48,-752.43 2744.99,-752.43 2995.23,-715.53" style="" />
+            <text text-anchor="middle" x="2995.23" y="-735.93" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.receive({{todo}})</text>
+        </g>
+        <g id="edge1" class="edge" data-name="spark_a_t-&gt;spark_0_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkred"
+                d="M2969.55,-752.89C2920.35,-774.86 2808.94,-822.05 2710.23,-845.37 2209.98,-963.54 1596.54,-1001.34 1332.41,-1012.64"
+                style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="1332.6,-1009.13 1322.76,-1013.05 1332.9,-1016.12 1332.6,-1009.13" style="" />
+            <text text-anchor="middle" x="2596.62" y="-867.57" font-family="Times,serif" font-size="14.00"
+                style="">IN</text>
+        </g>
+        <g id="edge32" class="edge" data-name="spark_a_t-&gt;spark_b_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkred" stroke-dasharray="5,2"
+                d="M2813.87,-740.13C2757.05,-740.13 2694.63,-740.13 2638.8,-740.13" style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2813.64,-743.63 2823.64,-740.13 2813.64,-736.63 2813.64,-743.63" style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2638.9,-736.63 2628.9,-740.13 2638.9,-743.63 2638.9,-736.63" style="" />
+            <text text-anchor="middle" x="2723.06" y="-747.33" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node13" class="node" pointer-events="visible" data-name="spark_c_t" data-comment="Why-Who: {{todo}}">
+
+            <ellipse fill="darkred" stroke="darkred" cx="2471.23" cy="-448.73" rx="129.25" ry="129.25" style="" />
+            <ellipse fill="none" stroke="darkred" cx="2471.23" cy="-448.73" rx="133.24" ry="133.24" style="" />
+            <text text-anchor="middle" x="2471.23" y="-444.53" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.dispatch({{todo}})</text>
+        </g>
+        <g id="edge12" class="edge" data-name="spark_a_t-&gt;spark_c_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkred" d="M2951.18,-714.8C2874.06,-672.21 2711.95,-582.67 2597.53,-519.48"
+                style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2949.08,-717.64 2959.53,-719.41 2952.47,-711.51 2949.08,-717.64" style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2599.42,-516.52 2588.97,-514.75 2596.04,-522.65 2599.42,-516.52" style="" />
+            <text text-anchor="middle" x="2777.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="edge13" class="edge" data-name="spark_b_t-&gt;spark_c_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkred" d="M2471.23,-716.01C2471.23,-688.77 2471.23,-641.2 2471.23,-593.72"
+                style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2467.73,-715.91 2471.23,-725.91 2474.73,-715.91 2467.73,-715.91" style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2474.73,-593.83 2471.23,-583.83 2467.73,-593.83 2474.73,-593.83" style="" />
+            <text text-anchor="middle" x="2484.85" y="-604.3" font-family="Times,serif" font-size="14.00"
+                style="">REC</text>
+        </g>
+        <g id="node16" class="node" pointer-events="visible" data-name="spark_f_t"
+            data-comment="Which-Closure: {{todo}}">
+
+            <ellipse fill="lightgray" stroke="lightgray" cx="1863.23" cy="-143.68" rx="114.76" ry="114.76" style="" />
+            <ellipse fill="none" stroke="lightgray" cx="1863.23" cy="-143.68" rx="118.75" ry="118.75" style="" />
+            <text text-anchor="middle" x="1863.23" y="-139.48" font-family="Times,serif" font-size="14.00"
+                style="">{{Name}}.exec({{todo}})</text>
+        </g>
+        <g id="edge33" class="edge" data-name="spark_c_t-&gt;spark_f_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkred" d="M2341.95,-383.28C2234.54,-329.75 2083.08,-254.26 1979.47,-202.61"
+                style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="2340.33,-386.39 2350.85,-387.72 2343.46,-380.13 2340.33,-386.39" style="" />
+            <polygon fill="darkred" stroke="darkred"
+                points="1981.14,-199.54 1970.63,-198.21 1978.02,-205.8 1981.14,-199.54" style="" />
+            <text text-anchor="middle" x="2181.62" y="-284.75" font-family="Times,serif" font-size="14.00"
+                style="">OUT</text>
+        </g>
+        <g id="edge34" class="edge" data-name="spark_d_t-&gt;spark_f_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkgreen" d="M1006.21,-406.23C1199.63,-347.2 1551.43,-239.83 1738.49,-182.75"
+                style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1005.49,-402.79 996.94,-409.06 1007.53,-409.48 1005.49,-402.79" style="" />
+            <polygon fill="darkgreen" stroke="darkgreen"
+                points="1739.48,-186.1 1748.02,-179.84 1737.44,-179.41 1739.48,-186.1" style="" />
+            <text text-anchor="middle" x="1410.62" y="-284.75" font-family="Times,serif" font-size="14.00"
+                style="">OUT</text>
+        </g>
+        <g id="edge35" class="edge" data-name="spark_e_t-&gt;spark_f_t" data-comment="{{todo}}">
+
+            <path fill="none" stroke="darkblue" d="M1863.23,-315.2C1863.23,-301.52 1863.23,-287.64 1863.23,-273.99"
+                style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1859.73,-315.13 1863.23,-325.13 1866.73,-315.13 1859.73,-315.13" style="" />
+            <polygon fill="darkblue" stroke="darkblue"
+                points="1866.73,-274.12 1863.23,-264.12 1859.73,-274.12 1866.73,-274.12" style="" />
+            <text text-anchor="middle" x="1877.62" y="-284.75" font-family="Times,serif" font-size="14.00"
+                style="">OUT</text>
         </g>
     </g>
 </svg>
