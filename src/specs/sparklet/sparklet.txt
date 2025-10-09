@@ -6,7 +6,7 @@ strict digraph {{Name}}Factor {
     label = "{{Name}}";
     comment = "{{descriptions}}";
     
-    spark_0_t [label = "{{Name}}.meta({{title}})";comment = "Abstract: {{descriptions}}";shape = doublecircle;color = darkgray;];
+    spark_0_t [label = "{{Name}}.meta({{meta}})";comment = "Abstract: {{descriptions}}";shape = doublecircle;color = darkgray;];
     spark_1_t [label = "{{Name}}.r1({{title}})";comment = "Initiation: {{descriptions}}";color = darkgreen;];
     spark_2_t [label = "{{Name}}.r2({{title}})";comment = "Response: {{descriptions}}";color = darkgreen;];
     spark_4_t [label = "{{Name}}.r4({{title}})";comment = "Integration: {{descriptions}}";color = darkgreen;];
