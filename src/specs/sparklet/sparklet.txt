@@ -1,3 +1,91 @@
+# Sparklet Framework
+
+A Sparklet is a formal topological framework with invariant 16 vertices and 35 edges that serves as a universal pattern for modeling systems.
+
+## Terminology
+
+- Sparklet: The Name of the Framework
+- Factor: A Factor is a concrete instance populated with actual data.
+- Spark: Node or Vertices
+- Arc: Edge
+
+## Sparklet Space
+
+### Balanced Ternary Projective System
+
+Each concept occupies a specific position in projective semantic space with coordinates (x, y, z, w) where:
+
+x,y,z ∈ {-1, 0, +1} with 137-step balanced ternary resolution
+w ∈ [0, 1] (continuous probability intensity)
+
+137-Step Balanced Ternary Distribution:
+
+Negative (-1 to 0): 68 steps  [-1.000, -0.985, ..., -0.015]
+Neutral  (0):       1 step    [0.000]
+Positive (0 to +1): 68 steps  [+0.015, ..., +0.985, +1.000]
+Total:              137 steps
+
+Constrained by the 3-sphere condition:
+
+x² + y² + z² + w² = 1
+
+### Semantic Dimensions & Balanced Ternary
+
+X-Axis: Polarity (137 steps between -1,0,+1)
+
+* -1 = Potential/Input/Receptive
+* 0 = Essence/Operator/Process
+* +1 = Manifest/Output/Expressive
+
+Y-Axis: Engagement (137 steps between -1,0,+1)
+
+* -1 = Initiation/Active
+* 0 = Neutral/Balanced
+* +1 = Response/Reactive
+
+Z-Axis: Logic (137 steps between -1,0,+1)
+
+* -1 = Thesis/Unity
+* 0 = Synthesis/Integration
+* +1 = Antithesis/Distinction
+
+W-Axis: Probability Intensity (continuous [0,1])
+
+* 0 = Pure potentiality (unmanifest)
+* 1 = Full actualization (manifest)
+
+### Spark Positions on the 3-Sphere
+
+Control Layer (Red) - Polarity Dominant
+
+spark_a_t = (-1, 0, 0, 0)     # receive  - Pure Potential
+spark_b_t = (+1, 0, 0, 0)     # send     - Pure Manifestation
+spark_c_t = (-1/√2, +1/√2, 0, 0)  # dispatch - Why-Who
+spark_d_t = (+1/√2, -1/√2, 0, 0)  # commit   - What-How
+spark_e_t = (-1/√3, -1/√3, +1/√3, 0)  # serve    - When-Where
+spark_f_t = (+1/√3, +1/√3, -1/√3, 0)  # exec     - Which-Closure
+
+Operational Layer (Green) - Engagement Dominant
+
+spark_1_t = (0, -1, 0, 0)          # r1 - Initiation
+spark_2_t = (0, +1, 0, 0)          # r2 - Response
+spark_4_t = (0, 0, -1, 0)          # r4 - Integration
+spark_8_t = (0, 0, +1, 0)          # r8 - Reflection
+spark_7_t = (0, +1/√2, -1/√2, 0)   # r7 - Consolidation
+spark_5_t = (0, -1/√2, +1/√2, 0)   # r5 - Propagation
+
+Logical Layer (Blue) - Logic Dominant
+
+spark_3_t = (-1/√2, 0, -1/√2, 0)   # r3 - Thesis
+spark_6_t = (+1/√2, 0, -1/√2, 0)   # r6 - Antithesis
+spark_9_t = (0, 0, 0, 1)            # r9 - Synthesis (pure actualization!)
+
+Meta Center (Gray)
+
+spark_0_t = (0, 0, 0, 1)            # meta - Essence Center (actualized)
+
+## Sparklet Topology
+
 strict digraph {{Name}}Factor {
     style = filled;
     color = lightgray;
@@ -5,7 +93,7 @@ strict digraph {{Name}}Factor {
     edge [color = darkgray;];
     label = "{{Name}}";
     comment = "{{descriptions}}";
-    
+
     spark_0_t [label = "{{Name}}.meta({{title}})";comment = "Abstract: {{descriptions}}";shape = doublecircle;color = darkgray;];
     spark_1_t [label = "{{Name}}.r1({{title}})";comment = "Initiation: {{descriptions}}";color = darkgreen;];
     spark_2_t [label = "{{Name}}.r2({{title}})";comment = "Response: {{descriptions}}";color = darkgreen;];
@@ -22,43 +110,56 @@ strict digraph {{Name}}Factor {
     spark_d_t [label = "{{Name}}.commit({{title}})";comment = "What-How: {{descriptions}}";shape = doublecircle;color = darkgreen;];
     spark_e_t [label = "{{Name}}.serve({{title}})";comment = "When-Where: {{descriptions}}";shape = doublecircle;color = darkblue;];
     spark_f_t [label = "{{Name}}.exec({{title}})";comment = "Which-Closure: {{descriptions}}";shape = doublecircle;color = lightgray;];
-    
+
     spark_a_t -> spark_0_t [label = "IN"; comment = "{{descriptions}}"; color = darkred; constraint = false;];
     spark_0_t -> spark_b_t [label = "OUT"; comment = "{{descriptions}}"; color = darkred;];
-    spark_0_t -> spark_3_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_6_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_9_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_1_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_2_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_4_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_8_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_7_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_5_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    
-    spark_a_t -> spark_c_t [label = "REC"; comment = "{{descriptions}}"; color = darkred; dir = both;];
-    spark_b_t -> spark_c_t [label = "REC"; comment = "{{descriptions}}"; color = darkred; dir = both;];
-    spark_1_t -> spark_d_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_2_t -> spark_d_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_4_t -> spark_d_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_8_t -> spark_d_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_7_t -> spark_d_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_5_t -> spark_d_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_3_t -> spark_e_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_6_t -> spark_e_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_9_t -> spark_e_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    
-    spark_1_t -> spark_2_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_2_t -> spark_4_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_4_t -> spark_8_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_8_t -> spark_7_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_7_t -> spark_5_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_5_t -> spark_1_t [label = "REC"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_3_t -> spark_6_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_6_t -> spark_9_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_9_t -> spark_3_t [label = "REC"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_a_t -> spark_b_t [label = "REC"; comment = "{{descriptions}}"; color = darkred; dir = both; style = dashed; constraint = false;];
-    
-    spark_c_t -> spark_f_t [label = "OUT"; comment = "{{descriptions}}"; color = darkred; dir = both;];
-    spark_d_t -> spark_f_t [label = "OUT"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_e_t -> spark_f_t [label = "OUT"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_3_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+
+    spark_a_t -> spark_c_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both;];
+    spark_1_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_3_t -> spark_e_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+
+    spark_1_t -> spark_2_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both; style = dashed; constraint = false;];
+
+    spark_c_t -> spark_f_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
 }
+
+The {{REL_TYPE}} are either:
+
+- IN for Input
+- OUT for Output
+- REC for bidirectional or recursive or feedback loop
+
+## Usage Protocol
+
+1. Positioning: Map concepts to 3-sphere coordinates using 137-step resolution
+2. Actualization: Track w-value evolution toward manifestation
+3. Navigation: Follow geodesic paths respecting sphere constraint
+4. Expansion: Instantiate new Factors with inherited coordinates and intensity for any Spark using its {{title}} as the new {{name}}
