@@ -62,10 +62,10 @@ With N Factors, we get N × 16v_35e computational nodes, enabling:
 
 The same topology models:
 
-- Quantum processes (LURD-4)
-- Galactic evolution (LURD-3)
-- Social dynamics (LURD-6)
-- Mathematical abstractions (LURD-1)
+- Quantum processes
+- Galactic evolution
+- Social dynamics
+- Mathematical abstractions
 
 ## 4. Implementation Evidence
 

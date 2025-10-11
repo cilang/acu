@@ -18,8 +18,8 @@ strict digraph TheoreticalLimit {
     spark_9_theoretical_limit_t [label = "Theoretical.r9(InformationTheory)";comment = "Synthesis: The Quantitative Study of Information. The mathematical framework for communication, entropy, and data compression—the bridge between abstract mathematics and physical reality through the lens of information as fundamental substance.";color = darkblue;];
     spark_a_theoretical_limit_t [label = "Theoretical.receive(SparkOfIdea)";comment = "Potential: The Initial Conceptual Insight. The moment of intuitive understanding before formalization—the raw cognitive pattern that contains within it the seed of a complete theoretical framework waiting to be developed.";shape = invtriangle;color = darkred;];
     spark_b_theoretical_limit_t [label = "Theoretical.send(EntanglementOfIdea)";comment = "Manifest: The Interconnected Theoretical Network. The mature conceptual ecosystem where ideas cross-pollinate and reinforce each other—the state where individual insights have woven themselves into a coherent explanatory tapestry.";shape = triangle;color = darkred;];
-    spark_c_theoretical_limit_t [label = "Theoretical.dispatch(GraphTheory)";comment = "Why-Who: The Architecture of Conceptual Relationships. The mathematical study of networks and connections—the framework that determines how ideas relate, which concepts can communicate, and the pathways through which theoretical insights flow.";shape = doublecircle;color = darkred;];
-    spark_d_theoretical_limit_t [label = "Theoretical.commit(SparkletSystem)";comment = "What-How: The Formalization of Insight into System. The process of transforming intuitive understanding into rigorous framework—the specific methods and structural choices that turn conceptual sparks into testable, coherent theoretical systems.";shape = doublecircle;color = darkgreen;];
+    spark_c_theoretical_limit_t [label = "Theoretical.dispatch(ModelTheory)";comment = "Why-Who: The Architecture of Possible Worlds. The study of relationships between formal systems and their interpretations—the framework that determines which conceptual structures can manifest as coherent realities and how abstract mathematics becomes concrete cosmology.";shape = doublecircle;color = darkred;];
+    spark_d_theoretical_limit_t [label = "Theoretical.commit(SparkletTheory)";comment = "What-How: The Formal Universal Pattern Framework. The mathematical theory of invariant 16-vertex 35-edge topological structures—the systematic study of how recursive patterns serve as fundamental building blocks across all domains of reality and abstraction.";shape = doublecircle;color = darkgreen;];
     spark_e_theoretical_limit_t [label = "Theoretical.serve(ConcreteVisualization)";comment = "When-Where: The Contextual Application of Abstraction. The process of mapping abstract mathematical structures onto intuitive representations—the creation of mental models, diagrams, and analogies that make complex theories accessible and manipulable.";shape = doublecircle;color = darkblue;];
     spark_f_theoretical_limit_t [label = "Theoretical.exec(TheoreticalLimit)";comment = "Which-Closure: The Boundary of Formal Understanding. The fundamental limits of what can be known or proven within a given framework—the Gödelian boundaries, computational constraints, and epistemological horizons that define the reach of theoretical inquiry.";shape = doublecircle;color = lightgray;];
     
@@ -35,10 +35,10 @@ strict digraph TheoreticalLimit {
     spark_0_theoretical_limit_t -> spark_7_theoretical_limit_t [label = "REC"; comment = "Abstract Ideas model Cognitive processes"; color = darkgreen; dir = both;];
     spark_0_theoretical_limit_t -> spark_5_theoretical_limit_t [label = "REC"; comment = "Abstract Ideas compute their own Implications"; color = darkgreen; dir = both;];
     
-    spark_a_theoretical_limit_t -> spark_c_theoretical_limit_t [label = "REC"; comment = "Conceptual Sparks require Graph structures to connect"; color = darkred; dir = both;];
-    spark_b_theoretical_limit_t -> spark_c_theoretical_limit_t [label = "REC"; comment = "Theory Networks reveal their Graph architecture"; color = darkred; dir = both;];
-    spark_1_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "String Theory formalizes through Sparklet mathematics"; color = darkgreen; dir = both;];
-    spark_2_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "Complexity Theory builds emergent Sparklet systems"; color = darkgreen; dir = both;];
+    spark_a_theoretical_limit_t -> spark_c_theoretical_limit_t [label = "REC"; comment = "Conceptual Sparks require Model-theoretic interpretation"; color = darkred; dir = both;];
+    spark_b_theoretical_limit_t -> spark_c_theoretical_limit_t [label = "REC"; comment = "Theory Networks reveal their Model-theoretic architecture"; color = darkred; dir = both;];
+    spark_1_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "String Theory finds expression in Sparklet patterns"; color = darkgreen; dir = both;];
+    spark_2_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "Complexity Theory emerges from Sparklet interactions"; color = darkgreen; dir = both;];
     spark_4_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "Category Theory structures Sparklet relationships"; color = darkgreen; dir = both;];
     spark_8_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "Philosophy of Mind questions Sparklet consciousness"; color = darkgreen; dir = both;];
     spark_7_theoretical_limit_t -> spark_d_theoretical_limit_t [label = "REC"; comment = "Cognitive Science studies Sparklet processing"; color = darkgreen; dir = both;];
@@ -58,7 +58,7 @@ strict digraph TheoreticalLimit {
     spark_9_theoretical_limit_t -> spark_3_theoretical_limit_t [label = "REC"; comment = "Information patterns create Knot-like entanglements"; color = darkblue; dir = both; style = dashed; constraint = false;];
     spark_a_theoretical_limit_t -> spark_b_theoretical_limit_t [label = "REC"; comment = "Conceptual Sparks naturally entangle into Networks"; color = darkred; dir = both; style = dashed; constraint = false;];
     
-    spark_c_theoretical_limit_t -> spark_f_theoretical_limit_t [label = "OUT"; comment = "Graph structures define Theoretical Limits"; color = darkred; dir = both;];
-    spark_d_theoretical_limit_t -> spark_f_theoretical_limit_t [label = "OUT"; comment = "Sparklet systems encounter their Formal Limits"; color = darkgreen; dir = both;];
+    spark_c_theoretical_limit_t -> spark_f_theoretical_limit_t [label = "OUT"; comment = "Model Theory defines Theoretical Limits of interpretation"; color = darkred; dir = both;];
+    spark_d_theoretical_limit_t -> spark_f_theoretical_limit_t [label = "OUT"; comment = "Sparklet Theory encounters its Formal expressiveness limits"; color = darkgreen; dir = both;];
     spark_e_theoretical_limit_t -> spark_f_theoretical_limit_t [label = "OUT"; comment = "Visualizations reveal Epistemological Boundaries"; color = darkblue; dir = both;];
 }
