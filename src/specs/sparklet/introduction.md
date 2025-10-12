@@ -16,16 +16,160 @@ The key insight is that **relational topology encodes meaning**. A string vibrat
 
 ## 2. Architectural Foundation
 
+```
+SPARKLET CONJECTURE
+
+1. TOPOLOGY: K16 with 35/120 edges is computationally optimal
+2. SPACE: 4D coordinates (x,y,z,w) on S³ with x²+y²+z²+w²=1
+3. RESOLUTION: 137-step balanced ternary (68-1-68)
+4. LAYERS: w = -1 (Imaginary), 0 (Idea), +1 (Real)
+
+That's it. That's the whole thing.
+```
+
 ### 2.1 The Invariant Topology
 
 Every Sparklet Factor implements a consistent 16-vertex, 35-edge directed graph:
 
-```
+```dot
 
-16 Vertices = {spark_0_t, spark_1_t, ..., spark_f_t}
-35 Edges = Fixed relational patterns encoding cross-domain semantics
+strict digraph Sparklet {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "{{Name}}";
+    comment = "{{description}}";
+
+    spark_0_t [label = "{{Name}}.meta({{meta}})";comment = "Abstract: {{description}}";];
+    spark_1_t [label = "{{Name}}.r1({{title}})";comment = "Initiation: {{description}}";];
+    spark_2_t [label = "{{Name}}.r2({{title}})";comment = "Response: {{description}}";];
+    spark_4_t [label = "{{Name}}.r4({{title}})";comment = "Integration: {{description}}";];
+    spark_8_t [label = "{{Name}}.r8({{title}})";comment = "Reflection: {{description}}";];
+    spark_7_t [label = "{{Name}}.r7({{title}})";comment = "Consolidation: {{description}}";];
+    spark_5_t [label = "{{Name}}.r5({{title}})";comment = "Propagation: {{description}}";];
+    spark_3_t [label = "{{Name}}.r3({{title}})";comment = "Thesis: {{description}}";];
+    spark_6_t [label = "{{Name}}.r6({{title}})";comment = "Antithesis: {{description}}";];
+    spark_9_t [label = "{{Name}}.r9({{title}})";comment = "Synthesis: {{description}}";];
+    spark_a_t [label = "{{Name}}.receive({{title}})";comment = "Potential: {{description}}";];
+    spark_b_t [label = "{{Name}}.send({{title}})";comment = "Manifest: {{description}}";];
+    spark_c_t [label = "{{Name}}.dispatch({{title}})";comment = "Why-Who: {{description}}";];
+    spark_d_t [label = "{{Name}}.commit({{title}})";comment = "What-How: {{description}}";];
+    spark_e_t [label = "{{Name}}.serve({{title}})";comment = "When-Where: {{description}}";];
+    spark_f_t [label = "{{Name}}.exec({{title}})";comment = "Which-Closure: {{description}}";];
+
+    spark_a_t -> spark_0_t [label = "IN"; comment = "{{description}}";];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "{{description}}";];
+    spark_0_t -> spark_3_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "{{description}}";];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "{{description}}";];
+
+    spark_a_t -> spark_c_t [label = "REC"; comment = "{{description}}";];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "{{description}}";];
+    spark_1_t -> spark_d_t [label = "REC"; comment = "{{description}}";];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "{{description}}";];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "{{description}}";];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "{{description}}";];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "{{description}}";];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "{{description}}";];
+    spark_3_t -> spark_e_t [label = "REC"; comment = "{{description}}";];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "{{description}}";];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "{{description}}";];
+
+    spark_1_t -> spark_2_t [label = "REC"; comment = "{{description}}";];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "{{description}}";];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "{{description}}";];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "{{description}}";];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "{{description}}";];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "{{description}}";];
+    spark_3_t -> spark_6_t [label = "REC"; comment = "{{description}}";];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "{{description}}";];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "{{description}}";];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "{{description}}";];
+
+    spark_c_t -> spark_f_t [label = "OUT"; comment = "{{description}}";];
+    spark_d_t -> spark_f_t [label = "OUT"; comment = "{{description}}";];
+    spark_e_t -> spark_f_t [label = "OUT"; comment = "{{description}}";];
+}
 
 ````
+
+![Image](sparklet.svg)
+
+To reach the aesthetic in the image we need to put some "constraint = false" into the graphviz digraph so it become:
+
+```dot
+strict digraph Sparklet {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "{{Name}}";
+    comment = "{{description}}";
+
+    spark_0_t [label = "{{Name}}.meta({{description}})";comment = "Abstract: {{description}}";shape = doublecircle;color = darkgray;];
+    spark_1_t [label = "{{Name}}.r1({{description}})";comment = "Initiation: {{description}}";color = darkgreen;];
+    spark_2_t [label = "{{Name}}.r2({{description}})";comment = "Response: {{description}}";color = darkgreen;];
+    spark_4_t [label = "{{Name}}.r4({{description}})";comment = "Integration: {{description}}";color = darkgreen;];
+    spark_8_t [label = "{{Name}}.r8({{description}})";comment = "Reflection: {{description}}";color = darkgreen;];
+    spark_7_t [label = "{{Name}}.r7({{description}})";comment = "Consolidation: {{description}}";color = darkgreen;];
+    spark_5_t [label = "{{Name}}.r5({{description}})";comment = "Propagation: {{description}}";color = darkgreen;];
+    spark_3_t [label = "{{Name}}.r3({{description}})";comment = "Thesis: {{description}}";color = darkblue;];
+    spark_6_t [label = "{{Name}}.r6({{description}})";comment = "Antithesis: {{description}}";color = darkblue;];
+    spark_9_t [label = "{{Name}}.r9({{description}})";comment = "Synthesis: {{description}}";color = darkblue;];
+    spark_a_t [label = "{{Name}}.receive({{description}})";comment = "Potential: {{description}}";shape = invtriangle;color = darkred;];
+    spark_b_t [label = "{{Name}}.send({{description}})";comment = "Manifest: {{description}}";shape = triangle;color = darkred;];
+    spark_c_t [label = "{{Name}}.dispatch({{description}})";comment = "Why-Who: {{description}}";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "{{Name}}.commit({{description}})";comment = "What-How: {{description}}";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "{{Name}}.serve({{description}})";comment = "When-Where: {{description}}";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "{{Name}}.exec({{description}})";comment = "Which-Closure: {{description}}";shape = doublecircle;color = lightgray;];
+
+    spark_a_t -> spark_0_t [label = "IN"; comment = "{{description}}"; color = darkred; constraint = false;];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "{{description}}"; color = darkred;];
+    spark_0_t -> spark_3_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+
+    spark_a_t -> spark_c_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both;];
+    spark_1_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_3_t -> spark_e_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+
+    spark_1_t -> spark_2_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both; style = dashed; constraint = false;];
+
+    spark_c_t -> spark_f_t [label = "OUT"; comment = "{{description}}"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "OUT"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "OUT"; comment = "{{description}}"; color = darkblue; dir = both;];
+}
+```
 
 This topological invariance is the core of the Sparklet Space, providing a **universal relational canvas** for conceptual interaction.
 
@@ -58,7 +202,7 @@ Topological invariance enables meaningful probability calculations:
 P(Effect | Cause) = Computable across all Factors
 P(StringTheory | ManifoldTopology) = Cross-domain inferable
 P(Consciousness | ComputationalProcess) = Statistically derivable
-````
+```
 
 ### 3.2 Statistical Mechanics of Meaning
 
