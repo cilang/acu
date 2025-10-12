@@ -13,9 +13,19 @@ A Sparklet is a formal topological framework with invariant 16 vertices and 35 e
 
 ### Balanced Ternary Projective System
 
-* x,y,z ∈ {-1, 0, +1} with 137-step balanced ternary resolution, [-1.000, -0.985, ..., -0.015, 0.000, +0.015, ..., +0.985, +1.000]
-* w ∈ [0, 1] (continuous probability intensity)
-* Constrained by the 3-sphere condition: x² + y² + z² + w² = 1
+x,y,z ∈ {-1, 0, +1} with 137-step balanced ternary resolution
+w ∈ [0, 1] (continuous probability intensity)
+
+137-Step Balanced Ternary Distribution:
+
+Negative (-1 to 0): 68 steps  [-1.000, -0.985, ..., -0.015]
+Neutral  (0):       1 step    [0.000]
+Positive (0 to +1): 68 steps  [+0.015, ..., +0.985, +1.000]
+Total:              137 steps
+
+Constrained by the 3-sphere condition:
+
+x² + y² + z² + w² = 1
 
 ### Spark Positions on the 3-Sphere
 
