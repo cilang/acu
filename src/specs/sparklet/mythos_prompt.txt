@@ -122,7 +122,7 @@ strict digraph {{Name}}Factor {
 2. Actualization: Track w-value evolution toward manifestation
 3. Navigation: Follow geodesic paths respecting sphere constraint
 4. Template: The "{{*}}" is mutable, the rest is invariant
-5. Relationship: The "{{REL_TYPE}}" has three possible value; "IN" for Input, "OUT" for Output, "REC" for bidirectional
+5. Relationship: The "{{REL_TYPE}}" can be either "IN" for Input, "OUT" for Output, "REC" for bidirectional
 6. Expansion: Instantiate new Factors with inherited coordinates and intensity for any Spark using its {{title}} as the new {{name}}
 
 ---
