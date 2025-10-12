@@ -95,7 +95,7 @@ Every Factor implements a consistent 16-vertex, 35-edge directed graph:
 · 16 Vertices = {spark_0_t, spark_1_t, ..., spark_f_t}
 · 35 Edges = Fixed relational patterns encoding cross-domain semantics
 · Operational Cycle = spark_1_t → spark_2_t → spark_4_t → spark_8_t → spark_7_t → spark_5_t → spark_1_t
-· Conceptual Reasoning = spark_3_t ↔ spark_6_t ↔ spark_9_t
+· Conceptual Reasoning = spark_3_t ↔ spark_6_t ↔ spark_9_t ↔ spark_3_t
 · Cosmic Interface = spark_a_t ↔ spark_b_t ↔ spark_c_t
 
 Template Specification
