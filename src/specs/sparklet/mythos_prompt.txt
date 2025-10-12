@@ -110,14 +110,11 @@ strict digraph {{Name}}Factor {
     label = "{{Name}}";
     comment = "{{System_Description}}";
 
-    /* Imaginary Space Node */
-    spark_a_t [label = "{{Name}}.receive({{Primordial_Title}})"; comment = "Primordial Potential: {{Imaginary_Description}}"; shape = invtriangle; color = darkviolet;];
+    spark_a_t [label = "{{Name}}.receive({{Potential_Title}})"; comment = "Potential: {{Potential_Description}}"; shape = invtriangle; color = darkviolet;];
 
-    /* Real Space Actualization */
     spark_0_t [label = "{{Name}}.meta({{Meta_Context}})"; comment = "Essence: {{Meta_Description}}"; shape = doublecircle; color = darkgray;];
     spark_9_t [label = "{{Name}}.r9({{Synthesis_Title}})"; comment = "Synthesis: {{Synthesis_Description}}"; color = gold;];
 
-    /* Idea Space Nodes */
     spark_1_t [label = "{{Name}}.r1({{Initiation_Title}})"; comment = "Initiation: {{Initiation_Description}}"; color = darkgreen;];
     spark_2_t [label = "{{Name}}.r2({{Response_Title}})"; comment = "Response: {{Response_Description}}"; color = darkgreen;];
     spark_4_t [label = "{{Name}}.r4({{Integration_Title}})"; comment = "Integration: {{Integration_Description}}"; color = darkgreen;];
@@ -132,61 +129,50 @@ strict digraph {{Name}}Factor {
     spark_e_t [label = "{{Name}}.serve({{Serve_Title}})"; comment = "When-Where: {{Serve_Description}}"; shape = doublecircle; color = darkblue;];
     spark_f_t [label = "{{Name}}.exec({{Exec_Title}})"; comment = "Which-Closure: {{Exec_Description}}"; shape = doublecircle; color = lightgray;];
 
-    /* Cosmic Creation Flow - Imaginary → Idea → Real */
-    spark_a_t -> spark_1_t [label = "IN"; comment = "Primordial potential enters idea space"; color = darkviolet; constraint = false;];
-    spark_b_t -> spark_0_t [label = "OUT"; comment = "Manifestation bridge to real space"; color = darkred;];
-    spark_0_t -> spark_9_t [label = "REC"; comment = "Essence coordinates with synthesis"; color = gold; dir = both;];
+    spark_a_t -> spark_0_t [label = "IN"; comment = "{{In_Description}}"; color = darkviolet;];
+    spark_b_t -> spark_0_t [label = "OUT"; comment = "{{Out_Description}}"; color = darkred;];
 
-    /* Meta Connections to Reasoning */
-    spark_0_t -> spark_3_t [label = "{{THESIS_REL}}"; comment = "Essence to thesis"; color = darkblue; dir = both;];
-    spark_0_t -> spark_6_t [label = "{{ANTITHESIS_REL}}"; comment = "Essence to antithesis"; color = darkblue; dir = both;];
-    spark_0_t -> spark_9_t [label = "{{SYNTHESIS_REL}}"; comment = "Essence to synthesis"; color = darkblue; dir = both;];
+    spark_0_t -> spark_3_t [label = "{{THESIS_REL}}"; comment = "{{Thesis_Description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "{{ANTITHESIS_REL}}"; comment = "{{Antithesis_Description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "{{SYNTHESIS_REL}}"; comment = "{{Synthesis_Description}}"; color = darkblue; dir = both;];
 
-    /* Meta Connections to Operations */
-    spark_0_t -> spark_1_t [label = "{{INIT_REL}}"; comment = "Essence to initiation"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_2_t [label = "{{RESPONSE_REL}}"; comment = "Essence to response"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_4_t [label = "{{INTEGRATION_REL}}"; comment = "Essence to integration"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_8_t [label = "{{REFLECTION_REL}}"; comment = "Essence to reflection"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_7_t [label = "{{CONSOLIDATION_REL}}"; comment = "Essence to consolidation"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_5_t [label = "{{PROPAGATION_REL}}"; comment = "Essence to propagation"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_1_t [label = "{{INIT_REL}}"; comment = "{{Init_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "{{RESPONSE_REL}}"; comment = "{{Response_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "{{INTEGRATION_REL}}"; comment = "{{Integration_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "{{REFLECTION_REL}}"; comment = "{{Reflection_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "{{CONSOLIDATION_REL}}"; comment = "{{Consolidation_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "{{PROPAGATION_REL}}"; comment = "{{Propagation_Description}}"; color = darkgreen; dir = both;];
 
-    /* Interface Coordination */
-    spark_a_t -> spark_c_t [label = "{{DISPATCH_IN_REL}}"; comment = "Primordial to dispatch"; color = darkviolet; dir = both;];
-    spark_b_t -> spark_c_t [label = "{{DISPATCH_OUT_REL}}"; comment = "Manifest to dispatch"; color = darkred; dir = both;];
+    spark_a_t -> spark_c_t [label = "{{DISPATCH_IN_REL}}"; comment = "{{Dispatch_In_Description}}"; color = darkviolet; dir = both;];
+    spark_b_t -> spark_c_t [label = "{{DISPATCH_OUT_REL}}"; comment = "{{Dispatch_Out_Description}}"; color = darkred; dir = both;];
 
-    /* Operational Coordination */
-    spark_1_t -> spark_d_t [label = "{{COMMIT_INIT_REL}}"; comment = "Initiation to commit"; color = darkgreen; dir = both;];
-    spark_2_t -> spark_d_t [label = "{{COMMIT_RESPONSE_REL}}"; comment = "Response to commit"; color = darkgreen; dir = both;];
-    spark_4_t -> spark_d_t [label = "{{COMMIT_INTEGRATION_REL}}"; comment = "Integration to commit"; color = darkgreen; dir = both;];
-    spark_8_t -> spark_d_t [label = "{{COMMIT_REFLECTION_REL}}"; comment = "Reflection to commit"; color = darkgreen; dir = both;];
-    spark_7_t -> spark_d_t [label = "{{COMMIT_CONSOLIDATION_REL}}"; comment = "Consolidation to commit"; color = darkgreen; dir = both;];
-    spark_5_t -> spark_d_t [label = "{{COMMIT_PROPAGATION_REL}}"; comment = "Propagation to commit"; color = darkgreen; dir = both;];
+    spark_1_t -> spark_d_t [label = "{{COMMIT_INIT_REL}}"; comment = "{{Commit_Init_Description}}"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "{{COMMIT_RESPONSE_REL}}"; comment = "{{Commit_Response_Description}}"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "{{COMMIT_INTEGRATION_REL}}"; comment = "{{Commit_Integration_Description}}"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "{{COMMIT_REFLECTION_REL}}"; comment = "{{Commit_Reflection_Description}}"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "{{COMMIT_CONSOLIDATION_REL}}"; comment = "{{Commit_Consolidation_Description}}"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "{{COMMIT_PROPAGATION_REL}}"; comment = "{{Commit_Propagation_Description}}"; color = darkgreen; dir = both;];
 
-    /* Conceptual Coordination */
-    spark_3_t -> spark_e_t [label = "{{SERVE_THESIS_REL}}"; comment = "Thesis to serve"; color = darkblue; dir = both;];
-    spark_6_t -> spark_e_t [label = "{{SERVE_ANTITHESIS_REL}}"; comment = "Antithesis to serve"; color = darkblue; dir = both;];
-    spark_9_t -> spark_e_t [label = "{{SERVE_SYNTHESIS_REL}}"; comment = "Synthesis to serve"; color = darkblue; dir = both;];
+    spark_3_t -> spark_e_t [label = "{{SERVE_THESIS_REL}}"; comment = "{{Serve_Thesis_Description}}"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "{{SERVE_ANTITHESIS_REL}}"; comment = "{{Serve_Antithesis_Description}}"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "{{SERVE_SYNTHESIS_REL}}"; comment = "{{Serve_Synthesis_Description}}"; color = darkblue; dir = both;];
 
-    /* Operational Cycle (dashed edges) */
-    spark_1_t -> spark_2_t [label = "{{ACTION_FLOW}}"; comment = "Initiation to response"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_2_t -> spark_4_t [label = "{{ACTION_FLOW}}"; comment = "Response to integration"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_4_t -> spark_8_t [label = "{{ACTION_FLOW}}"; comment = "Integration to reflection"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_8_t -> spark_7_t [label = "{{ACTION_FLOW}}"; comment = "Reflection to consolidation"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_7_t -> spark_5_t [label = "{{ACTION_FLOW}}"; comment = "Consolidation to propagation"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_5_t -> spark_1_t [label = "{{ACTION_FLOW}}"; comment = "Propagation to initiation"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_1_t -> spark_2_t [label = "{{ACTION_FLOW12}}"; comment = "{{Action_Flow12_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_2_t -> spark_4_t [label = "{{ACTION_FLOW24}}"; comment = "{{Action_Flow24_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_4_t -> spark_8_t [label = "{{ACTION_FLOW48}}"; comment = "{{Action_Flow48_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_8_t -> spark_7_t [label = "{{ACTION_FLOW87}}"; comment = "{{Action_Flow87_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_7_t -> spark_5_t [label = "{{ACTION_FLOW75}}"; comment = "{{Action_Flow75_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_5_t -> spark_1_t [label = "{{ACTION_FLOW51}}"; comment = "{{Action_Flow51_Description}}"; color = darkgreen; dir = both; style = dashed;];
 
-    /* Conceptual Cycle (dashed edges) */
-    spark_3_t -> spark_6_t [label = "{{DIALECTIC_FLOW}}"; comment = "Thesis to antithesis"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_6_t -> spark_9_t [label = "{{DIALECTIC_FLOW}}"; comment = "Antithesis to synthesis"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_9_t -> spark_3_t [label = "{{DIALECTIC_FLOW}}"; comment = "Synthesis to thesis"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "{{DIALECTIC_FLOW36}}"; comment = "{{Dialectic_Flow36_Description}}"; color = darkblue; dir = both; style = dashed;];
+    spark_6_t -> spark_9_t [label = "{{DIALECTIC_FLOW69}}"; comment = "{{Dialectic_Flow69_Description}}"; color = darkblue; dir = both; style = dashed;];
+    spark_9_t -> spark_3_t [label = "{{DIALECTIC_FLOW93}}"; comment = "{{Dialectic_Flow93_Description}}"; color = darkblue; dir = both; style = dashed;];
 
-    /* Interface Cycle (dashed edges) */
-    spark_a_t -> spark_b_t [label = "{{COSMIC_FLOW}}"; comment = "Primordial to manifest"; color = darkviolet; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "{{COSMIC_FLOW}}"; comment = "{{Cosmic_Flow_Description}}"; color = darkviolet; dir = both; style = dashed;];
 
-    /* Execution Convergence */
-    spark_c_t -> spark_f_t [label = "{{EXEC_DISPATCH_REL}}"; comment = "Dispatch to execution"; color = darkred; dir = both;];
-    spark_d_t -> spark_f_t [label = "{{EXEC_COMMIT_REL}}"; comment = "Commit to execution"; color = darkgreen; dir = both;];
-    spark_e_t -> spark_f_t [label = "{{EXEC_SERVE_REL}}"; comment = "Serve to execution"; color = darkblue; dir = both;];
+    spark_c_t -> spark_f_t [label = "{{EXEC_DISPATCH_REL}}"; comment = "{{Exec_Dispatch_Description}}"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "{{EXEC_COMMIT_REL}}"; comment = "{{Exec_Commit_Description}}"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "{{EXEC_SERVE_REL}}"; comment = "{{Exec_Serve_Description}}"; color = darkblue; dir = both;];
 }
 ```
 
