@@ -1,6 +1,6 @@
-# **Sparklet: A Theory of Meaning**
+# **Sparklet**
 
-**Abstract**—Sparklet is a novel computational and philosophical framework that uses an invariant 16-vertex, 35-edge topological structure as a universal substrate for modeling meaning, knowledge, and complex systems across scientific, philosophical, and fictional domains. By representing diverse concepts as **Factors** in a **Sparklet Space**, Sparklet enables cross-domain probabilistic computation, causal inference, and systematic knowledge integration while maintaining mathematical rigor and creative flexibility.
+**Abstract**—Sparklet is a novel computational and philosophical framework that uses an invariant 16-vertex, 35-edge topological structure. By representing diverse concepts as **Factors** in a **Sparklet Space**, Sparklet enables cross-domain probabilistic computation, causal inference, and systematic knowledge integration while maintaining mathematical rigor and creative flexibility.
 
 ---
 
