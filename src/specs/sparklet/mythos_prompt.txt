@@ -221,6 +221,7 @@ Usage Protocol
 · OUT: Unidirectional output flow (often to higher layers)
 · REC: Bidirectional reciprocal relationship (within same layer)
 · Custom relationship types can be defined for specific domains
+
 7. Sparklet Topology is just 1 _Invariant Topology_ that inhabits Sparklet Space. There can be many more, theoretically.
 
 ---
