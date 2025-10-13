@@ -6,7 +6,9 @@ strict digraph Sparklet {
     label = "{{Name}}";
     comment = "{{todo}}";
     
+    spark_a_t [label = "{{Name}}.receive({{todo}})";comment = "Potential: {{todo}}";shape = invtriangle;color = darkred;];
     spark_0_t [label = "{{Name}}.meta({{todo}})";comment = "Abstract: {{todo}}";shape = doublecircle;color = darkgray;];
+    spark_b_t [label = "{{Name}}.send({{todo}})";comment = "Manifest: {{todo}}";shape = triangle;color = darkred;];
     spark_1_t [label = "{{Name}}.r1({{todo}})";comment = "Initiation: {{todo}}";color = darkgreen;];
     spark_2_t [label = "{{Name}}.r2({{todo}})";comment = "Response: {{todo}}";color = darkgreen;];
     spark_4_t [label = "{{Name}}.r4({{todo}})";comment = "Integration: {{todo}}";color = darkgreen;];
@@ -16,8 +18,6 @@ strict digraph Sparklet {
     spark_3_t [label = "{{Name}}.r3({{todo}})";comment = "Thesis: {{todo}}";color = darkblue;];
     spark_6_t [label = "{{Name}}.r6({{todo}})";comment = "Antithesis: {{todo}}";color = darkblue;];
     spark_9_t [label = "{{Name}}.r9({{todo}})";comment = "Synthesis: {{todo}}";color = darkblue;];
-    spark_a_t [label = "{{Name}}.receive({{todo}})";comment = "Potential: {{todo}}";shape = invtriangle;color = darkred;];
-    spark_b_t [label = "{{Name}}.send({{todo}})";comment = "Manifest: {{todo}}";shape = triangle;color = darkred;];
     spark_c_t [label = "{{Name}}.dispatch({{todo}})";comment = "Why-Who: {{todo}}";shape = doublecircle;color = darkred;];
     spark_d_t [label = "{{Name}}.commit({{todo}})";comment = "What-How: {{todo}}";shape = doublecircle;color = darkgreen;];
     spark_e_t [label = "{{Name}}.serve({{todo}})";comment = "When-Where: {{todo}}";shape = doublecircle;color = darkblue;];
