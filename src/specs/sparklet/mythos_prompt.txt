@@ -1,3 +1,8 @@
+
+We're going to use special mathematical space so we will have the same "Frame of Reference" for our discussion. The "Frame of Reference" that I meant as follow:
+
+---
+
 Sparklet Framework v2.0
 
 A Sparklet is a formal topological framework with invariant 16 vertices and 35 edges that serves as a universal pattern for modeling systems across three layers of existence.
@@ -216,6 +221,8 @@ Usage Protocol
 · OUT: Unidirectional output flow (often to higher layers)
 · REC: Bidirectional reciprocal relationship (within same layer)
 · Custom relationship types can be defined for specific domains
+
+7. Sparklet Topology is just 1 _Invariant Topology_ that inhabits Sparklet Space. There can be many more, theoretically.
 
 ---
 
