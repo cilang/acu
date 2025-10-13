@@ -1,165 +1,225 @@
-# Sparklet Framework
+Sparklet Framework
 
-A Sparklet is a formal topological framework with invariant 16 vertices and 35 edges that serves as a universal pattern for modeling systems.
+A Sparklet is a formal topological framework with invariant 16 vertices and 35 edges that serves as a universal pattern for modeling systems across three layers of existence.
 
-## Terminology
+Terminology
 
-- Sparklet: The Name of the Framework
-- Factor: A Factor is a concrete instance populated with actual data.
-- Spark: Node or Vertices
-- Arc: Edge
+· Sparklet: The universal framework pattern (the "blueprint")
+· Factor: A concrete instance populated with actual data (an "implementation")
+· Spark: Node or vertex representing a system component
+· Arc: Edge representing relationships between components
+· Actualization: The process of moving from imaginary potential (w=-1) to full manifestation (w=+1)
 
-## Sparklet Space
+Sparklet Space
 
-### Balanced Ternary Projective System
+Three-Layer Cosmological Architecture
 
-Each concept occupies a specific position in projective semantic space with coordinates (x, y, z, w) where:
+The framework operates across three distinct layers of existence:
 
-x,y,z ∈ {-1, 0, +1} with 137-step balanced ternary resolution
-w ∈ [0, 1] (continuous probability intensity)
+Layer 1: Imaginary Space (w = -1)
+
+· Pure potential without structure
+· No (x,y,z) reference frames
+· Primordial substrate of existence
+· Source of all creative potential
+
+Layer 2: Idea Space (w = 0)
+
+· Conceptual realm with geometric structure
+· Full (x,y,z) coordinate system active
+· Mathematical and theoretical foundations
+· Blueprint realm before manifestation
+
+Layer 3: Real Space (w = +1)
+
+· Fully manifested reality
+· Actualized systems and entities
+· Observable cosmos with spacetime structure
+
+Balanced Ternary Navigation System
+
+Coordinate System:
+
+```
+x,y,z ∈ {-1, 0, +1} with 137-step balanced ternary interpolation
+w ∈ {-1, 0, +1} (three-layer existence spectrum)
 
 137-Step Balanced Ternary Distribution:
-
 Negative (-1 to 0): 68 steps  [-1.000, -0.985, ..., -0.015]
 Neutral  (0):       1 step    [0.000]
 Positive (0 to +1): 68 steps  [+0.015, ..., +0.985, +1.000]
 Total:              137 steps
+```
 
 Constrained by the 3-sphere condition:
 
+```
 x² + y² + z² + w² = 1
+```
 
-### Semantic Dimensions & Balanced Ternary
+Spark Positions on the 3-Sphere
 
-X-Axis: Polarity (137 steps between -1,0,+1)
+Imaginary Space Anchors (w = -1)
 
-* -1 = Potential/Input/Receptive
-* 0 = Essence/Operator/Process
-* +1 = Manifest/Output/Expressive
+· spark_a_t = (0, 0, 0, -1)           # receive - Pure Primordial Potential
 
-Y-Axis: Engagement (137 steps between -1,0,+1)
+Idea Space Foundations (w = 0)
 
-* -1 = Initiation/Active
-* 0 = Neutral/Balanced
-* +1 = Response/Reactive
+· spark_b_t = (+1, 0, 0, 0)           # send - Manifestation Bridge
+· spark_c_t = (-1/√2, +1/√2, 0, 0)    # dispatch - Why-Who
+· spark_d_t = (+1/√2, -1/√2, 0, 0)    # commit - What-How
+· spark_e_t = (-1/√3, -1/√3, +1/√3, 0) # serve - When-Where
+· spark_f_t = (+1/√3, +1/√3, -1/√3, 0) # exec - Which-Closure
+· spark_1_t = (0, -1, 0, 0)           # r1 - Initiation
+· spark_2_t = (0, +1, 0, 0)           # r2 - Response
+· spark_4_t = (0, 0, -1, 0)           # r4 - Integration
+· spark_8_t = (0, 0, +1, 0)           # r8 - Reflection
+· spark_7_t = (0, +1/√2, -1/√2, 0)    # r7 - Consolidation
+· spark_5_t = (0, -1/√2, +1/√2, 0)    # r5 - Propagation
+· spark_3_t = (-1/√2, 0, -1/√2, 0)    # r3 - Thesis
+· spark_6_t = (+1/√2, 0, -1/√2, 0)    # r6 - Antithesis
 
-Z-Axis: Logic (137 steps between -1,0,+1)
+Real Space Actualization (w = +1)
 
-* -1 = Thesis/Unity
-* 0 = Synthesis/Integration
-* +1 = Antithesis/Distinction
+· spark_9_t = (0, 0, 0, +1)           # r9 - Synthesis (pure manifestation!)
+· spark_0_t = (0, 0, 0, +1)           # meta - Essence Center (actualized essence)
 
-W-Axis: Probability Intensity (continuous [0,1])
+Note: spark_9_t and spark_0_t share Real Space coordinates but represent different semantic roles in the topology.
 
-* 0 = Pure potentiality (unmanifest)
-* 1 = Full actualization (manifest)
+Sparklet Topology
 
-### Spark Positions on the 3-Sphere
+The Invariant Topology
 
-Control Layer (Red) - Polarity Dominant
+Every Factor implements a consistent 16-vertex, 35-edge directed graph:
 
-spark_a_t = (-1, 0, 0, 0)     # receive  - Pure Potential
-spark_b_t = (+1, 0, 0, 0)     # send     - Pure Manifestation
-spark_c_t = (-1/√2, +1/√2, 0, 0)  # dispatch - Why-Who
-spark_d_t = (+1/√2, -1/√2, 0, 0)  # commit   - What-How
-spark_e_t = (-1/√3, -1/√3, +1/√3, 0)  # serve    - When-Where
-spark_f_t = (+1/√3, +1/√3, -1/√3, 0)  # exec     - Which-Closure
+· 16 Vertices = {spark_0_t, spark_1_t, ..., spark_f_t}
+· 35 Edges = Fixed relational patterns encoding cross-domain semantics
+· Operational Cycle = spark_1_t → spark_2_t → spark_4_t → spark_8_t → spark_7_t → spark_5_t → spark_1_t
+· Conceptual Reasoning = spark_3_t ↔ spark_6_t ↔ spark_9_t ↔ spark_3_t
+· Cosmic Interface = spark_a_t ↔ spark_b_t ↔ spark_c_t
 
-Operational Layer (Green) - Engagement Dominant
+Template Specification
 
-spark_1_t = (0, -1, 0, 0)          # r1 - Initiation
-spark_2_t = (0, +1, 0, 0)          # r2 - Response
-spark_4_t = (0, 0, -1, 0)          # r4 - Integration
-spark_8_t = (0, 0, +1, 0)          # r8 - Reflection
-spark_7_t = (0, +1/√2, -1/√2, 0)   # r7 - Consolidation
-spark_5_t = (0, -1/√2, +1/√2, 0)   # r5 - Propagation
-
-Logical Layer (Blue) - Logic Dominant
-
-spark_3_t = (-1/√2, 0, -1/√2, 0)   # r3 - Thesis
-spark_6_t = (+1/√2, 0, -1/√2, 0)   # r6 - Antithesis
-spark_9_t = (0, 0, 0, 1)            # r9 - Synthesis (pure actualization!)
-
-Meta Center (Gray)
-
-spark_0_t = (0, 0, 0, 1)            # meta - Essence Center (actualized)
-
-## Sparklet Topology
-
+```dot
 strict digraph {{Name}}Factor {
+    /* Graph styling */
     style = filled;
     color = lightgray;
     node [shape = circle; style = filled; color = lightgreen;];
     edge [color = darkgray;];
     label = "{{Name}}";
-    comment = "{{descriptions}}";
+    comment = "{{System_Description}}";
 
-    spark_0_t [label = "{{Name}}.meta({{meta}})";comment = "Abstract: {{descriptions}}";shape = doublecircle;color = darkgray;];
-    spark_1_t [label = "{{Name}}.r1({{title}})";comment = "Initiation: {{descriptions}}";color = darkgreen;];
-    spark_2_t [label = "{{Name}}.r2({{title}})";comment = "Response: {{descriptions}}";color = darkgreen;];
-    spark_4_t [label = "{{Name}}.r4({{title}})";comment = "Integration: {{descriptions}}";color = darkgreen;];
-    spark_8_t [label = "{{Name}}.r8({{title}})";comment = "Reflection: {{descriptions}}";color = darkgreen;];
-    spark_7_t [label = "{{Name}}.r7({{title}})";comment = "Consolidation: {{descriptions}}";color = darkgreen;];
-    spark_5_t [label = "{{Name}}.r5({{title}})";comment = "Propagation: {{descriptions}}";color = darkgreen;];
-    spark_3_t [label = "{{Name}}.r3({{title}})";comment = "Thesis: {{descriptions}}";color = darkblue;];
-    spark_6_t [label = "{{Name}}.r6({{title}})";comment = "Antithesis: {{descriptions}}";color = darkblue;];
-    spark_9_t [label = "{{Name}}.r9({{title}})";comment = "Synthesis: {{descriptions}}";color = darkblue;];
-    spark_a_t [label = "{{Name}}.receive({{title}})";comment = "Potential: {{descriptions}}";shape = invtriangle;color = darkred;];
-    spark_b_t [label = "{{Name}}.send({{title}})";comment = "Manifest: {{descriptions}}";shape = triangle;color = darkred;];
-    spark_c_t [label = "{{Name}}.dispatch({{title}})";comment = "Why-Who: {{descriptions}}";shape = doublecircle;color = darkred;];
-    spark_d_t [label = "{{Name}}.commit({{title}})";comment = "What-How: {{descriptions}}";shape = doublecircle;color = darkgreen;];
-    spark_e_t [label = "{{Name}}.serve({{title}})";comment = "When-Where: {{descriptions}}";shape = doublecircle;color = darkblue;];
-    spark_f_t [label = "{{Name}}.exec({{title}})";comment = "Which-Closure: {{descriptions}}";shape = doublecircle;color = lightgray;];
+    spark_a_t [label = "{{Name}}.receive({{Potential_Title}})"; comment = "Potential: {{Potential_Description}}"; shape = invtriangle; color = darkviolet;];
 
-    spark_a_t -> spark_0_t [label = "IN"; comment = "{{descriptions}}"; color = darkred; constraint = false;];
-    spark_0_t -> spark_b_t [label = "OUT"; comment = "{{descriptions}}"; color = darkred;];
-    spark_0_t -> spark_3_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_6_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_9_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_1_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_2_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_4_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_8_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_7_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_5_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
+    spark_0_t [label = "{{Name}}.meta({{Meta_Context}})"; comment = "Essence: {{Meta_Description}}"; shape = doublecircle; color = darkgray;];
+    spark_9_t [label = "{{Name}}.r9({{Synthesis_Title}})"; comment = "Synthesis: {{Synthesis_Description}}"; color = gold;];
 
-    spark_a_t -> spark_c_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both;];
-    spark_b_t -> spark_c_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both;];
-    spark_1_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_2_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_4_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_8_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_7_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_5_t -> spark_d_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_3_t -> spark_e_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_6_t -> spark_e_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
-    spark_9_t -> spark_e_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_1_t [label = "{{Name}}.r1({{Initiation_Title}})"; comment = "Initiation: {{Initiation_Description}}"; color = darkgreen;];
+    spark_2_t [label = "{{Name}}.r2({{Response_Title}})"; comment = "Response: {{Response_Description}}"; color = darkgreen;];
+    spark_4_t [label = "{{Name}}.r4({{Integration_Title}})"; comment = "Integration: {{Integration_Description}}"; color = darkgreen;];
+    spark_8_t [label = "{{Name}}.r8({{Reflection_Title}})"; comment = "Reflection: {{Reflection_Description}}"; color = darkgreen;];
+    spark_7_t [label = "{{Name}}.r7({{Consolidation_Title}})"; comment = "Consolidation: {{Consolidation_Description}}"; color = darkgreen;];
+    spark_5_t [label = "{{Name}}.r5({{Propagation_Title}})"; comment = "Propagation: {{Propagation_Description}}"; color = darkgreen;];
+    spark_3_t [label = "{{Name}}.r3({{Thesis_Title}})"; comment = "Thesis: {{Thesis_Description}}"; color = darkblue;];
+    spark_6_t [label = "{{Name}}.r6({{Antithesis_Title}})"; comment = "Antithesis: {{Antithesis_Description}}"; color = darkblue;];
+    spark_b_t [label = "{{Name}}.send({{Manifest_Title}})"; comment = "Manifest Bridge: {{Manifest_Description}}"; shape = triangle; color = darkred;];
+    spark_c_t [label = "{{Name}}.dispatch({{Dispatch_Title}})"; comment = "Why-Who: {{Dispatch_Description}}"; shape = doublecircle; color = darkred;];
+    spark_d_t [label = "{{Name}}.commit({{Commit_Title}})"; comment = "What-How: {{Commit_Description}}"; shape = doublecircle; color = darkgreen;];
+    spark_e_t [label = "{{Name}}.serve({{Serve_Title}})"; comment = "When-Where: {{Serve_Description}}"; shape = doublecircle; color = darkblue;];
+    spark_f_t [label = "{{Name}}.exec({{Exec_Title}})"; comment = "Which-Closure: {{Exec_Description}}"; shape = doublecircle; color = lightgray;];
 
-    spark_1_t -> spark_2_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_2_t -> spark_4_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_4_t -> spark_8_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_8_t -> spark_7_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_7_t -> spark_5_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_5_t -> spark_1_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
-    spark_3_t -> spark_6_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_6_t -> spark_9_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_9_t -> spark_3_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
-    spark_a_t -> spark_b_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_0_t [label = "IN"; comment = "{{In_Description}}"; color = darkviolet;];
+    spark_b_t -> spark_0_t [label = "OUT"; comment = "{{Out_Description}}"; color = darkred;];
 
-    spark_c_t -> spark_f_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkred; dir = both;];
-    spark_d_t -> spark_f_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkgreen; dir = both;];
-    spark_e_t -> spark_f_t [label = "{{REL_TYPE}}"; comment = "{{descriptions}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_3_t [label = "{{THESIS_REL}}"; comment = "{{Thesis_Description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "{{ANTITHESIS_REL}}"; comment = "{{Antithesis_Description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "{{SYNTHESIS_REL}}"; comment = "{{Synthesis_Description}}"; color = darkblue; dir = both;];
+
+    spark_0_t -> spark_1_t [label = "{{INIT_REL}}"; comment = "{{Init_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "{{RESPONSE_REL}}"; comment = "{{Response_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "{{INTEGRATION_REL}}"; comment = "{{Integration_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "{{REFLECTION_REL}}"; comment = "{{Reflection_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "{{CONSOLIDATION_REL}}"; comment = "{{Consolidation_Description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "{{PROPAGATION_REL}}"; comment = "{{Propagation_Description}}"; color = darkgreen; dir = both;];
+
+    spark_a_t -> spark_c_t [label = "{{DISPATCH_IN_REL}}"; comment = "{{Dispatch_In_Description}}"; color = darkviolet; dir = both;];
+    spark_b_t -> spark_c_t [label = "{{DISPATCH_OUT_REL}}"; comment = "{{Dispatch_Out_Description}}"; color = darkred; dir = both;];
+
+    spark_1_t -> spark_d_t [label = "{{COMMIT_INIT_REL}}"; comment = "{{Commit_Init_Description}}"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "{{COMMIT_RESPONSE_REL}}"; comment = "{{Commit_Response_Description}}"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "{{COMMIT_INTEGRATION_REL}}"; comment = "{{Commit_Integration_Description}}"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "{{COMMIT_REFLECTION_REL}}"; comment = "{{Commit_Reflection_Description}}"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "{{COMMIT_CONSOLIDATION_REL}}"; comment = "{{Commit_Consolidation_Description}}"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "{{COMMIT_PROPAGATION_REL}}"; comment = "{{Commit_Propagation_Description}}"; color = darkgreen; dir = both;];
+
+    spark_3_t -> spark_e_t [label = "{{SERVE_THESIS_REL}}"; comment = "{{Serve_Thesis_Description}}"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "{{SERVE_ANTITHESIS_REL}}"; comment = "{{Serve_Antithesis_Description}}"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "{{SERVE_SYNTHESIS_REL}}"; comment = "{{Serve_Synthesis_Description}}"; color = darkblue; dir = both;];
+
+    spark_1_t -> spark_2_t [label = "{{ACTION_FLOW12}}"; comment = "{{Action_Flow12_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_2_t -> spark_4_t [label = "{{ACTION_FLOW24}}"; comment = "{{Action_Flow24_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_4_t -> spark_8_t [label = "{{ACTION_FLOW48}}"; comment = "{{Action_Flow48_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_8_t -> spark_7_t [label = "{{ACTION_FLOW87}}"; comment = "{{Action_Flow87_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_7_t -> spark_5_t [label = "{{ACTION_FLOW75}}"; comment = "{{Action_Flow75_Description}}"; color = darkgreen; dir = both; style = dashed;];
+    spark_5_t -> spark_1_t [label = "{{ACTION_FLOW51}}"; comment = "{{Action_Flow51_Description}}"; color = darkgreen; dir = both; style = dashed;];
+
+    spark_3_t -> spark_6_t [label = "{{DIALECTIC_FLOW36}}"; comment = "{{Dialectic_Flow36_Description}}"; color = darkblue; dir = both; style = dashed;];
+    spark_6_t -> spark_9_t [label = "{{DIALECTIC_FLOW69}}"; comment = "{{Dialectic_Flow69_Description}}"; color = darkblue; dir = both; style = dashed;];
+    spark_9_t -> spark_3_t [label = "{{DIALECTIC_FLOW93}}"; comment = "{{Dialectic_Flow93_Description}}"; color = darkblue; dir = both; style = dashed;];
+
+    spark_a_t -> spark_b_t [label = "{{COSMIC_FLOW}}"; comment = "{{Cosmic_Flow_Description}}"; color = darkviolet; dir = both; style = dashed;];
+
+    spark_c_t -> spark_f_t [label = "{{EXEC_DISPATCH_REL}}"; comment = "{{Exec_Dispatch_Description}}"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "{{EXEC_COMMIT_REL}}"; comment = "{{Exec_Commit_Description}}"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "{{EXEC_SERVE_REL}}"; comment = "{{Exec_Serve_Description}}"; color = darkblue; dir = both;];
 }
+```
 
-The {{REL_TYPE}} are either:
+Usage Protocol
 
-- IN for Input
-- OUT for Output
-- REC for bidirectional or recursive or feedback loop
+1. Layer Selection
 
-## Usage Protocol
+· Choose the appropriate existence layer for your Factor:
+  · Imaginary Space (w=-1): Primordial concepts, source phenomena
+  · Idea Space (w=0): Theoretical frameworks, conceptual models
+  · Real Space (w=+1): Manifested systems, actualized entities
 
-1. Positioning: Map concepts to 3-sphere coordinates using 137-step resolution
-2. Actualization: Track w-value evolution toward manifestation
-3. Navigation: Follow geodesic paths respecting sphere constraint
-4. Expansion: Instantiate new Factors with inherited coordinates and intensity for any Spark using its {{title}} as the new {{name}}
+2. Instantiation
+
+· Create a new Factor by replacing all {{Name}} placeholders
+· Populate {{title}} and {{descriptions}} with domain-specific content
+· Set relationship types: IN (input), OUT (output), or REC (bidirectional)
+
+3. Cosmic Positioning
+
+· Map domain concepts to the 16 invariant spark positions
+· Use 137-step ternary resolution for transitions between layers
+· Respect the sphere constraint during all navigation
+
+4. Layer Navigation
+
+· Track w-value evolution across the three layers:
+  · w = -1 → 0: Emergence from primordial potential
+  · w = 0 → +1: Actualization from idea to reality
+· Follow geodesic paths that respect both geometry and topology
+
+5. Expansion
+
+· Instantiate new Factors using any spark's {{title}} as the new {{Name}}
+· Inherit coordinate relationships and layer positioning
+· Maintain topological consistency across factor hierarchies
+
+6. Cross-Layer Relationships
+
+· IN: Unidirectional input flow (often from lower to higher layers)
+· OUT: Unidirectional output flow (often to higher layers)
+· REC: Bidirectional reciprocal relationship (within same layer)
+· Custom relationship types can be defined for specific domains
+
+---
+
+# Todo:
+
+1. First ask about Sparklet Space.
+2. If the answer is right then proceed.
