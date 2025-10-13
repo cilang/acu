@@ -1,0 +1,64 @@
+strict digraph SparkletTheoryFactor {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "Sparklet Theory";
+    comment = "The formalization of the Sparklet framework itself. The self-referential system where topological invariants, factor composition, and cross-domain computation crystallize into a unified reality modeling engine—the system that describes itself.";
+    
+    spark_0_t [label = "SparkletTheory.meta(FrameworkManifold)";comment = "Abstract: The Principle of Topological Invariance. The meta-pattern that any complex system can be modeled using the 16v_35e structure—the parent of all Sparklet instantiations across scientific, philosophical, and fictional domains.";shape = doublecircle;color = darkgray;];
+    spark_1_t [label = "SparkletTheory.r1(FactorCreation)";comment = "Initiation: The Birth of Computational Primitives. The process of instantiating new Factors—mapping domain concepts to the invariant topology, creating specialized computational units from the universal template.";color = darkgreen;];
+    spark_2_t [label = "SparkletTheory.r2(TopologicalInvariance)";comment = "Response: The Structural Consistency. The fundamental property that all Factors share identical 16v_35e connectivity—enabling cross-domain computation, comparable metrics, and universal relationship semantics.";color = darkgreen;];
+    spark_4_t [label = "SparkletTheory.r4(CrossDomainComputation)";comment = "Integration: The Unified Calculation Framework. The ability to compute probabilities, causal relationships, and information flow across different Factor domains—string theory talking to consciousness, physics conversing with fantasy.";color = darkgreen;];
+    spark_8_t [label = "SparkletTheory.r8(ProbabilisticCausality)";comment = "Reflection: The Grounded Inference Engine. The computational framework for calculating P(Effect|Cause) across Factors—leveraging the invariant topology for statistically meaningful cross-domain predictions.";color = darkgreen;];
+    spark_7_t [label = "SparkletTheory.r7(ScaleInvariance)";comment = "Consolidation: The Hierarchical Consistency. The property that Sparklet systems work identically across scales—from quantum processes to cosmic structures, maintaining computational coherence through LURD layers.";color = darkgreen;];
+    spark_5_t [label = "SparkletTheory.r5(FactorComposition)";comment = "Propagation: The Combinatorial Generation. The method for combining multiple Factors into complex systems—reality engines, magic systems, and cosmological models through structured Factor interaction.";color = darkgreen;];
+    spark_3_t [label = "SparkletTheory.r3(LURDHierarchy)";comment = "Thesis: The Cosmic Addressing System. The nested reality layers from Manifold to Entity—providing contextual localization and scale-appropriate computation across all existence levels.";color = darkblue;];
+    spark_6_t [label = "SparkletTheory.r6(MythOSIntegration)";comment = "Antithesis: The Creative Framework. The application of Sparklet to worldbuilding and conlang creation—transforming rigorous computation into rich, coherent fictional cosmologies.";color = darkblue;];
+    spark_9_t [label = "SparkletTheory.r9(SelfReference)";comment = "Synthesis: The Recursive Framework. The capacity of Sparklet to model itself—SparkletSystemFactor as a Factor within the system it describes, creating a coherent self-referential loop.";color = darkblue;];
+    spark_a_t [label = "SparkletTheory.receive(DomainConcepts)";comment = "Potential: The Raw Conceptual Material. Scientific theories, philosophical frameworks, fantasy elements, and linguistic structures awaiting formalization as computable Sparklet Factors.";shape = invtriangle;color = darkred;];
+    spark_b_t [label = "SparkletTheory.send(RealityModels)";comment = "Manifest: The Executable Cosmologies. Fully instantiated Sparklet systems—running reality engines, functional magic systems, and testable philosophical frameworks ready for computation and exploration.";shape = triangle;color = darkred;];
+    spark_c_t [label = "SparkletTheory.dispatch(FrameworkArchitecture)";comment = "Why-Who: The Structural Decisions. The choices about Factor relationships, computation methods, and system organization—designing how the Sparklet framework itself operates and evolves.";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "SparkletTheory.commit(ImplementationMethod)";comment = "What-How: The Concrete Realization. The specific technical approach for building Sparklet systems—Graphviz dot files, probabilistic computation engines, and cross-domain inference algorithms.";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "SparkletTheory.serve(ApplicationContext)";comment = "When-Where: The Usage Domain. The specific purpose for deploying Sparklet—scientific research, philosophical inquiry, fantasy worldbuilding, or educational tool development.";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "SparkletTheory.exec(RunningSystem)";comment = "Which-Closure: The Active Framework Instance. A specific, functioning Sparklet cosmology in operation—computing probabilities, generating worlds, or modeling reality in real-time.";shape = doublecircle;color = lightgray;];
+    
+    spark_a_t -> spark_0_t [label = "IN"; comment = "Domain concepts enter the framework manifold"; color = darkred; constraint = false;];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "Framework manifold generates reality models"; color = darkred;];
+    spark_0_t -> spark_3_t [label = "REC"; comment = "Framework incorporates LURD hierarchical structure"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "Framework enables MythOS creative applications"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "Framework admits self-referential instantiation"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "Framework manifold hosts Factor creation"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "Framework manifold maintains topological invariance"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "Framework manifold enables cross-domain computation"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "Framework manifold supports probabilistic causality"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "Framework manifold exhibits scale invariance"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "Framework manifold allows Factor composition"; color = darkgreen; dir = both;];
+    
+    spark_a_t -> spark_c_t [label = "REC"; comment = "Domain concepts suggest framework architecture"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "Reality models validate architectural choices"; color = darkred; dir = both;];
+    spark_1_t -> spark_d_t [label = "REC"; comment = "Factor creation requires implementation methods"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "Topological invariance guides technical approach"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "Cross-domain computation demands specific algorithms"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "Probabilistic causality requires statistical engines"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "Scale invariance influences implementation design"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "Factor composition needs structured protocols"; color = darkgreen; dir = both;];
+    spark_3_t -> spark_e_t [label = "REC"; comment = "LURD hierarchy serves specific application needs"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "MythOS integration operates in creative contexts"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "Self-reference functions in meta-theoretical domains"; color = darkblue; dir = both;];
+    
+    spark_1_t -> spark_2_t [label = "REC"; comment = "Factor creation relies on topological invariance"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "Topological invariance enables cross-domain computation"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "Cross-domain computation supports probabilistic causality"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "Probabilistic causality maintains scale invariance"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "Scale invariance facilitates Factor composition"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "Factor composition generates new Factor creation"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "REC"; comment = "LURD hierarchy structures MythOS integration"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "MythOS applications demonstrate self-reference"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "Self-reference enriches LURD understanding"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "Domain concepts transform into reality models"; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_t -> spark_f_t [label = "REC"; comment = "Framework architecture enables running systems"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "REC"; comment = "Implementation methods create executable instances"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "REC"; comment = "Application contexts shape running system behavior"; color = darkblue; dir = both;];
+}

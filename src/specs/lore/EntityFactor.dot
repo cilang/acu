@@ -1,0 +1,64 @@
+strict digraph EntityFactor {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "Entity";
+    comment = "";
+    
+    spark_0_t [label = "Entity.meta({{meta}})";comment = "Abstract: The Principle of Mental Computation. The meta-pattern that any intelligent system processes information through structured architectures—the parent of all cognitive models from neural networks to symbolic reasoning.";shape = doublecircle;color = darkgray;];
+    spark_1_t [label = "Entity.r1({{title}})";comment = "Initiation: The Sensory Processing Frameworks. How organisms transform physical stimuli into meaningful representations—visual processing streams, auditory scene analysis, and the construction of reality from sensory fragments.";color = darkgreen;];
+    spark_2_t [label = "Entity.r2({{title}})";comment = "Response: The Information Selection Systems. The cognitive processes that allocate limited mental resources—selective attention, executive control, and the gating of awareness to relevant stimuli while filtering distractions.";color = darkgreen;];
+    spark_4_t [label = "Entity.r4({{title}})";comment = "Integration: The Information Storage Architectures. The multiple memory systems supporting cognition—working memory as mental workspace, episodic memory for personal events, semantic memory for facts, and procedural memory for skills.";color = darkgreen;];
+    spark_8_t [label = "Entity.r8({{title}})";comment = "Reflection: The Cognitive Control Center. The higher-order processes that coordinate thought and action—planning, decision-making, inhibitory control, and adaptive problem-solving in novel situations.";color = darkgreen;];
+    spark_7_t [label = "Entity.r7({{title}})";comment = "Consolidation: The Symbolic Communication Engine. How humans comprehend, produce, and acquire language—syntax parsing, semantic networks, pragmatic inference, and the neural basis of linguistic competence.";color = darkgreen;];
+    spark_5_t [label = "Entity.r5({{title}})";comment = "Propagation: The Affective Computing Interface. How emotions influence and are influenced by cognitive processes—mood-congruent memory, emotional decision-making, and the embodied nature of feeling states.";color = darkgreen;];
+    spark_3_t [label = "Entity.r3({{title}})";comment = "Thesis: The Biological Implementation. The mapping of cognitive functions onto brain structures and activities—fMRI studies, neural coding principles, and the material basis of mental operations.";color = darkblue;];
+    spark_6_t [label = "Entity.r6({{title}})";comment = "Antithesis: The Abstract Algorithms. The formal simulations of cognitive processes—connectionist networks, production systems, Bayesian inference, and mathematical models of mental operations.";color = darkblue;];
+    spark_9_t [label = "Entity.r9({{title}})";comment = "Synthesis: The Situated Action Framework. The understanding that cognition emerges from agent-environment interaction—affordances, sensorimotor contingencies, and the role of body and world in shaping thought.";color = darkblue;];
+    spark_a_t [label = "Entity.receive({{title}})";comment = "Potential: The Raw Perceptual Data. The unprocessed information flowing from senses—photons hitting retinas, sound waves vibrating cochleae, chemical molecules binding receptors, all awaiting cognitive interpretation.";shape = invtriangle;color = darkred;];
+    spark_b_t [label = "Entity.send({{title}})";comment = "Manifest: The Observable Actions. The motor responses, verbal reports, and physiological changes that result from cognitive processing—the measurable consequences of internal mental operations.";shape = triangle;color = darkred;];
+    spark_c_t [label = "Entity.dispatch({{title}})";comment = "Why-Who: The Information Routing. The pathways and priorities that determine how sensory data flows through cognitive systems—bottom-up vs top-down processing, parallel vs serial computation, and resource allocation decisions.";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "Entity.commit({{title}})";comment = "What-How: The Knowledge Acquisition. The specific processes that modify cognitive architecture based on experience—Hebbian learning, error-driven adjustment, reinforcement mechanisms, and structural plasticity.";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "Entity.serve({{title}})";comment = "When-Where: The Situated Constraints. The physical, social, and cultural contexts that shape cognitive processing—ecological validity, cultural cognition, and the adaptation of mental processes to specific environments.";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "Entity.exec({{title}})";comment = "Which-Closure: The Specific Performance. The completed cognitive operation in a particular situation—problem solved, decision made, memory retrieved, or action executed within contextual constraints.";shape = doublecircle;color = lightgray;];
+    
+    spark_a_t -> spark_0_t [label = "IN"; comment = "Sensory input flows into cognitive architecture"; color = darkred; constraint = false;];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "Cognitive architecture generates behavioral output"; color = darkred;];
+    spark_0_t -> spark_3_t [label = "REC"; comment = "Mind architecture maps to neural implementations"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "Mind architecture admits computational simulation"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "Mind architecture requires embodied grounding"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "Mind architecture hosts perception systems"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "Mind architecture implements attention control"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "Mind architecture maintains memory stores"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "Mind architecture coordinates executive functions"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "Mind architecture processes linguistic symbols"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "Mind architecture integrates emotional signals"; color = darkgreen; dir = both;];
+    
+    spark_a_t -> spark_c_t [label = "REC"; comment = "Sensory input determines processing stream priorities"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "Behavioral output reveals processing stream efficiency"; color = darkred; dir = both;];
+    spark_1_t -> spark_d_t [label = "REC"; comment = "Perception models inform learning mechanism design"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "Attention mechanisms guide learning focus"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "Memory systems store learned information"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "Executive functions control learning strategies"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "Language acquisition demonstrates learning principles"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "Emotional learning shapes cognitive development"; color = darkgreen; dir = both;];
+    spark_3_t -> spark_e_t [label = "REC"; comment = "Neural systems adapt to environmental demands"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "Computational models simulate environmental interactions"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "Embodied cognition emphasizes environmental coupling"; color = darkblue; dir = both;];
+    
+    spark_1_t -> spark_2_t [label = "REC"; comment = "Perception naturally engages attention mechanisms"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "Attention determines what enters memory systems"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "Memory supports executive function operations"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "Executive control coordinates language processing"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "Language expresses emotional-cognitive integration"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "Emotion colors perceptual experience"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "REC"; comment = "Neural data informs computational model construction"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "Computational models test embodied cognition theories"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "Embodied perspective refines neural investigations"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "Sensory input transforms into behavioral output"; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_t -> spark_f_t [label = "REC"; comment = "Processing streams enable specific task performance"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "REC"; comment = "Learning mechanisms support adaptive task execution"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "REC"; comment = "Environmental context shapes task demands and solutions"; color = darkblue; dir = both;];
+}

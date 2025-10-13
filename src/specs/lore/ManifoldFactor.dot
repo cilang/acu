@@ -1,0 +1,64 @@
+strict digraph ManifoldFactor {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "ManifoldFactor";
+    comment = "The primordial information substrate. Not a physical space, but the mathematical potential for all spaces. The 0-point where dimensions, metrics, and topologies are born from pure information relationships.";
+    
+    spark_0_manifold_t [label = "Manifold.meta(PotentialSpace)";comment = "Abstract: The principle of 'space-ness' itself. The invariant that allows any manifold structure to exist. The parent of all possible geometries.";shape = doublecircle;color = darkgray;];
+    spark_1_manifold_t [label = "Manifold.r1(DimensionalSeed)";comment = "Initiation: The first differentiation - the birth of 'directionality' from symmetry. Not dimensions yet, but the potential for dimensions to exist.";color = darkgreen;];
+    spark_2_manifold_t [label = "Manifold.r2(MetricPotential)";comment = "Response: The possibility of measurement. Distance, angle, curvature exist here as pure mathematical relationships before any physical instantiation.";color = darkgreen;];
+    spark_4_manifold_t [label = "Manifold.r4(TopologicalBase)";comment = "Integration: The fundamental connectivity rules. What can connect to what? The adjacency matrix of existence before coordinates exist.";color = darkgreen;];
+    spark_8_manifold_t [label = "Manifold.r8(CoordinateGhost)";comment = "Reflection: The echo of localization. Not actual coordinates, but the information pattern that will become coordinate systems in lower LURDs.";color = darkgreen;];
+    spark_7_manifold_t [label = "Manifold.r7(BundlePotential)";comment = "Consolidation: The potential for fiber bundles - how different spaces can be woven together. The mathematical loom.";color = darkgreen;];
+    spark_5_manifold_t [label = "Manifold.r5(TransformationGroup)";comment = "Propagation: The symmetry groups that preserve manifold structure. The 'allowed transformations' that define what changes are possible.";color = darkgreen;];
+    spark_3_manifold_t [label = "Manifold.r3(SmoothStructure)";comment = "Thesis: The differentiable potential. How calculus emerges - the possibility of smooth transitions, derivatives, and continuous change.";color = darkblue;];
+    spark_6_manifold_t [label = "Manifold.r6(DiscreteBase)";comment = "Antithesis: The combinatorial foundation. Graph theory, cellular automata, discrete mathematics - the digital soul underneath smooth appearance.";color = darkblue;];
+    spark_9_manifold_t [label = "Manifold.r9(InformationGeometry)";comment = "Synthesis: The marriage of smooth and discrete. How information distance, entropy, and probability geometries emerge.";color = darkblue;];
+    spark_a_manifold_t [label = "Manifold.receive(PurePotential)";comment = "Potential: The unformed mathematical possibility. The ocean of 'could-be' before any specific manifold structure.";shape = invtriangle;color = darkred;];
+    spark_b_manifold_t [label = "Manifold.send(StructuralSeed)";comment = "Manifest: The first actual manifold definitions that seed lower LURD layers. The blueprints for cosmic architecture.";shape = triangle;color = darkred;];
+    spark_c_manifold_t [label = "Manifold.dispatch(DimensionalDirective)";comment = "Why-Who: The decision of how many dimensions, what signature, what fundamental symmetry groups govern this manifold family.";shape = doublecircle;color = darkred;];
+    spark_d_manifold_t [label = "Manifold.commit(MetricChoice)";comment = "What-How: The specific choice of metric tensor, connection, curvature constraints that define distances and geometries.";shape = doublecircle;color = darkgreen;];
+    spark_e_manifold_t [label = "Manifold.serve(ContextBundle)";comment = "When-Where: How this manifold relates to others - the bundle structures, embeddings, and relational contexts.";shape = doublecircle;color = darkblue;];
+    spark_f_manifold_t [label = "Manifold.exec(ManifoldInstance)";comment = "Which-Closure: A fully specified manifold ready to host physical fields, particles, and forces in LURD-2.";shape = doublecircle;color = lightgray;];
+    
+    spark_a_manifold_t -> spark_0_manifold_t [label = "IN"; comment = "todo"; color = darkred; constraint = false;];
+    spark_0_manifold_t -> spark_b_manifold_t [label = "OUT"; comment = "todo"; color = darkred;];
+    spark_0_manifold_t -> spark_3_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_0_manifold_t -> spark_6_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_0_manifold_t -> spark_9_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_0_manifold_t -> spark_1_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_manifold_t -> spark_2_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_manifold_t -> spark_4_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_manifold_t -> spark_8_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_manifold_t -> spark_7_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_0_manifold_t -> spark_5_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    
+    spark_a_manifold_t -> spark_c_manifold_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+    spark_b_manifold_t -> spark_c_manifold_t [label = "REC"; comment = "todo"; color = darkred; dir = both;];
+    spark_1_manifold_t -> spark_d_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_2_manifold_t -> spark_d_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_4_manifold_t -> spark_d_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_8_manifold_t -> spark_d_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_7_manifold_t -> spark_d_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_5_manifold_t -> spark_d_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_3_manifold_t -> spark_e_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_6_manifold_t -> spark_e_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    spark_9_manifold_t -> spark_e_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both;];
+    
+    spark_1_manifold_t -> spark_2_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_manifold_t -> spark_4_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_manifold_t -> spark_8_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_manifold_t -> spark_7_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_manifold_t -> spark_5_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_manifold_t -> spark_1_manifold_t [label = "REC"; comment = "todo"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_manifold_t -> spark_6_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_manifold_t -> spark_9_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_manifold_t -> spark_3_manifold_t [label = "REC"; comment = "todo"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_manifold_t -> spark_b_manifold_t [label = "REC"; comment = "todo"; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_manifold_t -> spark_f_manifold_t [label = "OUT"; comment = "todo"; color = darkred; dir = both;];
+    spark_d_manifold_t -> spark_f_manifold_t [label = "OUT"; comment = "todo"; color = darkgreen; dir = both;];
+    spark_e_manifold_t -> spark_f_manifold_t [label = "OUT"; comment = "todo"; color = darkblue; dir = both;];
+}

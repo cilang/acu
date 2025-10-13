@@ -1,0 +1,64 @@
+strict digraph CommitView {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "Commit View";
+    comment = "Selection Operator for Meaning Construction";
+    
+    spark_0_commit_view_t [label = "Commit.meta(Commit)";comment = "Abstract: The semantic field where potential meanings exist as quantum superpositions before selection.";shape = doublecircle;color = darkgray;];
+    spark_1_commit_view_t [label = "Commit.r1(SematicPriming)";comment = "Initiation: Establishes initial context and activates relevant meaning frameworks.";color = darkgreen;];
+    spark_2_commit_view_t [label = "Commit.r2(PatternRecognition)";comment = "Response: Identifies meaningful structures and responds to semantic cues.";color = darkgreen;];
+    spark_4_commit_view_t [label = "Commit.r4(ConceptualBlending)";comment = "Integration: Merges multiple meaning frameworks into coherent wholes.";color = darkgreen;];
+    spark_8_commit_view_t [label = "Commit.r8(Meta-semanticAnalysis)";comment = "Reflection: Examines the meaning-making process itself.";color = darkgreen;];
+    spark_7_commit_view_t [label = "Commit.r7(SemanticCrystallization)";comment = "Consolidation: Solidifies selected meanings into stable constructs.";color = darkgreen;];
+    spark_5_commit_view_t [label = "Commit.r5(MeaningDiffusion)";comment = "Propagation: Spreads selected interpretations through associative networks.";color = darkgreen;];
+    spark_3_commit_view_t [label = "Commit.r3(PropositionalMeaning)";comment = "Thesis: Asserts a specific interpretation as primary truth.";color = darkblue;];
+    spark_6_commit_view_t [label = "Commit.r6(CounterInterpretation)";comment = "Antithesis: Challenges dominant meanings with alternative readings.";color = darkblue;];
+    spark_9_commit_view_t [label = "Commit.r9(IntegratedMeaning)";comment = "Synthesis: Resolves semantic conflicts through higher-order understanding.";color = darkblue;];
+    spark_a_commit_view_t [label = "Commit.receive(RawSematicInput)";comment = "Potential: Ambiguous signals awaiting interpretation and meaning assignment.";shape = invtriangle;color = darkred;];
+    spark_b_commit_view_t [label = "Commit.send(ExpressedMeaning)";comment = "Manifest: Clarified interpretations ready for communication and action.";shape = triangle;color = darkred;];
+    spark_c_commit_view_t [label = "Commit.dispatch(ContextualFraming)";comment = "Why-Who: Determines which meaning frameworks are relevant for selection.";shape = doublecircle;color = darkred;];
+    spark_d_commit_view_t [label = "Commit.commit(MeaningSelection)";comment = "What-How: The core operator that collapses semantic possibilities into definite interpretations.";shape = doublecircle;color = darkgreen;];
+    spark_e_commit_view_t [label = "Commit.serve(SemanticPresentation)";comment = "When-Where: Delivers selected meanings in appropriate contexts and timing.";shape = doublecircle;color = darkblue;];
+    spark_f_commit_view_t [label = "Commit.exec(MeaningRealization)";comment = "Which-Closure: Finalizes interpretation and completes the meaning-making cycle.";shape = doublecircle;color = lightgray;];
+    
+    spark_a_commit_view_t -> spark_0_commit_view_t [label = "IN"; comment = "Ambiguous semantic input enters the meaning field as potential interpretations."; color = darkred; constraint = false;];
+    spark_0_commit_view_t -> spark_b_commit_view_t [label = "OUT"; comment = "Definite meanings emerge from the selection process ready for expression."; color = darkred;];
+    spark_0_commit_view_t -> spark_3_commit_view_t [label = "REC"; comment = "Abstract meaning engages with propositional assertions to test interpretive frameworks."; color = darkblue; dir = both;];
+    spark_0_commit_view_t -> spark_6_commit_view_t [label = "REC"; comment = "Potential meanings interact with counter-interpretations to explore semantic alternatives."; color = darkblue; dir = both;];
+    spark_0_commit_view_t -> spark_9_commit_view_t [label = "REC"; comment = "Semantic possibilities seek synthetic resolution through integrated understanding."; color = darkblue; dir = both;];
+    spark_0_commit_view_t -> spark_1_commit_view_t [label = "REC"; comment = "Abstract context primes specific meaning initiation through contextual activation."; color = darkgreen; dir = both;];
+    spark_0_commit_view_t -> spark_2_commit_view_t [label = "REC"; comment = "Potential patterns engage recognition systems to identify meaningful structures."; color = darkgreen; dir = both;];
+    spark_0_commit_view_t -> spark_4_commit_view_t [label = "REC"; comment = "Multiple meanings require integration to form coherent interpretive frameworks."; color = darkgreen; dir = both;];
+    spark_0_commit_view_t -> spark_8_commit_view_t [label = "REC"; comment = "Meaning processes reflect on their own operation and interpretive strategies."; color = darkgreen; dir = both;];
+    spark_0_commit_view_t -> spark_7_commit_view_t [label = "REC"; comment = "Selected interpretations consolidate into stable semantic constructs."; color = darkgreen; dir = both;];
+    spark_0_commit_view_t -> spark_5_commit_view_t [label = "REC"; comment = "Stable meanings propagate through associative semantic networks."; color = darkgreen; dir = both;];
+    
+    spark_a_commit_view_t -> spark_c_commit_view_t [label = "REC"; comment = "Input ambiguity informs contextual framing by highlighting multiple interpretive possibilities."; color = darkred; dir = both;];
+    spark_b_commit_view_t -> spark_c_commit_view_t [label = "REC"; comment = "Output clarity refines contextual framing through successful meaning resolution feedback."; color = darkred; dir = both;];
+    spark_1_commit_view_t -> spark_d_commit_view_t [label = "REC"; comment = "Initiation provides contextual priming that biases selection toward specific meaning frameworks."; color = darkgreen; dir = both;];
+    spark_2_commit_view_t -> spark_d_commit_view_t [label = "REC"; comment = "Response patterns inform selection by identifying which interpretations best fit recognized structures."; color = darkgreen; dir = both;];
+    spark_4_commit_view_t -> spark_d_commit_view_t [label = "REC"; comment = "Integration capabilities enable selection of coherent meaning blends over fragmented interpretations."; color = darkgreen; dir = both;];
+    spark_8_commit_view_t -> spark_d_commit_view_t [label = "REC"; comment = "Reflection guides selection by evaluating the quality and implications of potential interpretations."; color = darkgreen; dir = both;];
+    spark_7_commit_view_t -> spark_d_commit_view_t [label = "REC"; comment = "Consolidation reinforces selection by stabilizing chosen meanings against competing alternatives."; color = darkgreen; dir = both;];
+    spark_5_commit_view_t -> spark_d_commit_view_t [label = "REC"; comment = "Propagation requirements influence selection by considering communicative effectiveness and spread potential."; color = darkgreen; dir = both;];
+    spark_3_commit_view_t -> spark_e_commit_view_t [label = "REC"; comment = "Thesis interpretations determine presentation parameters by establishing primary meaning assertions."; color = darkblue; dir = both;];
+    spark_6_commit_view_t -> spark_e_commit_view_t [label = "REC"; comment = "Antithetical challenges influence presentation by requiring accommodation of alternative viewpoints."; color = darkblue; dir = both;];
+    spark_9_commit_view_t -> spark_e_commit_view_t [label = "REC"; comment = "Synthetic resolutions guide presentation by integrating multiple perspectives into coherent delivery."; color = darkblue; dir = both;];
+    
+    spark_1_commit_view_t -> spark_2_commit_view_t [label = "REC"; comment = "Contextual priming enables pattern recognition by activating relevant semantic networks."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_commit_view_t -> spark_4_commit_view_t [label = "REC"; comment = "Recognized patterns drive integration needs as multiple meanings require coherent blending."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_commit_view_t -> spark_8_commit_view_t [label = "REC"; comment = "Integration complexity prompts reflection on the meaning construction process itself."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_commit_view_t -> spark_7_commit_view_t [label = "REC"; comment = "Reflective insights enable consolidation by identifying the most stable and coherent interpretations."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_commit_view_t -> spark_5_commit_view_t [label = "REC"; comment = "Consolidated meanings require propagation to spread through communicative channels."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_commit_view_t -> spark_1_commit_view_t [label = "REC"; comment = "Propagated meanings create new contextual priming, initiating further meaning cycles."; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_commit_view_t -> spark_6_commit_view_t [label = "REC"; comment = "Propositional assertions naturally generate counter-interpretations through semantic tension."; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_commit_view_t -> spark_9_commit_view_t [label = "REC"; comment = "Interpretive conflicts drive toward synthetic resolution through meaning integration."; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_commit_view_t -> spark_3_commit_view_t [label = "REC"; comment = "Synthetic resolutions become new propositions, advancing the evolution of understanding."; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_commit_view_t -> spark_b_commit_view_t [label = "REC"; comment = "Input ambiguity and output clarity exist in dialectical relationship, each informing the other."; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_commit_view_t -> spark_f_commit_view_t [label = "OUT"; comment = "Contextual framing culminates in meaning realization by defining interpretive boundaries."; color = darkred; dir = both;];
+    spark_d_commit_view_t -> spark_f_commit_view_t [label = "OUT"; comment = "Selection decisions achieve realization by collapsing semantic possibilities into definite meanings."; color = darkgreen; dir = both;];
+    spark_e_commit_view_t -> spark_f_commit_view_t [label = "OUT"; comment = "Presentation delivery completes realization by manifesting meanings in communicative acts."; color = darkblue; dir = both;];
+}

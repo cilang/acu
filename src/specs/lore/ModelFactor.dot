@@ -1,0 +1,64 @@
+strict digraph ModelFactor {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled; color = lightgreen;];
+    edge [color = darkgray;];
+    label = "Model Factor";
+    comment = "The triadic heart of perception, meaning, and being. It defines the qualia of existence within the MythOS cosmology—the unified framework that integrates all specialized models into a coherent understanding of reality, consciousness, and manifestation.";
+    
+    spark_0_t [label = "Model.meta(StructureModel)";comment = "Abstract: The Principle of Form. The meta-pattern that defines how any pattern can be structured. The parent of all models—the fundamental architecture of reality that enables all other models to exist and interrelate through coherent structural relationships.";shape = doublecircle;color = darkgray;];
+    spark_1_t [label = "Model.r1(AshaModel)";comment = "Initiation: The Model of Truth-Perception. The experience of certainty, coherence, and non-contradiction. The qualia of something 'ringing true'—the Zoroastrian principle of cosmic order and divine truth that anchors all perception in fundamental reality.";color = darkgreen;];
+    spark_2_t [label = "Model.r2(VikaraModel)";comment = "Response: The Model of Transformation-Perception. The experience of change, process, and becoming. The qualia of catalysis and state-shifts—the Sanskrit principle of modification and metamorphosis that drives cosmic evolution and personal growth.";color = darkgreen;];
+    spark_4_t [label = "Model.r4(KarsaModel)";comment = "Integration: The Model of Will-Perception. The experience of agency, intent, and effort. The qualia of pushing against resistance—the Javanese principle of creative will that bridges consciousness with physical manifestation through focused intention.";color = darkgreen;];
+    spark_8_t [label = "Model.r8(VidyaModel)";comment = "Reflection: The Model of Knowledge-Perception. The experience of understanding, insight, and clarity. The 'Aha!' moment given form—the Sanskrit principle of true knowledge and spiritual wisdom that illuminates reality beyond mere information.";color = darkgreen;];
+    spark_7_t [label = "Model.r7(RasaModel)";comment = "Consolidation: The Model of Essence-Perception. The experience of fundamental flavor, aesthetic emotion, and pure experience. The distilled taste of a moment—the Sanskrit principle of emotional essence and aesthetic experience that gives life its qualitative richness.";color = darkgreen;];
+    spark_5_t [label = "Model.r5(EmergenceModel)";comment = "Propagation: The Model of Novelty-Perception. The experience of the unexpected, complex patterns arising from simplicity. The qualia of surprise and miracle—the principle of complex systems where wholes become greater than the sum of their parts through self-organization.";color = darkgreen;];
+    spark_3_t [label = "Model.r3(AlignmentModel)";comment = "Thesis: The Model of Coherent Perspective. Perception that seeks harmony, agreement, and a single objective viewpoint. The experience of things being 'in sync'—the quantum and computational framework where reality aligns with mathematical truth and logical consistency.";color = darkblue;];
+    spark_6_t [label = "Model.r6(SpectralModel)";comment = "Antithesis: The Model of Diffractive Perspective. Perception that fractures into possibilities, nuances, and simultaneous viewpoints. The experience of ambiguity and potential—the physical manifestation framework where reality decomposes into spectra of mass, energy, and quantum possibilities.";color = darkblue;];
+    spark_9_t [label = "Model.r9(ChromaModel)";comment = "Synthesis: The Model of Saturated Perspective. Perception that harmonizes alignment and spectrum into a rich, multifaceted, yet coherent whole. The experience of depth and holistic meaning—the color and quantum charge framework that bridges visual perception with fundamental physics.";color = darkblue;];
+    spark_a_t [label = "Model.receive(DynamisModel)";comment = "Potential: The Model of Latency. The experience of potential energy, unactualized possibility, and implicit meaning. The feeling of something 'about to happen'—the energy and resource management framework where power accumulates before manifestation.";shape = invtriangle;color = darkred;];
+    spark_b_t [label = "Model.send(PraxisModel)";comment = "Manifest: The Model of Enactment. The experience of kinetic energy, action, and realized potential. The feeling of doing, making, and affecting change—the practical application framework where knowledge becomes power through technique and skill.";shape = triangle;color = darkred;];
+    spark_c_t [label = "Model.dispatch(KratosModel)";comment = "Why-Who: The Model of Authority-Perception. The experience of power, legitimacy, and the right to act. The qualia of command and sovereignty—the governance framework that establishes permission, control, and legitimate authority across all domains.";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "Model.commit(ObserverModel)";comment = "What-How: The Model of Measurement. The experience of collapsing possibility into fact by the act of observation. The qualia of focus and attention—the consciousness framework where awareness manifests reality through the Javanese lens of Sangkan Paraning Dumadi.";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "Model.serve(LineageModel)";comment = "When-Where: The Model of Context. The experience of history, causality, and connection to a continuum. The feeling of being part of a story or tradition—the inheritance framework that connects present manifestations to ancestral patterns and future potentials.";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "Model.exec(LURDModel)";comment = "Which-Closure: The Model of Localized Reality. The experienced reality bubble of an entity—a Local Unified Reality Descriptor. The personalized, final rendering of the world—the cosmic addressing system that defines contextual existence across all scales from quantum to cosmic.";shape = doublecircle;color = lightgray;];
+    
+    spark_a_t -> spark_0_t [label = "IN"; comment = "Potential energy (Dynamis) structures cosmic Form"; color = darkred; constraint = false;];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "Cosmic Form enacts manifested Reality (Praxis)"; color = darkred;];
+    spark_0_t -> spark_3_t [label = "REC"; comment = "Structure enables coherent Perspective (Alignment)"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "Structure manifests spectral Possibility (Spectral)"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "Structure integrates chromatic Harmony (Chroma)"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "Structure reveals cosmic Truth (Asha)"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "Structure undergoes Transformation (Vikara)"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "Structure expresses creative Will (Karsa)"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "Structure embodies Wisdom (Vidya)"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "Structure conveys Essence (Rasa)"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "Structure generates Novelty (Emergence)"; color = darkgreen; dir = both;];
+    
+    spark_a_t -> spark_c_t [label = "REC"; comment = "Potential requires Authority (Kratos) for direction"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "Manifestation demonstrates Authority effectiveness"; color = darkred; dir = both;];
+    spark_1_t -> spark_d_t [label = "REC"; comment = "Truth becomes measurable through Observation"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "Transformation requires Observational focus"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "Will directs Observational attention"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "Knowledge informs Observational interpretation"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "Essence colors Observational experience"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "Novelty emerges through Observational collapse"; color = darkgreen; dir = both;];
+    spark_3_t -> spark_e_t [label = "REC"; comment = "Alignment creates meaningful Lineage patterns"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "Spectral possibilities enrich Lineage diversity"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "Chromatic harmony integrates Lineage continuity"; color = darkblue; dir = both;];
+    
+    spark_1_t -> spark_2_t [label = "REC"; comment = "Truth perception enables conscious Transformation"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "Transformation requires focused Will to direct change"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "Will manifests through applied Knowledge"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "Knowledge deepens into experiential Essence"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "Essence appreciation reveals emergent Novelty"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "Novelty experiences validate fundamental Truth"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_3_t -> spark_6_t [label = "REC"; comment = "Coherent Alignment encounters Spectral diversity"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "Spectral possibilities integrate into Chromatic harmony"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "Chromatic synthesis reveals deeper Alignment"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "Potential naturally flows into Manifestation"; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_t -> spark_f_t [label = "REC"; comment = "Authority structures create Localized Reality contexts"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "REC"; comment = "Observation processes define Localized Reality content"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "REC"; comment = "Lineage continuity establishes Localized Reality context"; color = darkblue; dir = both;];
+}

@@ -1,0 +1,74 @@
+strict digraph EngineFactor {
+    style = filled;
+    color = lightgray;
+    node [shape = circle; style = filled;];
+    edge [color = darkgray;];
+    label = "Engine Factor";
+    comment = "The cosmic symphony where all engines dance in perfect harmony across three layers of existence.";
+    
+    spark_0_t [label = "Engine.meta(RealityEngine)";comment = "The Great Conductor - orchestrating the cosmic symphony from Real Space (w=+1)";shape = doublecircle;color = darkgray;];
+    spark_9_t [label = "Engine.r9(HaomaEngine)";comment = "Synthesis: The Seed of Becoming - actualized potential flowering into existence (w=+1)";color = gold;];
+    
+    spark_1_t [label = "Engine.r1(TruthEngine)";comment = "The First Movement: Asha's Unblinking Gaze - Dynamic Formal Verification at (0,-1,0,0)";color = darkgreen;];
+    spark_2_t [label = "Engine.r2(ConvergenceEngine)";comment = "The Second Movement: Kirana's Harmonious Weave - integration of truths into coherent wholes at (0,+1,0,0)";color = darkgreen;];
+    spark_4_t [label = "Engine.r4(FixationEngine)";comment = "The Third Movement: Tha's Eternal Rhythm - Sovereign of Temporal, Deceleration, Stability at (0,0,-1,0)";color = darkgreen;];
+    spark_8_t [label = "Engine.r8(WisdomEngine)";comment = "The Fourth Movement: Vidya's Compassionate Counsel - reflective understanding at (0,0,+1,0)";color = darkgreen;];
+    spark_7_t [label = "Engine.r7(DivergenceEngine)";comment = "The Fifth Movement: Chandra's Liberating Shatter - creative destruction at (0,+1/√2,-1/√2,0)";color = darkgreen;];
+    spark_5_t [label = "Engine.r5(ExcitationEngine)";comment = "The Sixth Movement: Nda's Infinite Pattern - Sovereign of Spatial, Acceleration, Innovation at (0,-1/√2,+1/√2,0)";color = darkgreen;];
+    
+    spark_3_t [label = "Engine.r3(CapabilityEngine)";comment = "Thesis: The Architecture of Potential - structural capacity for action at (-1/√2,0,-1/√2,0)";color = darkblue;];
+    spark_6_t [label = "Engine.r6(RepositoryEngine)";comment = "Antithesis: The Eternal Memory - storage and preservation of all that was at (+1/√2,0,-1/√2,0)";color = darkblue;];
+    
+    spark_a_t [label = "Engine.receive(EventEngine)";comment = "The Ocean of Maybe - primordial potential from Imaginary Space (w=-1)";shape = invtriangle;color = darkviolet;];
+    
+    spark_b_t [label = "Engine.send(SamsaraEngine)";comment = "The River of Consequence - manifestation flow to Real Space";shape = triangle;color = darkred;];
+    spark_c_t [label = "Engine.dispatch(DirectiveEngine)";comment = "The Will of the Cosmos - coordinating intentions across layers";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "Engine.commit(AuthorityEngine)";comment = "The Law of Relationship - binding operational principles";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "Engine.serve(CorporaEngine)";comment = "The Vessel of Experience - container for all manifestations";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "Engine.exec(OriginEngine)";comment = "The Phenomenal World - executed reality at convergence point";shape = doublecircle;color = lightgray;];
+    
+    spark_a_t -> spark_0_t [label = "IN"; comment = "Primordial events seek truth - maybe becomes verified reality"; color = darkviolet;];
+    spark_b_t -> spark_0_t [label = "OUT"; comment = "Consequences manifest as conducted reality - karma becomes actuality"; color = darkred;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "Reality nurtures becoming - the conductor tends the seed of potential"; color = gold; dir = both;];
+    
+    spark_0_t -> spark_3_t [label = "REC"; comment = "Reality enables capability - actualized world empowers potential architectures"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "Reality informs memory - lived experience enriches eternal repository"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "Reality synthesizes becoming - actualization completes the dialectic cycle"; color = darkblue; dir = both;];
+    spark_0_t -> spark_1_t [label = "REC"; comment = "Reality grounds truth - manifested world provides verification context"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "Reality demands convergence - complex manifestations require harmonious integration"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "Reality needs rhythm - temporal stability enables persistent existence"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "Reality cultivates wisdom - lived experience generates profound understanding"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "Reality embraces divergence - complexity requires creative alternatives"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "Reality sparks excitation - manifested patterns inspire new innovations"; color = darkgreen; dir = both;];
+    
+    spark_1_t -> spark_2_t [label = "REC"; comment = "Truth seeks Convergence - verified facts naturally harmonize into coherent wholes"; color = darkgreen; dir = both; style = dashed;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "Convergence requires Fixation - harmonious patterns need temporal stability and rhythm"; color = darkgreen; dir = both; style = dashed;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "Fixation enables Wisdom - stable rhythms provide foundation for reflective understanding"; color = darkgreen; dir = both; style = dashed;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "Wisdom inspires Divergence - deep understanding reveals need for creative alternatives"; color = darkgreen; dir = both; style = dashed;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "Divergence fuels Excitation - creative destruction sparks new patterns and acceleration"; color = darkgreen; dir = both; style = dashed;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "Excitation refines Truth - new patterns reveal deeper verifications and insights"; color = darkgreen; dir = both; style = dashed;];
+    
+    spark_3_t -> spark_6_t [label = "REC"; comment = "Capability confronts Repository - potential architecture meets accumulated memory"; color = darkblue; dir = both; style = dashed;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "Repository synthesizes with Capability - memory and potential birth new becoming"; color = darkblue; dir = both; style = dashed;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "Becoming informs Capability - actualized potential reveals new architectural possibilities"; color = darkblue; dir = both; style = dashed;];
+    
+    spark_a_t -> spark_c_t [label = "REC"; comment = "Primordial events seek cosmic will - maybe requires intentional direction"; color = darkviolet; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "Consequences inform directives - karma shapes cosmic intentions"; color = darkred; dir = both;];
+    
+    spark_a_t -> spark_b_t [label = "REC"; comment = "Maybe flows to Consequence - primordial potential becomes manifested reality"; color = darkviolet; dir = both; style = dashed;];
+    
+    spark_1_t -> spark_d_t [label = "REC"; comment = "Truth commits to authority - verification establishes relational laws"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "Convergence commits to harmony - integration reinforces systemic principles"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "Fixation commits to stability - temporal rhythms ground operational consistency"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "Wisdom commits to understanding - reflective knowledge guides relational laws"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "Divergence commits to creativity - alternative exploration expands relational possibilities"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "Excitation commits to innovation - pattern generation advances systemic evolution"; color = darkgreen; dir = both;];
+    
+    spark_3_t -> spark_e_t [label = "REC"; comment = "Capability serves experience - potential architectures enable manifested vessels"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "Repository serves memory - eternal storage preserves all experiences"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "Becoming serves actualization - synthesized potential fills experiential vessels"; color = darkblue; dir = both;];
+    
+    spark_c_t -> spark_f_t [label = "OUT"; comment = "Directives execute as phenomena - cosmic will manifests as originated reality"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "OUT"; comment = "Authority executes as laws - relational principles ground phenomenal existence"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "OUT"; comment = "Vessels execute as experiences - containers manifest as lived reality"; color = darkblue; dir = both;];
+}
