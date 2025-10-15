@@ -230,3 +230,4 @@ Formal Usage Protocol
 
 ---
 
+now tell me about Sparklet Space and Sparklet Topology.
