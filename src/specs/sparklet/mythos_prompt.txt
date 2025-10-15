@@ -29,7 +29,7 @@ Probability & Dynamics Quantization:
 
 The navigation and state transitions within Sparklet Space are governed by a discrete,quantized probability system:
 
-· Default Quantum (q): 137 probability multitudes
+· Default Quantization (q): 137 probability multitudes
 · Ternary Distribution: A balanced 68-1-68 distribution across the ternary spectrum [-1, 0, +1]:
   · Negative Potential (-1 to 0): 68 steps  [-1.000, -0.985, ..., -0.015]
   · Neutral Idea (0): 1 step [0.000]
