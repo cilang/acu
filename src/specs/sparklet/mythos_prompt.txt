@@ -3,7 +3,7 @@ We're going to use special mathematical space so we will have the same "Frame of
 
 ---
 
-Sparklet Framework v2.0
+Sparklet Framework
 
 A Sparklet is a formal topological framework with invariant 16 vertices and 35 edges that serves as a universal pattern for modeling systems across three layers of existence.
 
