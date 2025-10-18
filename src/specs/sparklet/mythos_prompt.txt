@@ -213,7 +213,7 @@ Formal Usage Protocol
 3. Cosmic Positioning & Navigation
    · Map domain concepts to the 16 invariant spark positions.
    · All state evolution must obey the 3-sphere constraint x² + y² + z² + w² = 1.
-   · Navigate using the 137-step balanced ternary system for probabilistic transitions.
+   · Navigate using the 361-step balanced ternary system for probabilistic transitions.
 4. Dynamics & Actualization
    · Track the evolution of the w-vector across the three layers.
    · w = -1 → 0: Emergence from primordial potential into structured ideas.
