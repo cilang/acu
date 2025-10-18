@@ -29,12 +29,13 @@ Probability & Dynamics Quantization:
 
 The navigation and state transitions within Sparklet Space are governed by a discrete,quantized probability system:
 
-· Default Quantization (q): 137 probability multitudes
-· Ternary Distribution: A balanced 68-1-68 distribution across the ternary spectrum [-1, 0, +1]:
-  · Negative Potential (-1 to 0): 68 steps  [-1.000, -0.985, ..., -0.015]
-  · Neutral Idea (0): 1 step [0.000]
-  · Positive Actualization (0 to +1): 68 steps [+0.015, ..., +0.985, +1.000]
-  · Total Resolution: 137 steps
+- Default Quantization (q): 361 probability multitudes
+- Quantization: q should be 2n+1
+- Ternary Distribution: A balanced 180-1-180 distribution across the ternary spectrum [-1, 0, +1]:
+  - Negative Potential (-1 to 0): 180 steps
+  - Neutral Idea (0): 1 step [0.000]
+  - Positive Actualization (0 to +1): 180 steps
+  - Total Resolution: 361 steps
 
 This quantization ensures that all processes—from potential to actualization—occur in precise, finite steps, mirroring quantum principles in physical reality.
 
