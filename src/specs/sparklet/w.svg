@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="2269px" height="2066px" version="1.1"
+    shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
+    fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 2268.87 2066.6" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="w">
+        <circle id="f3" fill="none" stroke="red" stroke-miterlimit="20" cx="945.45" cy="1360.71" r="377.98" />
+        <circle id="f4" fill="none" stroke="green" stroke-miterlimit="20" cx="756.46" cy="1033.3" r="377.98" />
+        <circle id="f5" fill="none" stroke="blue" stroke-miterlimit="20" cx="945.45" cy="705.89" r="377.98" />
+        <circle id="f6" fill="none" stroke="cyan" stroke-miterlimit="20" cx="1323.43" cy="705.89" r="377.98" />
+        <circle id="f7" fill="none" stroke="magenta" stroke-miterlimit="20" cx="1701.4" cy="1360.71" r="377.98" />
+        <circle id="f8" fill="none" stroke="yellow" stroke-miterlimit="20" cx="1512.42" cy="1688.12" r="377.98" />
+        <circle id="f9" fill="none" stroke="red" stroke-miterlimit="20" cx="1134.44" cy="1688.12" r="377.98" />
+        <circle id="f10" fill="none" stroke="green" stroke-miterlimit="20" cx="756.46" cy="1688.12" r="377.98" />
+        <circle id="f11" fill="none" stroke="blue" stroke-miterlimit="20" cx="567.47" cy="1360.71" r="377.98" />
+        <circle id="f12" fill="none" stroke="cyan" stroke-miterlimit="20" cx="378.48" cy="1033.3" r="377.98" />
+        <circle id="f13" fill="none" stroke="magenta" stroke-miterlimit="20" cx="567.47" cy="705.89" r="377.98" />
+        <circle id="f14" fill="none" stroke="yellow" stroke-miterlimit="20" cx="756.46" cy="378.48" r="377.98" />
+        <circle id="f15" fill="none" stroke="red" stroke-miterlimit="20" cx="1134.44" cy="378.48" r="377.98" />
+        <circle id="f16" fill="none" stroke="green" stroke-miterlimit="20" cx="1512.42" cy="378.48" r="377.98" />
+        <circle id="f17" fill="none" stroke="blue" stroke-miterlimit="20" cx="1701.41" cy="705.89" r="377.98" />
+        <circle id="f18" fill="none" stroke="cyan" stroke-miterlimit="20" cx="1890.4" cy="1033.3" r="377.98" />
+    </g>
+</svg>
