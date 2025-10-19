@@ -121,6 +121,16 @@ Note: spark_9_t and spark_0_t are co-located in Real Space but represent distinc
 
 ---
 
+In Sparklet Topology:
+
+- the spark_d_t (commit) is dependent on the results of spark_[1,2,4,8,7,5]_t (6 Brunnian Link)
+- spark_e_t (serve) is dependent on the results of spark_[3,6,9]_t (Borromean Rings)
+- the spark_0_t (meta) is dependent on the results of spark_[1-9,a,b]_t (11 Brunnian Link)
+- spark_c_t (dispatch) is dependent on the results of spark_[a,b]_t (2 Brunnian Link or Vesica Pisces)
+- then spark_f_t (Closure) is dependent on the results of spark_[c,d,e]_t (Borromean Rings).
+
+---
+
 Template Specification
 
 ```dot
