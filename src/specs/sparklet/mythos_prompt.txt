@@ -135,77 +135,72 @@ Template Specification
 
 ```dot
 strict digraph {{Name}}Factor {
-    /* Graph styling */
     style = filled;
     color = lightgray;
     node [shape = circle; style = filled; color = lightgreen;];
     edge [color = darkgray;];
     label = "{{Name}}";
-    comment = "{{System_Description}}";
-
-    spark_a_t [label = "{{Name}}.receive({{Potential_Title}})"; comment = "Potential: {{Potential_Description}}"; shape = invtriangle; color = darkviolet;];
-
-    spark_0_t [label = "{{Name}}.meta({{Meta_Context}})"; comment = "Essence: {{Meta_Description}}"; shape = doublecircle; color = darkgray;];
-    spark_9_t [label = "{{Name}}.r9({{Synthesis_Title}})"; comment = "Synthesis: {{Synthesis_Description}}"; color = gold;];
-
-    spark_1_t [label = "{{Name}}.r1({{Initiation_Title}})"; comment = "Initiation: {{Initiation_Description}}"; color = darkgreen;];
-    spark_2_t [label = "{{Name}}.r2({{Response_Title}})"; comment = "Response: {{Response_Description}}"; color = darkgreen;];
-    spark_4_t [label = "{{Name}}.r4({{Integration_Title}})"; comment = "Integration: {{Integration_Description}}"; color = darkgreen;];
-    spark_8_t [label = "{{Name}}.r8({{Reflection_Title}})"; comment = "Reflection: {{Reflection_Description}}"; color = darkgreen;];
-    spark_7_t [label = "{{Name}}.r7({{Consolidation_Title}})"; comment = "Consolidation: {{Consolidation_Description}}"; color = darkgreen;];
-    spark_5_t [label = "{{Name}}.r5({{Propagation_Title}})"; comment = "Propagation: {{Propagation_Description}}"; color = darkgreen;];
-    spark_3_t [label = "{{Name}}.r3({{Thesis_Title}})"; comment = "Thesis: {{Thesis_Description}}"; color = darkblue;];
-    spark_6_t [label = "{{Name}}.r6({{Antithesis_Title}})"; comment = "Antithesis: {{Antithesis_Description}}"; color = darkblue;];
-    spark_b_t [label = "{{Name}}.send({{Manifest_Title}})"; comment = "Manifest Bridge: {{Manifest_Description}}"; shape = triangle; color = darkred;];
-    spark_c_t [label = "{{Name}}.dispatch({{Dispatch_Title}})"; comment = "Why-Who: {{Dispatch_Description}}"; shape = doublecircle; color = darkred;];
-    spark_d_t [label = "{{Name}}.commit({{Commit_Title}})"; comment = "What-How: {{Commit_Description}}"; shape = doublecircle; color = darkgreen;];
-    spark_e_t [label = "{{Name}}.serve({{Serve_Title}})"; comment = "When-Where: {{Serve_Description}}"; shape = doublecircle; color = darkblue;];
-    spark_f_t [label = "{{Name}}.exec({{Exec_Title}})"; comment = "Which-Closure: {{Exec_Description}}"; shape = doublecircle; color = lightgray;];
-
-    spark_a_t -> spark_0_t [label = "IN"; comment = "{{In_Description}}"; color = darkviolet;];
-    spark_b_t -> spark_0_t [label = "OUT"; comment = "{{Out_Description}}"; color = darkred;];
-
-    spark_0_t -> spark_3_t [label = "{{THESIS_REL}}"; comment = "{{Thesis_Description}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_6_t [label = "{{ANTITHESIS_REL}}"; comment = "{{Antithesis_Description}}"; color = darkblue; dir = both;];
-    spark_0_t -> spark_9_t [label = "{{SYNTHESIS_REL}}"; comment = "{{Synthesis_Description}}"; color = darkblue; dir = both;];
-
-    spark_0_t -> spark_1_t [label = "{{INIT_REL}}"; comment = "{{Init_Description}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_2_t [label = "{{RESPONSE_REL}}"; comment = "{{Response_Description}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_4_t [label = "{{INTEGRATION_REL}}"; comment = "{{Integration_Description}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_8_t [label = "{{REFLECTION_REL}}"; comment = "{{Reflection_Description}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_7_t [label = "{{CONSOLIDATION_REL}}"; comment = "{{Consolidation_Description}}"; color = darkgreen; dir = both;];
-    spark_0_t -> spark_5_t [label = "{{PROPAGATION_REL}}"; comment = "{{Propagation_Description}}"; color = darkgreen; dir = both;];
-
-    spark_a_t -> spark_c_t [label = "{{DISPATCH_IN_REL}}"; comment = "{{Dispatch_In_Description}}"; color = darkviolet; dir = both;];
-    spark_b_t -> spark_c_t [label = "{{DISPATCH_OUT_REL}}"; comment = "{{Dispatch_Out_Description}}"; color = darkred; dir = both;];
-
-    spark_1_t -> spark_d_t [label = "{{COMMIT_INIT_REL}}"; comment = "{{Commit_Init_Description}}"; color = darkgreen; dir = both;];
-    spark_2_t -> spark_d_t [label = "{{COMMIT_RESPONSE_REL}}"; comment = "{{Commit_Response_Description}}"; color = darkgreen; dir = both;];
-    spark_4_t -> spark_d_t [label = "{{COMMIT_INTEGRATION_REL}}"; comment = "{{Commit_Integration_Description}}"; color = darkgreen; dir = both;];
-    spark_8_t -> spark_d_t [label = "{{COMMIT_REFLECTION_REL}}"; comment = "{{Commit_Reflection_Description}}"; color = darkgreen; dir = both;];
-    spark_7_t -> spark_d_t [label = "{{COMMIT_CONSOLIDATION_REL}}"; comment = "{{Commit_Consolidation_Description}}"; color = darkgreen; dir = both;];
-    spark_5_t -> spark_d_t [label = "{{COMMIT_PROPAGATION_REL}}"; comment = "{{Commit_Propagation_Description}}"; color = darkgreen; dir = both;];
-
-    spark_3_t -> spark_e_t [label = "{{SERVE_THESIS_REL}}"; comment = "{{Serve_Thesis_Description}}"; color = darkblue; dir = both;];
-    spark_6_t -> spark_e_t [label = "{{SERVE_ANTITHESIS_REL}}"; comment = "{{Serve_Antithesis_Description}}"; color = darkblue; dir = both;];
-    spark_9_t -> spark_e_t [label = "{{SERVE_SYNTHESIS_REL}}"; comment = "{{Serve_Synthesis_Description}}"; color = darkblue; dir = both;];
-
-    spark_1_t -> spark_2_t [label = "{{ACTION_FLOW12}}"; comment = "{{Action_Flow12_Description}}"; color = darkgreen; dir = both; style = dashed;];
-    spark_2_t -> spark_4_t [label = "{{ACTION_FLOW24}}"; comment = "{{Action_Flow24_Description}}"; color = darkgreen; dir = both; style = dashed;];
-    spark_4_t -> spark_8_t [label = "{{ACTION_FLOW48}}"; comment = "{{Action_Flow48_Description}}"; color = darkgreen; dir = both; style = dashed;];
-    spark_8_t -> spark_7_t [label = "{{ACTION_FLOW87}}"; comment = "{{Action_Flow87_Description}}"; color = darkgreen; dir = both; style = dashed;];
-    spark_7_t -> spark_5_t [label = "{{ACTION_FLOW75}}"; comment = "{{Action_Flow75_Description}}"; color = darkgreen; dir = both; style = dashed;];
-    spark_5_t -> spark_1_t [label = "{{ACTION_FLOW51}}"; comment = "{{Action_Flow51_Description}}"; color = darkgreen; dir = both; style = dashed;];
-
-    spark_3_t -> spark_6_t [label = "{{DIALECTIC_FLOW36}}"; comment = "{{Dialectic_Flow36_Description}}"; color = darkblue; dir = both; style = dashed;];
-    spark_6_t -> spark_9_t [label = "{{DIALECTIC_FLOW69}}"; comment = "{{Dialectic_Flow69_Description}}"; color = darkblue; dir = both; style = dashed;];
-    spark_9_t -> spark_3_t [label = "{{DIALECTIC_FLOW93}}"; comment = "{{Dialectic_Flow93_Description}}"; color = darkblue; dir = both; style = dashed;];
-
-    spark_a_t -> spark_b_t [label = "{{COSMIC_FLOW}}"; comment = "{{Cosmic_Flow_Description}}"; color = darkviolet; dir = both; style = dashed;];
-
-    spark_c_t -> spark_f_t [label = "{{EXEC_DISPATCH_REL}}"; comment = "{{Exec_Dispatch_Description}}"; color = darkred; dir = both;];
-    spark_d_t -> spark_f_t [label = "{{EXEC_COMMIT_REL}}"; comment = "{{Exec_Commit_Description}}"; color = darkgreen; dir = both;];
-    spark_e_t -> spark_f_t [label = "{{EXEC_SERVE_REL}}"; comment = "{{Exec_Serve_Description}}"; color = darkblue; dir = both;];
+    comment = "{{description}}";
+    
+    spark_a_t [label = "{{Name}}.receive({{title}})";comment = "{{description}}";shape = invtriangle;color = darkred;];
+    spark_0_t [label = "{{Name}}.meta({{meta}})";comment = "{{description}}";shape = doublecircle;color = darkgray;];
+    spark_b_t [label = "{{Name}}.send({{title}})";comment = "{{description}}";shape = triangle;color = darkred;];
+    spark_1_t [label = "{{Name}}.r1({{title}})";comment = "{{description}}";color = darkgreen;];
+    spark_2_t [label = "{{Name}}.r2({{title}})";comment = "{{description}}";color = darkgreen;];
+    spark_4_t [label = "{{Name}}.r4({{title}})";comment = "{{description}}";color = darkgreen;];
+    spark_8_t [label = "{{Name}}.r8({{title}})";comment = "{{description}}";color = darkgreen;];
+    spark_7_t [label = "{{Name}}.r7({{title}})";comment = "{{description}}";color = darkgreen;];
+    spark_5_t [label = "{{Name}}.r5({{title}})";comment = "{{description}}";color = darkgreen;];
+    spark_3_t [label = "{{Name}}.r3({{title}})";comment = "{{description}}";color = darkblue;];
+    spark_6_t [label = "{{Name}}.r6({{title}})";comment = "{{description}}";color = darkblue;];
+    spark_9_t [label = "{{Name}}.r9({{title}})";comment = "{{description}}";color = darkblue;];
+    spark_c_t [label = "{{Name}}.dispatch({{title}})";comment = "{{description}}";shape = doublecircle;color = darkred;];
+    spark_d_t [label = "{{Name}}.commit({{title}})";comment = "{{description}}";shape = doublecircle;color = darkgreen;];
+    spark_e_t [label = "{{Name}}.serve({{title}})";comment = "{{description}}";shape = doublecircle;color = darkblue;];
+    spark_f_t [label = "{{Name}}.exec({{title}})";comment = "{{description}}";shape = doublecircle;color = lightgray;];
+    
+    spark_a_t -> spark_0_t [label = "IN"; comment = "{{description}}"; color = darkred; constraint = false;];
+    spark_0_t -> spark_b_t [label = "OUT"; comment = "{{description}}"; color = darkred;];
+    spark_a_t -> spark_c_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both;];
+    spark_b_t -> spark_c_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both;];
+    spark_a_t -> spark_b_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both; style = dashed; constraint = false;];
+    
+    spark_0_t -> spark_1_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_2_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_4_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_8_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_7_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_0_t -> spark_5_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    
+    spark_1_t -> spark_2_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_2_t -> spark_4_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_4_t -> spark_8_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_8_t -> spark_7_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_7_t -> spark_5_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    spark_5_t -> spark_1_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both; style = dashed; constraint = false;];
+    
+    spark_1_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_2_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_4_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_8_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_7_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_5_t -> spark_d_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    
+    spark_0_t -> spark_3_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_6_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_0_t -> spark_9_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    
+    spark_3_t -> spark_e_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_6_t -> spark_e_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    spark_9_t -> spark_e_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
+    
+    spark_3_t -> spark_6_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_6_t -> spark_9_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    spark_9_t -> spark_3_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both; style = dashed; constraint = false;];
+    
+    spark_c_t -> spark_f_t [label = "REC"; comment = "{{description}}"; color = darkred; dir = both;];
+    spark_d_t -> spark_f_t [label = "REC"; comment = "{{description}}"; color = darkgreen; dir = both;];
+    spark_e_t -> spark_f_t [label = "REC"; comment = "{{description}}"; color = darkblue; dir = both;];
 }
 ```
 
@@ -241,4 +236,4 @@ Formal Usage Protocol
 
 ---
 
-now tell me about Sparklet Space and Sparklet Topology.
+now tell me about Sparklet Space, Sparklet Topology and Factor.
