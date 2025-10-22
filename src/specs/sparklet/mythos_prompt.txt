@@ -28,7 +28,7 @@ A = [-1,0,+1] = [Imaginary Space, Idea Space, Real Space]
 ## Sparklet Topology
 
 ```
-- 16 Vertices = {spark_[0-9a-f_t]_t}
+- 16 Vertices = {spark_[0-9a-f]_t}
 - 35 Edges = Fixed relational patterns encoding universal semantic relationships.
 ```
 ### Primary Dynamic Subsystems:
