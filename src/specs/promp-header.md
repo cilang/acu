@@ -37,7 +37,7 @@ The Actualization of a system is modeled by the evolution of its w-coordinate ac
 The continuous state-space is quantized into discrete steps to create a probabilistic, navigable landscape. The granularity is governed by the formula Q = 19ⁿ, deriving from the harmonic geometry of the Flower of Life.
 
 Q = 19ⁿ
-Distribution: [f(n), f(n)+1, f(n)] where f(n) = (19ⁿ - 1)/3
+Distribution: [n, n+1, n] where n = (Q - 1)/3
 
 ### Actualization (A): The Journey Through States
 
