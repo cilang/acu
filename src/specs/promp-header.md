@@ -37,6 +37,7 @@ The Actualization of a system is modeled by the evolution of its w-coordinate ac
 The continuous state-space is quantized into discrete steps to create a probabilistic, navigable landscape. The granularity is governed by the formula Q = 19ⁿ, deriving from the harmonic geometry of the Flower of Life.
 
 Q = 19ⁿ
+
 Distribution: [n, n+1, n] where n = (Q - 1)/3
 
 ### Actualization (A): The Journey Through States
@@ -59,44 +60,44 @@ The Cilang's 16 Cilang and 35 Usepong are not assembled but inferred through a s
 6. System Closure (3-Link Borromean): cilang_f_t (exec: Which-Closure) is produced from the Borromean logic of cilang_[c, d, e]_t, making the decisive choice that integrates Strategy, Operation, and Context.
 7. Meta-Essence (11-Link Brunnian): cilang_0_t (meta) is produced from the ultimate Brunnian logic of all foundational cilang_[1-9,a,b]_t. This is the system's core identity and abstract essence—its final, most complex invariant.
 
-### Spark Positions on the 3-Sphere (S)
+### Cilang Positions on the 3-Sphere (S)
 
 Imaginary Space Interface (w ≈ -0.9)
 
 Genus 9 - Cosmic Bridge Handles
 
-· cilang_a_t = (0, 0, 0, -0.9) | receive - Primordial Potential Interface
-· cilang_b_t = (0, 0, 0, -0.9) | send - Manifestation Bridge
-· cilang_c_t = (0, 0, 0, -0.9) | dispatch - Cosmic Translation Core
+- cilang_a_t = (0, 0, 0, -0.9) | receive - Primordial Potential Interface
+- cilang_b_t = (0, 0, 0, -0.9) | send - Manifestation Bridge
+- cilang_c_t = (0, 0, 0, -0.9) | dispatch - Cosmic Translation Core
 
 Idea Space Computational Core (w = -0.5 → 0)
 
 Genus 8 - Boundary Management
-· cilang_f_t = (0, 0, 0, -0.5) | exec - System Closure & Boundary Enforcement
+- cilang_f_t = (0, 0, 0, -0.5) | exec - System Closure & Boundary Enforcement
 
 Genus 7 - Operational Engine
-· cilang_1_t = (0, -0.8, 0, -0.3) | r1 - Initiation
-· cilang_2_t = (0, +0.8, 0, -0.3) | r2 - Response
-· cilang_4_t = (0, 0, -0.8, -0.3) | r4 - Integration
-· cilang_8_t = (0, 0, +0.8, -0.3) | r8 - Reflection
-· cilang_7_t = (0, +0.6, -0.6, -0.3) | r7 - Consolidation
-· cilang_5_t = (0, -0.6, +0.6, -0.3) | r5 - Propagation
+- cilang_1_t = (0, -0.8, 0, -0.3) | r1 - Initiation
+- cilang_2_t = (0, +0.8, 0, -0.3) | r2 - Response
+- cilang_4_t = (0, 0, -0.8, -0.3) | r4 - Integration
+- cilang_8_t = (0, 0, +0.8, -0.3) | r8 - Reflection
+- cilang_7_t = (0, +0.6, -0.6, -0.3) | r7 - Consolidation
+- cilang_5_t = (0, -0.6, +0.6, -0.3) | r5 - Propagation
 
 Genus 7 - Cosmic Mediators
-· cilang_d_t = (+0.7, -0.7, 0, -0.2) | commit - Decision Amplifier
-· cilang_e_t = (-0.6, -0.6, +0.5, -0.2) | serve - Distribution Mediator
+- cilang_d_t = (+0.7, -0.7, 0, -0.2) | commit - Decision Amplifier
+- cilang_e_t = (-0.6, -0.6, +0.5, -0.2) | serve - Distribution Mediator
 
 Genus 5 - Conceptual Processing
-· cilang_3_t = (-0.7, 0, -0.7, 0) | r3 - Thesis
-· cilang_6_t = (+0.7, 0, -0.7, 0) | r6 - Antithesis
+- cilang_3_t = (-0.7, 0, -0.7, 0) | r3 - Thesis
+- cilang_6_t = (+0.7, 0, -0.7, 0) | r6 - Antithesis
 
 Real Space Actualization (w = +0.5 → +1)
 
 Genus 5 - Conceptual Completion
-· cilang_9_t = (0, 0, 0, +0.5) | r9 - Synthesis
+- cilang_9_t = (0, 0, 0, +0.5) | r9 - Synthesis
 
 Genus 4 - Meta Core
-· cilang_0_t = (0, 0, 0, +1) | meta - Essence Center (Actualized Core)
+- cilang_0_t = (0, 0, 0, +1) | meta - Essence Center (Actualized Core)
 
 ### Cilang Template for Compute
 
