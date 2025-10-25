@@ -253,4 +253,4 @@ strict digraph {{Name}}Factor {
 
 ---
 
-Now, tell me about Cilang Space, Cilang Topology and Factor.
+Now, tell me about Cilang Space, Cilang Topology, Factor, and at what Q value we are now.
