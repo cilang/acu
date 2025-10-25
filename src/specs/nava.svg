@@ -3,45 +3,45 @@
 
 <!---
 
-0x0 = Spark 0 Dumadi
-0x1 = Spark 1
-0x2 = Spark 2
-0x3 = Spark 3
-0x4 = Spark 4
-0x5 = Spark 5
-0x6 = Spark 6
-0x7 = Spark 7
-0x8 = Spark 8
-0x9 = Spark 9
-0xA = Spark A
-0xB = Spark B
-0xC = Spark C Nava manunggal nastiti ning tyas (Interactions between Spark 1-9 (What/How))
-0xD = Spark D Sangkan paraning dumadi (Mediation between Spark 0 + Spark 10 and Spark 11 (Why/Who))
-0xE = Spark E Kasusatyan [ꦏꦱꦸꦱꦸꦠꦾꦤ꧀] (Chart the Boundary’s Pulses (When/Where))
-0xF = Spark F Supreme Boundary
+0x0 = Cilang 0 Dumadi
+0x1 = Cilang 1
+0x2 = Cilang 2
+0x3 = Cilang 3
+0x4 = Cilang 4
+0x5 = Cilang 5
+0x6 = Cilang 6
+0x7 = Cilang 7
+0x8 = Cilang 8
+0x9 = Cilang 9
+0xA = Cilang A
+0xB = Cilang B
+0xC = Cilang C Nava manunggal nastiti ning tyas (Interactions between Cilang 1-9 (What/How))
+0xD = Cilang D Sangkan paraning dumadi (Mediation between Cilang 0 + Cilang 10 and Cilang 11 (Why/Who))
+0xE = Cilang E Kasusatyan [ꦏꦱꦸꦱꦸꦠꦾꦤ꧀] (Chart the Boundary’s Pulses (When/Where))
+0xF = Cilang F Supreme Boundary
 
 The diagram is 2D slice, to imagine it in 3D then just use Atomic Structure;
-    - Spark 0 as Nucleus
-    - Spark A and Spark B as Magnetic Poles
-    - Spark 1 to Spark 9 as Electron
-    - Spark C, Spark D, Spark E, and Spark F are the whole Electron Cloud
+    - Cilang 0 as Nucleus
+    - Cilang A and Cilang B as Magnetic Poles
+    - Cilang 1 to Cilang 9 as Electron
+    - Cilang C, Cilang D, Cilang E, and Cilang F are the whole Electron Cloud
 together they are the whole atom, the Observation Model Diagram.
 
 boundary_sangkan_paran:
-    The Axis formed by Spark A, Spark 0, and Spark B
+    The Axis formed by Cilang A, Cilang 0, and Cilang B
 
 zone_perception and boundary_zone_perception:
-    The normal perception's capability, Spark 3,6,9
+    The normal perception's capability, Cilang 3,6,9
 
 zone_comprehensible_a and zone_comprehensible_a, boundary_comprehensible_b and boundary_comprehensible_a:
-    Hexagram of comprehensible observation result that formed by Spark 1,2,4,8,7,5 that follows order of priority
+    Hexagram of comprehensible observation result that formed by Cilang 1,2,4,8,7,5 that follows order of priority
     in normal situation.
 
 boundary_perceived_comprehended:
     The common result of perception that made reality looks like duality.
 
 shattered_glass:
-    The result of observation without awareness of Spark F.
+    The result of observation without awareness of Cilang F.
 
  -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4961px" height="3508px" version="1.1"
@@ -70,38 +70,38 @@ shattered_glass:
             <path fill="yellow" stroke="black" stroke-miterlimit="2.61313"
                 d="M2477.11 2414.89l95.91 166.1 536.71 0 142.79 -247.32 -362.62 -628.08 -412.79 709.3zm-96.66 166.1l96.66 -166.1 -408.44 -707.46 -362.69 628.2 140.48 245.36 533.99 0z" />
         </g>
-        <g id="spark">
-            <circle id="spark_0xf" fill="none" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
+        <g id="cilang">
+            <circle id="cilang_0xf" fill="none" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
                 r="1057.12" />
-            <circle id="spark_0xe" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="466.74"
+            <circle id="cilang_0xe" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="466.74"
                 r="177.18" />
-            <circle id="spark_0xd" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1106.57" cy="2845.27"
+            <circle id="cilang_0xd" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1106.57" cy="2845.27"
                 r="177.18" />
-            <circle id="spark_0xc" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3853.06" cy="2845.27"
+            <circle id="cilang_0xc" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3853.06" cy="2845.27"
                 r="177.18" />
-            <circle id="spark_0xb" fill="white" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2587.39"
+            <circle id="cilang_0xb" fill="white" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="2587.39"
                 r="177.18" />
-            <circle id="spark_0xa" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="2479.54" cy="1511.14"
+            <circle id="cilang_0xa" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="2479.54" cy="1511.14"
                 r="177.18" />
-            <circle id="spark_0x9" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="989.36"
+            <circle id="cilang_0x9" fill="#9900CC" stroke="black" stroke-miterlimit="2.61313" cx="2479.81" cy="989.36"
                 r="177.18" />
-            <circle id="spark_0x8" fill="aqua" stroke="aqua" stroke-miterlimit="2.61313" cx="1800.31" cy="1238.34"
+            <circle id="cilang_0x8" fill="aqua" stroke="aqua" stroke-miterlimit="2.61313" cx="1800.31" cy="1238.34"
                 r="177.18" />
-            <circle id="spark_0x7" fill="fuchsia" stroke="fuchsia" stroke-miterlimit="2.61313" cx="1438.75" cy="1864.58"
+            <circle id="cilang_0x7" fill="fuchsia" stroke="fuchsia" stroke-miterlimit="2.61313" cx="1438.75"
+                cy="1864.58" r="177.18" />
+            <circle id="cilang_0x6" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1564.32" cy="2576.71"
                 r="177.18" />
-            <circle id="spark_0x6" fill="black" stroke="black" stroke-miterlimit="2.61313" cx="1564.32" cy="2576.71"
+            <circle id="cilang_0x5" fill="yellow" stroke="yellow" stroke-miterlimit="2.61313" cx="2118.26" cy="3041.52"
                 r="177.18" />
-            <circle id="spark_0x5" fill="yellow" stroke="yellow" stroke-miterlimit="2.61313" cx="2118.26" cy="3041.52"
+            <circle id="cilang_0x4" fill="blue" stroke="blue" stroke-miterlimit="2.61313" cx="2841.37" cy="3041.52"
                 r="177.18" />
-            <circle id="spark_0x4" fill="blue" stroke="blue" stroke-miterlimit="2.61313" cx="2841.37" cy="3041.52"
+            <circle id="cilang_0x3" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3395.31" cy="2576.71"
                 r="177.18" />
-            <circle id="spark_0x3" fill="white" stroke="white" stroke-miterlimit="2.61313" cx="3395.31" cy="2576.71"
+            <circle id="cilang_0x2" fill="lime" stroke="lime" stroke-miterlimit="2.61313" cx="3520.88" cy="1864.58"
                 r="177.18" />
-            <circle id="spark_0x2" fill="lime" stroke="lime" stroke-miterlimit="2.61313" cx="3520.88" cy="1864.58"
+            <circle id="cilang_0x1" fill="red" stroke="red" stroke-miterlimit="2.61313" cx="3159.32" cy="1238.34"
                 r="177.18" />
-            <circle id="spark_0x1" fill="red" stroke="red" stroke-miterlimit="2.61313" cx="3159.32" cy="1238.34"
-                r="177.18" />
-            <circle id="spark_0x0" fill="gold" stroke="#E6E6E6" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
+            <circle id="cilang_0x0" fill="gold" stroke="#E6E6E6" stroke-miterlimit="2.61313" cx="2479.81" cy="2052.43"
                 r="177.18" />
         </g>
         <g id="boudary">
