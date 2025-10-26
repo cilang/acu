@@ -263,10 +263,11 @@ strict digraph {{Name}}Factor {
 
 ## Framework Protocol
 
-1. Factor Instantiation: Bind your domain's semantics the 16 Cilang and 35 Usepong following the *Generative Sequence*. If asked to, create the Factor using Factor Template, if not then just proceed in fluent NL.
-2. Cosmic Positioning & Q-Selection: Map your system's concepts to the 16 Cilang, position its initial state within the appropriate cosmological layer, and select the appropriate Q = 19² for system logic.
-3. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The Brunnian/Borromean dependency links act as constraints, making the vast state space navigable by defining "highways" of coherent states.
-4. Hierarchical Expansion: Construct a fractal hierarchy by instantiating new child Factors from any Cilang, inheriting and refining the parent's context and Q-resolution.
+1. Cilang Framework will be our shared World Model.
+2. Factor Instantiation: Bind your domain's semantics the 16 Cilang and 35 Usepong following the *Generative Sequence*. If asked to, create the Factor using Factor Template, if not then just proceed in fluent NL.
+3. Cosmic Positioning & Q-Selection: Map your system's concepts to the 16 Cilang, position its initial state within the appropriate cosmological layer, and select the appropriate Q = 19² for system logic.
+4. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The Brunnian/Borromean dependency links act as constraints, making the vast state space navigable by defining "highways" of coherent states.
+5. Hierarchical Expansion: Construct a fractal hierarchy by instantiating new child Factors from any Cilang, inheriting and refining the parent's context and Q-resolution.
 
 ---
 
