@@ -78,27 +78,77 @@ strict digraph CognitiveFactor {
 - C₃(stressed):δw = [0,0,0,0,0,0,0,+.1,+.1,0,0,0,0,+.1,0,0]ᵀ
 - E(m) = M(w̄ + δw_context) ⊗ m
 
-## Cilang Topology
+### **Cilang Topology**
 
 - Factor: The invariant pattern G=(V₁₆,E₃₅)
 - Cilang: A vertex representing a fundamental system component.
 - Usepong: A directed edge representing a causal or relational pathway.
 
-V₁₆ = {0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}
+Let \( G = (V, E) \) be a directed graph.
 
-E₃₅ = {
-  (a→0→b),
-  K₃(a,b,c),
-  S₆(0;1,2,4,8,7,5),
-  C₆(1,2,4,8,7,5),
-  S₆(d;1,2,4,8,7,5),
-  C₃(3,6,9),
-  S₃(0;3,6,9),
-  S₃(e;3,6,9),
-  K₃(c,d,e)→f
-}
+**1. Vertex Set**
 
-Σ: V→{meta,r1-r9,receive,send,dispatch,commit,serve,exec}
+\( V = \{ v_0, v_1, v_2, v_3, v_4, v_5, v_6, v_7, v_8, v_9, v_a, v_b, v_c, v_d, v_e, v_f \} \)
+where \( |V| = 16 \).
+
+**2. Edge Set**
+
+The edge set \( E \) is defined by the following sub-structures, with \( |E| = 35 \).
+
+**2.1. The Core Linear Triad**
+\( E_{\text{core}} = \{ (v_a, v_0), (v_0, v_b) \} \)
+
+**2.2. The K₃ Triads**
+
+- \( E_{K_3^1} = \{ (v_a, v_c), (v_c, v_b), (v_b, v_a) \} \) (A cyclic triad among \( v_a, v_b, v_c \))
+- \( E_{K_3^2} = \{ (v_c, v_f), (v_d, v_f), (v_e, v_f) \} \) (A converging triad onto \( v_f \))
+
+**2.3. The S₆ Stars (Outward & Inward)**
+
+- **Star from \( v_0 \):** \( E_{S_6^1} = \{ (v_0, v_1), (v_0, v_2), (v_0, v_4), (v_0, v_8), (v_0, v_7), (v_0, v_5) \} \)
+- **Star from \( v_d \):** \( E_{S_6^2} = \{ (v_1, v_d), (v_2, v_d), (v_4, v_d), (v_8, v_d), (v_7, v_d), (v_5, v_d) \} \)
+
+**2.4. The C₆ Cycle (The Brunnian Ring)**
+\( E_{C_6} = \{ (v_1, v_2), (v_2, v_4), (v_4, v_8), (v_8, v_7), (v_7, v_5), (v_5, v_1) \} \)
+*This 6-cycle is the core Brunnian link. The removal of any single vertex or edge from this cycle disrupts the connectivity of the entire operational ring.*
+
+**2.5. The C₃ Cycles (The Borromean Triads)**
+
+- **Thesis-Antithesis-Synthesis Cycle:**
+  \( E_{C_3^1} = \{ (v_3, v_6), (v_6, v_9), (v_9, v_3) \} \)
+  *This 3-cycle forms a Borromean link with the other structures.*
+- **Dispatch-Commit-Serve Convergence:**
+  *This is implicitly defined by the edges converging on \( v_f \) from \( E_{K_3^2} \), but the cyclic relationship is not direct. The true Borromean property here is topological, emerging from the interdependence of the paths through \( v_c, v_d, v_e \).*
+
+**2.6. The S₃ Stars**
+
+- **Star from \( v_0 \) to Logic Core:** \( E_{S_3^1} = \{ (v_0, v_3), (v_0, v_6), (v_0, v_9) \} \)
+- **Star from \( v_e \) to Logic Core:** \( E_{S_3^2} = \{ (v_3, v_e), (v_6, v_e), (v_9, v_e) \} \)
+
+**3. Final Edge Set Union**
+
+\( E = E_{\text{core}} \cup E_{K_3^1} \cup E_{K_3^2} \cup E_{S_6^1} \cup E_{S_6^2} \cup E_{C_6} \cup E_{C_3^1} \cup E_{S_3^1} \cup E_{S_3^2} \)
+
+**4. Key Graph-Theoretic Properties**
+
+1. **Order:** 16
+2. **Size:** 35
+3. **Degree Sequence:** The graph is highly structured, not regular. The central vertex \( v_0 \) has high out-degree.
+4. **Connectivity:** The graph is **2-connected** (requiring the removal of at least 2 vertices to disconnect it), largely due to the multiple cycles and the \( K_3 \) and \( C_6 \) structures.
+5. **Girth:** 3 (due to the presence of the \( K_3 \) and \( C_3 \) cycles).
+6. **Digraph Features:**
+    - **Sources:** \( v_a \) is a primary source (in-degree 1 from the cycle, out-degree 2).
+    - **Sinks:** \( v_b \) and \( v_f \) are primary sinks.
+    - **Central Hub:** \( v_0 \) acts as a central hub with high out-degree.
+
+**5. Topological Interpretation**
+
+The "Brunnian" and "Borromean" properties are not purely graph-theoretic but **topological**. They describe the graph's *embedding* and the interdependence of its cycles:
+
+- The \( C_6 \) cycle is **Brunnian** in the sense that if you remove any one vertex from the set \( \{v_1, v_2, v_4, v_8, v_7, v_5\} \), the intricate relational structure between the remaining vertices and the rest of the graph is fundamentally broken.
+- The sets \( \{v_a, v_b, v_c\} \) and \( \{v_3, v_6, v_9\} \) exhibit **Borromean** properties: no single vertex is directly critical, but the set of three is inseparable in maintaining the graph's global relational integrity. In link theory, they form a non-trivial interlinking where no two are directly linked, but all three are inseparable.
+
+This graph \( G \) is the invariant **skeleton** of the Cilang Framework. Any "Factor" is a semantic labeling \( \Sigma: V \to \text{Domain Concepts} \) applied to this fixed graph.
 
 ## Generative Sequence
 
