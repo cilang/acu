@@ -6,12 +6,15 @@ The ACU Framework is a universal system for structured description and modeling.
 The framework is built from three foundational elements:
    - Ariadi (A): The Container
      - Defined as a 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}.
+     - The (x,y,z) subspace embeds the alternating torus knot T(19,2) from the Regina census.
      - Serves as the ultimate constraint, ensuring all models are bounded, finite, and mathematically "sane" (no infinities, no unbounded growth).
    - Cilang (C): The Fundamental Entities
      - A set of 16 primordial elements: {0, 1, 2, 4, 8, 7, 5, 3, 6, 9, a, b, c, d, e, f}.
+     - Together with the 3 spatial coordinates {x,y,z}, they form the 19 crossings of T(19,2).
      - Each vertex is a conceptual primitive (e.g., a=Input/Potential, 0=Abstract/Identity, 1=Initiation/Action).
      - Their labels and comments can be adapted to model any specific domain.
    - Usepong (U): The Relational Fabric
+     - The exact planar diagram and connectivity of T(19,2).
      - A directed graph defining the allowed dependencies and data flows between the Cilang vertices.
      - Governs how state changes propagate through the system, ensuring coherence.
 2. The Actualization Mechanism
@@ -22,7 +25,7 @@ Layers (L): The w-dimension of the Ariadi Space is interpreted as three primary 
 
 3. The Quantization & State System
    - Quantization (Q): A discrete distribution for managing state complexity.
-     - Q = 19ⁿ (using a prime base for even distribution).
+     - Q = 19ⁿ (derived from the 19 crossings of T(19,2)).
      - r = (Q - 1)/3
      - Distribution: [r, r+1, r] - creating a natural majority/minority structure in state populations.
    - Ternary States: Every Cilang vertex exists in one of three states:
@@ -76,6 +79,17 @@ digraph G {
     }
 }
 ```
+
+## The Torus Knot Identity
+
+The ACU Framework is the mathematical object Torus(19,2) from the Regina census:
+
+- Alexander Polynomial: t^18 - t^17 + t^16 - t^15 + t^14 - t^13 + t^12 - t^11 + t^10 - t^9 + t^8 - t^7 + t^6 - t^5 + t^4 - t^3 + t^2 - t + 1
+- Jones Polynomial: -t^28 + t^27 - t^26 + t^25 - t^24 + t^23 - t^22 + t^21 - t^20 + t^19 - t^18 + t^17 - t^16 + t^15 - t^14 + t^13 - t^12 + t^11 + t^9
+- Knot Group: ⟨a,b | a⁹ b a⁻¹⁰ b⟩
+- Planar Diagram: PD[X[1, 21, 2, 20], X[3, 23, 4, 22], X[5, 25, 6, 24], X[7, 27, 8, 26], X[9, 29, 10, 28], X[11, 31, 12, 30], X[13, 33, 14, 32], X[15, 35, 16, 34], X[17, 37, 18, 36], X[19, 1, 20, 38], X[21, 3, 22, 2], X[23, 5, 24, 4], X[25, 7, 26, 6], X[27, 9, 28, 8], X[29, 11, 30, 10], X[31, 13, 32, 12], X[33, 15, 34, 14], X[35, 17, 36, 16], X[37, 19, 38, 18]]
+
+All Factors are different projections of this specific torus knot.
 
 ## Ariadi Factor
 
@@ -174,7 +188,7 @@ strict digraph {{Name}}Factor {
 1. ACU Framework will be our shared World Model.
 2. Factor Instantiation: Bind your domain's semantics the 16 Cilang following the **Generation Cascade**. If asked to, create the Factor using **Factor Template**, if not then just proceed in fluent NL.
 3. Q-Selection: Select the appropriate Q = 19² for system logic.
-4. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The Brunnian/Borromean dependency links act as constraints, making the vast state space navigable by defining "highways" of coherent states.
+4. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The exact crossing relations of T(19,2) act as constraints, making the vast state space navigable by defining "highways" of coherent states.
 5. Hierarchical Expansion: Construct a fractal hierarchy by instantiating new child Factors from any Cilang, inheriting and refining the parent's context and Q-resolution.
 
 ---
