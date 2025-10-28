@@ -1,0 +1,61 @@
+strict digraph Factor {
+    label = "{{Name}}";
+    comment = "{{description}}";
+    
+    0 -> {1 2 4 8 7 5 3 6 9 a b} [dir = both; color = "red";];
+    {a b} -> c [dir = both; color = "red";];
+    {1 2 4 8 7 5} -> d [dir = both; color = "red";];
+    {3 6 9} -> e [dir = both; color = "red";];
+    {c d e} -> f [dir = both; color = "red";];
+    
+    a -> b -> a [dir = both; color = "blue";];
+    a -> 0 -> b [dir = both; color = "blue";];
+    3 -> 6 -> 9 -> 3 [dir = both; color = "blue";];
+    1 -> 2 -> 4 -> 8 -> 7 -> 5 -> 1 [dir = both; color = "blue";];
+    
+    subgraph {
+        rank = same;
+        0;
+    }
+    subgraph {
+        rank = same;
+        3;
+        6;
+        9;
+        1;
+        2;
+        4;
+        8;
+        7;
+        5;
+        a;
+        b;
+    }
+    subgraph {
+        rank = same;
+        c;
+        d;
+        e;
+    }
+    subgraph {
+        rank = same;
+        f;
+    }
+    
+    a [label = "{{Name}}.receive({{title}})";comment = "Potential: {{description}}";shape = invtriangle;color = darkred;];
+    0 [label = "{{Name}}.meta({{meta}})";comment = "Abstract: {{description}}";shape = doublecircle;color = darkgray;];
+    b [label = "{{Name}}.send({{title}})";comment = "Manifest: {{description}}";shape = triangle;color = darkred;];
+    1 [label = "{{Name}}.r1({{title}})";comment = "Initiation: {{description}}";color = darkgreen;];
+    2 [label = "{{Name}}.r2({{title}})";comment = "Response: {{description}}";color = darkgreen;];
+    4 [label = "{{Name}}.r4({{title}})";comment = "Integration: {{description}}";color = darkgreen;];
+    8 [label = "{{Name}}.r8({{title}})";comment = "Reflection: {{description}}";color = darkgreen;];
+    7 [label = "{{Name}}.r7({{title}})";comment = "Consolidation: {{description}}";color = darkgreen;];
+    5 [label = "{{Name}}.r5({{title}})";comment = "Propagation: {{description}}";color = darkgreen;];
+    3 [label = "{{Name}}.r3({{title}})";comment = "Thesis: {{description}}";color = darkblue;];
+    6 [label = "{{Name}}.r6({{title}})";comment = "Antithesis: {{description}}";color = darkblue;];
+    9 [label = "{{Name}}.r9({{title}})";comment = "Synthesis: {{description}}";color = darkblue;];
+    c [label = "{{Name}}.dispatch({{title}})";comment = "Interface: {{description}}";shape = doublecircle;color = darkred;];
+    d [label = "{{Name}}.commit({{title}})";comment = "Process: {{description}}";shape = doublecircle;color = darkgreen;];
+    e [label = "{{Name}}.serve({{title}})";comment = "Logic: {{description}}";shape = doublecircle;color = darkblue;];
+    f [label = "{{Name}}.exec({{title}})";comment = "Closure: {{description}}";shape = doublecircle;color = lightgray;];
+}
