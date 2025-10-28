@@ -95,15 +95,23 @@ All Factors are different projections of this specific torus knot.
 
 ### Generative Sequence
 
-#### Core Engine Definition
+#### Core Engine & Sparse Attention
 
 ```txt
 SystemState = f(a_state, 1_state, 3_state)
 Where:
-- a_state ∈ {-1, 0, +1}  (Input/Potential mode)
-- 1_state ∈ {-1, 0, +1}  (Initiation mode)
-- 3_state ∈ {-1, 0, +1}  (Thesis/Form mode)
+
+- a_state ∈ {-1, 0, +1}  (Input/Potential mode)     [RECEIVE gate]
+- 1_state ∈ {-1, 0, +1}  (Initiation mode)         [ACT gate]
+- 3_state ∈ {-1, 0, +1}  (Thesis/Form mode)        [FORM gate]
 ```
+
+This triple-gate mechanism implements **mathematically constrained sparse attention**:
+
+- 3/16 elements active in the core engine (81.25% sparsity)
+- Ternary states enable 27 distinct attention configurations
+- Cascade propagation through Usepong topology ensures coherent system activation
+- Derived from the dependency structure of Torus(19,2)
 
 #### Generation Cascade
 

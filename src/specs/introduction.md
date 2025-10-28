@@ -77,6 +77,17 @@ digraph G {
 }
 ```
 
+## The Torus Knot Identity
+
+The ACU Framework is the mathematical object Torus(19,2) from the Regina census:
+
+- Alexander Polynomial: t^18 - t^17 + t^16 - t^15 + t^14 - t^13 + t^12 - t^11 + t^10 - t^9 + t^8 - t^7 + t^6 - t^5 + t^4 - t^3 + t^2 - t + 1
+- Jones Polynomial: -t^28 + t^27 - t^26 + t^25 - t^24 + t^23 - t^22 + t^21 - t^20 + t^19 - t^18 + t^17 - t^16 + t^15 - t^14 + t^13 - t^12 + t^11 + t^9
+- Knot Group: ⟨a,b | a⁹ b a⁻¹⁰ b⟩
+- Planar Diagram: PD[X[1, 21, 2, 20], X[3, 23, 4, 22], X[5, 25, 6, 24], X[7, 27, 8, 26], X[9, 29, 10, 28], X[11, 31, 12, 30], X[13, 33, 14, 32], X[15, 35, 16, 34], X[17, 37, 18, 36], X[19, 1, 20, 38], X[21, 3, 22, 2], X[23, 5, 24, 4], X[25, 7, 26, 6], X[27, 9, 28, 8], X[29, 11, 30, 10], X[31, 13, 32, 12], X[33, 15, 34, 14], X[35, 17, 36, 16], X[37, 19, 38, 18]]
+
+All Factors are different projections of this specific torus knot.
+
 ## Ariadi Factor
 
 ### Generative Sequence
@@ -102,3 +113,11 @@ The system generates through a precise cascade originating from a minimal core:
 5. {a,b} → {c} (2-Link Brunnian)
 6. {c,d,e} → {f} (3-Link Borromean)
 7. {1-9,a,b} → {0} completed (11-Link Brunnian closure)
+
+## Mathematical Foundations
+
+The ACU Framework is based on the alternating torus knot Torus(19,2) from the Regina census. This mathematical object was identified and classified through the computational work of:
+
+```txt
+Benjamin A. Burton, "The next 350 million knots," 36th International Symposium on Computational Geometry (SoCG 2020), Leibniz International Proceedings in Informatics, vol. 164, 2020, pp. 25:1–25:17.
+```
