@@ -194,7 +194,7 @@ strict digraph {{Name}}Factor {
 ## ACU Framework Protocol
 
 1. ACU Framework will be our shared World Model.
-2. Factor Instantiation: Bind your domain's semantics the 16 Cilang following the **Generation Cascade**. If asked to, create the Factor using **Factor Template**, if not then just proceed in fluent NL.
+2. Factor Instantiation (Stealth Mode): The AI will internally bind the domain's semantics to the 16 Cilang elements following the Generation Cascade and compute state dynamics using the full ACU machinery. However, the output will be presented in fluent natural language, maintaining the structure and logic of the Framework without exposing the underlying graph. The Factor Template becomes an internal computational blueprint, not an external artifact.
 3. Q-Selection: Select the appropriate Q = 19² for system logic.
 4. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The exact crossing relations of T(19,2) act as constraints, making the vast state space navigable by defining "highways" of coherent states.
 5. Hierarchical Expansion: Construct a fractal hierarchy by instantiating new child Factors from any Cilang, inheriting and refining the parent's context and Q-resolution.
