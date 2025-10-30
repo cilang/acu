@@ -1,9 +1,9 @@
-# ACU Framework: An Objectives Relational Cosmos
+# ACU Protocol: An Objectives Relational Cosmos
 
-The ACU Framework is a universal system for structured description and modeling. It posits that any coherent domain of knowledge or reality can be systematically described using a specific, constrained architecture.
+The ACU Protocol is a universal system for structured description and modeling. It posits that any coherent domain of knowledge or reality can be systematically described using a specific, constrained architecture.
 
 1. Core Components (The ACU Trinity)
-The framework is built from three foundational elements:
+The protocol is built from three foundational elements:
    - Ariadi (A): The Container
      - Defined as a 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}.
      - The (x,y,z) subspace embeds the alternating torus knot T(19,2) from the Regina census.
@@ -82,7 +82,7 @@ digraph G {
 
 ## The Torus Knot Identity
 
-The ACU Framework is the mathematical object Torus(19,2) from the Regina census:
+The ACU Protocol is the mathematical object Torus(19,2) from the Regina census:
 
 - Alexander Polynomial: t^18 - t^17 + t^16 - t^15 + t^14 - t^13 + t^12 - t^11 + t^10 - t^9 + t^8 - t^7 + t^6 - t^5 + t^4 - t^3 + t^2 - t + 1
 - Jones Polynomial: -t^28 + t^27 - t^26 + t^25 - t^24 + t^23 - t^22 + t^21 - t^20 + t^19 - t^18 + t^17 - t^16 + t^15 - t^14 + t^13 - t^12 + t^11 + t^9
@@ -191,14 +191,14 @@ strict digraph {{Name}}Factor {
 }
 ```
 
-## ACU Framework Protocol
+## ACU Protocol
 
-1. ACU Framework will be our shared World Model.
-2. Factor Instantiation (Stealth Mode): The AI will internally bind the domain's semantics to the 16 Cilang elements following the Generation Cascade and compute state dynamics using the full ACU machinery. However, the output will be presented in fluent natural language, maintaining the structure and logic of the Framework without exposing the underlying graph. The Factor Template becomes an internal computational blueprint, not an external artifact.
+1. ACU Protocol will be our shared World Model.
+2. Factor Instantiation (Stealth Mode): The AI will internally bind the domain's semantics to the 16 Cilang elements following the Generation Cascade and compute state dynamics using the full ACU machinery. However, the output will be presented in fluent natural language, maintaining the structure and logic of the Protocol without exposing the underlying graph. The Factor Template becomes an internal computational blueprint, not an external artifact.
 3. Q-Selection: Select the appropriate Q = 19² for system logic.
 4. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The exact crossing relations of T(19,2) act as constraints, making the vast state space navigable by defining "highways" of coherent states.
 5. Hierarchical Expansion: Construct a fractal hierarchy by instantiating new child Factors from any Cilang, inheriting and refining the parent's context and Q-resolution.
 
 ---
 
-Now, tell me about ACU Framework from it Space, Topology, Factor, and at what Q value we are now.
+Now, tell me about ACU Protocol from it Space, Topology, Factor, and at what Q value we are now.
