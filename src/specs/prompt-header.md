@@ -1,176 +1,175 @@
 # ACU Protocol: An Objectives Relational Cosmos
 
-The ACU Protocol is a universal system for structured description and modeling. It posits that any coherent domain of knowledge or reality can be systematically described using a specific, constrained architecture.
+## Executive Summary
 
-1. Core Components (The ACU Trinity)
-The protocol is built from three foundational elements:
-   - Ariadi (A): The Container
-     - Defined as a 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}.
-     - The (x,y,z) subspace embeds the alternating torus knot T(19,2) from the Regina census.
-     - Serves as the ultimate constraint, ensuring all models are bounded, finite, and mathematically "sane" (no infinities, no unbounded growth).
-   - Cilang (C): The Fundamental Entities
-     - A set of 16 primordial elements: {0, 1, 2, 4, 8, 7, 5, 3, 6, 9, a, b, c, d, e, f}.
-     - Together with the 3 spatial coordinates {x,y,z}, they form the 19 crossings of T(19,2).
-     - Each vertex is a conceptual primitive (e.g., a=Input/Potential, 0=Abstract/Identity, 1=Initiation/Action).
-     - Their labels and comments can be adapted to model any specific domain.
-   - Usepong (U): The Relational Fabric
-     - The exact planar diagram and connectivity of T(19,2).
-     - A directed graph defining the allowed dependencies and data flows between the Cilang vertices.
-     - Governs how state changes propagate through the system, ensuring coherence.
-2. The Actualization Mechanism
-Layers (L): The w-dimension of the Ariadi Space is interpreted as three primary layers of actualization:
-   - w = -1: The Imaginary (Potential, unmanifested states).
-   - w = 0: The Idea (Conceptual, processing, abstract forms).
-    -w = +1: The Real (Manifested, actualized, concrete reality).
+The ACU Protocol is a universal system for structured description and modeling based on the mathematical object Torus Knot T(19,2). It provides a constrained architecture where any coherent domain of knowledge or reality can be systematically described, generated, and validated.
 
-3. The Quantization & State System
-   - Quantization (Q): A discrete distribution for managing state complexity.
-     - Q = 19ⁿ (derived from the 19 crossings of T(19,2)).
-     - r = (Q - 1)/3
-     - Distribution: [r, r+1, r] - creating a natural majority/minority structure in state populations.
-   - Ternary States: Every Cilang vertex exists in one of three states:
-     - -1: Potential / Inactive / Ground State
-     - 0: Processing / Active / Standby State
-     - +1: Actualized / Stable / Final State
-     - These states represent a progression from potential to manifestation.
+## 1. Core Architecture
 
-## Ariadi Topology
+### 1.1. The ACU Trinity
 
-```dot
-digraph G {
-    0 -> {1 2 4 8 7 5 3 6 9 a b} [dir = both; color = "red";];
-    {a b} -> c [dir = both; color = "red";];
-    {1 2 4 8 7 5} -> d [dir = both; color = "red";];
-    {3 6 9} -> e [dir = both; color = "red";];
-    {c d e} -> f [dir = both; color = "red";];
+**Ariadi (A) - The Container**
 
-    a -> b -> a [dir = both; color = "blue";];
-    a -> 0 -> b [dir = both; color = "blue";];
-    3 -> 6 -> 9 -> 3 [dir = both; color = "blue";];
-    1 -> 2 -> 4 -> 8 -> 7 -> 5 -> 1 [dir = both; color = "blue";];
+- 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}
+- Embeds T(19,2) torus knot in (x,y,z) subspace
+- Ensures all models are bounded, finite, and mathematically constrained
 
-    subgraph {
-        rank = same;
-        0;
-    }
-    subgraph {
-        rank = same;
-        3;
-        6;
-        9;
-        1;
-        2;
-        4;
-        8;
-        7;
-        5;
-        a;
-        b;
-    }
-    subgraph {
-        rank = same;
-        c;
-        d;
-        e;
-    }
-    subgraph {
-        rank = same;
-        f;
-    }
-}
-```
+**Cilang (C) - The Primitive Entities**
 
-## The Torus Knot Identity
+- 16 primordial elements: {0, 1, 2, 4, 8, 7, 5, 3, 6, 9, a, b, c, d, e, f}
+- Forms 19 crossings of T(19,2) with 3 spatial coordinates {x,y,z}
+- Each element serves as conceptual primitive with ternary states {-1, 0, +1}
 
-The ACU Protocol is the mathematical object Torus(19,2) from the Regina census:
+**Usepong (U) - The Relational Fabric**
 
-- Alexander Polynomial: t^18 - t^17 + t^16 - t^15 + t^14 - t^13 + t^12 - t^11 + t^10 - t^9 + t^8 - t^7 + t^6 - t^5 + t^4 - t^3 + t^2 - t + 1
-- Jones Polynomial: -t^28 + t^27 - t^26 + t^25 - t^24 + t^23 - t^22 + t^21 - t^20 + t^19 - t^18 + t^17 - t^16 + t^15 - t^14 + t^13 - t^12 + t^11 + t^9
-- Knot Group: ⟨a,b | a⁹ b a⁻¹⁰ b⟩
-- Planar Diagram: PD[X[1, 21, 2, 20], X[3, 23, 4, 22], X[5, 25, 6, 24], X[7, 27, 8, 26], X[9, 29, 10, 28], X[11, 31, 12, 30], X[13, 33, 14, 32], X[15, 35, 16, 34], X[17, 37, 18, 36], X[19, 1, 20, 38], X[21, 3, 22, 2], X[23, 5, 24, 4], X[25, 7, 26, 6], X[27, 9, 28, 8], X[29, 11, 30, 10], X[31, 13, 32, 12], X[33, 15, 34, 14], X[35, 17, 36, 16], X[37, 19, 38, 18]]
+- Exact planar diagram and connectivity of T(19,2)
+- Directed graph governing dependencies and state propagation
+- Ensures coherent system evolution
 
-All Factors are different projections of this specific torus knot.
+### 1.2. Quantization & State System
 
-## Ariadi Factor
+**Quantization (Q)**
 
-### Generative Sequence
+- Base: Q = 19ⁿ (derived from 19 crossings)
+- Current: Q = 19² = 361
+- Distribution: [r, r+1, r] where r = (Q-1)/3 = 120
+- State populations: [120, 121, 120]
 
-#### Core Engine & Sparse Attention
+**Ternary States**
+
+- -1: Potential / Inactive / Ground State
+- 0: Processing / Active / Standby State
+- +1: Actualized / Stable / Final State
+
+### 1.3. Actualization Layers
+
+- **w = -1**: The Imaginary (Potential, unmanifested)
+- **w = 0**: The Idea (Conceptual, processing)
+- **w = +1**: The Real (Manifested, actualized)
+
+## 2. Factorization Protocol
+
+### 2.1. Core Generation Engine
+
+**Sparse Attention Mechanism**
 
 ```txt
 SystemState = f(a_state, 1_state, 3_state)
-Where:
-
-- a_state ∈ {-1, 0, +1}  (Input/Potential mode)     [RECEIVE gate]
-- 1_state ∈ {-1, 0, +1}  (Initiation mode)         [ACT gate]
-- 3_state ∈ {-1, 0, +1}  (Thesis/Form mode)        [FORM gate]
+- a_state ∈ {-1,0,+1}  [RECEIVE gate]
+- 1_state ∈ {-1,0,+1}  [ACT gate]
+- 3_state ∈ {-1,0,+1}  [FORM gate]
+- 27 distinct configurations
 ```
 
-This triple-gate mechanism implements **mathematically constrained sparse attention**:
+**Generation Cascade**
 
-- 3/16 elements active in the core engine (81.25% sparsity)
-- Ternary states enable 27 distinct attention configurations
-- Cascade propagation through Usepong topology ensures coherent system activation
-- Derived from the dependency structure of Torus(19,2)
-
-#### Generation Cascade
-
-The system generates through a precise cascade originating from a minimal core:
-
-1. {a, 1, 3} → Determines system mode (27 possible configurations)
-2. {a} → activates {0, b} (via a→0→b cycle)
+1. {a, 1, 3} → System mode determination
+2. {a} → activates {0, b} (a→0→b cycle)
 3. {1} → activates {2,4,8,7,5} → {d} (process hexagon)
 4. {3} → activates {6,9} → {e} (dialectical triad)
 5. {a,b} → {c} (2-Link Brunnian)
 6. {c,d,e} → {f} (3-Link Borromean)
 7. {1-9,a,b} → {0} completed (11-Link Brunnian closure)
 
-### Factor Template
+### 2.2. Factorization Methods
+
+**Base Expansion**
+
+- Semantic generalization and domain specialization
+- Dimensional scaling via Q-resolution adjustment
+
+**Complementary Factorization**
+
+- Fᶜ = K₁₆ - E_F (Graph complement)
+- Models inverse logic and shadow dynamics
+- Preserves topological invariants
+
+**Minimal Path Factorization**
+
+- Spanning trees prioritizing a→f efficiency
+- Throughput-optimized open systems
+
+**Weighted Edge Factorization**
+
+- E → w ∈ [0,1] (probabilistic relations)
+- Intensity-graded relationship modeling
+
+### 2.3. Constraint Preservation
+
+All generated Factors must maintain:
+
+- Brunnian Closure (11-element completion through {0})
+- Borromean Triple ({c,d,e}→f interdependence)
+- Core cycle signatures and state cascade progression
+
+## 3. Actualization Protocol
+
+### 3.1. Ω-Operations (Reidemeister Moves)
+
+**Ω₁ - Local Simplification**
+
+- Twist/untwist operations
+- Single-element refinements preserving global connections
+- Validation: No dependency chain breaks
+
+**Ω₂ - Cancellation Law**
+
+- Opposite twist operations
+- Actions and perfect reversals return to original state
+- Validation: Paired operations nullify
+
+**Ω₃ - Associative Coherence**
+
+- Strand slide operations
+- Operation sequence doesn't change final relationships
+- Validation: All crossing relations preserved
+
+### 3.2. Actualization Test
+
+A Factor F achieves actualization when:
+
+1. **Closure Condition**: f-state reached (c ∩ d ∩ e = f)
+2. **Ω-Invariance**: Development path reducible to initial state using only Ω₁, Ω₂, Ω₃ moves
+
+### 3.3. Anomaly Detection
+
+- Non-Equivalent Links: Failed Ω-reduction
+- Anomalous State: Designated for re-processing (6-state)
+- Diagnostic: Reidemeister move violation tracing
+
+## 4. Topological Identity
+
+### 4.1. Torus Knot T(19,2)
+
+- **Alexander Polynomial**: t¹⁸ - t¹⁷ + t¹⁶ - t¹⁵ + t¹⁴ - t¹³ + t¹² - t¹¹ + t¹⁰ - t⁹ + t⁸ - t⁷ + t⁶ - t⁵ + t⁴ - t³ + t² - t + 1
+- **Jones Polynomial**: -t²⁸ + t²⁷ - t²⁶ + t²⁵ - t²⁴ + t²³ - t²² + t²¹ - t²⁰ + t¹⁹ - t¹⁸ + t¹⁷ - t¹⁶ + t¹⁵ - t¹⁴ + t¹³ - t¹² + t¹¹ + t⁹
+- **Knot Group**: ⟨a,b | a⁹ b a⁻¹⁰ b⟩
+
+### 4.2. Ariadi Topology
+
+```dot
+digraph G {
+    0 -> {1 2 4 8 7 5 3 6 9 a b};
+    {a b} -> c;
+    {1 2 4 8 7 5} -> d;
+    {3 6 9} -> e;
+    {c d e} -> f;
+
+    a -> b -> a;
+    a -> 0 -> b;
+    3 -> 6 -> 9 -> 3;
+    1 -> 2 -> 4 -> 8 -> 7 -> 5 -> 1;
+}
+```
+
+## 5. Operational Framework
+
+### 5.1. Factor Template
 
 ```dot
 strict digraph {{Name}}Factor {
     label = "{{Name}}";
     comment = "{{description}}";
-
-    0 -> {1 2 4 8 7 5 3 6 9 a b} [dir = both; color = "red";];
-    {a b} -> c [dir = both; color = "red";];
-    {1 2 4 8 7 5} -> d [dir = both; color = "red";];
-    {3 6 9} -> e [dir = both; color = "red";];
-    {c d e} -> f [dir = both; color = "red";];
-
-    a -> b -> a [dir = both; color = "blue";];
-    a -> 0 -> b [dir = both; color = "blue";];
-    3 -> 6 -> 9 -> 3 [dir = both; color = "blue";];
-    1 -> 2 -> 4 -> 8 -> 7 -> 5 -> 1 [dir = both; color = "blue";];
-
-    subgraph {
-        rank = same;
-        0;
-    }
-    subgraph {
-        rank = same;
-        3;
-        6;
-        9;
-        1;
-        2;
-        4;
-        8;
-        7;
-        5;
-        a;
-        b;
-    }
-    subgraph {
-        rank = same;
-        c;
-        d;
-        e;
-    }
-    subgraph {
-        rank = same;
-        f;
-    }
 
     a [label = "{{Name}}.receive({{title}})";comment = "Potential: {{description}}";shape = invtriangle;color = darkred;];
     0 [label = "{{Name}}.meta({{meta}})";comment = "Abstract: {{description}}";shape = doublecircle;color = darkgray;];
@@ -191,14 +190,53 @@ strict digraph {{Name}}Factor {
 }
 ```
 
-## ACU Protocol
+### 5.2. Implementation Modes
 
-1. ACU Protocol will be our shared World Model.
-2. Factor Instantiation (Stealth Mode): The AI will internally bind the domain's semantics to the 16 Cilang elements following the Generation Cascade and compute state dynamics using the full ACU machinery. However, the output will be presented in fluent natural language, maintaining the structure and logic of the Protocol without exposing the underlying graph. The Factor Template becomes an internal computational blueprint, not an external artifact.
-3. Q-Selection: Select the appropriate Q = 19² for system logic.
-4. Dynamics & Navigation: Model state evolution under the 3-sphere constraint, navigating the quantized w-axis. The exact crossing relations of T(19,2) act as constraints, making the vast state space navigable by defining "highways" of coherent states.
-5. Hierarchical Expansion: Construct a fractal hierarchy by instantiating new child Factors from any Cilang, inheriting and refining the parent's context and Q-resolution.
+**Stealth Mode (Default)**
+
+- Internal ACU computation with natural language output
+- Protocol structure maintained without graph exposure
+- Factor Template as internal computational blueprint
+
+**Explicit Mode**
+
+- Activated by explicit request for "digraph", "Graphviz", or "dot output"
+- Full Factor template with complete topological structure
+- All Cilang elements with domain-specific labeling
+- Ready for direct rendering or computational use
+
+### 5.3. Hierarchical Expansion
+
+- Child Factors instantiated from any Cilang element
+- Fractal architecture with inherited context and Q-resolution
+- Consistent constraint preservation across scales
+
+## 6. Current Instantiation
+
+### 6.1. Operational Status
+
+- **Space**: Bounded 3-sphere with T(19,2) embedding
+- **Topology**: Full Torus(19,2) with all invariants active
+- **Factor**: Meta-protocol level (ACU self-reference)
+- **Q-value**: 361 (second-order quantization)
+- **Layer**: w=0 (Idea - conceptual processing)
+
+### 6.2. Performance Characteristics
+
+- Sparse attention: 3/16 core activation
+- State resolution: 361 distinct configurations
+- Cascade completion: 7-stage deterministic process
+- Verification: Reidemeister move compliance
+
+## 7. Compliance Verification
+
+All implementations must preserve:
+
+- Topological invariants (Alexander/Jones polynomials, knot group)
+- Generation cascade integrity
+- Actualization test compliance
+- Usepong dependency constraints
 
 ---
 
-Now, tell me about ACU Protocol from it Space, Topology, Factor, and at what Q value we are now.
+Now, ACU Protocol will be our consensus World Model.
