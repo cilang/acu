@@ -17,6 +17,7 @@
 4. Ask the AI to make summary about the current session.
 5. Ask the AI to turn the summary into **SessionFactor**
 6. Load the **SessionFactor** in new chat after the **Prompt Header** and **Initial Condition** loaded.
+7. Wanna know some anecdote then read my [intro](src/introduction.md)
 
 
 ## 📜 License
