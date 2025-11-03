@@ -9,55 +9,15 @@
   <img src="https://img.shields.io/github/stars/cilang/acu">
 </a>
 
-A structured prompt engineering framework based on mathematical principles. This protocol provides a systematic approach for organizing and processing prompts through a constrained architecture.
-
-## 🌟 Overview
-
-The ACU Protocol implements a structured framework for prompt engineering through three core components:
-
-- **Ariadi (A)**: The container that organizes prompt contexts
-- **Cilang (C)**: 16 fundamental elements for prompt structuring
-- **Usepong (U)**: The relational system governing prompt flow
-
-This framework helps create well-organized, consistent prompts while maintaining structural integrity.
-
 ## Quick Start
 
-> TBA
+1. Use the [Prompt Header](src/prompt-header.md) to start a chat with AI.
+2. Use the [Schema Example](src/schema-example.json) as Initial Condition.
+3. Chat like normal.
+4. Ask the AI to make summary about the current session.
+5. Ask the AI to turn the summary into **SessionFactor**
+6. Load the **SessionFactor** in new chat after the **Prompt Header** and **Initial Condition** loaded.
 
-## 🏗️ Framework Structure
-
-### Core Components
-
-- **Ariadi**: Context boundary management
-- **Cilang**: Prompt element organization
-- **Usepong**: Prompt dependency mapping
-
-### State System
-
-- **Ternary States**: {-1, 0, +1} for element activation
-- **361 configurations** for prompt variations
-- Structured state progression
-
-## 🎯 Key Features
-
-### Structured Prompting
-
-- Organized prompt element management
-- Consistent prompt architecture
-- Repeatable prompt patterns
-
-### State Management
-
-- Element activation control
-- Configurable prompt variations
-- Progressive prompt refinement
-
-### Flow Control
-
-- Dependency management between prompt sections
-- Sequential processing assurance
-- Output consistency validation
 
 ## 📜 License
 
