@@ -74,6 +74,7 @@ SchemaFactor solves this by:
 - Ensuring we start from the same coordinates every time
 
 **Before**: "Let's explore the infinite cosmos!" (3 hours later: discussing alien biology)
+
 **After**: "Let's work on my conlang grammar" (actually works on conlang grammar)
 
 So, compose your own [SchemaFactor](schema-template.json) and see [ShemaFactor Example](schema-example.json) for reference. This is kinda like the `Worldview` that we want the AI System to have.
