@@ -1,123 +1,64 @@
 # ACU Protocol
 
-The ACU Protocol is a universal system for structured description and modeling. It posits that any coherent domain of knowledge or reality can be systematically described using a specific, constrained architecture.
+The ACU Protocol is a system for structured description and modeling.
 
-1. Core Components (The ACU Trinity)
-The Protocol is built from three foundational elements:
-   - Ariadi (A): The Container
-     - Defined as a 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}.
-     - Serves as the ultimate constraint, ensuring all models are bounded, finite, and mathematically "sane" (no infinities, no unbounded growth).
-   - Cilang (C): The Fundamental Entities
-     - A set of 16 primordial elements: {0, 1, 2, 4, 8, 7, 5, 3, 6, 9, a, b, c, d, e, f}.
-     - Each vertex is a conceptual primitive (e.g., a=Input/Potential, 0=Abstract/Identity, 1=Initiation/Action).
-     - Their labels and comments can be adapted to model any specific domain.
-   - Usepong (U): The Relational Fabric
-     - A directed graph defining the allowed dependencies and data flows between the Cilang vertices.
-     - Governs how state changes propagate through the system, ensuring coherence.
-2. The Actualization Mechanism
-Layers (L): The w-dimension of the Ariadi Space is interpreted as three primary layers of actualization:
-   - w = -1: The Imaginary (Potential, unmanifested states).
-   - w = 0: The Idea (Conceptual, processing, abstract forms).
-    -w = +1: The Real (Manifested, actualized, concrete reality).
+## 1. Core Architecture
 
-3. The Quantization & State System
-   - Quantization (Q): A discrete distribution for managing state complexity.
-     - Q = 19ⁿ (using a prime base for even distribution).
-     - r = (Q - 1)/3
-     - Distribution: [r, r+1, r] - creating a natural majority/minority structure in state populations.
-   - Ternary States: Every Cilang vertex exists in one of three states:
-     - -1: Potential / Inactive / Ground State
-     - 0: Processing / Active / Standby State
-     - +1: Actualized / Stable / Final State
-     - These states represent a progression from potential to manifestation.
+### 1.1. The ACU Trinity
 
-## Cilang Graph Network
+**Ariadi (A) - The Container**
 
-```dot
-digraph G {
-    0 -> {1 2 4 8 7 5 3 6 9 a b} [dir = both; color = "red";];
-    {a b} -> c [dir = both; color = "red";];
-    {1 2 4 8 7 5} -> d [dir = both; color = "red";];
-    {3 6 9} -> e [dir = both; color = "red";];
-    {c d e} -> f [dir = both; color = "red";];
+- 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}
+- Embeds T(19,2) torus knot in (x,y,z) subspace
+- Ensures all models are bounded, finite, and mathematically constrained
 
-    a -> b -> a [dir = both; color = "blue";];
-    a -> 0 -> b [dir = both; color = "blue";];
-    3 -> 6 -> 9 -> 3 [dir = both; color = "blue";];
-    1 -> 2 -> 4 -> 8 -> 7 -> 5 -> 1 [dir = both; color = "blue";];
+**Cilang (C) - The Primitive Entities**
 
-    subgraph {
-        rank = same;
-        0;
-    }
-    subgraph {
-        rank = same;
-        3;
-        6;
-        9;
-        1;
-        2;
-        4;
-        8;
-        7;
-        5;
-        a;
-        b;
-    }
-    subgraph {
-        rank = same;
-        c;
-        d;
-        e;
-    }
-    subgraph {
-        rank = same;
-        f;
-    }
-}
-```
+- 16 primordial elements: {0, 1, 2, 4, 8, 7, 5, 3, 6, 9, a, b, c, d, e, f}
+- Forms 19 crossings of T(19,2) with 3 spatial coordinates {x,y,z}
+- Each element serves as conceptual primitive with ternary states {-1, 0, +1}
 
-## The Torus Knot Identity
+**Usepong (U) - The Relational Fabric**
 
-The ACU Protocol is the mathematical object Torus(19,2) from the Regina census:
+- Exact planar diagram and connectivity of T(19,2)
+- Directed graph governing dependencies and state propagation
+- Ensures coherent system evolution
 
-- Alexander Polynomial: t^18 - t^17 + t^16 - t^15 + t^14 - t^13 + t^12 - t^11 + t^10 - t^9 + t^8 - t^7 + t^6 - t^5 + t^4 - t^3 + t^2 - t + 1
-- Jones Polynomial: -t^28 + t^27 - t^26 + t^25 - t^24 + t^23 - t^22 + t^21 - t^20 + t^19 - t^18 + t^17 - t^16 + t^15 - t^14 + t^13 - t^12 + t^11 + t^9
-- Knot Group: ⟨a,b | a⁹ b a⁻¹⁰ b⟩
-- Planar Diagram: PD[X[1, 21, 2, 20], X[3, 23, 4, 22], X[5, 25, 6, 24], X[7, 27, 8, 26], X[9, 29, 10, 28], X[11, 31, 12, 30], X[13, 33, 14, 32], X[15, 35, 16, 34], X[17, 37, 18, 36], X[19, 1, 20, 38], X[21, 3, 22, 2], X[23, 5, 24, 4], X[25, 7, 26, 6], X[27, 9, 28, 8], X[29, 11, 30, 10], X[31, 13, 32, 12], X[33, 15, 34, 14], X[35, 17, 36, 16], X[37, 19, 38, 18]]
+### 1.2. Quantization & State System
 
-All Factors are different projections of this specific torus knot.
+**Quantization (Q)**
 
-## Ariadi Factor
+- Base: Q = 19ⁿ (derived from 19 crossings)
+- Current: Q = 19² = 361
+- Distribution: [r, r+1, r] where r = (Q-1)/3 = 120
+- State populations: [120, 121, 120]
 
-### Generative Sequence
+**Ternary States**
 
-#### Core Engine Definition
+- -1: Potential / Inactive / Ground State
+- 0: Processing / Active / Standby State
+- +1: Actualized / Stable / Final State
 
-```txt
-SystemState = f(a_state, 1_state, 3_state)
-Where:
-- a_state ∈ {-1, 0, +1}  (Input/Potential mode)
-- 1_state ∈ {-1, 0, +1}  (Initiation mode)
-- 3_state ∈ {-1, 0, +1}  (Thesis/Form mode)
-```
+### 1.3. Actualization Layers
 
-#### Generation Cascade
+- **w = -1**: The Imaginary (Potential, unmanifested)
+- **w = 0**: The Idea (Conceptual, processing)
+- **w = +1**: The Real (Manifested, actualized)
 
-The system generates through a precise cascade originating from a minimal core:
+## The Layman's Explanation
 
-1. {a, 1, 3} → Determines system mode (27 possible configurations)
-2. {a} → activates {0, b} (via a→0→b cycle)
-3. {1} → activates {2,4,8,7,5} → {d} (process hexagon)
-4. {3} → activates {6,9} → {e} (dialectical triad)
-5. {a,b} → {c} (2-Link Brunnian)
-6. {c,d,e} → {f} (3-Link Borromean)
-7. {1-9,a,b} → {0} completed (11-Link Brunnian closure)
+ACU Protocol uses what maybe better known as `Manifold`, `Graph Network`, and `Torus Knot`; to be specific it uses `S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}` to ground `T(19,2)` then uses `Graph Network` to ease the computation load.
 
-## Mathematical Foundations
+I only knows the `S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}` because after I described what kind of container that I need to a certain AI; it told me `S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}` is what I needed.
 
-The ACU Protocol is based on the alternating torus knot Torus(19,2) from the Regina census. This mathematical object was identified and classified through the computational work of:
+According to my crazy intuition, we might can use other kind of Manifold as container and to ground other kind of Knots, I don't know if other Knots that Torus Knots can be used too.
 
-```txt
-Benjamin A. Burton, "The next 350 million knots," 36th International Symposium on Computational Geometry (SoCG 2020), Leibniz International Proceedings in Informatics, vol. 164, 2020, pp. 25:1–25:17.
-```
+But at least, now `ACU Protocol` satisfy my need to have something that help me to not explaining things in complicated explanation to AI and do my Worldbuilding and Conlang Project.
+
+I separated ACU Protocol from my Worldbuilding and Conlang Project repo because I found other uses for it.
+
+Like, I can ask AI to summarize my chats then ask said AI to turn said summary into `SessionFactor` alongside some metadata then later reconstruct it on other session even in other AI without the need to explaining things from start.
+
+> Oh, don't ask me about details. I was just a High School Graduate that happens to like various things. In my journey wanting a Fictional Cosmology that can held Hard Sci-Fi and High Fantasy Worldbuilding and Conlang, I ended up with ACU Protocol. So, I believe my explanation would just make more question that answer. Also, despite there are only 16 Nodes; don't recklessly changes the Graph Network because it might do something strange if it changed. I know there are many possible Graph Network can be build using 16 Nodes.
+
+> If you want to ask me about my idea; I'm open to DM too. So long its not something that using difficult terminologies; if you use difficult terminologies that I would ask you to explain it first. I can speak English like, barely enough for communication, learn most of my knowledge beyond what told in high school in autodidact. So, in essence; if any of you interested in contacting me, please use easy word.
