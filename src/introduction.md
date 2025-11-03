@@ -1,9 +1,9 @@
-# ACU Framework
+# ACU Protocol
 
-The ACU Framework is a universal system for structured description and modeling. It posits that any coherent domain of knowledge or reality can be systematically described using a specific, constrained architecture.
+The ACU Protocol is a universal system for structured description and modeling. It posits that any coherent domain of knowledge or reality can be systematically described using a specific, constrained architecture.
 
 1. Core Components (The ACU Trinity)
-The framework is built from three foundational elements:
+The Protocol is built from three foundational elements:
    - Ariadi (A): The Container
      - Defined as a 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}.
      - Serves as the ultimate constraint, ensuring all models are bounded, finite, and mathematically "sane" (no infinities, no unbounded growth).
@@ -31,7 +31,7 @@ Layers (L): The w-dimension of the Ariadi Space is interpreted as three primary 
      - +1: Actualized / Stable / Final State
      - These states represent a progression from potential to manifestation.
 
-## Ariadi Topology
+## Cilang Graph Network
 
 ```dot
 digraph G {
@@ -79,7 +79,7 @@ digraph G {
 
 ## The Torus Knot Identity
 
-The ACU Framework is the mathematical object Torus(19,2) from the Regina census:
+The ACU Protocol is the mathematical object Torus(19,2) from the Regina census:
 
 - Alexander Polynomial: t^18 - t^17 + t^16 - t^15 + t^14 - t^13 + t^12 - t^11 + t^10 - t^9 + t^8 - t^7 + t^6 - t^5 + t^4 - t^3 + t^2 - t + 1
 - Jones Polynomial: -t^28 + t^27 - t^26 + t^25 - t^24 + t^23 - t^22 + t^21 - t^20 + t^19 - t^18 + t^17 - t^16 + t^15 - t^14 + t^13 - t^12 + t^11 + t^9
@@ -116,7 +116,7 @@ The system generates through a precise cascade originating from a minimal core:
 
 ## Mathematical Foundations
 
-The ACU Framework is based on the alternating torus knot Torus(19,2) from the Regina census. This mathematical object was identified and classified through the computational work of:
+The ACU Protocol is based on the alternating torus knot Torus(19,2) from the Regina census. This mathematical object was identified and classified through the computational work of:
 
 ```txt
 Benjamin A. Burton, "The next 350 million knots," 36th International Symposium on Computational Geometry (SoCG 2020), Leibniz International Proceedings in Informatics, vol. 164, 2020, pp. 25:1–25:17.
