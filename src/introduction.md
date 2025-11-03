@@ -77,7 +77,7 @@ SchemaFactor solves this by:
 
 **After**: "Let's work on my conlang grammar" (actually works on conlang grammar)
 
-So, compose your own [SchemaFactor](schema-template.json) and see [ShemaFactor Example](schema-example.json) for reference. This is kinda like the `Worldview` that we want the AI System to have.
+So, compose your own [SchemaFactor](schema-template.json) and see [ShemaFactor Example](schema-example.json) for reference; the SchemaFactor example is taken from my Worldbuilding and Conlang Project. This is kinda like the `Worldview` that we want the AI System to have.
 
 ## Important Notes
 
