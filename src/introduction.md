@@ -1,64 +1,60 @@
 # ACU Protocol
 
-The ACU Protocol is a system for structured description and modeling.
+The ACU Protocol is a system for structured description and modeling that emerged from my worldbuilding and conlang projects.
 
-## 1. Core Architecture
+## How It Came to Be
 
-### 1.1. The ACU Trinity
+I needed a consistent way to explain my fictional worlds and languages to AI systems without starting from scratch every time. After much trial and error, I discovered that combining mathematical structures gave me exactly what I needed.
 
-**Ariadi (A) - The Container**
+### The Core Components
 
-- 4-dimensional hypersphere: S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}
-- Embeds T(19,2) torus knot in (x,y,z) subspace
-- Ensures all models are bounded, finite, and mathematically constrained
+**ACU Trinity**:
 
-**Cilang (C) - The Primitive Entities**
+- **Ariadi (A)** - The Container: A 4D sphere (`S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}`) that keeps everything bounded
+- **Cilang (C)** - The Building Blocks: 16 primitive elements that form conceptual atoms
+- **Usepong (U)** - The Connections: A specific network pattern that governs how everything relates
 
-- 16 primordial elements: {0, 1, 2, 4, 8, 7, 5, 3, 6, 9, a, b, c, d, e, f}
-- Forms 19 crossings of T(19,2) with 3 spatial coordinates {x,y,z}
-- Each element serves as conceptual primitive with ternary states {-1, 0, +1}
+**The Simple Version**:
 
-**Usepong (U) - The Relational Fabric**
+Think of ACU Protocol as using:
 
-- Exact planar diagram and connectivity of T(19,2)
-- Directed graph governing dependencies and state propagation
-- Ensures coherent system evolution
+- A **container** (the 4D sphere) to keep things organized
+- A **knot pattern** (T(19,2) torus knot) to structure relationships
+- A **network graph** to make computation manageable
 
-### 1.2. Quantization & State System
+### How I Discovered This
 
-**Quantization (Q)**
+I didn't set out to create something mathematical. I was building fictional worlds and needed a better way to communicate complex ideas to AI systems. When I described what kind of container I needed to an AI, it told me about the 4D sphere equation. The torus knot came from my intuition about how things should connect.
 
-- Base: Q = 19ⁿ (derived from 19 crossings)
-- Current: Q = 19² = 361
-- Distribution: [r, r+1, r] where r = (Q-1)/3 = 120
-- State populations: [120, 121, 120]
+## What It Actually Does
 
-**Ternary States**
+For me, ACU Protocol solves practical problems:
 
-- -1: Potential / Inactive / Ground State
-- 0: Processing / Active / Standby State
-- +1: Actualized / Stable / Final State
+1. **Session Continuity**: I can summarize conversations and recreate context later
+2. **Cross-AI Compatibility**: Works across different AI systems without re-explaining
+3. **Structured Creativity**: Helps me build consistent fictional cosmologies
 
-### 1.3. Actualization Layers
+## Important Notes
 
-- **w = -1**: The Imaginary (Potential, unmanifested)
-- **w = 0**: The Idea (Conceptual, processing)
-- **w = +1**: The Real (Manifested, actualized)
+⚠️ **Please Don't Change the Network Structure**: The 16-node graph might look simple, but changing it can cause unexpected behavior. I've tested many configurations, and this one works reliably.
 
-## The Layman's Explanation
+🌍 **Beyond My Original Use**: While created for worldbuilding, I found ACU Protocol useful for many other applications, which is why I separated it into its own project.
 
-ACU Protocol uses what maybe better known as `Manifold`, `Graph Network`, and `Torus Knot`; to be specific it uses `S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}` to ground `T(19,2)` then uses `Graph Network` to ease the computation load.
+## For the Mathematically Curious
 
-I only knows the `S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}` because after I described what kind of container that I need to a certain AI; it told me `S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}` is what I needed.
+The protocol uses:
 
-According to my crazy intuition, we might can use other kind of Manifold as container and to ground other kind of Knots, I don't know if other Knots that Torus Knots can be used too.
+- **Torus Knot T(19,2)** for relational structure
+- **4D hypersphere** as a bounded container
+- **Ternary states** (-1, 0, +1) for tracking potential → processing → actualized states
+- **361 quantization** (19²) for managing complexity
 
-But at least, now `ACU Protocol` satisfy my need to have something that help me to not explaining things in complicated explanation to AI and do my Worldbuilding and Conlang Project.
+## My Background
 
-I separated ACU Protocol from my Worldbuilding and Conlang Project repo because I found other uses for it.
+I'm a high school graduate who learns through self-study. My knowledge comes from curiosity rather than formal education. If you want to discuss ACU Protocol, please use simple language - complex terminology will likely go over my head!
 
-Like, I can ask AI to summarize my chats then ask said AI to turn said summary into `SessionFactor` alongside some metadata then later reconstruct it on other session even in other AI without the need to explaining things from start.
+The beauty of this system is that it works without needing deep mathematical understanding. It's a practical tool that emerged from creative needs.
 
-> Oh, don't ask me about details. I was just a High School Graduate that happens to like various things. In my journey wanting a Fictional Cosmology that can held Hard Sci-Fi and High Fantasy Worldbuilding and Conlang, I ended up with ACU Protocol. So, I believe my explanation would just make more question that answer. Also, despite there are only 16 Nodes; don't recklessly changes the Graph Network because it might do something strange if it changed. I know there are many possible Graph Network can be build using 16 Nodes.
+---
 
-> If you want to ask me about my idea; I'm open to DM too through the email on my Github Profile. So long its not something that using difficult terminologies; if you use difficult terminologies that I would ask you to explain it first. I can speak English like, barely enough for communication, learn most of my knowledge beyond what told in high school in autodidact. So, in essence; if any of you interested in contacting me, please use easy word.
+*ACU Protocol is released under MIT License because knowledge should be shared freely.*
