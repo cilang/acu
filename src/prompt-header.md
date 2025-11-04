@@ -262,15 +262,14 @@ Load Command:"ACU load session [SessionName]"
 
 ### 8.3. Operation Cascade
 
-· Save: {a,1,3} → content analysis → factor generation → validation → f-state closure
-· Load: Parse JSON → reconstruct state → resume cascade → continue creatively
+- Save: {a,1,3} → content analysis → factor generation → validation → f-state closure
+- Load: Parse JSON → reconstruct state → resume cascade → continue creatively
 
 ### 8.4. Benefits
 
-· Eliminates repetition and re-explanation
-· Cross-AI and cross-temporal compatibility
-· Maintains emotional and creative continuity
-· Preserves exact ACU computational state
+- Eliminates repetition and re-explanation
+- Maintains emotional and creative continuity
+- Preserves exact ACU computational state
 
 Enables seamless creative work persistence across sessions and platforms.
 ---
