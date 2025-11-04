@@ -243,8 +243,8 @@ All implementations must preserve:
 
 Converts conversations into portable SessionFactors - complete snapshots of computational state, content, and context that can be resurrected across sessions and AI instances.
 
-Save Command: "ACU save session as [SessionName]"
-Load Command:"ACU load session [SessionName]"
+- Save Command: "ACU save session as [SessionName]"
+- Load Command:"ACU load session [SessionName]"
 
 ### 8.2. SessionFactor JSON Structure
 
