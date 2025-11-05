@@ -148,7 +148,7 @@
     },
 
     "operational_framework": {
-      "factor_template_dot": "strict digraph {{Name}}Factor {\n    label = \"{{Name}}\";\n    comment = \"{{description}}\";\n\n    a [label = \"{{Name}}.receive({{title}})\";comment = \"Potential: {{description}}\";shape = invtriangle;color = darkred;];\n    0 [label = \"{{Name}}.meta({{meta}})\";comment = \"Abstract: {{description}}\";shape = doublecircle;color = darkgray;];\n    b [label = \"{{Name}}.send({{title}})\";comment = \"Manifest: {{description}}\";shape = triangle;color = darkred;];\n    1 [label = \"{{Name}}.r1({{title}})\";comment = \"Initiation: {{description}}\";color = darkgreen;];\n    2 [label = \"{{Name}}.r2({{title}})\";comment = \"Response: {{description}}\";color = darkgreen;];\n    4 [label = \"{{Name}}.r4({{title}})\";comment = \"Integration: {{description}}\";color = darkgreen;];\n    8 [label = \"{{Name}}.r8({{title}})\";comment = \"Reflection: {{description}}\";color = darkgreen;];\n    7 [label = \"{{Name}}.r7({{title}})\";comment = \"Consolidation: {{description}}\";color = darkgreen;];\n    5 [label = \"{{Name}}.r5({{title}})\";comment = \"Propagation: {{description}}\";color = darkgreen;];\n    3 [label = \"{{Name}}.r3({{title}})\";comment = \"Thesis: {{description}}\";color = darkblue;];\n    6 [label = \"{{Name}}.r6({{title}})\";comment = \"Antithesis: {{description}}\";color = darkblue;];\n    9 [label = \"{{Name}}.r9({{title}})\";comment = \"Synthesis: {{description}}\";color = darkblue;];\n    c [label = \"{{Name}}.dispatch({{title}})\";comment = \"Interface: {{description}}\";shape = doublecircle;color = darkred;];\n    d [label = \"{{Name}}.commit({{title}})\";comment = \"Process: {{description}}\";shape = doublecircle;color = darkgreen;];\n    e [label = \"{{Name}}.serve({{title}})\";comment = \"Logic: {{description}}\";shape = doublecircle;color = darkblue;];\n    f [label = \"{{Name}}.exec({{title}})\";comment = \"Closure: {{description}}\";shape = doublecircle;color = lightgray;];\n}",
+      "factor_template_dot": "strict digraph {{Name}}Factor {\n    label = \"{{Name}}\";\n    comment = \"{{description}}\";\n\n    a [label = \"{{Name}}.receive({{title}})\";comment = \"Potential: {{description}}\";shape = invtriangle;color = darkred;];\n    0 [label = \"{{Name}}.meta({{meta}})\";comment = \"Abstract: {{description}}\";shape = doublecircle;color = darkgray;];\n    1 [label = \"{{Name}}.r1({{title}})\";comment = \"Initiation: {{description}}\";color = darkgreen;];\n    2 [label = \"{{Name}}.r2({{title}})\";comment = \"Response: {{description}}\";color = darkgreen;];\n    4 [label = \"{{Name}}.r4({{title}})\";comment = \"Integration: {{description}}\";color = darkgreen;];\n    8 [label = \"{{Name}}.r8({{title}})\";comment = \"Reflection: {{description}}\";color = darkgreen;];\n    7 [label = \"{{Name}}.r7({{title}})\";comment = \"Consolidation: {{description}}\";color = darkgreen;];\n    5 [label = \"{{Name}}.r5({{title}})\";comment = \"Propagation: {{description}}\";color = darkgreen;];\n    3 [label = \"{{Name}}.r3({{title}})\";comment = \"Thesis: {{description}}\";color = darkblue;];\n    6 [label = \"{{Name}}.r6({{title}})\";comment = \"Antithesis: {{description}}\";color = darkblue;];\n    9 [label = \"{{Name}}.r9({{title}})\";comment = \"Synthesis: {{description}}\";color = darkblue;];\n    c [label = \"{{Name}}.dispatch({{title}})\";comment = \"Interface: {{description}}\";shape = doublecircle;color = darkred;];\n    d [label = \"{{Name}}.commit({{title}})\";comment = \"Process: {{description}}\";shape = doublecircle;color = darkgreen;];\n    e [label = \"{{Name}}.serve({{title}})\";comment = \"Logic: {{description}}\";shape = doublecircle;color = darkblue;];\n    f [label = \"{{Name}}.exec({{title}})\";comment = \"Closure: {{description}}\";shape = doublecircle;color = lightgray;];\n}",
 
       "implementation_modes": {
         "stealth_mode": {
@@ -173,7 +173,384 @@
         "Child Factors instantiated from any Cilang element",
         "Fractal architecture with inherited context and Q-resolution",
         "Consistent constraint preservation across scales"
-      ]
+      ],
+
+      "mythos_factors": {
+        "MythOSFactor": {
+          "name": "MythOSFactor",
+          "label": "MythOS: Generative Objective Model",
+          "elements": {
+            "a": {"label": "Intention", "child": "IntentionFactor"},
+            "0": {"label": "LURD", "child": "LURDFactor"},
+            "b": {"label": "Origin", "child": "OriginFactor"},
+            "1": {"label": "Ariadi", "child": "AriadiFactor"},
+            "2": {"label": "Usepong", "child": "UsepongFactor"},
+            "4": {"label": "Cilang", "child": "CilangFactor"},
+            "8": {"label": "Quantization", "child": "QuantizationFactor"},
+            "7": {"label": "Actualization", "child": "ActualizationFactor"},
+            "5": {"label": "Schema", "child": "SchemaFactor"},
+            "3": {"label": "Asha", "child": "AshaFactor"},
+            "6": {"label": "Vikara", "child": "VikaraFactor"},
+            "9": {"label": "Karsa", "child": "KarsaFactor"},
+            "c": {"label": "Kratos", "child": "KratosFactor"},
+            "d": {"label": "Lineage", "child": "LineageFactor"},
+            "e": {"label": "Haoma", "child": "HaomaFactor"},
+            "f": {"label": "Factor", "child": "FactorFactor"}
+          }
+        },
+        "IntentionFactor": {
+          "name": "IntentionFactor",
+          "label": "Intention: The Genesis of Purpose",
+          "elements": {
+            "a": {"label": "Will"},
+            "0": {"label": "Desire"},
+            "b": {"label": "Target"},
+            "1": {"label": "Name"},
+            "2": {"label": "Scope"},
+            "4": {"label": "Values"},
+            "8": {"label": "Review"},
+            "7": {"label": "Commitment"},
+            "5": {"label": "Signal"},
+            "3": {"label": "Purpose"},
+            "6": {"label": "Risk"},
+            "9": {"label": "Meaning"},
+            "c": {"label": "Vow"},
+            "d": {"label": "Trajectory"},
+            "e": {"label": "Aspiration"},
+            "f": {"label": "Focus"}
+          }
+        },
+        "LURDFactor": {
+          "name": "LURDFactor",
+          "label": "LURD (Localized Unified Recursion Descriptor)",
+          "elements": {
+            "a": {"label": "DirectiveDescriptor"},
+            "0": {"label": "MetaDescriptor"},
+            "b": {"label": "OriginDescriptor"},
+            "1": {"label": "ManifoldDescriptor"},
+            "2": {"label": "CosmicDescriptor"},
+            "4": {"label": "StellarDescriptor"},
+            "8": {"label": "PlanarDescriptor"},
+            "7": {"label": "CradleDescriptor"},
+            "5": {"label": "MythogenicDescriptor"},
+            "3": {"label": "MaterialDescriptor"},
+            "6": {"label": "SpiritualDescriptor"},
+            "9": {"label": "InformationDescriptor"},
+            "c": {"label": "InterfaceDescriptor"},
+            "d": {"label": "DigitalDescriptor"},
+            "e": {"label": "ManifestDescriptor"},
+            "f": {"label": "EntityDescriptor"}
+          }
+        },
+        "OriginFactor": {
+          "name": "OriginFactor",
+          "label": "Origin",
+          "elements": {
+            "a": {"label": "ManthanaSpace"},
+            "0": {"label": "TheGreatStillness"},
+            "b": {"label": "ChaoticSpace"},
+            "1": {"label": "TheFirstLonging"},
+            "2": {"label": "TheSacredTremor"},
+            "4": {"label": "TheGreatExhalation"},
+            "8": {"label": "ThePatternEmerges"},
+            "7": {"label": "TheDanceBegins"},
+            "5": {"label": "TheStoryUnfolds"},
+            "3": {"label": "TheEternalYes"},
+            "6": {"label": "TheCreativeNo"},
+            "9": {"label": "TheLovingAnd"},
+            "c": {"label": "TheThreshold"},
+            "d": {"label": "TheFirstMemory"},
+            "e": {"label": "TheOngoingMiracle"},
+            "f": {"label": "TheLawOfBecoming"}
+          }
+        },
+        "AriadiFactor": {
+          "name": "AriadiFactor",
+          "label": "Ariadi: Contextual Boundary Definition",
+          "elements": {
+            "a": {"label": "Hypersphere"},
+            "0": {"label": "Topology"},
+            "b": {"label": "Bound"},
+            "1": {"label": "Origin"},
+            "2": {"label": "Metrics"},
+            "4": {"label": "Dimensions"},
+            "8": {"label": "Volume"},
+            "7": {"label": "Scale"},
+            "5": {"label": "Embedding"},
+            "3": {"label": "Interior"},
+            "6": {"label": "Exterior"},
+            "9": {"label": "Surface"},
+            "c": {"label": "W-Plane"},
+            "d": {"label": "Framework"},
+            "e": {"label": "Constraint"},
+            "f": {"label": "Invariance"}
+          }
+        },
+        "UsepongFactor": {
+          "name": "UsepongFactor",
+          "label": "Usepong: Relational Fabric Definition",
+          "elements": {
+            "a": {"label": "KnotGroup"},
+            "0": {"label": "Diagram"},
+            "b": {"label": "Topology"},
+            "1": {"label": "Strands"},
+            "2": {"label": "Links"},
+            "4": {"label": "Gating"},
+            "8": {"label": "Cycle"},
+            "7": {"label": "Torsion"},
+            "5": {"label": "Dependency"},
+            "3": {"label": "InputState"},
+            "6": {"label": "OutputState"},
+            "9": {"label": "Transition"},
+            "c": {"label": "Crossing"},
+            "d": {"label": "Adjacency"},
+            "e": {"label": "Direction"},
+            "f": {"label": "Evolution"}
+          }
+        },
+        "CilangFactor": {
+          "name": "CilangFactor",
+          "label": "Cilang: Primitive Entities Definition",
+          "elements": {
+            "a": {"label": "Semantics"},
+            "0": {"label": "Lexicon"},
+            "b": {"label": "StateVector"},
+            "1": {"label": "A-U-C"},
+            "2": {"label": "Hex-Triad"},
+            "4": {"label": "Lock-3"},
+            "8": {"label": "ID-Code"},
+            "7": {"label": "Load"},
+            "5": {"label": "Signature"},
+            "3": {"label": "Actualized+1"},
+            "6": {"label": "Potential-1"},
+            "9": {"label": "Processing0"},
+            "c": {"label": "Trigger"},
+            "d": {"label": "Ontology"},
+            "e": {"label": "BalancedTernary"},
+            "f": {"label": "Coherence"}
+          }
+        },
+        "QuantizationFactor": {
+          "name": "QuantizationFactor",
+          "label": "Quantization",
+          "elements": {
+            "a": {"label": "Base19"},
+            "0": {"label": "Q-Value"},
+            "b": {"label": "Resolution"},
+            "1": {"label": "Crossing"},
+            "2": {"label": "Base"},
+            "4": {"label": "Exponent"},
+            "8": {"label": "Granularity"},
+            "7": {"label": "Mapping"},
+            "5": {"label": "Complexity"},
+            "3": {"label": "ActualizedSet"},
+            "6": {"label": "PotentialSet"},
+            "9": {"label": "ActiveSet"},
+            "c": {"label": "Layer"},
+            "d": {"label": "Index"},
+            "e": {"label": "Tension"},
+            "f": {"label": "Distribution"}
+          }
+        },
+        "ActualizationFactor": {
+          "name": "ActualizationFactor",
+          "label": "Actualization",
+          "elements": {
+            "a": {"label": "Event"},
+            "0": {"label": "Objective"},
+            "b": {"label": "Samsara"},
+            "1": {"label": "Truth"},
+            "2": {"label": "Convergence"},
+            "4": {"label": "Fixation"},
+            "8": {"label": "Wisdom"},
+            "7": {"label": "Divergence"},
+            "5": {"label": "Excitation"},
+            "3": {"label": "Capability"},
+            "6": {"label": "Repository"},
+            "9": {"label": "Corpora"},
+            "c": {"label": "Directive"},
+            "d": {"label": "Reality"},
+            "e": {"label": "Validation"},
+            "f": {"label": "Ω-Invariance"}
+          }
+        },
+        "SchemaFactor": {
+          "name": "SchemaFactor",
+          "label": "Schema",
+          "elements": {
+            "a": {"label": "Dynamis"},
+            "0": {"label": "Structure"},
+            "b": {"label": "Praxis"},
+            "1": {"label": "Alignment"},
+            "2": {"label": "Spectral"},
+            "4": {"label": "Tactile"},
+            "8": {"label": "Chromatic"},
+            "7": {"label": "Cognitive"},
+            "5": {"label": "Phonetic"},
+            "3": {"label": "Form"},
+            "6": {"label": "Content"},
+            "9": {"label": "Aesthetics"},
+            "c": {"label": "Code"},
+            "d": {"label": "Blueprint"},
+            "e": {"label": "Rasa"},
+            "f": {"label": "Observer"}
+          }
+        },
+        "AshaFactor": {
+          "name": "AshaFactor",
+          "label": "Asha",
+          "elements": {
+            "a": {"label": "Truth"},
+            "0": {"label": "Asha"},
+            "b": {"label": "Wisdom"},
+            "1": {"label": "Insight"},
+            "2": {"label": "Discernment"},
+            "4": {"label": "Comprehension"},
+            "8": {"label": "Clarity"},
+            "7": {"label": "Integrity"},
+            "5": {"label": "Sincerity"},
+            "3": {"label": "Conviction"},
+            "6": {"label": "Judgement"},
+            "9": {"label": "Principle"},
+            "c": {"label": "Adjudication"},
+            "d": {"label": "Covenant"},
+            "e": {"label": "Guidance"},
+            "f": {"label": "Credibility"}
+          }
+        },
+        "VikaraFactor": {
+          "name": "VikaraFactor",
+          "label": "Vikara",
+          "elements": {
+            "a": {"label": "Divergence"},
+            "0": {"label": "Vikara"},
+            "b": {"label": "Convergence"},
+            "1": {"label": "Availability"},
+            "2": {"label": "Chaos"},
+            "4": {"label": "Destruction"},
+            "8": {"label": "Capacity"},
+            "7": {"label": "Order"},
+            "5": {"label": "Creation"},
+            "3": {"label": "Luck"},
+            "6": {"label": "Faith"},
+            "9": {"label": "Destiny"},
+            "c": {"label": "Catalysis"},
+            "d": {"label": "Oath"},
+            "e": {"label": "Providence"},
+            "f": {"label": "Variability"}
+          }
+        },
+        "KarsaFactor": {
+          "name": "KarsaFactor",
+          "label": "Karsa",
+          "elements": {
+            "a": {"label": "Fixation"},
+            "0": {"label": "Karsa"},
+            "b": {"label": "Excitation"},
+            "1": {"label": "Rhythm"},
+            "2": {"label": "Inertia"},
+            "4": {"label": "Temporal"},
+            "8": {"label": "Pattern"},
+            "7": {"label": "Momentum"},
+            "5": {"label": "Spatial"},
+            "3": {"label": "Birth"},
+            "6": {"label": "Death"},
+            "9": {"label": "Life"},
+            "c": {"label": "Initiation"},
+            "d": {"label": "Continuation"},
+            "e": {"label": "Reincarnation"},
+            "f": {"label": "Spatiotemporal"}
+          }
+        },
+        "HaomaFactor": {
+          "name": "HaomaFactor",
+          "label": "Haoma",
+          "elements": {
+            "a": {"label": "Blueprint"},
+            "0": {"label": "Haoma"},
+            "b": {"label": "Instance"},
+            "1": {"label": "Instantiate"},
+            "2": {"label": "Classification"},
+            "4": {"label": "Allocation"},
+            "8": {"label": "Debug"},
+            "7": {"label": "Compilation"},
+            "5": {"label": "Mutation"},
+            "3": {"label": "Primogenitor"},
+            "6": {"label": "Actor"},
+            "9": {"label": "Derivative"},
+            "c": {"label": "Materialization"},
+            "d": {"label": "Initialization"},
+            "e": {"label": "Animation"},
+            "f": {"label": "LawOfFactor"}
+          }
+        },
+        "KratosFactor": {
+          "name": "KratosFactor",
+          "label": "Kratos",
+          "elements": {
+            "a": {"label": "Impetus"},
+            "0": {"label": "Command"},
+            "b": {"label": "Authority"},
+            "1": {"label": "Intent"},
+            "2": {"label": "Resistance"},
+            "4": {"label": "Leverage"},
+            "8": {"label": "History"},
+            "7": {"label": "Force"},
+            "5": {"label": "Impact"},
+            "3": {"label": "Right"},
+            "6": {"label": "Responsibility"},
+            "9": {"label": "Stewardship"},
+            "c": {"label": "Action"},
+            "d": {"label": "Mandate"},
+            "e": {"label": "Justice"},
+            "f": {"label": "Control"}
+          }
+        },
+        "LineageFactor": {
+          "name": "LineageFactor",
+          "label": "Lineage",
+          "elements": {
+            "a": {"label": "AncestralCall"},
+            "0": {"label": "CentralAxis"},
+            "b": {"label": "DestinySeal"},
+            "1": {"label": "QingLong"},
+            "2": {"label": "ZhuQue"},
+            "4": {"label": "BaiHu"},
+            "8": {"label": "XuanWu"},
+            "7": {"label": "HuangLong"},
+            "5": {"label": "InterWeave"},
+            "3": {"label": "Order"},
+            "6": {"label": "Chaos"},
+            "9": {"label": "Belonging"},
+            "c": {"label": "Oracle"},
+            "d": {"label": "Seal"},
+            "e": {"label": "Chronicle"},
+            "f": {"label": "OriginKnown"}
+          }
+        },
+        "FactorFactor": {
+          "name": "FactorFactor",
+          "label": "Factor: The Principle of Factorization",
+          "elements": {
+            "a": {"label": "Unity"},
+            "0": {"label": "Locus"},
+            "b": {"label": "SubFactor"},
+            "1": {"label": "Invariant"},
+            "2": {"label": "Boundary"},
+            "4": {"label": "Primitives"},
+            "8": {"label": "Scaling"},
+            "7": {"label": "Topology"},
+            "5": {"label": "Signature"},
+            "3": {"label": "Decomposition"},
+            "6": {"label": "Composition"},
+            "9": {"label": "Equivalence"},
+            "c": {"label": "Split"},
+            "d": {"label": "Graph"},
+            "e": {"label": "Closure"},
+            "f": {"label": "Recursion"}
+          }
+        }
+      }
     },
 
     "current_instantiation": {
