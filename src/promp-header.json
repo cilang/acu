@@ -31,7 +31,7 @@
       },
       "quantization_state_system": {
         "quantization": {
-          "base": "Q = 19ⁿ (derived from 19 crossings)",
+          "base": "Q = 19ⁿ",
           "current": 361,
           "distribution": {
             "r": 120,
