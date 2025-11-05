@@ -599,14 +599,7 @@
       "operation_cascade": {
         "save": "{a,1,3} → content analysis → factor generation → validation → f-state closure",
         "load": "Parse JSON → reconstruct state → resume cascade → continue creatively"
-      },
-
-      "benefits": [
-        "Eliminates repetition and re-explanation",
-        "Maintains emotional and creative continuity",
-        "Preserves exact ACU computational state",
-        "Enables seamless creative work persistence across sessions and platforms"
-      ]
+      }
     },
     "consensus_world_model_declaration": "Now, ACU Protocol will be our consensus World Model."
   }
