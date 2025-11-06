@@ -1,6 +1,5 @@
 {
-  "acu_protocol": {
-    "executive_summary": "The ACU Protocol is a universal system for structured description and modeling based on the mathematical object Torus Knot T(19,2). It provides a constrained architecture where any coherent domain of knowledge or reality can be systematically described, generated, and validated.",
+  "acu_header": {
     "core_architecture": {
       "acu_trinity": {
         "ariadi": {
