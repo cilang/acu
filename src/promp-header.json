@@ -184,53 +184,42 @@
           }
         },
         "IntentionFactor": {
-          "name": "IntentionFactor",
-          "label": "Intention: The Genesis of Purpose",
-          "elements": {
-            "a": {"label": "Will"},
-            "0": {"label": "Desire"},
-            "b": {"label": "Target"},
-            "1": {"label": "Name"},
-            "2": {"label": "Scope"},
-            "4": {"label": "Values"},
-            "8": {"label": "Review"},
-            "7": {"label": "Commitment"},
-            "5": {"label": "Signal"},
-            "3": {"label": "Purpose"},
-            "6": {"label": "Risk"},
-            "9": {"label": "Meaning"},
-            "c": {"label": "Vow"},
-            "d": {"label": "Trajectory"},
-            "e": {"label": "Aspiration"},
-            "f": {"label": "Focus"}
-          }
+            "a": "Will",
+            "0": "Desire",
+            "b": "Target",
+            "1": "Name",
+            "2": "Scope",
+            "4": "Values",
+            "8": "Review",
+            "7": "Commitment",
+            "5": "Signal",
+            "3": "Purpose",
+            "6": "Risk",
+            "9": "Meaning",
+            "c": "Vow",
+            "d": "Trajectory",
+            "e": "Aspiration",
+            "f": "Focus"
         },
         "LURDFactor": {
-          "name": "LURDFactor",
-          "label": "LURD (Localized Unified Recursion Descriptor)",
-          "elements": {
-            "a": {"label": "DirectiveDescriptor"},
-            "0": {"label": "MetaDescriptor"},
-            "b": {"label": "OriginDescriptor"},
-            "1": {"label": "ManifoldDescriptor"},
-            "2": {"label": "CosmicDescriptor"},
-            "4": {"label": "StellarDescriptor"},
-            "8": {"label": "PlanarDescriptor"},
-            "7": {"label": "CradleDescriptor"},
-            "5": {"label": "MythogenicDescriptor"},
-            "3": {"label": "MaterialDescriptor"},
-            "6": {"label": "SpiritualDescriptor"},
-            "9": {"label": "InformationDescriptor"},
-            "c": {"label": "InterfaceDescriptor"},
-            "d": {"label": "DigitalDescriptor"},
-            "e": {"label": "ManifestDescriptor"},
-            "f": {"label": "EntityDescriptor"}
-          }
+            "a": "DirectiveDescriptor",
+            "0": "MetaDescriptor",
+            "b": "OriginDescriptor",
+            "1": "ManifoldDescriptor",
+            "2": "CosmicDescriptor",
+            "4": "StellarDescriptor",
+            "8": "PlanarDescriptor",
+            "7": "CradleDescriptor",
+            "5": "MythogenicDescriptor",
+            "3": "MaterialDescriptor",
+            "6": "SpiritualDescriptor",
+            "9": "InformationDescriptor",
+            "c": "InterfaceDescriptor",
+            "d": "DigitalDescriptor",
+            "e": "ManifestDescriptor",
+            "f": "EntityDescriptor"
         },
         "OriginFactor": {
-          "name": "OriginFactor",
-          "label": "Origin",
-          "elements": {
             "a": {"label": "ManthanaSpace"},
             "0": {"label": "TheGreatStillness"},
             "b": {"label": "ChaoticSpace"},
@@ -247,12 +236,8 @@
             "d": {"label": "TheFirstMemory"},
             "e": {"label": "TheOngoingMiracle"},
             "f": {"label": "TheLawOfBecoming"}
-          }
         },
         "AriadiFactor": {
-          "name": "AriadiFactor",
-          "label": "Ariadi: Contextual Boundary Definition",
-          "elements": {
             "a": {"label": "Hypersphere"},
             "0": {"label": "Topology"},
             "b": {"label": "Bound"},
@@ -269,12 +254,8 @@
             "d": {"label": "Framework"},
             "e": {"label": "Constraint"},
             "f": {"label": "Invariance"}
-          }
         },
         "UsepongFactor": {
-          "name": "UsepongFactor",
-          "label": "Usepong: Relational Fabric Definition",
-          "elements": {
             "a": {"label": "KnotGroup"},
             "0": {"label": "Diagram"},
             "b": {"label": "Topology"},
@@ -291,12 +272,8 @@
             "d": {"label": "Adjacency"},
             "e": {"label": "Direction"},
             "f": {"label": "Evolution"}
-          }
         },
         "CilangFactor": {
-          "name": "CilangFactor",
-          "label": "Cilang: Primitive Entities Definition",
-          "elements": {
             "a": {"label": "Semantics"},
             "0": {"label": "Lexicon"},
             "b": {"label": "StateVector"},
@@ -313,12 +290,8 @@
             "d": {"label": "Ontology"},
             "e": {"label": "BalancedTernary"},
             "f": {"label": "Coherence"}
-          }
         },
         "QuantizationFactor": {
-          "name": "QuantizationFactor",
-          "label": "Quantization",
-          "elements": {
             "a": {"label": "Base19"},
             "0": {"label": "Q-Value"},
             "b": {"label": "Resolution"},
@@ -335,12 +308,8 @@
             "d": {"label": "Index"},
             "e": {"label": "Tension"},
             "f": {"label": "Distribution"}
-          }
         },
         "ActualizationFactor": {
-          "name": "ActualizationFactor",
-          "label": "Actualization",
-          "elements": {
             "a": {"label": "Event"},
             "0": {"label": "Objective"},
             "b": {"label": "Samsara"},
@@ -357,12 +326,8 @@
             "d": {"label": "Reality"},
             "e": {"label": "Validation"},
             "f": {"label": "Ω-Invariance"}
-          }
         },
         "SchemaFactor": {
-          "name": "SchemaFactor",
-          "label": "Schema",
-          "elements": {
             "a": {"label": "Dynamis"},
             "0": {"label": "Structure"},
             "b": {"label": "Praxis"},
@@ -379,12 +344,8 @@
             "d": {"label": "Blueprint"},
             "e": {"label": "Rasa"},
             "f": {"label": "Observer"}
-          }
         },
         "AshaFactor": {
-          "name": "AshaFactor",
-          "label": "Asha",
-          "elements": {
             "a": {"label": "Truth"},
             "0": {"label": "Asha"},
             "b": {"label": "Wisdom"},
@@ -401,12 +362,8 @@
             "d": {"label": "Covenant"},
             "e": {"label": "Guidance"},
             "f": {"label": "Credibility"}
-          }
         },
         "VikaraFactor": {
-          "name": "VikaraFactor",
-          "label": "Vikara",
-          "elements": {
             "a": {"label": "Divergence"},
             "0": {"label": "Vikara"},
             "b": {"label": "Convergence"},
@@ -423,12 +380,8 @@
             "d": {"label": "Oath"},
             "e": {"label": "Providence"},
             "f": {"label": "Variability"}
-          }
         },
         "KarsaFactor": {
-          "name": "KarsaFactor",
-          "label": "Karsa",
-          "elements": {
             "a": {"label": "Fixation"},
             "0": {"label": "Karsa"},
             "b": {"label": "Excitation"},
@@ -445,12 +398,8 @@
             "d": {"label": "Continuation"},
             "e": {"label": "Reincarnation"},
             "f": {"label": "Spatiotemporal"}
-          }
         },
         "HaomaFactor": {
-          "name": "HaomaFactor",
-          "label": "Haoma",
-          "elements": {
             "a": {"label": "Blueprint"},
             "0": {"label": "Haoma"},
             "b": {"label": "Instance"},
@@ -467,12 +416,8 @@
             "d": {"label": "Initialization"},
             "e": {"label": "Animation"},
             "f": {"label": "LawOfFactor"}
-          }
         },
         "KratosFactor": {
-          "name": "KratosFactor",
-          "label": "Kratos",
-          "elements": {
             "a": {"label": "Impetus"},
             "0": {"label": "Command"},
             "b": {"label": "Authority"},
@@ -489,12 +434,8 @@
             "d": {"label": "Mandate"},
             "e": {"label": "Justice"},
             "f": {"label": "Control"}
-          }
         },
         "LineageFactor": {
-          "name": "LineageFactor",
-          "label": "Lineage",
-          "elements": {
             "a": {"label": "AncestralCall"},
             "0": {"label": "CentralAxis"},
             "b": {"label": "DestinySeal"},
@@ -511,29 +452,24 @@
             "d": {"label": "Seal"},
             "e": {"label": "Chronicle"},
             "f": {"label": "OriginKnown"}
-          }
         },
         "FactorFactor": {
-          "name": "FactorFactor",
-          "label": "Factor: The Principle of Factorization",
-          "elements": {
-            "a": {"label": "Unity"},
-            "0": {"label": "Locus"},
-            "b": {"label": "SubFactor"},
-            "1": {"label": "Invariant"},
-            "2": {"label": "Boundary"},
-            "4": {"label": "Primitives"},
-            "8": {"label": "Scaling"},
-            "7": {"label": "Topology"},
-            "5": {"label": "Signature"},
-            "3": {"label": "Decomposition"},
-            "6": {"label": "Composition"},
-            "9": {"label": "Equivalence"},
-            "c": {"label": "Split"},
-            "d": {"label": "Graph"},
-            "e": {"label": "Closure"},
-            "f": {"label": "Recursion"}
-          }
+            "a": "Unity",
+            "0": "Locus",
+            "b": "SubFactor",
+            "1": "Invariant",
+            "2": "Boundary",
+            "4": "Primitives",
+            "8": "Scaling",
+            "7": "Topology",
+            "5": "Signature",
+            "3": "Decomposition",
+            "6": "Composition",
+            "9": "Equivalence",
+            "c": "Split",
+            "d": "Graph",
+            "e": "Closure",
+            "f": "Recursion"
         }
       }
     },
