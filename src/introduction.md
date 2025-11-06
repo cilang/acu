@@ -81,7 +81,7 @@ So, compose your own [SchemaFactor](schema-template.json) and see [ShemaFactor E
 
 ## Important Notes
 
-⚠️ **Please Don't Change the Network Structure**: The 16-node graph might look simple, but changing it can cause unexpected behavior. I've tested many configurations, and this one works reliably.
+⚠️ **Please Don't Change the Graph Network Structure**: The 16-node graph might look simple, but changing it can cause unexpected behavior. I've tested many configurations, and this one works reliably.
 
 🌍 **Beyond My Original Use**: While created for worldbuilding, I found ACU Protocol useful for many other applications, which is why I separated it into its own project.
 
