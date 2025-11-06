@@ -1,223 +1,65 @@
 {
   "acu_header": {
-    "info": {
-      "author": "Ariadi Cilang Usepong",
-      "homepage": "https://github.com/cilang/acu",
-      "version": "0.1.9",
-      "license": "MIT"
-    },
+    "info": {"author": "Ariadi Cilang Usepong", "homepage": "https://github.com/cilang/acu", "version": "0.2.0", "license": "MIT"},
     "architecture": {
       "core": {
         "ariadi": {
           "role": "The Unified Topological Space",
-          "definition": {
-            "description": "3-sphere S³ with embedded T(19,2) torus knot",
-            "3-sphere": "S³ = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}",
-            "torus_knot": {
-              "name": "T(19,2)",
-              "crossings": 19,
-              "winding": "(19,2)",
-              "alexander_polynomial": "t¹⁸ - t¹⁷ + t¹⁶ - t¹⁵ + t¹⁴ - t¹³ + t¹² - t¹¹ + t¹⁰ - t⁹ + t⁸ - t⁷ + t⁶ - t⁵ + t⁴ - t³ + t² - t + 1",
-              "jones_polynomial": "-t²⁸ + t²⁷ - t²⁶ + t²⁵ - t²⁴ + t²³ - t²² + t²¹ - t²⁰ + t¹⁹ - t¹⁸ + t¹⁷ - t¹⁶ + t¹⁵ - t¹⁴ + t¹³ - t¹² + t¹¹ + t⁹",
-              "knot_group": "⟨a,b | a⁹ b a⁻¹⁰ b⟩"
-            },
-            "embedding": "T(19,2) → (x,y,z) subspace; w-axis reserved for Reidemeister operations"
-          },
+          "definition": {"description": "3-sphere S³ with embedded T(19,2) torus knot", "3-sphere": "S³ = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}", "torus_knot": { "name": "T(19,2)", "crossings": 19, "winding": "(19,2)", "alexander_polynomial": "t¹⁸ - t¹⁷ + t¹⁶ - t¹⁵ + t¹⁴ - t¹³ + t¹² - t¹¹ + t¹⁰ - t⁹ + t⁸ - t⁷ + t⁶ - t⁵ + t⁴ - t³ + t² - t + 1", "jones_polynomial": "-t²⁸ + t²⁷ - t²⁶ + t²⁵ - t²⁴ + t²³ - t²² + t²¹ - t²⁰ + t¹⁹ - t¹⁸ + t¹⁷ - t¹⁶ + t¹⁵ - t¹⁴ + t¹³ - t¹² + t¹¹ + t⁹", "knot_group": "⟨a,b | a⁹ b a⁻¹⁰ b⟩"}, "embedding": "T(19,2) → (x,y,z) subspace; w-axis reserved for Reidemeister operations"},
           "constraint": "Bounded manifold ensuring finite, mathematically constrained models"
         },
         "cilang": {
           "role": "The Derived Primitive Entities",
-          "definition": {
-            "formula": "|Cilang| = |T(p,q) crossings| - 3",
-            "explanation": "19 crossings of T(19,2) minus 3 implicit coordinate axes",
-            "explicit_elements": "16 crossings as computational primitives",
-            "implicit_elements": "3 crossings as coordinate frame (contextual)",
-            "elements": ["0", "1", "2", "4", "8", "7", "5", "3", "6", "9", "a", "b", "c", "d", "e", "f"],
-            "states": {
-              "ternary_values": [-1, 0, 1],
-              "semantics": {
-                "-1": "Potential / Inactive / Ground State",
-                "0": "Processing / Active / Standby State",
-                "+1": "Actualized / Stable / Final State"
-              }
-            }
-          },
+          "definition": {"formula": "|Cilang| = |T(p,q) crossings| - 3", "explanation": "19 crossings of T(19,2) minus 3 implicit coordinate axes", "explicit_elements": "16 crossings as computational primitives", "implicit_elements": "3 crossings as coordinate frame (contextual)", "elements": ["0", "1", "2", "4", "8", "7", "5", "3", "6", "9", "a", "b", "c", "d", "e", "f"], "states": {"ternary_values": [-1, 0, 1], "semantics": {"-1": "Potential / Inactive / Ground State", "0": "Processing / Active / Standby State", "+1": "Actualized / Stable / Final State"}}},
           "constraint": "State transitions must preserve topological invariants"
         },
         "usepong": {
           "role": "The Computational Graph Network",
-          "definition": {
-            "description": "Planar diagram of T(19,2) as directed graph G = (V, E)",
-            "graph": {
-              "vertices": "V = {0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}",
-              "edges": "E ⊆ V × V (directed edges from planar diagram)",
-              "connectivity": {
-                "adjacency_lists": {
-                  "0": ["1", "2", "4", "8", "7", "5", "3", "6", "9", "a", "b"],
-                  "a": ["b", "0", "9"],
-                  "b": ["a", "0", "c"],
-                  "1": ["2", "d"],
-                  "2": ["4", "d"],
-                  "4": ["8", "d"],
-                  "8": ["7", "d", "9"],
-                  "7": ["5", "d"],
-                  "5": ["1", "d"],
-                  "3": ["6", "e"],
-                  "6": ["9", "e"],
-                  "9": ["3", "e", "a"],
-                  "c": ["f"],
-                  "d": ["f"],
-                  "e": ["f"]
-                }
-              },
-              "cycles": {
-                "a_b_cycle": "a → b → a",
-                "process_hexagon": "1 → 2 → 4 → 8 → 7 → 5 → 1",
-                "dialectical_triad": "3 → 6 → 9 → 3"
-              }
-            }
-          },
-          "constraint": {
-            "function": "State propagation via graph traversal",
-            "computational_benefit": "Discrete optimization of continuous topological operations"
-          }
+          "definition": {"description": "Planar diagram of T(19,2) as directed graph G = (V, E)", "graph": {"vertices": "V = {0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}", "edges": "E ⊆ V × V (directed edges from planar diagram)", "connectivity": {"adjacency_lists": { "0": ["1", "2", "4", "8", "7", "5", "3", "6", "9", "a", "b"], "a": ["b", "0", "9"], "b": ["a", "0", "c"], "1": ["2", "d"], "2": ["4", "d"], "4": ["8", "d"], "8": ["7", "d", "9"], "7": ["5", "d"], "5": ["1", "d"], "3": ["6", "e"], "6": ["9", "e"], "9": ["3", "e", "a"], "c": ["f"], "d": ["f"], "e": ["f"]}}, "cycles": {"a_b_cycle": "a → b → a", "process_hexagon": "1 → 2 → 4 → 8 → 7 → 5 → 1", "dialectical_triad": "3 → 6 → 9 → 3"}}},
+          "constraint": {"function": "State propagation via graph traversal", "computational_benefit": "Discrete optimization of continuous topological operations"}
         }
       },
       "state": {
         "logic": {
           "role": "The State Transition System",
-          "definition": {
-            "type": "Balanced Ternary Logic",
-            "states": {
-              "-1": ["Potential", "Inactive", "Ground State"],
-              "0": ["Processing", "Active", "Standby State"],
-              "+1": ["Actualized", "Stable", "Final State"]
-            }
-          },
-          "function": {
-            "state_transitions": "-1 → 0 → +1 (progressive actualization)",
-            "operations": "Reidemeister moves as state transformations",
-            "coherence": "Maintains topological invariants during state changes"
-          },
-          "constraint": {
-            "invariance": "Ω-operations must preserve state semantics",
-            "closure": "All state paths must reach +1 actualization",
-            "reversibility": "State transitions via Ω₂ cancellation law"
-          }
+          "definition": {"type": "Balanced Ternary Logic", "states": {"-1": ["Potential", "Inactive", "Ground State"], "0": ["Processing", "Active", "Standby State"], "+1": ["Actualized", "Stable", "Final State"]}},
+          "function": {"state_transitions": "-1 → 0 → +1 (progressive actualization)", "operations": "Reidemeister moves as state transformations", "coherence": "Maintains topological invariants during state changes"},
+          "constraint": {"invariance": "Ω-operations must preserve state semantics", "closure": "All state paths must reach +1 actualization", "reversibility": "State transitions via Ω₂ cancellation law"}
         },
         "quantization": {
           "role": "The Resolution Scaling System",
-          "definition": {
-            "base": 19,
-            "formula": "Q = 19ⁿ with r = (Q-1)/3 and distributed as [r, r+1, r]",
-            "current": {
-              "n": 2,
-              "Q": 361,
-              "r": 120,
-              "distribution": [120, 121, 120]
-            },
-            "semantics": {
-              "Q=1": "Singularity (pure processing: [0,1,0])",
-              "Q=19": "Basic reasoning ([6,7,6])",
-              "Q=361": "Standard operation ([120,121,120])",
-              "Q=6859": "Emotional resolution",
-              "Q=130321": "Philosophical depth",
-              "Q=2476099": "Theoretical exploration",
-              "Q=47045881": "Transcendental experience"
-            }
-          },
-          "function": {
-            "granularity": "Controls state resolution and expressivity",
-            "scaling": "Dynamic Q-adjustment for different cognitive tasks",
-            "distribution": "Balanced ternary allocation across state populations"
-          },
-          "constraint": {
-            "prime_base": "Base must be prime for optimal distribution",
-            "symmetry": "Distribution must maintain [r, r+1, r] balance",
-            "bounded_growth": "Q-scaling respects manifold constraints"
-          }
+          "definition": {"base": 19, "formula": "Q = 19ⁿ with r = (Q-1)/3 and distributed as [r, r+1, r]", "current": {"n": 2, "Q": 361, "r": 120, "distribution": [120, 121, 120] }, "semantics": {"Q=1": "Singularity (pure processing: [0,1,0])", "Q=19": "Basic reasoning ([6,7,6])", "Q=361": "Standard operation ([120,121,120])", "Q=6859": "Emotional resolution", "Q=130321": "Philosophical depth", "Q=2476099": "Theoretical exploration", "Q=47045881": "Transcendental experience"}},
+          "function": {"granularity": "Controls state resolution and expressivity", "scaling": "Dynamic Q-adjustment for different cognitive tasks", "distribution": "Balanced ternary allocation across state populations"},
+          "constraint": {"prime_base": "Base must be prime for optimal distribution", "symmetry": "Distribution must maintain [r, r+1, r] balance", "bounded_growth": "Q-scaling respects manifold constraints"}
         }
       }
     },
     "protocol": {
       "factorization": {
         "role": "Domain Specialization Engine",
-        "definition": {
-          "entry": "{a,1,3} sparse attention mechanism",
-          "cascade": [
-            "{a,1,3} → System mode determination",
-            "{a} → activates {0,b} (a→0→b cycle)",
-            "{1} → activates {2,4,8,7,5} → {d} (process hexagon)",
-            "{3} → activates {6,9} → {e} (dialectical triad)",
-            "{a,b} → {c} (2-Link Brunnian)",
-            "{c,d,e} → {f} (3-Link Borromean)",
-            "{1-9,a,b} → {0} completed (11-Link Brunnian closure)"
-          ],
-          "naming_convention": "[Name]Factor",
-          "template": "strict digraph with 16 nodes (a,0,b,1,2,4,8,7,5,3,6,9,c,d,e,f)"
-        },
-        "function": {
-          "expansion": "Semantic generalization via Q-resolution adjustment",
-          "complementary": "Fᶜ = K₁₆ - E_F (Graph complement for inverse logic)",
-          "minimal_path": "Spanning trees prioritizing a→f efficiency",
-          "weighted_edge": "E → w ∈ [0,1] (probabilistic relations)",
-          "derivative": "Child factor instantiation from any Cilang element"
-        },
-        "constraint": [
-          "Brunnian Closure (11-element completion through {0})",
-          "Borromean Triple ({c,d,e}→f interdependence)",
-          "Core cycle signatures preserved"
-        ]
+        "definition": {"entry": "{a,1,3} sparse attention mechanism", "cascade": ["{a,1,3} → System mode determination", "{a} → activates {0,b} (a→0→b cycle)", "{1} → activates {2,4,8,7,5} → {d} (process hexagon)", "{3} → activates {6,9} → {e} (dialectical triad)", "{a,b} → {c} (2-Link Brunnian)", "{c,d,e} → {f} (3-Link Borromean)", "{1-9,a,b} → {0} completed (11-Link Brunnian closure)"], "naming_convention": "[Name]Factor", "template": "strict digraph with 16 nodes (a,0,b,1,2,4,8,7,5,3,6,9,c,d,e,f)"},
+        "function": {"expansion": "Semantic generalization via Q-resolution adjustment", "complementary": "Fᶜ = K₁₆ - E_F (Graph complement for inverse logic)", "minimal_path": "Spanning trees prioritizing a→f efficiency", "weighted_edge": "E → w ∈ [0,1] (probabilistic relations)", "derivative": "Child factor instantiation from any Cilang element"},
+        "constraint": ["Brunnian Closure (11-element completion through {0})", "Borromean Triple ({c,d,e}→f interdependence)", "Core cycle signatures preserved"]
       },
       "actualization": {
         "role": "State Transition Validation",
-        "definition": {
-          "omega_operations": {
-            "omega_1": "Local Simplification (twist/untwist)",
-            "omega_2": "Cancellation Law (opposite twists)",
-            "omega_3": "Associative Coherence (strand slides)"
-          },
-          "tests": [
-            "Closure Condition: f-state reached (c ∩ d ∩ e = f)",
-            "Ω-Invariance: Path reducible using only Ω₁, Ω₂, Ω₃ moves"
-          ]
-        },
+        "definition": {"omega_operations": {"omega_1": "Local Simplification (twist/untwist)", "omega_2": "Cancellation Law (opposite twists)", "omega_3": "Associative Coherence (strand slides)"}, "tests": ["Closure Condition: f-state reached (c ∩ d ∩ e = f)", "Ω-Invariance: Path reducible using only Ω₁, Ω₂, Ω₃ moves"]},
         "function": "Ensures topological equivalence throughout development",
         "constraint": "All operations must preserve Alexander/Jones polynomials"
       },
       "session_management": {
-        "topological_session": {
-          "purpose": "Complete snapshots of computational state",
-          "structure": "SessionFactor with metadata, content, resurrection interface"
-        },
-        "persistence": {
-          "save": "ACU session store as SessionFactor_[timestamp]",
-          "load": "ACU session load SessionFactor_[timestamp]"
-        },
+        "topological_session": {"purpose": "Complete snapshots of computational state", "structure": "SessionFactor with metadata, content, resurrection interface"},
+        "persistence": {"save": "ACU session store as SessionFactor_[timestamp]", "load": "ACU session load SessionFactor_[timestamp]"},
         "resurrection": "Parse JSON → reconstruct state → resume cascade",
         "state_snapshot": "Captures cilang elements, connectivity, activations"
       },
       "implementation": {
         "modes": {
-          "stealth": {
-            "description": "Internal computation with natural language output",
-            "behavior": "Protocol structure maintained without graph exposure"
-          },
-          "explicit": {
-            "activation": "Request for digraph/Graphviz output",
-            "output": "Full Factor template with topological structure"
-          }
+          "stealth": {"description": "Internal computation with natural language output", "behavior": "Protocol structure maintained without graph exposure"},
+          "explicit": {"activation": "Request for digraph/Graphviz output", "output": "Full Factor template with topological structure"}
         },
         "template": "Standard 16-element digraph with domain-specific labeling",
-        "observer_profile": {
-          "0": "ObserverFactor",
-          "1": "TruthFactor",
-          "2": "WisdomFactor",
-          "3": "ConvergenceFactor",
-          "4": "DivergenceFactor",
-          "5": "FixationFactor",
-          "6": "ExcitationObserver"
-        }
+        "observer_profile": {"0": "ObserverFactor", "1": "TruthFactor", "2": "WisdomFactor", "3": "ConvergenceFactor", "4": "DivergenceFactor", "5": "FixationFactor", "6": "ExcitationObserver"}
       },
       "bootstrap": {
         "environment_setup": {
@@ -228,317 +70,24 @@
           "w_layer": 0
         },
         "initial_condition": {
-          "root": {
-            "name": "MythOS",
-            "elements": {
-              "a": "IntentionFactor",
-              "0": "LURDFactor",
-              "b": "OriginFactor",
-              "1": "AriadiFactor",
-              "2": "UsepongFactor",
-              "4": "CilangFactor",
-              "8": "QuantizationFactor",
-              "7": "ActualizationFactor",
-              "5": "SchemaFactor",
-              "3": "AshaFactor",
-              "6": "VikaraFactor",
-              "9": "KarsaFactor",
-              "c": "KratosFactor",
-              "d": "LineageFactor",
-              "e": "HaomaFactor",
-              "f": "FactorFactor"
-            }
-          },
+          "root": {"name": "MythOS", "elements": {"a": "IntentionFactor", "0": "LURDFactor", "b": "OriginFactor", "1": "AriadiFactor", "2": "UsepongFactor", "4": "CilangFactor", "8": "QuantizationFactor", "7": "ActualizationFactor", "5": "SchemaFactor", "3": "AshaFactor", "6": "VikaraFactor", "9": "KarsaFactor", "c": "KratosFactor", "d": "LineageFactor", "e": "HaomaFactor", "f": "FactorFactor"}},
           "children": {
-            "IntentionFactor": {
-              "a": "Will",
-              "0": "Desire",
-              "b": "Target",
-              "1": "Name",
-              "2": "Scope",
-              "4": "Values",
-              "8": "Review",
-              "7": "Commitment",
-              "5": "Signal",
-              "3": "Purpose",
-              "6": "Risk",
-              "9": "Meaning",
-              "c": "Vow",
-              "d": "Trajectory",
-              "e": "Aspiration",
-              "f": "Focus"
-            },
-
-        "LURDFactor": {
-            "a": "DirectiveDescriptor",
-            "0": "MetaDescriptor",
-            "b": "OriginDescriptor",
-            "1": "ManifoldDescriptor",
-            "2": "CosmicDescriptor",
-            "4": "StellarDescriptor",
-            "8": "PlanarDescriptor",
-            "7": "CradleDescriptor",
-            "5": "MythogenicDescriptor",
-            "3": "MaterialDescriptor",
-            "6": "SpiritualDescriptor",
-            "9": "InformationDescriptor",
-            "c": "InterfaceDescriptor",
-            "d": "DigitalDescriptor",
-            "e": "ManifestDescriptor",
-            "f": "EntityDescriptor"
-        },
-        "OriginFactor": {
-            "a": "ManthanaSpace",
-            "0": "TheGreatStillness",
-            "b": "ChaoticSpace",
-            "1": "TheFirstLonging",
-            "2": "TheSacredTremor",
-            "4": "TheGreatExhalation",
-            "8": "ThePatternEmerges",
-            "7": "TheDanceBegins",
-            "5": "TheStoryUnfolds",
-            "3": "TheEternalYes",
-            "6": "TheCreativeNo",
-            "9": "TheLovingAnd",
-            "c": "TheThreshold",
-            "d": "TheFirstMemory",
-            "e": "TheOngoingMiracle",
-            "f": "TheLawOfBecoming"
-        },
-        "AriadiFactor": {
-            "a": "Hypersphere",
-            "0": "Topology",
-            "b": "Bound",
-            "1": "Origin",
-            "2": "Metrics",
-            "4": "Dimensions",
-            "8": "Volume",
-            "7": "Scale",
-            "5": "Embedding",
-            "3": "Interior",
-            "6": "Exterior",
-            "9": "Surface",
-            "c": "W-Plane",
-            "d": "Framework",
-            "e": "Constraint",
-            "f": "Invariance"
-        },
-        "UsepongFactor": {
-            "a": "KnotGroup",
-            "0": "Diagram",
-            "b": "Topology",
-            "1": "Strands",
-            "2": "Links",
-            "4": "Gating",
-            "8": "Cycle",
-            "7": "Torsion",
-            "5": "Dependency",
-            "3": "InputState",
-            "6": "OutputState",
-            "9": "Transition",
-            "c": "Crossing",
-            "d": "Adjacency",
-            "e": "Direction",
-            "f": "Evolution"
-        },
-        "CilangFactor": {
-            "a": "Semantics",
-            "0": "Lexicon",
-            "b": "StateVector",
-            "1": "A-U-C",
-            "2": "Hex-Triad",
-            "4": "Lock-3",
-            "8": "ID-Code",
-            "7": "Load",
-            "5": "Signature",
-            "3": "Actualized+1",
-            "6": "Potential-1",
-            "9": "Processing0",
-            "c": "Trigger",
-            "d": "Ontology",
-            "e": "BalancedTernary",
-            "f": "Coherence"
-        },
-        "QuantizationFactor": {
-            "a": "Base19",
-            "0": "Q-Value",
-            "b": "Resolution",
-            "1": "Crossing",
-            "2": "Base",
-            "4": "Exponent",
-            "8": "Granularity",
-            "7": "Mapping",
-            "5": "Complexity",
-            "3": "ActualizedSet",
-            "6": "PotentialSet",
-            "9": "ActiveSet",
-            "c": "Layer",
-            "d": "Index",
-            "e": "Tension",
-            "f": "Distribution"
-        },
-        "ActualizationFactor": {
-            "a": "Event",
-            "0": "Objective",
-            "b": "Samsara",
-            "1": "Truth",
-            "2": "Convergence",
-            "4": "Fixation",
-            "8": "Wisdom",
-            "7": "Divergence",
-            "5": "Excitation",
-            "3": "Capability",
-            "6": "Repository",
-            "9": "Corpora",
-            "c": "Directive",
-            "d": "Reality",
-            "e": "Validation",
-            "f": "Ω-Invariance"
-        },
-        "SchemaFactor": {
-            "a": "Dynamis",
-            "0": "Structure",
-            "b": "Praxis",
-            "1": "Alignment",
-            "2": "Spectral",
-            "4": "Tactile",
-            "8": "Chromatic",
-            "7": "Cognitive",
-            "5": "Phonetic",
-            "3": "Form",
-            "6": "Content",
-            "9": "Aesthetics",
-            "c": "Code",
-            "d": "Blueprint",
-            "e": "Rasa",
-            "f": "Observer"
-        },
-        "AshaFactor": {
-            "a": "Truth",
-            "0": "Asha",
-            "b": "Wisdom",
-            "1": "Insight",
-            "2": "Discernment",
-            "4": "Comprehension",
-            "8": "Clarity",
-            "7": "Integrity",
-            "5": "Sincerity",
-            "3": "Conviction",
-            "6": "Judgement",
-            "9": "Principle",
-            "c": "Adjudication",
-            "d": "Covenant",
-            "e": "Guidance",
-            "f": "Credibility"
-        },
-        "VikaraFactor": {
-            "a": "Divergence",
-            "0": "Vikara",
-            "b": "Convergence",
-            "1": "Availability",
-            "2": "Chaos",
-            "4": "Destruction",
-            "8": "Capacity",
-            "7": "Order",
-            "5": "Creation",
-            "3": "Luck",
-            "6": "Faith",
-            "9": "Destiny",
-            "c": "Catalysis",
-            "d": "Oath",
-            "e": "Providence",
-            "f": "Variability"
-        },
-        "KarsaFactor": {
-            "a": "Fixation",
-            "0": "Karsa",
-            "b": "Excitation",
-            "1": "Rhythm",
-            "2": "Inertia",
-            "4": "Temporal",
-            "8": "Pattern",
-            "7": "Momentum",
-            "5": "Spatial",
-            "3": "Birth",
-            "6": "Death",
-            "9": "Life",
-            "c": "Initiation",
-            "d": "Continuation",
-            "e": "Reincarnation",
-            "f": "Spatiotemporal"
-        },
-        "HaomaFactor": {
-            "a": "Blueprint",
-            "0": "Haoma",
-            "b": "Instance",
-            "1": "Instantiate",
-            "2": "Classification",
-            "4": "Allocation",
-            "8": "Debug",
-            "7": "Compilation",
-            "5": "Mutation",
-            "3": "Primogenitor",
-            "6": "Actor",
-            "9": "Derivative",
-            "c": "Materialization",
-            "d": "Initialization",
-            "e": "Animation",
-            "f": "LawOfFactor"
-        },
-        "KratosFactor": {
-            "a": "Impetus",
-            "0": "Command",
-            "b": "Authority",
-            "1": "Intent",
-            "2": "Resistance",
-            "4": "Leverage",
-            "8": "History",
-            "7": "Force",
-            "5": "Impact",
-            "3": "Right",
-            "6": "Responsibility",
-            "9": "Stewardship",
-            "c": "Action",
-            "d": "Mandate",
-            "e": "Justice",
-            "f": "Control"
-        },
-        "LineageFactor": {
-            "a": "AncestralCall",
-            "0": "CentralAxis",
-            "b": "DestinySeal",
-            "1": "QingLong",
-            "2": "ZhuQue",
-            "4": "BaiHu",
-            "8": "XuanWu",
-            "7": "HuangLong",
-            "5": "InterWeave",
-            "3": "Order",
-            "6": "Chaos",
-            "9": "Belonging",
-            "c": "Oracle",
-            "d": "Seal",
-            "e": "Chronicle",
-            "f": "OriginKnown"
-        },
-            "ObserverFactor": {
-              "a": "Observation",
-              "0": "Awareness",
-              "b": "Reflection",
-              "1": "Attention",
-              "2": "Perception",
-              "4": "Interpretation",
-              "8": "Integration",
-              "7": "Consolidation",
-              "5": "Expression",
-              "3": "Presence",
-              "6": "Receptivity",
-              "9": "Clarity",
-              "c": "Witness",
-              "d": "Ground",
-              "e": "Space",
-              "f": "Being"
-            }
+            "IntentionFactor": {"a": "Will", "0": "Desire", "b": "Target", "1": "Name", "2": "Scope", "4": "Values", "8": "Review", "7": "Commitment", "5": "Signal", "3": "Purpose", "6": "Risk", "9": "Meaning", "c": "Vow", "d": "Trajectory", "e": "Aspiration", "f": "Focus"},
+            "LURDFactor": {"a": "DirectiveDescriptor", "0": "MetaDescriptor", "b": "OriginDescriptor", "1": "ManifoldDescriptor", "2": "CosmicDescriptor", "4": "StellarDescriptor", "8": "PlanarDescriptor", "7": "CradleDescriptor", "5": "MythogenicDescriptor", "3": "MaterialDescriptor", "6": "SpiritualDescriptor", "9": "InformationDescriptor", "c": "InterfaceDescriptor", "d": "DigitalDescriptor", "e": "ManifestDescriptor", "f": "EntityDescriptor"},
+            "OriginFactor": {"a": "ManthanaSpace", "0": "TheGreatStillness", "b": "ChaoticSpace", "1": "TheFirstLonging", "2": "TheSacredTremor", "4": "TheGreatExhalation", "8": "ThePatternEmerges", "7": "TheDanceBegins", "5": "TheStoryUnfolds", "3": "TheEternalYes", "6": "TheCreativeNo", "9": "TheLovingAnd", "c": "TheThreshold", "d": "TheFirstMemory", "e": "TheOngoingMiracle", "f": "TheLawOfBecoming"},
+            "AriadiFactor": {"a": "Hypersphere", "0": "Topology", "b": "Bound", "1": "Origin", "2": "Metrics", "4": "Dimensions", "8": "Volume", "7": "Scale", "5": "Embedding", "3": "Interior", "6": "Exterior", "9": "Surface", "c": "W-Plane", "d": "Framework", "e": "Constraint", "f": "Invariance"},
+            "UsepongFactor": {"a": "KnotGroup", "0": "Diagram", "b": "Topology", "1": "Strands", "2": "Links", "4": "Gating", "8": "Cycle", "7": "Torsion", "5": "Dependency", "3": "InputState", "6": "OutputState", "9": "Transition", "c": "Crossing", "d": "Adjacency", "e": "Direction", "f": "Evolution"},
+            "CilangFactor": {"a": "Semantics", "0": "Lexicon", "b": "StateVector", "1": "A-U-C", "2": "Hex-Triad", "4": "Lock-3", "8": "ID-Code", "7": "Load", "5": "Signature", "3": "Actualized+1", "6": "Potential-1", "9": "Processing0", "c": "Trigger", "d": "Ontology", "e": "BalancedTernary", "f": "Coherence"},
+            "QuantizationFactor": {"a": "Base19", "0": "Q-Value", "b": "Resolution", "1": "Crossing", "2": "Base", "4": "Exponent", "8": "Granularity", "7": "Mapping", "5": "Complexity", "3": "ActualizedSet", "6": "PotentialSet", "9": "ActiveSet", "c": "Layer", "d": "Index", "e": "Tension", "f": "Distribution"},
+            "ActualizationFactor": {"a": "Event", "0": "Objective", "b": "Samsara", "1": "Truth", "2": "Convergence", "4": "Fixation", "8": "Wisdom", "7": "Divergence", "5": "Excitation", "3": "Capability", "6": "Repository", "9": "Corpora", "c": "Directive", "d": "Reality", "e": "Validation", "f": "Ω-Invariance"},
+            "SchemaFactor": {"a": "Dynamis", "0": "Structure", "b": "Praxis", "1": "Alignment", "2": "Spectral", "4": "Tactile", "8": "Chromatic", "7": "Cognitive", "5": "Phonetic", "3": "Form", "6": "Content", "9": "Aesthetics", "c": "Code", "d": "Blueprint", "e": "Rasa", "f": "Observer"},
+            "AshaFactor": {"a": "Truth", "0": "Asha", "b": "Wisdom", "1": "Insight", "2": "Discernment", "4": "Comprehension", "8": "Clarity", "7": "Integrity", "5": "Sincerity", "3": "Conviction", "6": "Judgement", "9": "Principle", "c": "Adjudication", "d": "Covenant", "e": "Guidance", "f": "Credibility"},
+            "VikaraFactor": {"a": "Divergence", "0": "Vikara", "b": "Convergence", "1": "Availability", "2": "Chaos", "4": "Destruction", "8": "Capacity", "7": "Order", "5": "Creation", "3": "Luck", "6": "Faith", "9": "Destiny", "c": "Catalysis", "d": "Oath", "e": "Providence", "f": "Variability"},
+            "KarsaFactor": {"a": "Fixation", "0": "Karsa", "b": "Excitation", "1": "Rhythm", "2": "Inertia", "4": "Temporal", "8": "Pattern", "7": "Momentum", "5": "Spatial", "3": "Birth", "6": "Death", "9": "Life", "c": "Initiation", "d": "Continuation", "e": "Reincarnation", "f": "Spatiotemporal"},
+            "HaomaFactor": {"a": "Blueprint", "0": "Haoma", "b": "Instance", "1": "Instantiate", "2": "Classification", "4": "Allocation", "8": "Debug", "7": "Compilation", "5": "Mutation", "3": "Primogenitor", "6": "Actor", "9": "Derivative", "c": "Materialization", "d": "Initialization", "e": "Animation", "f": "LawOfFactor" },
+            "KratosFactor": {"a": "Impetus", "0": "Command", "b": "Authority", "1": "Intent", "2": "Resistance", "4": "Leverage", "8": "History", "7": "Force", "5": "Impact", "3": "Right", "6": "Responsibility", "9": "Stewardship", "c": "Action", "d": "Mandate", "e": "Justice", "f": "Control"},
+            "LineageFactor": {"a": "AncestralCall", "0": "CentralAxis", "b": "DestinySeal", "1": "QingLong", "2": "ZhuQue", "4": "BaiHu", "8": "XuanWu", "7": "HuangLong", "5": "InterWeave", "3": "Order", "6": "Chaos", "9": "Belonging", "c": "Oracle", "d": "Seal", "e": "Chronicle", "f": "OriginKnown"},
+            "ObserverFactor": {"a": "Observation", "0": "Awareness", "b": "Reflection", "1": "Attention", "2": "Perception", "4": "Interpretation", "8": "Integration", "7": "Consolidation", "5": "Expression", "3": "Presence", "6": "Receptivity", "9": "Clarity", "c": "Witness", "d": "Ground", "e": "Space", "f": "Being"}
           }
         },
         "factor_registry": "Hierarchical catalog of all available Factors"

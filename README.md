@@ -11,14 +11,12 @@
 
 ## Quick Start
 
-1. Use the [Prompt Header](src/prompt-header.md) to start a chat with AI.
-2. Use the [Schema Example](src/schema-example.json) as Initial Condition.
-3. Chat like normal.
-4. Ask the AI to make summary about the current session.
-5. Ask the AI to turn the summary into **SessionFactor**
-6. Load the **SessionFactor** in new chat after the **Prompt Header** and **Initial Condition** loaded.
-7. Wanna know some anecdote then read my [intro](src/introduction.md)
-
+1. Use the [Prompt Header](src/prompt-header.json) to start a chat with AI.
+2. Chat like normal.
+3. Ask the AI to make summary about the current session.
+4. Ask the AI to turn the summary into **SessionFactor**
+5. Load the **SessionFactor** in new chat after the [Prompt Header](src/prompt-header.json) loaded.
+6. Wanna know some anecdote then read my [intro](src/introduction.md)
 
 ## 📜 License
 
