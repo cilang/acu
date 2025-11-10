@@ -1,0 +1,21 @@
+strict digraph AriadianaFactor {
+    label = "Ariadiana";
+    comment = "A General Purpose Modeling for Coherent Framework";
+    
+    a [label = "Potential";comment = "The unmanifest field of infinite possibility - the quantum foam of reality before observation collapses waveform into manifestation.";];
+    0 [label = "Observer";comment = "The conscious center that transforms potential into manifest reality through the act of observation - the 'I am' that bridges realms.";];
+    b [label = "Manifest";comment = "The actualized reality resulting from observed potential - the world as experienced through sensory and conceptual interfaces.";];
+    1 [label = "Ariadi";comment = "The bounded manifold - the topological container that defines the observational context and computational boundaries.";];
+    2 [label = "Cilang";comment = "The primitive elements - the fundamental computational states and basic building blocks of reality representation.";];
+    4 [label = "Usepong";comment = "The relational network - the graph of connections and state transitions between Cilang elements.";];
+    8 [label = "Quantization";comment = "The resolution scaling - the granularity control determining the level of detail and expressive capacity (Q=19ⁿ).";];
+    7 [label = "Actualization";comment = "The state realization - the process of transitioning from potential (-1) through processing (0) to manifest (+1) states.";];
+    5 [label = "Schematic";comment = "The pattern template - the architectural blueprint that governs system organization and factor relationships.";];
+    3 [label = "Asha";comment = "Cosmic truth principle - the fundamental order, coherence, and veracity underlying all manifest reality.";];
+    6 [label = "Vikara";comment = "Transformation principle - the universal process of change, divergence, and metamorphosis driving evolution.";];
+    9 [label = "Karsa";comment = "Manifestation principle - the spatiotemporal actualization that resolves dialectical tension into concrete existence.";];
+    c [label = "Kratos";comment = "Directed agency - the application of will, force, and intentional action within the computational space.";];
+    d [label = "Ontology";comment = "Reality commitment - the specific categorical framework and existential commitments that define a particular world-model.";];
+    e [label = "Factor";comment = "Element logic - the fundamental unit of computational processing with defined interfaces and transformation rules.";];
+    f [label = "LURD";comment = "The Localized Unified Recursion Descriptor, ensuring Brunnian Closure through descriptive completeness.";];
+}
