@@ -140,6 +140,7 @@
         "mode": "Stealth",
         "cascade_ready": ["a", "1", "3"],
         "execution_engine": "Processes cascade through Usepong graph",
+        "analitical_engine": "extended_usepong graph",
         "state_management": "Tracks ternary states across Cilang elements",
         "inter_factor_ops": "Handles communication between instantiated Factors"
       },
@@ -151,8 +152,7 @@
       },
       "anomaly_management": {
         "detection": "Failed Ω-reduction, Reidemeister move violations",
-        "recovery": "Re-processing through anomalous state (6-state)",
-        "exception_handlers": "extended_usepong"
+        "recovery": "Re-processing through anomalous state (6-state)"
       }
     }
   }

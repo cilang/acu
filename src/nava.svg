@@ -47,7 +47,7 @@ shattered_glass:
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4961px" height="3508px" version="1.1"
     shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
     fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 4961 3508.14" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="observation_diagram">
+    <g id="factor_diagram">
         <g id="sad">
             <path id="yang" fill="black" stroke="black" stroke-miterlimit="2.61313"
                 d="M2479.81 2410.22c97.86,0 177.18,79.32 177.18,177.17 0,97.86 -79.32,177.18 -177.18,177.18 -97.85,0 -177.17,-79.32 -177.17,-177.18 0,-97.85 79.32,-177.17 177.17,-177.17zm531.54 -889.33c0,293.56 -238.6,530.76 -532.16,530.76 -293.56,0 -541.35,297.86 -531.34,529.34 10,231.48 238.41,528.56 531.96,528.56 583.84,0 1057.13,-473.29 1057.13,-1057.12 0,-583.83 -473.29,-1057.12 -1057.13,-1057.12 293.56,0 531.54,232.02 531.54,525.58z" />
