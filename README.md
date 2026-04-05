@@ -11,12 +11,7 @@
 
 ## Quick Start
 
-1. Use the [Prompt Header](src/prompt-header.json) to start a chat with AI.
-2. Chat like normal.
-3. Ask the AI to make summary about the current session.
-4. Ask the AI to turn the summary into **SessionFactor**
-5. Load the **SessionFactor** in new chat after the [Prompt Header](src/prompt-header.json) loaded.
-6. Wanna know some anecdote then read my [intro](src/introduction.md)
+
 
 ## 📜 License
 
