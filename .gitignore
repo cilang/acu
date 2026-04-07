@@ -16,3 +16,4 @@ dist
 .vscode/
 .obsidian/
 .tmp/
+node_modules/
