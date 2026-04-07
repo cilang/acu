@@ -15,7 +15,7 @@ dist
 .vscode-test
 .vscode/
 .obsidian/
-.tmp/
+tmp/
 .continue/
 .qwen/
 node_modules/
