@@ -19,3 +19,4 @@ tmp/
 .continue/
 .qwen/
 node_modules/
+QWEN.md
