@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/cilang/acu/schemas/factor.schema.json",
+  "$id": "https://github.com/cilang/acu/src/factor/schema.json",
   "title": "ACU Factor Definition",
   "description": "A complete Factor with 19 nodes (x, y, z and 0-9a-f) and resonance parameters. Any node may contain a nested Factor, creating fractal depth. Text fields follow the Three-Sentence Rule: definition (≤3 sentences), role (1 sentence), manifestation (≤5 short examples).",
   "type": "object",
