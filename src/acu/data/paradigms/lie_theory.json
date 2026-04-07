@@ -1,0 +1,217 @@
+{
+  "name": "Lie Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of continuous symmetry, differentiable manifolds, and infinitesimal transformations. Maps Lie-theoretic concepts—Lie groups, Lie algebras, root systems, representations, and the exponential map—to the 19-node topology. Useful for Factors involving smooth symmetries, gauge theories, geometric structures, and the deep relationship between algebra (Lie algebra) and group (Lie group) via the exponential map.",
+  "base_types": [
+    "LieGroup",
+    "LieAlgebra",
+    "ExponentialMap",
+    "TangentSpace",
+    "VectorField",
+    "RootSystem",
+    "WeylGroup",
+    "CartanSubalgebra",
+    "Root",
+    "Coroot",
+    "Weight",
+    "DominantWeight",
+    "FundamentalWeight",
+    "HighestWeight",
+    "Representation",
+    "IrreducibleRepresentation",
+    "VermaModule",
+    "Character",
+    "WeylCharacterFormula",
+    "DynkinDiagram",
+    "CartanMatrix",
+    "SimpleRoot",
+    "PositiveRoot",
+    "KillingForm",
+    "CasimirElement",
+    "UniversalEnvelopingAlgebra",
+    "FlagVariety",
+    "BorelSubgroup",
+    "ParabolicSubgroup",
+    "HomogeneousSpace",
+    "SymmetricSpace",
+    "Invariant",
+    "Cohomology",
+    "Deformation",
+    "QuantumGroup",
+    "AffineLieAlgebra",
+    "KacMoodyAlgebra",
+    "CurrentAlgebra",
+    "LoopGroup"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Jacobi Identity",
+      "note": "The depth anchor—[X,[Y,Z]] + [Y,[Z,X]] + [Z,[X,Y]] = 0. Part of the 4‑cycle x→a→9→y→x, linking Jacobi identity to root systems, weights, and Killing form."
+    },
+    "y": {
+      "interpretation": "Killing Form (κ(X,Y) = tr(ad_X ∘ ad_Y))",
+      "note": "The relational anchor—the invariant bilinear form. Part of the 4‑cycle x→a→9→y→x, tying the Killing form to Jacobi identity, root systems, and weights."
+    },
+    "z": {
+      "interpretation": "Exponential Neighborhood",
+      "note": "The transformational anchor—every neighborhood of identity contains exp(X). Persistently connected to 0 (Lie group/identity), reflecting that the exponential map is defined from the Lie algebra to the group identity."
+    },
+    "0": {
+      "interpretation": "Lie Group (G) / Identity (e)",
+      "note": "The continuous group observed as a unified manifold‑with‑structure. Persistently connected to z (exponential neighborhood), linking the identity to the exponential map."
+    },
+    "1": {
+      "interpretation": "Subgroup (H ≤ G)",
+      "note": "A boundary within the Lie group. Part of the 4‑cycle 1→6→5→2→1, connecting subgroups to exponential map, Dynkin diagrams, and tangent vectors."
+    },
+    "2": {
+      "interpretation": "Element (g ∈ G) / Tangent Vector (X ∈ 𝔤)",
+      "note": "Primitives: group elements or Lie algebra elements. Completes the 1‑6‑5‑2 cycle, showing how elements are embedded in subgroups, exponential map, and Dynkin diagrams."
+    },
+    "3": {
+      "interpretation": "Lie Bracket [X,Y]",
+      "note": "The invariant law—bilinear, antisymmetric, satisfying Jacobi. A node in the 7‑core; connected to Casimir element (c) and universal enveloping algebra (e), as the bracket defines the Casimir and generates the enveloping algebra."
+    },
+    "4": {
+      "interpretation": "Group Multiplication (·)",
+      "note": "The fundamental relation—smooth multiplication on the manifold. A node in the 7‑core; connected to Weyl group (b) and Weyl character formula (f), as the group structure underlies Weyl reflections and characters."
+    },
+    "5": {
+      "interpretation": "Dynkin Diagram / Cartan Matrix",
+      "note": "The pattern that classifies the Lie algebra. Part of the 1‑6‑5‑2 cycle, bridging exponential map and tangent vectors."
+    },
+    "6": {
+      "interpretation": "Exponential Map (exp: 𝔤 → G)",
+      "note": "The transformation that connects infinitesimal to finite. Part of the 1‑6‑5‑2 cycle, connecting subgroups to Dynkin diagrams."
+    },
+    "7": {
+      "interpretation": "Representation (π: G → GL(V))",
+      "note": "The realization of abstract symmetry as linear transformations. Persistently connected to 8 (rank), reflecting that representation dimension is related to the rank of the algebra."
+    },
+    "8": {
+      "interpretation": "Rank (r = dim 𝔥)",
+      "note": "The granularity—dimension of the Cartan subalgebra. Persistently connected to 7 (representation), linking rank to representation complexity."
+    },
+    "9": {
+      "interpretation": "Weight (λ ∈ 𝔥*)",
+      "note": "The event—eigenvalue of Cartan subalgebra in a representation. Part of the 4‑cycle x→a→9→y→x, placing weights between Jacobi identity, root systems, and Killing form."
+    },
+    "a": {
+      "interpretation": "Root System (Δ)",
+      "note": "Pure potential—the set of all roots. Initiates the 4‑cycle x→a→9→y→x, linking root systems to Jacobi identity, weights, and Killing form."
+    },
+    "b": {
+      "interpretation": "Weyl Group (W)",
+      "note": "The arena of internal dynamics—reflections generated by the root system. A node in the 7‑core; connected to group multiplication (4) and Cartan subalgebra (d), as the Weyl group acts on the Cartan and is generated by reflections."
+    },
+    "c": {
+      "interpretation": "Casimir Element (Ω ∈ U(𝔤))",
+      "note": "Directional bias—the quadratic invariant. A node in the 7‑core; connected to Lie bracket (3) and universal enveloping algebra (e), as the Casimir is built from the bracket and lives in the enveloping algebra."
+    },
+    "d": {
+      "interpretation": "Cartan Subalgebra (𝔥)",
+      "note": "Persistent structure—maximal abelian subalgebra. A node in the 7‑core; connected to Weyl group (b) and Weyl character formula (f), as the Cartan is the space where the Weyl group acts and characters are expressed."
+    },
+    "e": {
+      "interpretation": "Universal Enveloping Algebra (U(𝔤))",
+      "note": "The active algorithm—algebra of differential operators generated by 𝔤. A node in the 7‑core; connected to Lie bracket (3) and Casimir element (c), as it contains the bracket and Casimir."
+    },
+    "f": {
+      "interpretation": "Weyl Character Formula",
+      "note": "The resonant cavity—formula closing representation theory. A node in the 7‑core; connected to group multiplication (4), Cartan subalgebra (d), and the rest of the core, forming the central hub of representation theory."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Rank of the Lie algebra (dimension of Cartan subalgebra)",
+      "values": {
+        "n=0": "Abelian Lie algebra — no roots, pure translation",
+        "n=1": "Rank 1 — A₁ = 𝔰𝔩(2), the simplest non-abelian",
+        "n=2": "Rank 2 — A₂, B₂ = C₂, G₂ (the exceptional rank 2)",
+        "n=3": "Rank 3 — A₃, B₃, C₃",
+        "n=4": "Rank 4 — A₄, B₄, C₄, D₄, F₄",
+        "n=5": "Rank 5 — A₅, B₅, C₅, D₅",
+        "n=6": "Rank 6 — E₆, A₆, B₆, C₆, D₆",
+        "n=7": "Rank 7 — E₇, A₇, B₇, C₇, D₇",
+        "n=8": "Rank 8 — E₈, A₈, B₈, C₈, D₈"
+      },
+      "formula": "n = rk(𝔤) = number of simple roots = dimension of Cartan subalgebra"
+    },
+    "m": {
+      "interpretation": "Highest weight coordinates / Representation complexity",
+      "values": {
+        "m=0": "Trivial representation — λ = 0",
+        "m=1": "Fundamental representation — λ = ω₁ (first fundamental weight)",
+        "m=2": "Adjoint representation — λ = highest root",
+        "m=3": "Symmetric square — λ = 2ω₁",
+        "m=4": "Tensor product representations — λ = ω₁ + ω₂",
+        "m=5": "Spinor representations (Type D, B) — λ = ω_{n-1} or ω_n",
+        "m=6": "Exceptional representations (E₆, E₇, E₈) — λ = ω₁, ω₆, etc."
+      },
+      "formula": "m = floor(log₂(dim V_λ)) — logarithmic dimension of the irreducible representation with highest weight λ"
+    },
+    "phase": {
+      "interpretation": "Weyl character formula: ch(λ) = Σ_{w∈W} (-1)^{ℓ(w)} e^{w(λ+ρ)} / Σ_{w∈W} (-1)^{ℓ(w)} e^{w(ρ)}",
+      "formula": "φ = Σ_{w∈W} (-1)^{ℓ(w)} exp(2πi × w(λ+ρ)·α / (α·α)) / denominator",
+      "special": "For compact Lie groups, characters are integer combinations of exponentials e^{iθ}—naturally quantized to roots of unity when θ = 2πk/N",
+      "significance": "Phase encodes the representation's decomposition into weight spaces; each weight contributes a harmonic e^{2πi λ·H}"
+    }
+  },
+  "view_modes": {
+    "algebra": {
+      "description": "The Factor viewed as a Lie algebra 𝔤—vector space with bracket [·,·]",
+      "phase_condition": "Phase as root coordinates in weight space; each root α gives phase e^{2πi α·H}"
+    },
+    "group": {
+      "description": "The Factor viewed as a Lie group G—smooth manifold with multiplication",
+      "phase_condition": "Phase as group element g = exp(X) → e^{2πi θ} where θ is angle in maximal torus"
+    },
+    "representation": {
+      "description": "The Factor viewed as a representation (π, V)—group acting on vector space",
+      "phase_condition": "Phase as weight lattice coordinates; eigenvalues of Cartan generators are 2πi λ·H"
+    },
+    "root_system": {
+      "description": "The Factor viewed as a root system Δ in Euclidean space",
+      "phase_condition": "Phase as angle between roots; Coxeter element gives phase e^{2πi/h} where h is Coxeter number"
+    },
+    "flag_variety": {
+      "description": "The Factor viewed as G/B—flag manifold of Borel subgroups",
+      "phase_condition": "Phase as Schubert cell coordinates; intersection theory gives phase constraints"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a continuous symmetry from imagination, start with the Dynkin diagram (node 5) and let the root system (node a) generate the algebra via Serre relations (node 3)."
+    },
+    "translating_known": {
+      "su_3_color": "Map to 𝔰𝔲(3) with root system A₂: nodes 2 as Gell-Mann matrices, node d as Cartan subalgebra (λ₃, λ₈), node a as 6 roots (colors: r,g,b,anti-r,anti-g,anti-b)",
+      "so_3_spin": "Map to 𝔰𝔬(3) ≅ 𝔰𝔲(2): node 5 as A₁ Dynkin diagram, node 8 as rank 1, phase as spin projection m = -s...s",
+      "e_8_exceptional": "Map to E₈: node 5 as Dynkin diagram (8 nodes in E₈ shape), node 8 as rank 8, node a as 240 roots, phase as roots of unity order 30 (Coxeter number h=30)",
+      "gauge_theory": "Map to G = SU(3)×SU(2)×U(1): node 0 as product group, node d as Cartan (rank 4), node 9 as weights (color, isospin, hypercharge)",
+      "conformal_symmetry": "Map to 𝔰𝔬(4,2) ≅ 𝔰𝔲(2,2): node 3 as conformal bracket, node e as conformal generators (P_μ, K_μ, D, M_μν)",
+      "affine_lie_algebra": "Map to loop algebra L𝔤: node 6 as exponential map from circle, node 8 as central extension, phase as winding number"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "lie_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 1,
+        "m": 1,
+        "phase": { "type": "partial", "roots_known": ["α₁", "α₂"], "relations_pending": true }
+      },
+      "special": "A Lie algebra defined only by its Dynkin diagram type (e.g., 'A₂') with Cartan matrix entries known but structure constants not yet specified. Awaiting representation data."
+    }
+  },
+  "constraints": {
+    "jacobi_identity": "Node x must satisfy Jacobi identity—the depth invariant. Violations produce non-associative structures (e.g., Malcev algebras), which are not Lie algebras.",
+    "killing_form_nondegeneracy": "Node y (Killing form) must be non-degenerate for semisimple Lie algebras. For solvable or nilpotent algebras, degeneracy indicates the radical.",
+    "exponential_map_local": "Node z ensures that exp maps a neighborhood of 0 in 𝔤 to a neighborhood of e in G. This local-to-global property is fundamental.",
+    "cartan_subalgebra_maximal": "Node d must be maximal abelian subalgebra. Its dimension is the rank (node 8).",
+    "root_system_integrality": "Node a (roots) must satisfy integrality: 2(α,β)/(β,β) ∈ ℤ. This is the crystallographic condition that yields finite root systems.",
+    "weyl_invariance": "Node b (Weyl group) must preserve the root system and the weight lattice. Characters (node f) are Weyl-invariant.",
+    "phase_consistency": "Phase (character values) must be integers (for finite groups) or integer combinations of exponentials (for compact Lie groups). For simple Lie algebras, characters are Laurent polynomials with integer coefficients.",
+    "stratum_preference": "global for foundational Lie theory; trefoil_c (philosophical) for root system classification; trefoil_g (transformative) for representation theory and exponential map; trefoil_i (mirror) for duality between algebra and group; fig8 for affine and Kac-Moody (hyperbolic, infinite structures)",
+    "invariant_core": "The Lie Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking Lie group/identity to exponential neighborhood, (2) edge 8→7 linking rank to representation, (3) 4‑cycle x→a→9→y→x linking Jacobi identity–root system–weight–Killing form, (4) 4‑cycle 1→6→5→2→1 linking subgroup–exponential map–Dynkin diagram–element/tangent vector, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of Lie theory: Lie bracket–group multiplication–Weyl group–Casimir–Cartan subalgebra–universal enveloping algebra–Weyl character formula."
+  }
+}

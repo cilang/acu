@@ -1,0 +1,199 @@
+{
+  "name": "Model Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of formal languages, structures, and the relationship between syntax and semantics. Maps model-theoretic concepts—signatures, theories, models, definability, types, stability, and forking—to the 19-node topology. Useful for Factors involving formal systems, interpretations, classification of structures, and the interplay between axioms and their models.",
+  "base_types": [
+    "Signature",
+    "Language",
+    "Structure",
+    "Interpretation",
+    "Theory",
+    "Model",
+    "Element",
+    "Relation",
+    "Function",
+    "Constant",
+    "Formula",
+    "Sentence",
+    "Satisfaction",
+    "Truth",
+    "Validity",
+    "DefinableSet",
+    "Type",
+    "CompleteType",
+    "RealizedType",
+    "OmittingType",
+    "ElementarySubstructure",
+    "ElementaryEmbedding",
+    "Isomorphism",
+    "Saturation",
+    "Homogeneous",
+    "Universal",
+    "PrimeModel",
+    "SaturatedModel",
+    "QuantifierElimination",
+    "ModelCompleteness",
+    "Categoricity",
+    "Stability",
+    "Forking",
+    "Independence",
+    "MorleyRank",
+    "SimpleTheory",
+    "NIP",
+    "DpMin",
+    "O‑minimal",
+    "StronglyMinimal"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Compactness",
+      "note": "The depth anchor—every finitely satisfiable theory is satisfiable. Part of the 4‑cycle x→a→9→y→x, linking compactness to type space, types, and Löwenheim‑Skolem."
+    },
+    "y": {
+      "interpretation": "Löwenheim‑Skolem",
+      "note": "The relational anchor—if a theory has an infinite model, it has models of all infinite cardinalities. Part of the 4‑cycle x→a→9→y→x, tying Löwenheim‑Skolem to compactness, type space, and types."
+    },
+    "z": {
+      "interpretation": "Tarski's Undefinability",
+      "note": "The transformational anchor—truth cannot be defined within the same language. Persistently connected to 0 (theory), reflecting that the theory (object language) is separate from the metalanguage where truth is defined."
+    },
+    "0": {
+      "interpretation": "Theory (T) / Complete Theory (Th(𝔐))",
+      "note": "The set of sentences closed under consequence. Persistently connected to z (Tarski's undefinability), linking the theory to the impossibility of defining its own truth."
+    },
+    "1": {
+      "interpretation": "Signature (σ = (R,F,C))",
+      "note": "The boundary—vocabulary of the language. Part of the 4‑cycle 1→6→5→2→1, connecting signature to elementary embeddings, definable sets, and elements."
+    },
+    "2": {
+      "interpretation": "Element (a ∈ M)",
+      "note": "Primitives—individuals in a structure's domain. Completes the 1‑6‑5‑2 cycle, showing how elements are embedded in signature, elementary embeddings, and definable sets."
+    },
+    "3": {
+      "interpretation": "Axioms / Sentences (φ)",
+      "note": "The invariant law—axioms defining the class of models. A node in the 7‑core; connected to stability (c) and quantifier elimination (e), as axioms determine stability and whether quantifier elimination holds."
+    },
+    "4": {
+      "interpretation": "Satisfaction (𝔐 ⊨ φ)",
+      "note": "The fundamental relation—satisfaction between structures and formulas. A node in the 7‑core; connected to forking (b) and monster model (f), as forking is defined via satisfaction, and the monster model is the universal domain of satisfaction."
+    },
+    "5": {
+      "interpretation": "Definable Set (φ(M))",
+      "note": "The pattern—sets definable by formulas. Part of the 1‑6‑5‑2 cycle, bridging elementary embeddings and elements."
+    },
+    "6": {
+      "interpretation": "Elementary Embedding (f: 𝔐 ↪ 𝔑)",
+      "note": "The transformation—embedding preserving all first‑order formulas. Part of the 1‑6‑5‑2 cycle, connecting signature to definable sets."
+    },
+    "7": {
+      "interpretation": "Model (𝔐 ⊧ T)",
+      "note": "The realization—a structure satisfying the theory. Persistently connected to 8 (cardinality), linking the model to its size."
+    },
+    "8": {
+      "interpretation": "Cardinality (|M|)",
+      "note": "The granularity—size of the model. Persistently connected to 7 (model), reflecting that the model's cardinality is a key invariant."
+    },
+    "9": {
+      "interpretation": "Type (p(x) ∈ S_n(A))",
+      "note": "The event—complete set of formulas consistent with the theory. Part of the 4‑cycle x→a→9→y→x, placing types between compactness, type space, and Löwenheim‑Skolem."
+    },
+    "a": {
+      "interpretation": "Space of Types (S_n(A))",
+      "note": "Pure potential—Stone space of complete n‑types. Initiates the 4‑cycle x→a→9→y→x, linking type space to compactness, types, and Löwenheim‑Skolem."
+    },
+    "b": {
+      "interpretation": "Forking / Independence",
+      "note": "The arena—non‑forking independence relation. A node in the 7‑core; connected to satisfaction (4) and prime/saturated model (d), as forking defines independence and is used to construct prime models."
+    },
+    "c": {
+      "interpretation": "Stability (λ‑stable)",
+      "note": "Directional bias—property that the theory has few types. A node in the 7‑core; connected to axioms (3) and monster model (f), as stability is a property of the theory and is witnessed in the monster."
+    },
+    "d": {
+      "interpretation": "Prime Model / Saturated Model",
+      "note": "Persistent structure—models with special properties. A node in the 7‑core; connected to forking (b) and monster model (f), as prime models are built using forking, and the monster is saturated."
+    },
+    "e": {
+      "interpretation": "Quantifier Elimination",
+      "note": "The active algorithm—procedure eliminating quantifiers. A node in the 7‑core; connected to axioms (3) and monster model (f), as quantifier elimination is a property of the theory and is often proved in the monster."
+    },
+    "f": {
+      "interpretation": "Monster Model (𝕄)",
+      "note": "The resonant cavity—large saturated model containing all others. A node in the 7‑core; connected to satisfaction (4), stability (c), prime/saturated (d), quantifier elimination (e), and the rest, forming the central hub of model‑theoretic universality."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Model complexity / Morley rank / Shelah classification",
+      "values": {
+        "n=0": "Totally transcendental — Morley rank defined",
+        "n=1": "Stable — no order property, types have ranks",
+        "n=2": "Superstable — ranks ordinal‑valued",
+        "n=3": "Simple — forking is well‑behaved",
+        "n=4": "NIP — no independence property",
+        "n=5": "o‑minimal — ordered structures, definable sets are finite unions of intervals",
+        "n=6": "Unstable — has order property"
+      },
+      "formula": "n corresponds to the 'tameness' level in classification theory"
+    },
+    "m": {
+      "interpretation": "Type space dimension / Number of non‑isomorphic models",
+      "values": {
+        "m=0": "Categorical in some cardinality — unique model up to isomorphism",
+        "m=1": "Few models — finite number in each cardinality",
+        "m=2": "Many models — continuum many",
+        "m=3": "Uncountably many — maximal complexity"
+      },
+      "formula": "m = log₂(κ) where κ is number of models in some cardinality"
+    },
+    "phase": {
+      "interpretation": "Realization of types",
+      "formula": "φ = 2π × (realized types / total types in Stone space)",
+      "special": "Phase = 0 when all types are realized (saturated model); phase = π when only isolated types are realized (prime model)",
+      "significance": "Phase measures the 'richness' of the model in terms of which types are realized."
+    }
+  },
+  "view_modes": {
+    "syntactic": {
+      "description": "The Factor viewed as a formal theory (sentences, axioms, consequences)",
+      "phase_condition": "Phase as consistency—0 for consistent theory, π for inconsistent"
+    },
+    "semantic": {
+      "description": "The Factor viewed as a structure (domain, interpretations)",
+      "phase_condition": "Phase as elementarity—0 for elementary substructure, π for elementary extension"
+    },
+    "geometric": {
+      "description": "The Factor viewed as a geometry of definable sets (Zariski‑like)",
+      "phase_condition": "Phase as dimension—0 for minimal, π for maximal"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a logical theory, start with signature (node 1), axioms (node 3), and models (node 7). Let types (node 9) classify elements."
+    },
+    "translating_known": {
+      "group_theory": "Map groups: signature {·, e, ⁻¹}, axioms of group theory as node 3, models as groups",
+      "arithmetic_PA": "Map Peano Arithmetic: signature {0, S, +, ×}, induction schema as node 5, standard model ℕ as node 7",
+      "real_closed_fields": "Map RCF: signature {+, ×, 0, 1, <}, o‑minimal as node c, ℝ as node 7",
+      "ZFC_set_theory": "Map ZFC: signature {∈}, cumulative hierarchy V as node d, forcing extensions as node b"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "model_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 2,
+        "m": 1,
+        "phase": { "type": "partial", "signature_known": true, "axioms_pending": true }
+      },
+      "special": "A signature defined, but axioms not yet specified. Awaiting the laws that will define the class of structures."
+    }
+  },
+  "constraints": {
+    "compactness": "Node x ensures every finitely consistent theory is consistent.",
+    "löwenheim_skolem": "Node y ensures infinite models exist in all cardinalities.",
+    "truth_definition": "Node z ensures object language truth is not definable in itself.",
+    "stratum_preference": "global for foundational model theory; trefoil_c for stable theories; trefoil_g for o‑minimal; fig8 for unstable, NIP",
+    "invariant_core": "The Model Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking theory to Tarski's undefinability, (2) edge 8→7 linking cardinality to model, (3) 4‑cycle x→a→9→y→x linking compactness–type space–type–Löwenheim‑Skolem, (4) 4‑cycle 1→6→5→2→1 linking signature–elementary embedding–definable set–element, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of model theory: axioms–satisfaction–forking–stability–prime/saturated model–quantifier elimination–monster model."
+  }
+}

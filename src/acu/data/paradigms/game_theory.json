@@ -1,0 +1,198 @@
+{
+  "name": "Game Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of strategic interactions, decisions, and equilibria. Maps game-theoretic concepts—players, strategies, payoffs, Nash equilibrium, extensive and normal forms, cooperative games, and evolutionary dynamics—to the 19-node topology. Useful for Factors involving competition, cooperation, bargaining, and strategic decision-making.",
+  "base_types": [
+    "Player",
+    "Strategy",
+    "Payoff",
+    "Utility",
+    "NormalFormGame",
+    "ExtensiveFormGame",
+    "InformationSet",
+    "PerfectInformation",
+    "ImperfectInformation",
+    "CompleteInformation",
+    "IncompleteInformation",
+    "MixedStrategy",
+    "PureStrategy",
+    "NashEquilibrium",
+    "SubgamePerfectEquilibrium",
+    "BayesianNashEquilibrium",
+    "CorrelatedEquilibrium",
+    "ParetoOptimality",
+    "DominantStrategy",
+    "Minimax",
+    "Maximin",
+    "RepeatedGame",
+    "FolkTheorem",
+    "CooperativeGame",
+    "Coalition",
+    "ShapleyValue",
+    "Core",
+    "BargainingProblem",
+    "Auction",
+    "MechanismDesign",
+    "EvolutionaryGame",
+    "ReplicatorDynamics",
+    "EvolutionarilyStableStrategy",
+    "ZeroSum",
+    "NonZeroSum",
+    "PotentialGame"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Number of Players",
+      "note": "The depth anchor—the number of players in the game. Part of the 4‑cycle x→a→9→y→x, linking player count to strategy space, information sets, and information structure."
+    },
+    "y": {
+      "interpretation": "Information Structure",
+      "note": "The relational anchor—information available to players (complete/incomplete, perfect/imperfect). Part of the 4‑cycle x→a→9→y→x, tying information to player count, strategy space, and decision points."
+    },
+    "z": {
+      "interpretation": "Time / Repeated Interaction",
+      "note": "The transformational anchor—temporal dimension (one‑shot vs repeated). Persistently connected to 0 (player), reflecting that repeated play depends on the player’s perspective."
+    },
+    "0": {
+      "interpretation": "Observer / Player / Decision‑Maker",
+      "note": "The point of observation—a player in the game. Persistently connected to z (time), linking the player to repeated interactions."
+    },
+    "1": {
+      "interpretation": "Game / Rules / Boundaries",
+      "note": "The boundary—the complete specification of players, strategies, payoffs, and information. Part of the 4‑cycle 1→6→5→2→1, connecting game boundaries to equilibria, game forms, and strategies."
+    },
+    "2": {
+      "interpretation": "Strategy / Action",
+      "note": "Primitive—a pure strategy or action. Completes the 1‑6‑5‑2 cycle, showing how strategies are embedded in game boundaries, equilibria, and game forms."
+    },
+    "3": {
+      "interpretation": "Payoff Function / Utility",
+      "note": "The invariant law—mapping from strategy profiles to payoffs. A node in the 7‑core; connected to best response (c) and learning (e), as payoffs define best responses and shape learning dynamics."
+    },
+    "4": {
+      "interpretation": "Interaction / Play",
+      "note": "The fundamental relation—selection of strategies by players. A node in the 7‑core; connected to randomness (b) and equilibrium set (f), as play involves chance and leads to equilibrium."
+    },
+    "5": {
+      "interpretation": "Game Form / Extensive Form Tree",
+      "note": "The pattern—extensive form representation: nodes, branches, information sets. Part of the 1‑6‑5‑2 cycle, bridging equilibria and strategies."
+    },
+    "6": {
+      "interpretation": "Equilibrium / Nash Equilibrium",
+      "note": "The transformation—strategy profile where no player can unilaterally improve. Part of the 1‑6‑5‑2 cycle, connecting game boundaries to game forms."
+    },
+    "7": {
+      "interpretation": "Realized Outcome / Played Strategy Profile",
+      "note": "The realization—actual strategies chosen in an instance. Persistently connected to 8 (strategy space size), linking the outcome to the complexity of the strategy space."
+    },
+    "8": {
+      "interpretation": "Quantization / Strategy Space Size / Payoff Resolution",
+      "note": "The granularity—number of pure strategies or payoff granularity. Persistently connected to 7 (outcome), reflecting that the size of the strategy space determines possible outcomes."
+    },
+    "9": {
+      "interpretation": "Event / Move / Information Set",
+      "note": "The event—a decision point in the game. Part of the 4‑cycle x→a→9→y→x, placing decision points between strategy space, player count, and information structure."
+    },
+    "a": {
+      "interpretation": "Strategy Space / All Possible Profiles",
+      "note": "Pure potential—Cartesian product of all players' strategy sets. Initiates the 4‑cycle x→a→9→y→x, linking strategy space to player count, information sets, and information structure."
+    },
+    "b": {
+      "interpretation": "Randomness / Mixed Strategy / Nature",
+      "note": "The arena—introduction of chance: mixed strategies, nature’s moves. A node in the 7‑core; connected to interaction (4) and memory (d), as randomness affects play and can be remembered."
+    },
+    "c": {
+      "interpretation": "Direction / Best Response / Rationality",
+      "note": "Directional bias—tendency to choose strategies that maximize payoff. A node in the 7‑core; connected to payoff function (3) and equilibrium set (f), as best responses are derived from payoffs and lead to equilibrium."
+    },
+    "d": {
+      "interpretation": "Memory / History / Repeated Play",
+      "note": "Persistent structure—record of past actions in repeated games. A node in the 7‑core; connected to randomness (b) and equilibrium set (f), as memory of chance outcomes shapes equilibrium in repeated games."
+    },
+    "e": {
+      "interpretation": "Learning / Dynamics / Replicator",
+      "note": "The active algorithm—process by which strategies evolve or beliefs update. A node in the 7‑core; connected to payoff function (3) and equilibrium set (f), as learning is driven by payoffs and converges to equilibrium."
+    },
+    "f": {
+      "interpretation": "Closure / Equilibrium Set / Social Optimum",
+      "note": "The resonant cavity—the set of all equilibria or the socially optimal outcome. A node in the 7‑core; connected to interaction (4), best response (c), memory (d), learning (e), and payoff function (3), forming the central hub of strategic outcomes."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Number of players / Game dimension",
+      "values": {
+        "n=0": "0‑player — game against nature",
+        "n=1": "1‑player — decision theory, optimization",
+        "n=2": "2‑player — classic game theory (Prisoner's Dilemma, Battle of Sexes)",
+        "n=3": "3‑player — three‑player games, coalition formation",
+        "n=4": "4+ players — n‑player games, public goods"
+      },
+      "formula": "n = number of players"
+    },
+    "m": {
+      "interpretation": "Complexity / Strategy count / Information depth",
+      "values": {
+        "m=0": "Simple — 2×2 games, one‑shot",
+        "m=1": "Moderate — few strategies, perfect information",
+        "m=2": "Complex — many strategies, imperfect information",
+        "m=3": "Very complex — extensive trees, repeated games",
+        "m=4": "Extreme — infinite strategy spaces, Bayesian games"
+      },
+      "formula": "m = floor(log₂(|S|)) where |S| is the number of pure strategy profiles"
+    },
+    "phase": {
+      "interpretation": "Cooperation level / Payoff angle",
+      "formula": "φ = e^{2πi × (cooperative index)} where cooperative index is the fraction of maximum possible total payoff achieved",
+      "special": "Phase = 0 for pure defection, phase = π for full cooperation, phase = π/2 for mixed outcomes",
+      "significance": "Phase encodes the degree of cooperation or the relative payoff in a bargaining solution."
+    }
+  },
+  "view_modes": {
+    "normal_form": {
+      "description": "The Factor viewed as a matrix (payoff table) with players, strategies, and payoffs",
+      "phase_condition": "Phase as payoff normalized to [0,2π]"
+    },
+    "extensive_form": {
+      "description": "The Factor viewed as a game tree with nodes, branches, and information sets",
+      "phase_condition": "Phase as the branch angle or information set index"
+    },
+    "evolutionary": {
+      "description": "The Factor viewed as a population dynamics (replicator, Moran process)",
+      "phase_condition": "Phase as the frequency of a strategy in the population"
+    },
+    "cooperative": {
+      "description": "The Factor viewed as a cooperative game with coalitions and characteristic function",
+      "phase_condition": "Phase as the Shapley value share or bargaining power"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a game, start with players (node 0) and their strategies (node 2). Define the payoff function (node 3) and the game form (node 5). Compute equilibria (node 6) and analyze outcomes (node 7)."
+    },
+    "translating_known": {
+      "prisoners_dilemma": "Map to node 1 as 2×2 normal form, node 3 as payoff matrix, node 6 as (Defect,Defect) equilibrium, node φ as 0 (defection)",
+      "ultimatum_game": "Map to node 5 as extensive tree, node 0 as proposer and responder, node 9 as decision nodes, node 6 as subgame perfect equilibrium",
+      "rock_paper_scissors": "Map to node 2 as three strategies, node 3 as cyclic payoffs, node 6 as mixed equilibrium, node b as mixed strategy",
+      "public_goods_game": "Map to node 2 as contribute/defect, node d as history in repeated version, node e as learning dynamics"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "game_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 2,
+        "m": 1,
+        "phase": { "type": "partial", "players_known": true, "payoffs_pending": true }
+      },
+      "special": "Players and their strategy sets defined, but payoff matrix not yet specified. Awaiting utility assignments."
+    }
+  },
+  "constraints": {
+    "rationality": "Players aim to maximize their own payoff; preferences are transitive and complete.",
+    "equilibrium_consistency": "In a Nash equilibrium, no player can gain by unilaterally deviating; this must hold for node 6.",
+    "information_consistency": "Information sets (node 9) must be consistent: players cannot distinguish between nodes in the same information set.",
+    "stratum_preference": "global for general game theory; trefoil_g for evolutionary and learning games; trefoil_c for cooperative and axiomatic games; fig8 for games with incomplete information (Harsanyi transformation).",
+    "invariant_core": "The Game Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking player to repeated interaction, (2) edge 8→7 linking strategy space size to realized outcome, (3) 4‑cycle x→a→9→y→x linking player count–strategy space–information set–information structure, (4) 4‑cycle 1→6→5→2→1 linking game boundaries–equilibrium–game form–strategy, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of game theory: payoff function–interaction–randomness–best response–memory–learning–equilibrium set."
+  }
+}

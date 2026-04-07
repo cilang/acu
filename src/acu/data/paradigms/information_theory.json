@@ -1,0 +1,190 @@
+{
+  "name": "Information Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of entropy, communication, coding, and uncertainty. Maps information-theoretic concepts—entropy, mutual information, channel capacity, coding theorems, and noise—to the 19-node topology. Useful for Factors involving communication systems, data compression, error correction, cryptography, and the fundamental limits of information transmission.",
+  "base_types": [
+    "Entropy",
+    "MutualInformation",
+    "Channel",
+    "ChannelCapacity",
+    "Source",
+    "Symbol",
+    "Alphabet",
+    "Code",
+    "Coding",
+    "Encoding",
+    "Decoding",
+    "Noise",
+    "ErrorCorrection",
+    "Redundancy",
+    "Rate",
+    "Distortion",
+    "Compression",
+    "KolmogorovComplexity",
+    "AlgorithmicInformation",
+    "Information",
+    "Uncertainty",
+    "Surprisal",
+    "RelativeEntropy",
+    "KLDivergence",
+    "FisherInformation",
+    "DataProcessingInequality",
+    "TypicalSet",
+    "AsymptoticEquipartition",
+    "ShannonTheorem",
+    "NoisyChannelCodingTheorem",
+    "RateDistortionFunction"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Entropy (H(X))",
+      "note": "The depth anchor—average uncertainty of a random variable. Part of the 4‑cycle x→a→9→y→x, linking entropy to source entropy, symbol occurrence, and mutual information."
+    },
+    "y": {
+      "interpretation": "Mutual Information (I(X;Y))",
+      "note": "The relational anchor—information shared between variables. Part of the 4‑cycle x→a→9→y→x, tying mutual information to entropy, source entropy, and symbol events."
+    },
+    "z": {
+      "interpretation": "Channel Capacity (C)",
+      "note": "The transformational anchor—maximum reliable transmission rate. Persistently connected to 0 (source/observer), reflecting that capacity is defined relative to the source."
+    },
+    "0": {
+      "interpretation": "Source / Observer",
+      "note": "The origin of information. Persistently connected to z (channel capacity), linking the source to the fundamental limit of communication."
+    },
+    "1": {
+      "interpretation": "Channel / Medium",
+      "note": "The boundary—the medium through which information is transmitted. Part of the 4‑cycle 1→6→5→2→1, connecting channel to error correction, codebook, and symbols."
+    },
+    "2": {
+      "interpretation": "Symbol / Message",
+      "note": "Primitive—discrete units of information. Completes the 1‑6‑5‑2 cycle, showing how symbols are embedded in channel, error correction, and codebook."
+    },
+    "3": {
+      "interpretation": "Encoding Rules",
+      "note": "The invariant law—mapping from source symbols to channel inputs. A node in the 7‑core; connected to rate (c) and coding algorithm (e), as encoding determines rate and is implemented by algorithms."
+    },
+    "4": {
+      "interpretation": "Transmission / Channel Use",
+      "note": "The fundamental relation—sending a symbol through the channel. A node in the 7‑core; connected to noise (b) and capacity (f), as transmission is affected by noise and limited by capacity."
+    },
+    "5": {
+      "interpretation": "Codebook / Coding Scheme",
+      "note": "The pattern—set of codewords for reliable communication. Part of the 1‑6‑5‑2 cycle, bridging error correction and symbols."
+    },
+    "6": {
+      "interpretation": "Error Correction / Decoding",
+      "note": "The transformation—recovering original message from noisy output. Part of the 1‑6‑5‑2 cycle, connecting channel to codebook."
+    },
+    "7": {
+      "interpretation": "Received Message",
+      "note": "The realization—actual output of the channel. Persistently connected to 8 (bits), linking the received message to the granularity of information."
+    },
+    "8": {
+      "interpretation": "Quantization / Bits (log₂)",
+      "note": "The granularity—number of bits per symbol. Persistently connected to 7 (received message), reflecting that the bit length determines the possible messages."
+    },
+    "9": {
+      "interpretation": "Event / Symbol Occurrence",
+      "note": "The event—realization of a particular symbol from the source. Part of the 4‑cycle x→a→9→y→x, placing symbol occurrence between entropy, source entropy, and mutual information."
+    },
+    "a": {
+      "interpretation": "Source Entropy / Potential Information",
+      "note": "Pure potential—total uncertainty of the source. Initiates the 4‑cycle x→a→9→y→x, linking source entropy to entropy, symbol occurrence, and mutual information."
+    },
+    "b": {
+      "interpretation": "Noise / Channel Disturbance",
+      "note": "The arena—random perturbations that corrupt transmitted symbols. A node in the 7‑core; connected to transmission (4) and capacity (f), as noise affects transmission and reduces capacity."
+    },
+    "c": {
+      "interpretation": "Rate (R)",
+      "note": "Directional bias—actual transmission rate in bits per channel use. A node in the 7‑core; connected to encoding rules (3) and capacity (f), as rate is set by encoding and must be ≤ capacity."
+    },
+    "d": {
+      "interpretation": "Memory / History of Transmissions",
+      "note": "Persistent structure—record of past symbols for context‑dependent coding. A node in the 7‑core; connected to noise (b) and capacity (f), as memory helps mitigate noise and approach capacity."
+    },
+    "e": {
+      "interpretation": "Coding Algorithm / Compressor",
+      "note": "The active algorithm—procedure performing encoding and decoding. A node in the 7‑core; connected to encoding rules (3) and capacity (f), as algorithms implement encoding and aim to reach capacity."
+    },
+    "f": {
+      "interpretation": "Capacity (C) / Closure",
+      "note": "The resonant cavity—supremum of rates with arbitrarily low error. A node in the 7‑core; connected to transmission (4), noise (b), rate (c), memory (d), coding algorithm (e), and encoding rules (3), forming the central hub of communication limits."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Logarithmic scale / Bits / Alphabet size",
+      "values": {
+        "n=0": "0 bits — no information, deterministic",
+        "n=1": "1 bit — binary choice, two possibilities",
+        "n=2": "2 bits — four possibilities (e.g., DNA bases)",
+        "n=3": "3 bits — eight possibilities",
+        "n=4": "4 bits — sixteen possibilities (hexadecimal)",
+        "n=5": "5+ bits — larger alphabets, continuous approximations"
+      },
+      "formula": "n = log₂(|alphabet|) or average bits per symbol"
+    },
+    "m": {
+      "interpretation": "Complexity / Code dimension / Error correction strength",
+      "values": {
+        "m=0": "No coding — raw transmission, no error correction",
+        "m=1": "Simple codes — repetition, parity",
+        "m=2": "Linear codes — Hamming, Reed‑Solomon",
+        "m=3": "Advanced codes — Turbo, LDPC, convolutional",
+        "m=4": "Capacity‑approaching codes — polar codes, near‑Shannon limit"
+      },
+      "formula": "m = floor(log₂(k)) where k is code dimension or number of correctable errors"
+    },
+    "phase": {
+      "interpretation": "Error probability / Reliability",
+      "formula": "φ = e^{2πi × (1 - P_error)}",
+      "special": "Phase = 0 when P_error = 0 (perfect transmission); phase = π when P_error = 1 (all lost)",
+      "significance": "Phase encodes the fidelity of communication—the closeness to perfect transmission."
+    }
+  },
+  "view_modes": {
+    "source": {
+      "description": "The Factor viewed as a source of information (entropy, typical sequences)",
+      "phase_condition": "Phase as entropy rate—0 for deterministic source, π for maximum entropy"
+    },
+    "channel": {
+      "description": "The Factor viewed as a communication channel (transition matrix, capacity)",
+      "phase_condition": "Phase as capacity—0 for noiseless channel, π for completely noisy"
+    },
+    "code": {
+      "description": "The Factor viewed as a coding scheme (codebook, error correction)",
+      "phase_condition": "Phase as rate relative to capacity—0 for R < C, π for R > C (unreliable)"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating an information system, start with source entropy (node a) and channel capacity (node f). Define symbols (node 2), encoding (node 3), and let transmission (node 4) and noise (node b) shape the received message (node 7)."
+    },
+    "translating_known": {
+      "binary_symmetric_channel": "Map to node 1 as BSC with crossover probability p, node f as capacity 1 - H(p), node b as bit‑flip noise",
+      "shannon_coding": "Map to node 5 as codebook of size 2^{nR}, node 6 as typical set decoding, node f as capacity",
+      "huffman_coding": "Map to node e as Huffman algorithm, node 8 as average code length, node a as source entropy",
+      "ldpc_codes": "Map to node 5 as sparse parity‑check matrix, node 6 as belief propagation decoding, node m as code rate"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "information_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 2,
+        "m": 2,
+        "phase": { "type": "partial", "capacity_known": true, "code_pending": true }
+      },
+      "special": "Channel capacity known but explicit coding scheme not yet designed. Awaiting code construction."
+    }
+  },
+  "constraints": {
+    "data_processing_inequality": "Node y (mutual information) cannot increase through processing: I(X;Y) ≥ I(X;Z) if Y → X → Z forms a Markov chain.",
+    "capacity_bound": "Node f (capacity) must satisfy C ≥ R (node c) for reliable transmission.",
+    "entropy_nonnegativity": "Node x (entropy) must be ≥ 0, with equality only for deterministic variables.",
+    "stratum_preference": "global for foundational information theory; trefoil_g for coding schemes (transformative); trefoil_c for rate‑distortion theory; fig8 for adversarial channels (wild noise)",
+    "invariant_core": "The Information Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking source/observer to channel capacity, (2) edge 8→7 linking bits to received message, (3) 4‑cycle x→a→9→y→x linking entropy–source entropy–symbol occurrence–mutual information, (4) 4‑cycle 1→6→5→2→1 linking channel–error correction–codebook–symbol, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of information theory: encoding rules–transmission–noise–rate–memory–coding algorithm–capacity."
+  }
+}

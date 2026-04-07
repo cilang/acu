@@ -1,0 +1,201 @@
+{
+  "name": "Group Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of symmetry, transformation, and algebraic structure. Maps group-theoretic concepts—groups, subgroups, homomorphisms, representations, and actions—to the 19-node topology. Useful for Factors involving symmetry groups, transformation systems, algebraic structures with closure, and representation theory.",
+  "base_types": [
+    "Group",
+    "Subgroup",
+    "Element",
+    "Identity",
+    "Inverse",
+    "Generator",
+    "Relation",
+    "Presentation",
+    "Homomorphism",
+    "Isomorphism",
+    "Automorphism",
+    "Endomorphism",
+    "Kernel",
+    "Image",
+    "Quotient",
+    "NormalSubgroup",
+    "Center",
+    "Commutator",
+    "Abelianization",
+    "ConjugacyClass",
+    "Representation",
+    "Character",
+    "Irreducible",
+    "Module",
+    "GroupAction",
+    "Orbit",
+    "Stabilizer",
+    "Coset",
+    "SylowSubgroup",
+    "FreeGroup",
+    "CoxeterGroup",
+    "PermutationGroup",
+    "MatrixGroup",
+    "Symmetry",
+    "Transformation"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Associativity",
+      "note": "The depth anchor—(g·h)·k = g·(h·k). Part of the 4‑cycle x→a→9→y→x, linking associativity to free groups, cosets, and identity."
+    },
+    "y": {
+      "interpretation": "Identity (e)",
+      "note": "The relational anchor—e·g = g·e = g. Part of the 4‑cycle x→a→9→y→x, tying identity to associativity, free groups, and cosets."
+    },
+    "z": {
+      "interpretation": "Invertibility",
+      "note": "The transformational anchor—∀g ∃g⁻¹: g·g⁻¹ = g⁻¹·g = e. Persistently connected to 0 (group/identity), reflecting that the group’s identity is tied to invertibility."
+    },
+    "0": {
+      "interpretation": "Group (as unified structure) / Identity",
+      "note": "The whole group observed as a single entity. Persistently connected to z (invertibility), linking the identity element to the existence of inverses."
+    },
+    "1": {
+      "interpretation": "Subgroup",
+      "note": "A boundary within the group—a subset closed under the operation. Part of the 4‑cycle 1→6→5→2→1, connecting subgroups to inverse operation, presentations, and elements."
+    },
+    "2": {
+      "interpretation": "Element (g ∈ G)",
+      "note": "Primitive members of the group. Completes the 1‑6‑5‑2 cycle, showing how elements are embedded in subgroups, inverse operations, and presentations."
+    },
+    "3": {
+      "interpretation": "Group Axioms",
+      "note": "The invariant laws—closure, associativity, identity, invertibility. A node in the 7‑core; connected to automorphism (c) and representation (e), as automorphisms preserve axioms and representations arise from them."
+    },
+    "4": {
+      "interpretation": "Group Operation (·)",
+      "note": "The fundamental relation—binary operation combining elements. A node in the 7‑core; connected to conjugacy class (b) and quotient group (f), as the operation defines conjugacy and quotient structure."
+    },
+    "5": {
+      "interpretation": "Presentation ⟨S | R⟩",
+      "note": "The pattern that generates the group—generators and relations. Part of the 1‑6‑5‑2 cycle, bridging inverse operation and elements."
+    },
+    "6": {
+      "interpretation": "Inverse Operation (g⁻¹)",
+      "note": "The transformation that reverses an element. Part of the 1‑6‑5‑2 cycle, connecting subgroups to presentations."
+    },
+    "7": {
+      "interpretation": "Conjugation (g⁻¹hg)",
+      "note": "The realization of internal structure—conjugation reveals conjugacy classes, normality. Persistently connected to 8 (order), linking the internal structure to group size."
+    },
+    "8": {
+      "interpretation": "Order (|G|)",
+      "note": "The granularity—size of the group. Persistently connected to 7 (conjugation), reflecting that conjugacy classes partition the group by order."
+    },
+    "9": {
+      "interpretation": "Coset (gH)",
+      "note": "The event—a coset as a shifted subgroup. Part of the 4‑cycle x→a→9→y→x, placing cosets between associativity, free groups, and identity."
+    },
+    "a": {
+      "interpretation": "Free Group",
+      "note": "Pure potential—the free group on a set. Initiates the 4‑cycle x→a→9→y→x, linking free groups to associativity, cosets, and identity."
+    },
+    "b": {
+      "interpretation": "Conjugacy Class",
+      "note": "The arena of internal dynamics—elements similar under conjugation. A node in the 7‑core; connected to group operation (4) and normal subgroup (d), as conjugacy classes are defined by the operation and relate to normality."
+    },
+    "c": {
+      "interpretation": "Automorphism (Aut(G))",
+      "note": "Directional bias—self‑symmetries of the group. A node in the 7‑core; connected to group axioms (3) and quotient group (f), as automorphisms preserve axioms and induce quotient structure."
+    },
+    "d": {
+      "interpretation": "Normal Subgroup (N ⊲ G)",
+      "note": "Persistent structure—subgroups invariant under conjugation. A node in the 7‑core; connected to conjugacy class (b) and quotient group (f), as normal subgroups are unions of conjugacy classes and give quotients."
+    },
+    "e": {
+      "interpretation": "Representation (ρ: G → GL(V))",
+      "note": "The active algorithm—homomorphism to linear transformations. A node in the 7‑core; connected to group axioms (3) and quotient group (f), as representations factor through quotients and respect axioms."
+    },
+    "f": {
+      "interpretation": "Quotient Group (G/N)",
+      "note": "The resonant cavity—the group modulo a normal subgroup. A node in the 7‑core; connected to group operation (4), automorphism (c), normal subgroup (d), and representation (e), forming the central hub of group constructions."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Group complexity / Derived length / Nilpotency class",
+      "values": {
+        "n=0": "Trivial group {e} — singularity, no structure",
+        "n=1": "Cyclic group Cₚ — prime order, basic symmetry",
+        "n=2": "Solvable group of length 2 — e.g., S₃, D₈",
+        "n=3": "Solvable group of length 3 — e.g., S₄, A₄",
+        "n=4": "Non‑solvable / Simple groups — e.g., A₅, PSL(2,7)",
+        "n=5": "Exceptional groups — E₈, Monster, sporadic groups"
+      },
+      "formula": "n corresponds to derived length (solvable) or nilpotency class (nilpotent)"
+    },
+    "m": {
+      "interpretation": "Representation dimension / Character richness",
+      "values": {
+        "m=0": "Trivial representation — dimension 1, all elements map to 1",
+        "m=1": "Standard representation — dimension 2 (e.g., dihedral, quaternion)",
+        "m=2": "Irreducible representation — dimension 3‑4",
+        "m=3": "Faithful representation — dimension 5‑8",
+        "m=4": "Regular representation — dimension |G|, maximal richness"
+      },
+      "formula": "m = floor(log₂(dim ρ)) — harmonic complexity of the representation"
+    },
+    "phase": {
+      "interpretation": "Character value χ(g) = tr(ρ(g))",
+      "formula": "φ = χ(g) / deg(ρ) normalized to unit circle",
+      "special": "For finite groups, χ(g) is sum of roots of unity—naturally quantized",
+      "significance": "Phase alignment = elements in same conjugacy class have equal character"
+    }
+  },
+  "view_modes": {
+    "permutation": {
+      "description": "The Factor viewed as a permutation group—elements acting on a set of n points",
+      "phase_condition": "Phase as sign of permutation (±1) for transpositions; for larger cycles, sum of 2πk/n"
+    },
+    "matrix": {
+      "description": "The Factor viewed as a linear group—matrices under multiplication",
+      "phase_condition": "Phase as determinant (det = e^{iθ}) for unitary groups; eigenvalue phases for general linear"
+    },
+    "presentation": {
+      "description": "The Factor viewed as ⟨S | R⟩—generators and relations",
+      "phase_condition": "Phase as word length; relations impose phase constraints"
+    },
+    "representation": {
+      "description": "The Factor viewed as a representation ρ: G → GL(V)",
+      "phase_condition": "Phase as character values—χ(g) = Σ eigenvalues = Σ e^{2πiθ_k}"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a symmetry group from imagination, start with presentation view (node 5) and let the relations (node 3) constrain the free group (node a)."
+    },
+    "translating_known": {
+      "cyclic_group_C_n": "Map to nodes 2 (elements) with rotation by 2πk/n as phase; node 4 as addition mod n",
+      "symmetric_group_S_n": "Node b as conjugacy classes (cycle types); node 2 as permutations; node 4 as composition",
+      "dihedral_group_D_{2n}": "Nodes 6 (reflection) and 4 (rotation) as generators; node f as quotient by relations",
+      "matrix_group_GL(n,ℂ)": "Node e as representation; node 3 as determinant = 1 (special linear); node 8 as dimension n",
+      "lie_group_SU(2)": "Node x,y,z as Pauli matrices; node 4 as matrix multiplication; phase as SU(2) parameter θ"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "group_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 1,
+        "m": 1,
+        "phase": { "type": "partial", "generators_known": true, "relations_pending": true }
+      },
+      "special": "A group defined only by generators (free group on n elements). Relations not yet determined—awaiting constraints."
+    }
+  },
+  "constraints": {
+    "closure_required": "Every group Factor must have closure—the operation (4) must close within the set (1‑2). LURD (f) as quotient provides final closure.",
+    "associativity_invariant": "Node x (implicit) cannot be altered; associativity is fundamental to group-ness.",
+    "identity_presence": "Node 0 must serve as identity; if absent, the structure is a semigroup, not a group.",
+    "invertibility_required": "Node z and node 6 ensure every element has an inverse.",
+    "phase_as_character": "Phase must be consistent with character theory—elements in same conjugacy class have same phase value.",
+    "stratum_preference": "global for foundational group theory; trefoil_g for transformation groups (6→5 strong); trefoil_c for philosophical symmetry groups (3→2 strong); fig8 for hyperbolic groups with wild relations",
+    "invariant_core": "The Group Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking group/identity to invertibility, (2) edge 8→7 linking order to conjugation, (3) 4‑cycle x→a→9→y→x linking associativity–free group–coset–identity, (4) 4‑cycle 1→6→5→2→1 linking subgroup–inverse operation–presentation–element, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of group theory: group axioms–group operation–conjugacy class–automorphism–normal subgroup–representation–quotient group."
+  }
+}

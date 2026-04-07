@@ -1,0 +1,205 @@
+{
+  "name": "Category Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of mathematical structure, universal properties, and relationships-between-relationships. Maps categorical concepts—categories, functors, natural transformations, limits, adjunctions, monads, and topoi—to the 19-node topology. Useful for Factors involving compositionality, structure-preserving maps, adjoint relationships, and the deep unity of mathematical constructions.",
+  "base_types": [
+    "Category",
+    "Object",
+    "Morphism",
+    "Functor",
+    "NaturalTransformation",
+    "Limit",
+    "Colimit",
+    "Initial",
+    "Terminal",
+    "Product",
+    "Coproduct",
+    "Equalizer",
+    "Coequalizer",
+    "Pullback",
+    "Pushout",
+    "Exponential",
+    "CartesianClosed",
+    "Adjunction",
+    "Monad",
+    "Comonad",
+    "Endofunctor",
+    "Algebra",
+    "Coalgebra",
+    "KanExtension",
+    "YonedaEmbedding",
+    "Presheaf",
+    "Sheaf",
+    "Topos",
+    "GrothendieckTopology",
+    "Site",
+    "Stack",
+    "2Category",
+    "HigherCategory",
+    "EnrichedCategory",
+    "Fibration",
+    "Opfibration"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Implicit / Associativity of Composition",
+      "note": "The depth anchor—(f∘g)∘h = f∘(g∘h). In the invariant core, x initiates the 4‑cycle x→a→9→y→x, linking associativity to presheaves, universal arrows, and identities."
+    },
+    "y": {
+      "interpretation": "Implicit / Identity Morphisms (id_A)",
+      "note": "The relational anchor—id_B ∘ f = f = f ∘ id_A. Completes the 4‑cycle x→a→9→y→x, showing how identities close the Yoneda loop."
+    },
+    "z": {
+      "interpretation": "Implicit / Yoneda Lemma",
+      "note": "The transformational anchor—Hom(𝒞(−, A), F) ≅ F(A). Connected persistently to 0 (category/terminal object), reflecting the terminal object’s role in Yoneda embedding."
+    },
+    "0": {
+      "interpretation": "Category (𝒞) / Terminal Object (1)",
+      "note": "The whole category observed as a unified system of objects and arrows. Persistently connected to z (Yoneda lemma)."
+    },
+    "1": {
+      "interpretation": "Subcategory (𝒟 ↪ 𝒞)",
+      "note": "A boundary within the category. Forms a 4‑cycle 1→6→5→2→1 with natural transformations, functors, and objects, capturing the subcategory‑object‑functor‑natural transformation loop."
+    },
+    "2": {
+      "interpretation": "Object (A ∈ 𝒞)",
+      "note": "Primitives—the objects of the category. Part of the 1‑6‑5‑2 cycle; the building block that closes back to subcategory via the cycle."
+    },
+    "3": {
+      "interpretation": "Composition (∘)",
+      "note": "The invariant law—associative composition of morphisms. A node in the 7‑core; connected to adjunction (c) and endofunctor (e)."
+    },
+    "4": {
+      "interpretation": "Morphism (f: A → B)",
+      "note": "The fundamental relation—arrows between objects. A node in the 7‑core; connects to Grothendieck topology (b) and topos (f)."
+    },
+    "5": {
+      "interpretation": "Functor (F: 𝒞 → 𝒟)",
+      "note": "The pattern that maps between categories. Part of the 1‑6‑5‑2 cycle; bridges objects and natural transformations."
+    },
+    "6": {
+      "interpretation": "Natural Transformation (α: F ⇒ G)",
+      "note": "The transformation between functors. Part of the 1‑6‑5‑2 cycle; the morphism of functors."
+    },
+    "7": {
+      "interpretation": "Limit (lim F)",
+      "note": "The realization of universal property—the cone that is terminal among all cones. Persistently connected to 8 (colimit), reflecting the limit‑colimit duality."
+    },
+    "8": {
+      "interpretation": "Colimit (colim F)",
+      "note": "The granularity—the cocone that is initial among all cocones. Persistently connected to 7 (limit), capturing the dual nature of universal constructions."
+    },
+    "9": {
+      "interpretation": "Universal Arrow",
+      "note": "The event—the unique arrow that factors through a universal construction. Part of the 4‑cycle x→a→9→y→x, placing it between presheaves and identities."
+    },
+    "a": {
+      "interpretation": "Presheaf (𝒞ᵒᵖ → Set)",
+      "note": "Pure potential—all possible contravariant functors to Set. Initiates the 4‑cycle x→a→9→y→x, linking to associativity, universal arrows, and identities."
+    },
+    "b": {
+      "interpretation": "Grothendieck Topology",
+      "note": "The arena of coverage—the sieves that determine when a presheaf is a sheaf. A node in the 7‑core; connected to morphism (4), monad (d), and topos (f)."
+    },
+    "c": {
+      "interpretation": "Adjunction (F ⊣ G)",
+      "note": "Directional bias—a pair of functors with natural bijection. A node in the 7‑core; connected to composition (3) and morphism (4)."
+    },
+    "d": {
+      "interpretation": "Monad (T, η, μ)",
+      "note": "Persistent structure—an endofunctor with unit and multiplication. A node in the 7‑core; connected to Grothendieck topology (b) and topos (f)."
+    },
+    "e": {
+      "interpretation": "Endofunctor (F: 𝒞 → 𝒞)",
+      "note": "The active algorithm—a functor from a category to itself. A node in the 7‑core; connected to composition (3) and Grothendieck topology (b)."
+    },
+    "f": {
+      "interpretation": "Topos (𝒯)",
+      "note": "The resonant cavity—a category that behaves like the category of sets. A node in the 7‑core; connected to morphism (4), monad (d), adjunction (c), and composition (3)."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Categorical dimension / Complexity of diagram shape",
+      "values": {
+        "n=0": "Discrete category — no non-identity morphisms",
+        "n=1": "Poset / Preorder — at most one morphism between objects",
+        "n=2": "Monoid / Group — one object, many morphisms",
+        "n=3": "Small category — objects and morphisms form sets",
+        "n=4": "Locally small category — Hom-sets are sets",
+        "n=5": "Large category — proper class of objects",
+        "n=6": "2‑category — morphisms between morphisms",
+        "n=7": "Higher category — n‑morphisms for n>2"
+      },
+      "formula": "n corresponds to the 'size' and 'dimension' of the categorical structure"
+    },
+    "m": {
+      "interpretation": "Enrichment richness / Internal logic complexity",
+      "values": {
+        "m=0": "Set-enriched — ordinary category theory",
+        "m=1": "Abelian — enriched in Abelian groups",
+        "m=2": "Monoidal — enriched in monoidal category",
+        "m=3": "Closed — internal Hom exists",
+        "m=4": "Cartesian closed — exponentials exist",
+        "m=5": "Topos — subobject classifier + cartesian closed"
+      },
+      "formula": "m = log₂(complexity of enrichment monoidal structure)"
+    },
+    "phase": {
+      "interpretation": "Universal property satisfaction",
+      "formula": "φ = 2π × (universal factor / total possible factors)",
+      "special": "For limits: phase = 0 when terminal cone exists; for colimits: phase = π when initial cocone exists",
+      "significance": "Phase measures how 'universal' a construction is—how close to satisfying the universal property"
+    }
+  },
+  "view_modes": {
+    "object_view": {
+      "description": "The Factor viewed as a category of objects and morphisms",
+      "phase_condition": "Phase as existence of universal properties—0 for limits, π for colimits"
+    },
+    "functor_view": {
+      "description": "The Factor viewed as a functor between categories",
+      "phase_condition": "Phase as fullness/faithfulness—0 for fully faithful, π/2 for essentially surjective"
+    },
+    "adjunction_view": {
+      "description": "The Factor viewed as an adjoint pair (F ⊣ G)",
+      "phase_condition": "Phase as unit-counit composition—0 when η_G = id, π when ε_F = id"
+    },
+    "topos_view": {
+      "description": "The Factor viewed as a topos (generalized universe of sets)",
+      "phase_condition": "Phase as truth value in subobject classifier—Ω has 2^m truth values"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a categorical structure, start with objects (node 2) and morphisms (node 4), let composition (node 3) provide the invariant laws, and seek universal properties (nodes 7‑9)."
+    },
+    "translating_known": {
+      "set_category": "Map to Set: node 0 as Set, node 2 as sets, node 4 as functions, node 7 as products, node 8 as coproducts",
+      "functor_category": "Map to [𝒞,𝒟]: node 5 as objects (functors), node 6 as morphisms (natural transformations)",
+      "adjunction": "Map to F ⊣ G: node c as the adjunction, node 9 as the unit and counit universal arrows",
+      "monad": "Map to (T,η,μ): node d as monad, node e as endofunctor T, node 6 as natural transformations η, μ",
+      "topos": "Map to 𝒯: node f as topos, node a as presheaves, node b as Grothendieck topology"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "category_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 3,
+        "m": 2,
+        "phase": { "type": "partial", "objects_known": ["A", "B"], "morphisms_pending": true }
+      },
+      "special": "A category defined only by its objects, with morphisms not yet specified. Awaiting the grammar of connection."
+    }
+  },
+  "constraints": {
+    "associativity": "Node x ensures composition is associative—(f∘g)∘h = f∘(g∘h).",
+    "identities": "Node y ensures identity morphisms exist—id_B ∘ f = f = f ∘ id_A.",
+    "yoneda_embedding": "Node z ensures the Yoneda lemma holds—Hom(𝒞(−, A), F) ≅ F(A).",
+    "functor_preservation": "Node 5 (functors) must preserve composition and identities.",
+    "naturality": "Node 6 (natural transformations) must satisfy naturality squares.",
+    "stratum_preference": "global for foundational categorical work; trefoil_c for universal properties; trefoil_g for natural transformations; fig8 for higher categories and topoi.",
+    "invariant_core": "The Category Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems that mirror the invariant structure of the T(19,2) knot. These subsystems provide a pedagogical roadmap: (1) the simple edge 0→z linking the category to the Yoneda lemma, (2) the edge 8→7 linking colimit to limit, (3) the 4‑cycle x→a→9→y→x capturing the Yoneda‑universal property loop, (4) the 4‑cycle 1→6→5→2→1 capturing the subcategory‑functor‑natural transformation cycle, and (5) the 7‑node core {3,4,b,c,d,e,f} encoding the algebraic heart of category theory (composition, morphisms, Grothendieck topologies, adjunctions, monads, endofunctors, topoi)."
+  }
+}

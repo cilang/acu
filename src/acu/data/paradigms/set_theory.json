@@ -1,0 +1,181 @@
+{
+  "name": "Set Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of extensional collections, transfinite hierarchies, and forcing extensions. Maps set-theoretic concepts—sets, classes, ordinals, cardinals, the cumulative hierarchy, and forcing—to the 19-node topology. Useful for Factors involving collections, hierarchies, partial knowledge, and the foundations of mathematics.",
+  "base_types": [
+    "Set",
+    "Class",
+    "Element",
+    "Membership",
+    "Subset",
+    "Union",
+    "Intersection",
+    "EmptySet",
+    "PowerSet",
+    "CartesianProduct",
+    "Relation",
+    "Function",
+    "Ordinal",
+    "Cardinal",
+    "TransitiveSet",
+    "WellFounded",
+    "Choice",
+    "TransfiniteRecursion",
+    "CumulativeHierarchy",
+    "Forcing",
+    "GenericExtension",
+    "Condition",
+    "PartialOrder",
+    "GenericFilter",
+    "BooleanValue"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Well‑Foundedness",
+      "note": "The depth anchor—every nonempty set has an ∈‑minimal element. Part of the 4‑cycle x→a→9→y→x, linking well‑foundedness to the empty set, forcing relation, and extensionality."
+    },
+    "y": {
+      "interpretation": "Extensionality",
+      "note": "The relational anchor—sets are determined by their elements. Part of the 4‑cycle x→a→9→y→x, tying extensionality to well‑foundedness, the empty set, and forcing relation."
+    },
+    "z": {
+      "interpretation": "Foundation",
+      "note": "The transformational anchor—no infinite descending ∈‑chains. Persistently connected to 0 (observer/condition), reflecting that the axiom of foundation grounds the observer’s construction."
+    },
+    "0": {
+      "interpretation": "Observer / Condition / NoteTaker",
+      "note": "When present, represents a partial condition in a forcing extension. Persistently connected to z (foundation), linking the observer’s state to the well‑foundedness of the universe."
+    },
+    "1": {
+      "interpretation": "Set (as boundary)",
+      "note": "A set as a bounded collection. Part of the 4‑cycle 1→6→5→2→1, connecting sets to transitive closure, definable collections, and elements."
+    },
+    "2": {
+      "interpretation": "Element",
+      "note": "Primitive members of a set. Completes the 1‑6‑5‑2 cycle, showing how elements are embedded in sets, transitive closure, and definable collections."
+    },
+    "3": {
+      "interpretation": "ZFC Axioms",
+      "note": "The invariant laws—extensionality, foundation, replacement, choice, etc. A node in the 7‑core; connected to choice function (c) and forcing poset (e), as axioms include choice and forcing adds sets that respect the axioms."
+    },
+    "4": {
+      "interpretation": "Membership (∈)",
+      "note": "The fundamental relation connecting elements to sets. A node in the 7‑core; connected to generic filter (b) and closure (f), as membership is the basis for forcing and the closure of the universe."
+    },
+    "5": {
+      "interpretation": "Definable Collection",
+      "note": "Patterns definable by formulas. Part of the 1‑6‑5‑2 cycle, bridging transitive closure and elements."
+    },
+    "6": {
+      "interpretation": "Transitive Closure",
+      "note": "The transformation that closes a set under membership. Part of the 1‑6‑5‑2 cycle, connecting sets to definable collections."
+    },
+    "7": {
+      "interpretation": "V_α Stage",
+      "note": "Actualized stage in the cumulative hierarchy. Persistently connected to 8 (power set), linking the stage to the operation that generates higher ranks."
+    },
+    "8": {
+      "interpretation": "Power Set (𝒫)",
+      "note": "The operation that generates granularity. Persistently connected to 7 (V_α), reflecting that each stage is the power set of the previous limit."
+    },
+    "9": {
+      "interpretation": "Forcing Relation (⊩)",
+      "note": "The event where a condition forces a statement. Part of the 4‑cycle x→a→9→y→x, placing the forcing relation between well‑foundedness, the empty set, and extensionality."
+    },
+    "a": {
+      "interpretation": "Empty Set (∅)",
+      "note": "Pure potential—the set with no members. Initiates the 4‑cycle x→a→9→y→x, linking the empty set to well‑foundedness, forcing, and extensionality."
+    },
+    "b": {
+      "interpretation": "Generic Filter",
+      "note": "The unpredictable selection that resolves undetermined truth. A node in the 7‑core; connected to membership (4) and transitive model (d), as the generic filter adds new sets to the transitive model."
+    },
+    "c": {
+      "interpretation": "Choice Function",
+      "note": "Directional bias—a function selecting distinguished elements. A node in the 7‑core; connected to ZFC axioms (3) and transitive model (d), as choice is part of ZFC and holds in transitive models."
+    },
+    "d": {
+      "interpretation": "Transitive Model",
+      "note": "Persistent structure—models like L, HOD, or V[G]. A node in the 7‑core; connected to generic filter (b), choice function (c), and closure (f), as transitive models contain generic filters and respect choice."
+    },
+    "e": {
+      "interpretation": "Forcing Poset (ℙ)",
+      "note": "The active algorithm—a partial order of conditions. A node in the 7‑core; connected to ZFC axioms (3) and closure (f), as the poset is defined in ZFC and determines the generic extension."
+    },
+    "f": {
+      "interpretation": "Closure (V or L)",
+      "note": "The resonant cavity—the completed universe. A node in the 7‑core; connected to membership (4), transitive model (d), and forcing poset (e), forming the central hub of the set‑theoretic universe."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Rank in cumulative hierarchy (V_α)",
+      "values": {
+        "n=0": "V_∅ — no sets, pure potential",
+        "n=1": "V_ω — hereditarily finite sets",
+        "n=2": "V_{ω+ω} — countable transfinite",
+        "n=3": "V_{ω₁} — uncountable",
+        "n=4": "V — the entire universe"
+      },
+      "formula": "n = rank level (α such that V_α is considered)"
+    },
+    "m": {
+      "interpretation": "Cardinality exponent (2^m)",
+      "values": {
+        "m=0": "2^0 = 1 — singleton",
+        "m=1": "2^1 = 2 — binary choice",
+        "m=2": "2^2 = 4 — finite",
+        "m=3": "2^3 = 8 — countably infinite",
+        "m=4": "2^4 = 16 — continuum and beyond"
+      },
+      "formula": "m = log₂(κ) where κ is the cardinality of the power set of some set, or the number of elements in a finite set"
+    },
+    "phase": {
+      "interpretation": "Boolean value in forcing extension",
+      "formula": "φ(p) = { q ≤ p | q ⊩ ψ } / dense sets",
+      "special": "May be given as interval or partial order when uncertain",
+      "significance": "Phase encodes the truth value of a statement relative to a condition in a forcing poset."
+    }
+  },
+  "view_modes": {
+    "cumulative": {
+      "description": "The Factor viewed as a stage in the cumulative hierarchy V_α",
+      "phase_condition": "Phases increase with rank—each power set operation adds π/19"
+    },
+    "forcing": {
+      "description": "The Factor viewed as a condition in a partial order, awaiting generic extension",
+      "phase_condition": "Phase is partial—the Factor's truth value is not yet determined"
+    },
+    "class": {
+      "description": "The Factor viewed as a proper class—too large to be a set, closure is a limit condition",
+      "phase_condition": "No closure—f is absent; phases approach a limit ordinal"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a set-theoretic structure, start with the empty set (node a), build up via power set (node 8) and union, and use the cumulative hierarchy (node 7) to track rank."
+    },
+    "translating_known": {
+      "zfc_axioms": "Map to node 3 (Asha) — invariant laws",
+      "cumulative_hierarchy": "Map to nodes 7‑8 (Actualization/Quantization) — staged construction",
+      "forcing_extension": "Map to nodes a-b-e (Ocean/Chaos/Factor) — conditions, generic filter, poset",
+      "proper_class": "f absent — closure is a limit condition, not a current state"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "set_theory" },
+      "stratum": "global",
+      "resonance": { "n": 1, "m": 1, "phase": { "type": "interval", "min": 0, "max": "2π/3" } },
+      "special": "f may be omitted or marked as 'pending'. The Factor is a condition in a forcing poset—awaiting generic extension."
+    }
+  },
+  "constraints": {
+    "well_foundedness": "Node x ensures every nonempty set has an ∈‑minimal element.",
+    "extensionality": "Node y ensures sets are uniquely determined by their elements.",
+    "foundation": "Node z prohibits infinite descending ∈‑chains.",
+    "power_set_operation": "Node 8 (power set) must produce a set of strictly larger cardinality (Cantor's theorem).",
+    "forcing_closure": "When using forcing, node f may be omitted or marked pending; the Factor is an incomplete condition.",
+    "stratum_preference": "global for general set theory; trefoil_g for forcing extensions (transformative); fig8 for wild or non‑well‑founded set theories",
+    "invariant_core": "The Set Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking observer/condition to foundation, (2) edge 8→7 linking power set to V_α stage, (3) 4‑cycle x→a→9→y→x linking well‑foundedness–empty set–forcing relation–extensionality, (4) 4‑cycle 1→6→5→2→1 linking set–transitive closure–definable collection–element, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of set theory: ZFC axioms–membership–generic filter–choice function–transitive model–forcing poset–closure."
+  }
+}

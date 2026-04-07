@@ -1,0 +1,43 @@
+{
+  "role": "Resonance Interpretation Framework",
+  "definition": {
+    "description": "The Seifert‑fibered complement of the chosen structure provides a natural decomposition into base and fibers, enabling harmonic analysis. Paradigms may overlay additional layers of meaning (e.g., Information, Spiritual, Material)."
+  },
+  "formalism": {
+    "description": "The harmonic structure inherited from the Seifert‑fibered complement of T(19,2) (or any structure whose complement is Seifert‑fibered).",
+    "mathematical_foundation": "For the default T(19,2) knot, S³ \\ T(19,2) is Seifert‑fibered over a disk with cone points of orders 19 and 2.",
+    "parameters": {
+      "quantum_depth": {
+        "symbol": "n",
+        "base": 19,
+        "formula": "Q = 19ⁿ",
+        "role": "Depth of resolution, corresponds to winding around the order‑19 cone point."
+      },
+      "resonant_harmonic": {
+        "symbol": "m",
+        "base": 2,
+        "formula": "R = 2ᵐ",
+        "role": "Complexity of harmonics, corresponds to winding around the order‑2 cone point."
+      },
+      "phase_factor": {
+        "symbol": "φ",
+        "formula": "φ(n,m) = e^(2πi × (n/19 + m/2))",
+        "role": "Relative alignment of the two winding numbers; quantized to the 38th roots of unity."
+      },
+      "combined_state": {
+        "symbol": "Ψ",
+        "formula": "Ψ(n,m) = 19ⁿ × 2ᵐ × φ(n,m)",
+        "role": "Complete resonant state; in closed systems, the sum of Ψ over all nodes must be real (phase cancellation)."
+      }
+    },
+    "resonant_states": {
+      "definition": "Special (n,m) combinations where φ is rational (i.e., n/19 + m/2 is an integer or half‑integer).",
+      "simple_ratios": [
+        { "condition": "n/19 + m/2 = 0", "interpretation": "Pure potential (phase π)" },
+        { "condition": "n/19 + m/2 = 1", "interpretation": "Full actualization (phase 0)" },
+        { "condition": "n/19 + m/2 = 1/2", "interpretation": "Transitional processing (phase in between)" }
+      ]
+    }
+  },
+  "constraint": "Any valid Factor must define resonance parameters (n,m) consistent with the chosen structure's complement. The phase φ must be a 38th root of unity."
+}

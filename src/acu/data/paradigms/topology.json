@@ -1,0 +1,199 @@
+{
+  "name": "Topology",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of spaces, continuity, and invariants. Maps topological concepts—manifolds, embeddings, homotopy, homology, and beyond—to the 19-node topology. Useful for Factors involving shape, connectivity, transformation without tearing, and the fundamental invariants that persist under continuous deformation.",
+  "base_types": [
+    "TopologicalSpace",
+    "Manifold",
+    "Homotopy",
+    "Homology",
+    "Cohomology",
+    "FundamentalGroup",
+    "CoveringSpace",
+    "Bundle",
+    "Embedding",
+    "Immersion",
+    "Isotopy",
+    "MappingClassGroup",
+    "CellComplex",
+    "SimplicialComplex",
+    "Knot",
+    "Link",
+    "Braids",
+    "Surface",
+    "3Manifold",
+    "4Manifold",
+    "HandleDecomposition",
+    "MorseFunction",
+    "CriticalPoint",
+    "EulerCharacteristic",
+    "Genus",
+    "ConnectedSum",
+    "Bordism",
+    "Cobordism",
+    "CharacteristicClass",
+    "Fibration",
+    "Foliations",
+    "ContactStructure",
+    "SymplecticStructure"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Implicit / Hausdorff",
+      "note": "The depth anchor—points can be separated by disjoint open sets. Forms a 4‑cycle with a, 9, y in the mirror‑invariant core, representing the cycle of potential → event → relation → space."
+    },
+    "y": {
+      "interpretation": "Implicit / Paracompactness",
+      "note": "The relational anchor—every open cover has a locally finite refinement. Part of the 4‑cycle x→a→9→y→x, linking paracompactness to loop spaces and critical points."
+    },
+    "z": {
+      "interpretation": "Implicit / Contractibility",
+      "note": "The transformational anchor—the space is homotopy equivalent to a point. Connected by a persistent edge from 0 (basepoint), reflecting that the universal cover contracts to a point."
+    },
+    "0": {
+      "interpretation": "Basepoint / UniversalCover",
+      "note": "The chosen reference point in a pointed space. Has a persistent edge to z, linking the basepoint to the contractibility of its universal cover."
+    },
+    "1": {
+      "interpretation": "Manifold (boundary)",
+      "note": "A topological space that locally resembles Euclidean space. Forms a 4‑cycle with 6,5,2 (1→6→5→2→1), capturing the boundary‑homotopy‑triangulation‑point loop."
+    },
+    "2": {
+      "interpretation": "Point (∈ space)",
+      "note": "Primitive elements—points in the space. Part of the 1‑6‑5‑2 cycle; the fundamental building block that closes back to the manifold boundary."
+    },
+    "3": {
+      "interpretation": "OpenSet / Continuity",
+      "note": "The invariant law—the collection of open sets defines the topology. One of the seven nodes in the strongly connected mirror‑invariant core (3,4,b,c,d,e,f), linking continuity to maps, symmetry groups, fibrations, homology, cohomology, and duality."
+    },
+    "4": {
+      "interpretation": "ContinuousMap (f: X→Y)",
+      "note": "The fundamental relation—maps that preserve the topological structure. Central node in the 7‑core, connecting to 3 (open sets), b (mapping class group), c (fibration), d (homology), e (cohomology), f (duality)."
+    },
+    "5": {
+      "interpretation": "CellComplex / Triangulation",
+      "note": "The pattern—a decomposition into simple building blocks. Part of the 1‑6‑5‑2 cycle; triangulation emerges from homotopy and leads to points."
+    },
+    "6": {
+      "interpretation": "Homotopy (f ≃ g)",
+      "note": "The transformation—a continuous deformation of one map into another. Key node in the 1‑6‑5‑2 cycle, bridging manifold boundary to triangulation."
+    },
+    "7": {
+      "interpretation": "HandleAttachment",
+      "note": "The realization—adding a handle to a manifold changes its topology. Persistently connected to 8 (Euler characteristic), reflecting that handle attachments determine the Euler characteristic."
+    },
+    "8": {
+      "interpretation": "EulerCharacteristic / BettiNumbers",
+      "note": "The granularity—numerical invariants that count holes. Has a persistent edge to 7 (handle attachment), linking combinatorial invariants to surgery operations."
+    },
+    "9": {
+      "interpretation": "CriticalPoint / MorseIndex",
+      "note": "The event—a point where the gradient of a Morse function vanishes. Part of the 4‑cycle x→a→9→y→x, placing critical points in the loop of potential, relation, and space."
+    },
+    "a": {
+      "interpretation": "LoopSpace (ΩX)",
+      "note": "Pure potential—the space of based loops in X. Initiates the 4‑cycle x→a→9→y→x, representing how loops generate critical points and relations."
+    },
+    "b": {
+      "interpretation": "MappingClassGroup (Mod(S))",
+      "note": "The arena—the group of isotopy classes of homeomorphisms of a surface. Part of the 7‑core; connects to a, c, d, and the rest of the invariant engine."
+    },
+    "c": {
+      "interpretation": "Fibration (E → B)",
+      "note": "Directional bias—a map with the homotopy lifting property. Central in the 7‑core; mediates between the mapping class group (b) and homology/cohomology (d,e)."
+    },
+    "d": {
+      "interpretation": "Homology (H_n(X))",
+      "note": "Persistent structure—abelian groups that measure holes. Member of the 7‑core; connects to 4 (continuous maps), b (mapping class group), c (fibration), e (cohomology), f (duality)."
+    },
+    "e": {
+      "interpretation": "CohomologyRing (H*(X))",
+      "note": "The active algorithm—a graded ring structure on cohomology groups. Part of the 7‑core; pairs with homology (d) and duality (f) to form the cohomology ring."
+    },
+    "f": {
+      "interpretation": "PoincaréDuality",
+      "note": "The resonant cavity—for a closed oriented n‑manifold, H^k ≅ H_{n-k}. The closure of the 7‑core; ties homology and cohomology together in a dual relationship."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Dimension of the space / Depth of homology",
+      "values": {
+        "n=0": "0‑dimensional (discrete points) — homotopy 0‑type, just connected components",
+        "n=1": "1‑dimensional (graphs, curves) — fundamental group and first homology",
+        "n=2": "2‑dimensional (surfaces) — genus, Euler characteristic",
+        "n=3": "3‑dimensional (3‑manifolds) — Heegaard splittings, knot complements",
+        "n=4": "4‑dimensional — exotic smooth structures, gauge theory",
+        "n=5": "Higher dimensions — surgery theory, characteristic classes"
+      },
+      "formula": "n = max dimension of space under consideration"
+    },
+    "m": {
+      "interpretation": "Complexity / Number of handles / Knot crossings",
+      "values": {
+        "m=0": "Trivial topology — sphere, contractible space",
+        "m=1": "Simple — torus, figure‑eight knot",
+        "m=2": "Moderate — genus 2 surface, trefoil knot",
+        "m=3": "Complex — genus 3 surface, 8 crossing knots",
+        "m=4": "Highly complex — hyperbolic surfaces, high‑crossing knots"
+      },
+      "formula": "m = floor(log₂(genus + 1)) or floor(log₂(crossing number + 1))"
+    },
+    "phase": {
+      "interpretation": "Winding number / Linking number / Holonomy",
+      "formula": "φ = e^{2πi × (winding/linking number)}",
+      "special": "For a knot, phase = e^{2πi × (1/2) when amphichiral; for a torus knot T(p,q), phase = e^{2πi × (p/q)}",
+      "significance": "Phase encodes how loops wrap around holes or each other."
+    }
+  },
+  "view_modes": {
+    "point_set": {
+      "description": "The Factor viewed as a topological space with open sets and continuity",
+      "phase_condition": "Phase as local homeomorphism—0 when locally Euclidean, π when singular"
+    },
+    "homotopy": {
+      "description": "The Factor viewed up to continuous deformation",
+      "phase_condition": "Phase as homotopy class—0 for contractible, π for essential loops"
+    },
+    "knot": {
+      "description": "The Factor viewed as a knot or link (the default T(19,2) embedding)",
+      "phase_condition": "Phase as writhe or linking number"
+    },
+    "manifold": {
+      "description": "The Factor viewed as a smooth manifold with handles",
+      "phase_condition": "Phase as angle of handle attachment"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a topological space, start with points (node 2) and open sets (node 3), build a cell complex (node 5), compute homology (node d), and close with Poincaré duality (node f)."
+    },
+    "translating_known": {
+      "sphere_S^n": "Map to node 0 as basepoint, node 8 as Euler characteristic (2 for even n, 0 for odd), node f as self‑dual",
+      "torus_T^2": "Map to node 1 as boundary (genus 1), node 8 as χ=0, node 9 as critical points of height function, node a as loop space",
+      "knot_complement": "Map to node a as loop space (fundamental group), node d as homology, node b as mapping class group",
+      "morse_theory": "Map to node 9 as critical points, node 7 as handle attachments, node 8 as Morse indices"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "topology" },
+      "stratum": "global",
+      "resonance": {
+        "n": 3,
+        "m": 2,
+        "phase": { "type": "partial", "homotopy_groups_known": ["π₁"], "higher_groups_pending": true }
+      },
+      "special": "A space defined by its fundamental group and first homology; higher homotopy groups not yet determined. Awaiting cellular structure."
+    }
+  },
+  "constraints": {
+    "hausdorff": "Node x ensures points are distinguishable—the space is Hausdorff.",
+    "paracompact": "Node y ensures the space is paracompact, allowing partitions of unity.",
+    "contractibility": "Node z may be contracted when the space is simply connected and has vanishing higher homotopy.",
+    "cell_complex": "Node 5 must provide a finite cell decomposition when n and m are finite.",
+    "homology_integer": "Node d (homology groups) must be finitely generated abelian groups for compact spaces.",
+    "poincare_duality": "Node f holds only for closed oriented manifolds; for other spaces, closure may be replaced by other duality theorems (Alexander, Lefschetz).",
+    "stratum_preference": "global for foundational topological work; trefoil_g for handlebody decompositions and Morse theory; trefoil_c for classification of surfaces; trefoil_i for mirror symmetries (chiral knots); fig8 for hyperbolic geometry and wild topology.",
+    "invariant_core": "The directed edges with weight 1 in trefoil_i define a persistent skeleton: 0→z, 8→7, two 4‑cycles (x→a→9→y→x and 1→6→5→2→1), and a 7‑node strongly connected core {3,4,b,c,d,e,f}. These relations are invariant under chirality and inform the structural roles above."
+  }
+}

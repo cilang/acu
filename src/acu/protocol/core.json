@@ -1,0 +1,272 @@
+{
+  "ariadi": {
+    "role": "The Unified Topological Space",
+    "definition": {
+      "description": "Ariadi is the 3‑sphere S³ containing a properly embedded 1‑dimensional structure chosen from {Knot, Link, Braid}.",
+      "components": {
+        "manifold": { "name": "S³", "property": "Fixed ambient space." },
+        "structure": {
+          "type": "OneOf",
+          "options": ["Knot", "Link", "Braid"],
+          "default": "Knot",
+          "description": "The embedded 1‑dimensional object."
+        },
+        "complement": { "name": "S³ \\ Structure", "description": "Provides the resonance harmonics." }
+      }
+    },
+    "manifestation": {
+      "description": "The abstract topological space manifests differently across planes, with the complement providing resonant structure",
+      "default": {
+        "name": "T(19,2) torus knot",
+        "reason": "Selected as MythOS default because its 19 crossings map to Cilang's 19 primitives, and its complement provides natural resonance harmonics",
+        "properties": {
+          "crossings": 19,
+          "winding": "(19,2)",
+          "alexander_polynomial": "t¹⁸ - t¹⁷ + t¹⁶ - t¹⁵ + t¹⁴ - t¹³ + t¹² - t¹¹ + t¹⁰ - t⁹ + t⁸ - t⁷ + t⁶ - t⁵ + t⁴ - t³ + t² - t + 1",
+          "knot_group": "⟨a,b | a⁹ b a⁻¹⁰ b⟩",
+          "seifert_invariants": {
+            "base_orbifold": "Disk with two cone points",
+            "cone_orders": [19, 2],
+            "fiber_type": "Seifert-fibered S¹ bundle over orbifold",
+            "milnor_fiber_genus": 9
+          }
+        },
+        "structure_encoding": {
+          "type": "planar_diagram",
+          "description": "Explicit planar diagram of T(19,2) as a list of 19 crossings, each a 4‑tuple of edge indices (1..38). The cyclic order is [a,b,c,d] meaning edges a→b and c→d cross, with over/under given by sign.",
+          "crossings": [
+            [1, 20, 2, 19],
+            [3, 22, 4, 21],
+            [5, 24, 6, 23],
+            [7, 26, 8, 25],
+            [9, 28, 10, 27],
+            [11, 30, 12, 29],
+            [13, 32, 14, 31],
+            [15, 34, 16, 33],
+            [17, 36, 18, 35],
+            [19, 38, 20, 37],
+            [21, 2, 22, 1],
+            [23, 4, 24, 3],
+            [25, 6, 26, 5],
+            [27, 8, 28, 7],
+            [29, 10, 30, 9],
+            [31, 12, 32, 11],
+            [33, 14, 34, 13],
+            [35, 16, 36, 15],
+            [37, 18, 38, 17]
+          ],
+          "signs": [1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1],
+          "crossing_to_node": {
+            "1": "x",
+            "2": "y",
+            "3": "z",
+            "4": "0",
+            "5": "1",
+            "6": "2",
+            "7": "3",
+            "8": "4",
+            "9": "5",
+            "10": "6",
+            "11": "7",
+            "12": "8",
+            "13": "9",
+            "14": "a",
+            "15": "b",
+            "16": "c",
+            "17": "d",
+            "18": "e",
+            "19": "f"
+          },
+          "edge_count": 38,
+          "crossing_count": 19,
+          "format": "Each crossing is [a,b,c,d] where edges a→b and c→d are the two strands. The cyclic order is a,b,c,d. Sign +1 indicates edge a→b is over c→d, sign -1 indicates under."
+        }
+      }
+    },
+    "constraint": "Manifold is always S³. Structure's crossing number ≤ 19. For the default T(19,2), the structure_encoding provides the explicit embedding from which Cilang and Usepong are derived."
+  },
+  "cilang": {
+    "role": "The Derived Primitive Entities",
+    "definition": {
+      "description": "Cilang nodes are the 19 crossing positions (or strands) of the chosen structure.",
+      "total_elements": 19,
+      "nodes": [
+        { "id": "x", "type": "implicit", "position": 1, "fiber": "regular" },
+        { "id": "y", "type": "implicit", "position": 2, "fiber": "singular_order_19" },
+        { "id": "z", "type": "implicit", "position": 3, "fiber": "singular_order_2" },
+        { "id": "0", "type": "explicit", "position": 4, "fiber": "regular" },
+        { "id": "1", "type": "explicit", "position": 5, "fiber": "regular" },
+        { "id": "2", "type": "explicit", "position": 6, "fiber": "regular" },
+        { "id": "3", "type": "explicit", "position": 7, "fiber": "regular" },
+        { "id": "4", "type": "explicit", "position": 8, "fiber": "regular" },
+        { "id": "5", "type": "explicit", "position": 9, "fiber": "regular" },
+        { "id": "6", "type": "explicit", "position": 10, "fiber": "regular" },
+        { "id": "7", "type": "explicit", "position": 11, "fiber": "regular" },
+        { "id": "8", "type": "explicit", "position": 12, "fiber": "regular" },
+        { "id": "9", "type": "explicit", "position": 13, "fiber": "regular" },
+        { "id": "a", "type": "explicit", "position": 14, "fiber": "regular" },
+        { "id": "b", "type": "explicit", "position": 15, "fiber": "regular" },
+        { "id": "c", "type": "explicit", "position": 16, "fiber": "regular" },
+        { "id": "d", "type": "explicit", "position": 17, "fiber": "regular" },
+        { "id": "e", "type": "explicit", "position": 18, "fiber": "regular" },
+        { "id": "f", "type": "explicit", "position": 19, "fiber": "regular" }
+      ],
+      "state_definition": {
+        "applicability": "States apply only to explicit nodes (0‑9a‑f).",
+        "implicit_nodes": "x, y, z are always in state 0 (eternal context).",
+        "explicit_nodes": {
+          "values": [-1, 0, 1],
+          "semantics": { "-1": "Potential", "0": "Processing", "+1": "Actualized" }
+        }
+      }
+    },
+    "constraint": "The node set is invariant; connectivity may change based on the chosen structure."
+  },
+  "usepong": {
+    "role": "The Grammar of Relationship and Dynamics",
+    "definition": {
+      "description": "Usepong defines adjacency between Cilang nodes, derived from the chosen structure.",
+      "structures": {
+        "base": {
+          "description": "The fundamental adjacency of the T(19,2) knot—a directed 19‑cycle visiting every node exactly once.",
+          "edges": [
+            "x→6",
+            "6→f",
+            "f→5",
+            "5→e",
+            "e→4",
+            "4→d",
+            "d→3",
+            "3→c",
+            "c→2",
+            "2→b",
+            "b→1",
+            "1→a",
+            "a→0",
+            "0→9",
+            "9→z",
+            "z→8",
+            "8→y",
+            "y→7",
+            "7→x"
+          ]
+        },
+        "strata": {
+          "description": "Catalog of satellite families. Each stratum defines a weighted adjacency on the 19 nodes. Actual data is stored in `acu.data.satellites`.",
+          "families": [
+            {
+              "id": "trefoil",
+              "name": "Ur-Trefoil",
+              "description": "Complete aggregation of all 86 trefoil satellites (001‑086).",
+              "best_for": "Cosmic creation myths, meta‑canon establishment, universe source code, mathematical foundations.",
+              "data_ref": "acu.data.satellites.trefoil"
+            },
+            {
+              "id": "trefoil_a",
+              "name": "Canonical Trefoil",
+              "description": "Largest family (48 variants, 087‑134). Most mature, 'canonical' trefoil structure.",
+              "best_for": "Epic narratives, heroic journeys, cosmic myths, foundational stories.",
+              "data_ref": "acu.data.satellites.trefoil_a"
+            },
+            {
+              "id": "trefoil_b",
+              "name": "Emergent Trefoil",
+              "description": "Medium family (18 variants, 135‑152). 'Emerging' structures with invariant hexagon at lower weights.",
+              "best_for": "Coming‑of‑age stories, discovery‑focused narratives, exploration, first contact.",
+              "data_ref": "acu.data.satellites.trefoil_b"
+            },
+            {
+              "id": "trefoil_c",
+              "name": "Philosophical Trefoil",
+              "description": "Large family (36 variants, 153‑188). Exceptionally strong coherence.",
+              "best_for": "Theological discourse, metaphysical inquiry, deep worldbuilding, philosophical fiction.",
+              "data_ref": "acu.data.satellites.trefoil_c"
+            },
+            {
+              "id": "trefoil_d",
+              "name": "Reflective Trefoil",
+              "description": "Large family (24 variants, 189‑212). Core‑centric with strong x→z but lighter peripheral connections.",
+              "best_for": "Character studies, memoirs, contemplative fiction, balanced reflective narratives.",
+              "data_ref": "acu.data.satellites.trefoil_d"
+            },
+            {
+              "id": "trefoil_f",
+              "name": "Intimate Trefoil",
+              "description": "Small family (4 variants, 213‑216). Invariant core: 8→y, b→a, d→c, f→e.",
+              "best_for": "Personal journeys, close relationships, interiority, intimate character‑focused narratives.",
+              "data_ref": "acu.data.satellites.trefoil_f"
+            },
+            {
+              "id": "trefoil_g",
+              "name": "Transformative Trefoil",
+              "description": "Large family (20 variants, 217‑236). Hierarchical merging from invariant skeleton to full connectivity.",
+              "best_for": "Rebellion, evolution, paradigm shifts, revolutionary narratives, transformation stories.",
+              "data_ref": "acu.data.satellites.trefoil_g"
+            },
+            {
+              "id": "trefoil_h",
+              "name": "Pure Trefoil",
+              "description": "Small family (4 variants, 237‑240). Directed tree as 7‑node component.",
+              "best_for": "Parables, fables, allegories, symbolic tales, pure‑form narratives.",
+              "data_ref": "acu.data.satellites.trefoil_h"
+            },
+            {
+              "id": "trefoil_i",
+              "name": "Mirror Trefoil",
+              "description": "Chiral pair (2 variants, 241‑242). Persistent skeleton with 2‑2‑4‑4‑7 decomposition.",
+              "best_for": "Time‑travel stories, mirror‑worlds, duality, recursion, alternate timelines.",
+              "data_ref": "acu.data.satellites.trefoil_i"
+            },
+            {
+              "id": "fig8",
+              "name": "Hyperbolic Fig8",
+              "description": "Hyperbolic family (3 variants, 243‑245). Persistent core: e→0.",
+              "best_for": "Surreal fiction, dream‑logic, psychological horror, avant‑garde, weird fiction.",
+              "data_ref": "acu.data.satellites.fig8"
+            }
+          ]
+        },
+        "global": {
+          "id": "global",
+          "name": "Global Aggregate",
+          "description": "The complete aggregated adjacency over all 245 satellites.",
+          "best_for": "Meta‑narratives, systems where all possible connections coexist, or when the precise stratum is deliberately unspecified.",
+          "data_ref": "acu.data.satellites.global"
+        }
+      }
+    },
+    "constraint": "Any Factor’s adjacency must be realizable as a satellite of T(19,2) or as a link/braid derived from it."
+  },
+  "dynamics": {
+    "role": "State Transition Logic Derived from Knot Crossings and Resonance",
+    "definition": {
+      "type": "Ternary Logic Derived from Knot Crossings",
+      "states": {
+        "-1": ["Potential", "Over‑crossing"],
+        "0": ["Processing", "Crossing point"],
+        "+1": ["Actualized", "Under‑crossing"]
+      },
+      "resonance_embedding": {
+        "phase_quantization": "Phase is quantized in units of π/19 (38th roots of unity).",
+        "state_phase_correlation": {
+          "-1": "arg(φ) = π (mod 2π)",
+          "0": "arg(φ) in transition",
+          "+1": "arg(φ) = 0 (mod 2π)"
+        }
+      }
+    },
+    "transitions": {
+      "left_handed": { "sequence": "-1 → 0 → +1 → -1", "phase_shift": "decreases by 2π/3 each step" },
+      "right_handed": { "sequence": "+1 → 0 → -1 → +1", "phase_shift": "increases by 2π/3 each step" }
+    },
+    "operations": {
+      "reidemeister_1": "Self‑interaction: adds/removes a full phase cycle (2π), preserving chirality.",
+      "reidemeister_2": "Pair interaction: cancels or creates opposite phases.",
+      "reidemeister_3": "Three‑way interaction: shifts phase by ±2π/3, can flip chirality."
+    },
+    "constraint": {
+      "phase_closure": "Around any closed cycle, the sum of phase changes must be 0 mod 2π.",
+      "state_conservation": "Sum of states around any closed cycle = 0 mod 3."
+    }
+  }
+}

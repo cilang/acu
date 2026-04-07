@@ -1,0 +1,216 @@
+{
+  "name": "Graph Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of networks, connectivity, and combinatorial structures. Maps graph-theoretic concepts—vertices, edges, adjacency, paths, cycles, trees, connectivity, and graph invariants—to the 19-node topology. Useful for Factors involving networks, relationships, flows, social structures, and the mathematics of pairwise connections.",
+  "base_types": [
+    "Graph",
+    "Vertex",
+    "Node",
+    "Edge",
+    "Arc",
+    "DirectedGraph",
+    "UndirectedGraph",
+    "Adjacency",
+    "Incidence",
+    "Degree",
+    "Path",
+    "Cycle",
+    "Walk",
+    "Trail",
+    "Connectedness",
+    "Component",
+    "Tree",
+    "Forest",
+    "SpanningTree",
+    "Bipartite",
+    "PlanarGraph",
+    "Embedding",
+    "Coloring",
+    "ChromaticNumber",
+    "Clique",
+    "IndependentSet",
+    "VertexCover",
+    "Matching",
+    "PerfectMatching",
+    "GraphIsomorphism",
+    "Subgraph",
+    "InducedSubgraph",
+    "GraphComplement",
+    "CompleteGraph",
+    "CycleGraph",
+    "PathGraph",
+    "StarGraph",
+    "WheelGraph",
+    "Hypergraph",
+    "Multigraph",
+    "WeightedGraph",
+    "Distance",
+    "ShortestPath",
+    "Diameter",
+    "Radius",
+    "Eccentricity",
+    "Centrality",
+    "Flow",
+    "Cut",
+    "NetworkFlow",
+    "MinimumCut",
+    "MaximumFlow"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Implicit / Graph Invariant / Chromatic Number",
+      "note": "The depth anchor—a fundamental invariant that characterizes the graph (e.g., chromatic number, genus). The invariant that distinguishes graph types."
+    },
+    "y": {
+      "interpretation": "Implicit / Connectivity / Algebraic Connectivity",
+      "note": "The relational anchor—the measure of how well the graph is connected (e.g., vertex connectivity, edge connectivity, second eigenvalue of Laplacian)."
+    },
+    "z": {
+      "interpretation": "Implicit / Planarity / Embedding",
+      "note": "The transformational anchor—whether the graph can be drawn without edge crossings (planar) and how it is embedded in a surface."
+    },
+    "0": {
+      "interpretation": "Observer / Reference Vertex / Root",
+      "note": "The point of observation—a distinguished vertex (e.g., root of a tree, source in flow network). The reference for distances and orientations."
+    },
+    "1": {
+      "interpretation": "Graph (G = (V,E))",
+      "note": "The boundary—the whole graph structure defined by its vertex set and edge set. The container of all connectivity."
+    },
+    "2": {
+      "interpretation": "Vertex / Node",
+      "note": "Primitive—a fundamental unit of the graph. The building blocks of the network."
+    },
+    "3": {
+      "interpretation": "Incidence / Edge Property",
+      "note": "The invariant law—the relationship that edges connect vertices. The rule that defines adjacency and incidence."
+    },
+    "4": {
+      "interpretation": "Edge / Connection",
+      "note": "The fundamental relation—a connection between two vertices (directed or undirected). The grammar of adjacency."
+    },
+    "5": {
+      "interpretation": "Graph Pattern / Subgraph / Induced Subgraph",
+      "note": "The pattern—a template or recurring substructure (e.g., clique, cycle, tree). The blueprint of local connectivity."
+    },
+    "6": {
+      "interpretation": "Graph Transformation / Operation",
+      "note": "The transformation—an operation that modifies the graph (e.g., vertex deletion, edge contraction, subdivision). The process of graph evolution."
+    },
+    "7": {
+      "interpretation": "Realized Graph / Instance",
+      "note": "The realization—a concrete graph instance with specific vertices and edges. The actualized network."
+    },
+    "8": {
+      "interpretation": "Quantization / Order (|V|) / Size (|E|)",
+      "note": "The granularity—the number of vertices (n) and edges (m). n controls the scale of the graph."
+    },
+    "9": {
+      "interpretation": "Path / Walk / Cycle",
+      "note": "The event—a sequence of edges connecting vertices. The moment of traversal or connectivity."
+    },
+    "a": {
+      "interpretation": "Complete Graph / All Possible Edges",
+      "note": "Pure potential—the maximum connectivity where every pair of vertices is adjacent. The ocean of all possible connections."
+    },
+    "b": {
+      "interpretation": "Random Graph / Erdős–Rényi",
+      "note": "The arena—the space of all graphs with given parameters. The chaotic realm where edges appear with probability p."
+    },
+    "c": {
+      "interpretation": "Direction / Orientation",
+      "note": "Directional bias—whether edges are directed (asymmetric) or undirected (symmetric). The gradient that imposes flow."
+    },
+    "d": {
+      "interpretation": "Spanning Tree / Connectivity Backbone",
+      "note": "Persistent structure—a minimal connected subgraph that spans all vertices. The memory of connectivity without cycles."
+    },
+    "e": {
+      "interpretation": "Graph Algorithm / Traversal",
+      "note": "The active algorithm—a procedure that processes the graph (e.g., BFS, DFS, Dijkstra, Max-Flow). The process that extracts structure."
+    },
+    "f": {
+      "interpretation": "Closure / Graph Property / Graph Class",
+      "note": "The resonant cavity—a property or class of graphs that is closed under certain operations (e.g., forests, planar graphs). The limit of graph constructions."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Order of graph (number of vertices)",
+      "values": {
+        "n=0": "Empty graph — no vertices",
+        "n=1": "Single vertex — trivial graph",
+        "n=2": "Two vertices — single edge possible",
+        "n=3": "Three vertices — triangle, path of length 2",
+        "n=4": "Four vertices — K₄, C₄, etc.",
+        "n=5": "Small graphs — up to 5 vertices",
+        "n=6": "Moderate — 6 vertices",
+        "n=7": "Large — 7+ vertices"
+      },
+      "formula": "n = |V| (number of vertices)"
+    },
+    "m": {
+      "interpretation": "Complexity / Edge density / Connectivity",
+      "values": {
+        "m=0": "Very sparse — forest, few edges",
+        "m=1": "Sparse — average degree ~ constant",
+        "m=2": "Moderate — average degree ~ log n",
+        "m=3": "Dense — average degree ~ n/2",
+        "m=4": "Complete — all possible edges"
+      },
+      "formula": "m = floor(log₂(2|E|/|V|)) (rough measure of density)"
+    },
+    "phase": {
+      "interpretation": "Graph coloring / Chromatic angle",
+      "formula": "φ = e^{2πi × (color / chromatic number)}",
+      "special": "For bipartite graphs, phase = π (two colors); for complete graphs, phases equally spaced.",
+      "significance": "Phase encodes the assignment of colors or the cyclic order in a graph embedding."
+    }
+  },
+  "view_modes": {
+    "adjacency": {
+      "description": "The Factor viewed as an adjacency matrix or incidence structure",
+      "phase_condition": "Phase as adjacency weight—0 for no edge, π for edge"
+    },
+    "geometric": {
+      "description": "The Factor viewed as a graph embedded in a surface (planar, toroidal)",
+      "phase_condition": "Phase as embedding coordinates or face angles"
+    },
+    "spectral": {
+      "description": "The Factor viewed through eigenvalues of adjacency or Laplacian matrix",
+      "phase_condition": "Phase as eigenvalue argument (for complex eigenvalues in directed graphs)"
+    },
+    "combinatorial": {
+      "description": "The Factor viewed as a combinatorial structure (cliques, colorings, matchings)",
+      "phase_condition": "Phase as indicator of property existence (0 for absent, π for present)"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a graph, start with vertices (node 2) and decide on edges (node 4). Consider properties like connectivity (node y) and planarity (node z). Use algorithms (node e) to explore structure."
+    },
+    "translating_known": {
+      "complete_graph_K_n": "Map to node a as complete graph, node n as order, node 4 as all possible edges",
+      "tree_T": "Map to node d as spanning tree, node 9 as unique path between vertices, node y as vertex connectivity 1",
+      "bipartite_graph": "Map to node b as bipartite, node φ as π (two colors), node y as odd cycle absence",
+      "planar_graph": "Map to node z as planar, node f as Euler's formula closure, node 8 as face count"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "graph_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 4,
+        "m": 2,
+        "phase": { "type": "partial", "vertices_known": true, "edges_pending": true }
+      },
+      "special": "Vertex set defined but edges not yet specified. Awaiting the pattern of connections."
+    }
+  },
+  "constraints": {
+    "simple_graph": "Unless specified otherwise, graphs are simple (no loops, no multiple edges). Multigraphs require type_context.",
+    "handshaking_lemma": "Sum of degrees = 2|E|, invariant that must hold.",
+    "euler_characteristic": "For planar graphs, V - E + F = 2 (for connected, planar).",
+    "stratum_preference": "global for general graph theory; trefoil_g for graph operations; trefoil_c for graph classes; fig8 for random graphs and hypergraphs."
+  }
+}

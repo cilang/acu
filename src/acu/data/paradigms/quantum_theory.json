@@ -1,0 +1,197 @@
+{
+  "name": "Quantum Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of quantum mechanics—superposition, entanglement, measurement, and the wavefunction. Maps quantum-theoretic concepts—Hilbert spaces, states, observables, unitary evolution, measurement, and quantum information—to the 19-node topology. Useful for Factors involving quantum systems, fundamental physics, quantum computing, and interpretations of reality.",
+  "base_types": [
+    "HilbertSpace",
+    "StateVector",
+    "Wavefunction",
+    "DensityMatrix",
+    "Observable",
+    "HermitianOperator",
+    "Eigenvalue",
+    "Measurement",
+    "BornRule",
+    "Projection",
+    "UnitaryEvolution",
+    "Hamiltonian",
+    "SchrodingerEquation",
+    "HeisenbergPicture",
+    "InteractionPicture",
+    "Entanglement",
+    "BellState",
+    "EPR",
+    "QuantumCorrelation",
+    "Superposition",
+    "Basis",
+    "Completeness",
+    "ProbabilityAmplitude",
+    "QuantumGate",
+    "Circuit",
+    "Qubit",
+    "QuantumAlgorithm",
+    "Decoherence",
+    "MeasurementProblem",
+    "Interpretation",
+    "NoCloning",
+    "BellInequality",
+    "QuantumInformation",
+    "VonNeumannEntropy"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Hilbert Space Dimension",
+      "note": "The depth anchor—dimension of the Hilbert space. Part of the 4‑cycle x→a→9→y→x, linking dimension to superposition, quantum jumps, and entanglement entropy."
+    },
+    "y": {
+      "interpretation": "Entanglement Entropy / Correlation",
+      "note": "The relational anchor—degree of quantum entanglement. Part of the 4‑cycle x→a→9→y→x, tying entanglement to Hilbert space dimension, superposition, and quantum jumps."
+    },
+    "z": {
+      "interpretation": "Unitarity / Reversibility",
+      "note": "The transformational anchor—quantum evolution is unitary. Persistently connected to 0 (observer/measurement), reflecting that measurement breaks unitarity."
+    },
+    "0": {
+      "interpretation": "Observer / Measurement / Quantum Reference",
+      "note": "The point of observation—measurement collapses the wavefunction. Persistently connected to z (unitarity), linking measurement to the breaking of unitarity."
+    },
+    "1": {
+      "interpretation": "Hilbert Space / State Space",
+      "note": "The boundary—complex vector space of quantum states. Part of the 4‑cycle 1→6→5→2→1, connecting Hilbert space to measurement, quantum gates, and state vectors."
+    },
+    "2": {
+      "interpretation": "State Vector / Qubit / Wavefunction",
+      "note": "Primitive—a vector in Hilbert space. Completes the 1‑6‑5‑2 cycle, showing how state vectors are embedded in Hilbert space, measurement, and quantum gates."
+    },
+    "3": {
+      "interpretation": "Schrödinger Equation / Hamiltonian",
+      "note": "The invariant law—time‑evolution equation. A node in the 7‑core; connected to phase (c) and quantum algorithm (e), as the Hamiltonian determines the phase and underlies quantum algorithms."
+    },
+    "4": {
+      "interpretation": "Unitary Evolution / Time Development",
+      "note": "The fundamental relation—state evolution U = e^{-iHt/ℏ}. A node in the 7‑core; connected to entanglement (b) and Born rule (f), as unitary evolution generates entanglement and the Born rule gives probabilities."
+    },
+    "5": {
+      "interpretation": "Quantum Gate / Circuit / Algorithm",
+      "note": "The pattern—unitary operation on qubits. Part of the 1‑6‑5‑2 cycle, bridging measurement and state vectors."
+    },
+    "6": {
+      "interpretation": "Measurement / Collapse",
+      "note": "The transformation—projection onto eigenstate. Part of the 1‑6‑5‑2 cycle, connecting Hilbert space to quantum gates."
+    },
+    "7": {
+      "interpretation": "Outcome / Classical Result",
+      "note": "The realization—concrete eigenvalue from measurement. Persistently connected to 8 (Planck constant), linking the outcome to the scale of quantization."
+    },
+    "8": {
+      "interpretation": "Quantization / Planck Constant / Energy Levels",
+      "note": "The granularity—ℏ discretizes phase space. Persistently connected to 7 (outcome), reflecting that measurement outcomes are quantized."
+    },
+    "9": {
+      "interpretation": "Event / Quantum Jump / Detection",
+      "note": "The event—sudden change due to measurement. Part of the 4‑cycle x→a→9→y→x, placing quantum jumps between Hilbert space dimension, superposition, and entanglement entropy."
+    },
+    "a": {
+      "interpretation": "Superposition / All Possible States",
+      "note": "Pure potential—linear combination of basis states. Initiates the 4‑cycle x→a→9→y→x, linking superposition to Hilbert space dimension, quantum jumps, and entanglement entropy."
+    },
+    "b": {
+      "interpretation": "Entanglement / Non‑local Correlations",
+      "note": "The arena—quantum correlations beyond local realism. A node in the 7‑core; connected to unitary evolution (4) and decoherence (d), as entanglement is created by unitarity and destroyed by decoherence."
+    },
+    "c": {
+      "interpretation": "Direction / Phase / Interference",
+      "note": "Directional bias—complex phase of amplitudes. A node in the 7‑core; connected to Hamiltonian (3) and Born rule (f), as the Hamiltonian determines the phase, and the Born rule uses phase to compute probabilities."
+    },
+    "d": {
+      "interpretation": "Memory / Density Matrix / Decoherence",
+      "note": "Persistent structure—mixed state after environment interaction. A node in the 7‑core; connected to entanglement (b) and quantum algorithm (e), as decoherence destroys entanglement and affects algorithms."
+    },
+    "e": {
+      "interpretation": "Quantum Algorithm / Computation",
+      "note": "The active algorithm—sequence of unitaries and measurements. A node in the 7‑core; connected to Hamiltonian (3) and decoherence (d), as algorithms rely on Hamiltonians and are limited by decoherence."
+    },
+    "f": {
+      "interpretation": "Closure / Born Rule / Probability",
+      "note": "The resonant cavity—rule connecting amplitudes to probabilities. A node in the 7‑core; connected to unitary evolution (4), phase (c), and the rest, forming the central hub of quantum measurement."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Hilbert space dimension / Qubit number",
+      "values": {
+        "n=0": "0‑dimensional — trivial system",
+        "n=1": "1‑dimensional — single qubit (2‑level system)",
+        "n=2": "2‑dimensional — 2‑qubit Hilbert space (dim 4)",
+        "n=3": "3‑dimensional — 3‑qubit (dim 8)",
+        "n=4": "4‑qubit (dim 16)",
+        "n=5": "n‑qubit systems (dim 2ⁿ)"
+      },
+      "formula": "n = number of qubits (or log₂(dim))"
+    },
+    "m": {
+      "interpretation": "Entanglement complexity / Bell inequality violation",
+      "values": {
+        "m=0": "Separable — product states, no entanglement",
+        "m=1": "Simple — Bell states, maximally entangled 2‑qubit",
+        "m=2": "Moderate — GHZ states, W states",
+        "m=3": "Complex — graph states, cluster states",
+        "m=4": "Highly entangled — many‑body entanglement, topological"
+      },
+      "formula": "m = floor(log₂(entanglement measure))"
+    },
+    "phase": {
+      "interpretation": "Relative phase in superposition",
+      "formula": "φ = e^{2πi × (phase / 2π)}",
+      "special": "Phase = 0 for in‑phase superposition; phase = π for out‑of‑phase; phase = π/2 for imaginary components.",
+      "significance": "Phase encodes the quantum phase difference between basis states, determining interference and measurement outcomes."
+    }
+  },
+  "view_modes": {
+    "wavefunction": {
+      "description": "The Factor viewed as a complex wavefunction ψ(x) or state vector",
+      "phase_condition": "Phase as the argument of the wavefunction at each point"
+    },
+    "density_matrix": {
+      "description": "The Factor viewed as a density operator ρ = ∑ p_i |ψ_i⟩⟨ψ_i|",
+      "phase_condition": "Phase as the off‑diagonal phase coherence"
+    },
+    "circuit": {
+      "description": "The Factor viewed as a quantum circuit (gates, qubits, measurements)",
+      "phase_condition": "Phase as the angle of rotation gates (e.g., Rz(θ) gives phase e^{iθ/2})"
+    },
+    "measurement": {
+      "description": "The Factor viewed as a measurement apparatus with outcomes",
+      "phase_condition": "Phase as the eigenvalue of the measured observable"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a quantum system, start with the Hilbert space (node 1) and state (node 2). Define the Hamiltonian (node 3) for unitary evolution (node 4). Introduce measurement (node 6) to produce outcomes (node 7). Use superposition (node a) and entanglement (node b) for quantum advantages."
+    },
+    "translating_known": {
+      "single_qubit": "Map to node 2 as |ψ⟩ = α|0⟩+β|1⟩, node 5 as Pauli gates, node 8 as Bloch sphere, node φ as azimuthal angle",
+      "bell_state": "Map to node b as |Φ⁺⟩ = (|00⟩+|11⟩)/√2, node y as entanglement entropy = 1, node 0 as measurement in Bell basis",
+      "quantum_fourier_transform": "Map to node 5 as QFT circuit, node e as algorithm, node φ as phase estimation",
+      "decoherence": "Map to node d as density matrix with off‑diagonal decay, node 6 as measurement, node b as environment interaction"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 1, "paradigm": "quantum_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 2,
+        "m": 1,
+        "phase": { "type": "partial", "state_known": true, "evolution_pending": true }
+      },
+      "special": "Quantum state defined but Hamiltonian not yet specified. Awaiting the generator of time evolution."
+    }
+  },
+  "constraints": {
+    "unitarity": "Node 4 (evolution) must be unitary: U†U = I. Node 3 (Hamiltonian) must be Hermitian.",
+    "born_rule": "Node f must satisfy: probability of outcome = |⟨φ|ψ⟩|².",
+    "no_cloning": "Unknown quantum states cannot be perfectly copied; this is a fundamental constraint.",
+    "stratum_preference": "global for foundational quantum theory; trefoil_g for quantum gates and algorithms; trefoil_c for interpretations and measurement; trefoil_i for time‑reversal symmetry; fig8 for decoherence and open quantum systems.",
+    "invariant_core": "The Quantum Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking observer/measurement to unitarity, (2) edge 8→7 linking Planck constant to measurement outcome, (3) 4‑cycle x→a→9→y→x linking Hilbert space dimension–superposition–quantum jump–entanglement entropy, (4) 4‑cycle 1→6→5→2→1 linking Hilbert space–measurement–quantum gate–state vector, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of quantum theory: Hamiltonian–unitary evolution–entanglement–phase–decoherence–quantum algorithm–Born rule."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "name": "Narrative Charter",
+  "version": "v1.0.0",
+  "description": "A paradigm for structuring a self‑contained unit of story (a chapter, an episode, a scene cluster) as a formal charter. Maps the 19‑node topology to narrative beats: frame (x,y,z), inciting event (0), rising action (1), complication (2), setback (3), insight (4), turning point (5), crisis (6), climax (7), denouement (8), resolution (9), theme (a), character arc (b), setting (c), conflict (d), dialogue (e), and charter closure (f).",
+  "node_mapping": {
+    "x": {
+      "interpretation": "Scene Associativity",
+      "note": "The order of scenes must be coherent; scene composition is associative. This ensures that the chapter can be read as a linear sequence without paradox."
+    },
+    "y": {
+      "interpretation": "Chapter Identity",
+      "note": "The unique theme or emotional core of the chapter. What makes this chapter this chapter, not another."
+    },
+    "z": {
+      "interpretation": "Narrative Invertibility",
+      "note": "The possibility of flashbacks, foreshadowing, or parallel timelines. Allows the chapter to refer to past or future events without breaking coherence."
+    },
+    "0": {
+      "interpretation": "Inciting Event",
+      "note": "The moment that kicks off the chapter's action – a question, a disturbance, a call to action."
+    },
+    "1": {
+      "interpretation": "Rising Action",
+      "note": "The initial steps, complications, and increasing tension after the inciting event."
+    },
+    "2": {
+      "interpretation": "Complication",
+      "note": "A twist, obstacle, or new information that raises the stakes."
+    },
+    "3": {
+      "interpretation": "Setback",
+      "note": "A low point, failure, or unexpected reversal that makes the goal harder."
+    },
+    "4": {
+      "interpretation": "Insight",
+      "note": "A character learns something, gains a new understanding, or finds a hidden advantage."
+    },
+    "5": {
+      "interpretation": "Turning Point",
+      "note": "The decision or action that commits the character to a new path, leading toward the climax."
+    },
+    "6": {
+      "interpretation": "Crisis",
+      "note": "The moment of highest tension just before the climax; the ‘darkest hour’."
+    },
+    "7": {
+      "interpretation": "Climax",
+      "note": "The peak of action or emotion where the chapter’s central conflict is resolved."
+    },
+    "8": {
+      "interpretation": "Denouement",
+      "note": "The immediate aftermath of the climax; falling action, tying up immediate threads."
+    },
+    "9": {
+      "interpretation": "Resolution",
+      "note": "The new steady state; what has changed, what has been learned, what remains open."
+    },
+    "a": {
+      "interpretation": "Theme",
+      "note": "The underlying idea, moral, or question that the chapter explores."
+    },
+    "b": {
+      "interpretation": "Character Arc",
+      "note": "The internal change (or lack thereof) experienced by the viewpoint character."
+    },
+    "c": {
+      "interpretation": "Setting",
+      "note": "The physical, temporal, and emotional environment where the chapter takes place."
+    },
+    "d": {
+      "interpretation": "Conflict",
+      "note": "The core opposition driving the chapter: internal, interpersonal, societal, or environmental."
+    },
+    "e": {
+      "interpretation": "Dialogue / Voice",
+      "note": "The distinctive speech patterns, internal monologue, or narrative voice that gives the chapter its texture."
+    },
+    "f": {
+      "interpretation": "Chapter Closure",
+      "note": "The hook or sense of completion that closes the chapter, leading to the next or ending the arc."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Chapter Depth",
+      "values": {
+        "n=0": "Single beat chapter (very short, one idea)",
+        "n=1": "Standard chapter (19 scene beats)",
+        "n=2": "Complex chapter (361 sub‑beats, e.g., multi‑POV or long chapter)",
+        "n=3": "Epic chapter (6859 beats – novel length)"
+      }
+    },
+    "m": {
+      "interpretation": "Emotional Harmonics",
+      "values": {
+        "m=0": "Binary emotion (on/off)",
+        "m=1": "Basic polarity (happy/sad)",
+        "m=2": "Standard range (4 emotional tones)",
+        "m=3": "Rich nuance (8 tones)",
+        "m=4": "Full spectrum (16 emotional layers)"
+      }
+    },
+    "phase": {
+      "interpretation": "Narrative Chirality",
+      "formula": "φ = e^{2πi × (n/19 + m/2)}",
+      "special": "Left‑handed phase = narrative flows from theme to event; right‑handed = from event to theme; amphichiral = balanced."
+    }
+  },
+  "view_modes": {
+    "linear": "Read the chapter as a straightforward sequence of events.",
+    "circular": "Treat the chapter as a loop where the end leads back to the beginning.",
+    "braided": "Multiple timelines or POVs interwoven."
+  },
+  "composition_guidance": {
+    "creating_a_chapter": "Start with the inciting event (0), let the conflict (d) escalate, reach the climax (7), then close with chapter closure (f). Ensure the sum of phase changes around the 19 nodes is 0 mod 2π – the chapter must feel complete."
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "name": "Chaos Theory",
+  "version": "v1.0.0",
+  "description": "A lens for composing Factors from the language of deterministic chaos, fractals, and nonlinear dynamics. Maps concepts—sensitivity to initial conditions, strange attractors, bifurcations, and unpredictability—to the 19-node topology. Ideal for modeling subjectivity, narrative divergence, complex systems, and the boundary between order and randomness.",
+  "base_types": [
+    "PhaseSpace",
+    "Attractor",
+    "StrangeAttractor",
+    "LyapunovExponent",
+    "Bifurcation",
+    "PeriodDoubling",
+    "ChaoticOrbit",
+    "SensitivityToInitialConditions",
+    "FractalDimension",
+    "HausdorffDimension",
+    "TopologicalEntropy",
+    "Recurrence",
+    "PoincareSection",
+    "InvariantMeasure",
+    "Mixing",
+    "Ergodicity",
+    "IteratedFunctionSystem",
+    "JuliaSet",
+    "MandelbrotSet",
+    "FeigenbaumConstant",
+    "Cascade",
+    "ControlParameter",
+    "PhaseSpaceVolume",
+    "TransientChaos",
+    "ChaosControl",
+    "Synchronization"
+  ],
+  "node_mapping": {
+    "x": {
+      "interpretation": "Fractal Dimension",
+      "note": "Measures how complexity scales with resolution. Part of the 4‑cycle x→a→9→y→x, linking fractal dimension to phase space, Poincaré sections, and Lyapunov exponents."
+    },
+    "y": {
+      "interpretation": "Lyapunov Exponent",
+      "note": "Rate of divergence of nearby trajectories. Part of the 4‑cycle x→a→9→y→x, tying sensitivity to initial conditions to fractal dimension and recurrence."
+    },
+    "z": {
+      "interpretation": "Topological Entropy",
+      "note": "Complexity of orbit structure. Persistently connected to 0 (initial condition), reflecting how the starting point influences entropy growth."
+    },
+    "0": {
+      "interpretation": "Initial Condition",
+      "note": "The starting point in phase space. Persistently connected to z (topological entropy), capturing sensitivity and divergence."
+    },
+    "1": {
+      "interpretation": "Phase Space Boundary",
+      "note": "Defines the bounded region of possible states. Part of the 4‑cycle 1→6→5→2→1, linking boundary to bifurcations, attractors, and state variables."
+    },
+    "2": {
+      "interpretation": "State Variable / Point in Phase Space",
+      "note": "A single point representing instantaneous state. Completes the 1‑6‑5‑2 cycle, showing how state variables are bounded."
+    },
+    "3": {
+      "interpretation": "Equations of Motion / Deterministic Law",
+      "note": "The invariant law governing evolution. A node in the 7‑core; connected to control parameters (c) and iterated function systems (e)."
+    },
+    "4": {
+      "interpretation": "Flow / Time Evolution",
+      "note": "The mapping that advances states forward in time. A node in the 7‑core; connected to chaotic region (b) and attractor basin (f)."
+    },
+    "5": {
+      "interpretation": "Attractor Pattern",
+      "note": "The set toward which trajectories converge. Part of the 1‑6‑5‑2 cycle, bridging bifurcations and state variables."
+    },
+    "6": {
+      "interpretation": "Bifurcation / Parameter Change",
+      "note": "Qualitative change in behavior. Part of the 1‑6‑5‑2 cycle, connecting boundary to attractor pattern."
+    },
+    "7": {
+      "interpretation": "Actualized Trajectory / Orbit",
+      "note": "A specific path through phase space. Persistently connected to 8 (embedding dimension), reflecting that the dimension needed to unfold the orbit is tied to the trajectory itself."
+    },
+    "8": {
+      "interpretation": "Embedding Dimension / Fractal Dimension",
+      "note": "The dimension needed to unfold the attractor. Persistently connected to 7 (orbit), linking dimension to the realized trajectory."
+    },
+    "9": {
+      "interpretation": "Poincaré Section / Recurrence Event",
+      "note": "A transverse slice that reduces dynamics to a discrete map. Part of the 4‑cycle x→a→9→y→x, placing recurrence between phase space and Lyapunov exponents."
+    },
+    "a": {
+      "interpretation": "Phase Space / All Possible States",
+      "note": "The complete set of possible states. Initiates the 4‑cycle x→a→9→y→x, linking phase space to fractal dimension and recurrence."
+    },
+    "b": {
+      "interpretation": "Chaotic Region / Mixing Dynamics",
+      "note": "The region where trajectories exhibit sensitive dependence. A node in the 7‑core; connected to flow (4), invariant measure (d), and IFS (e)."
+    },
+    "c": {
+      "interpretation": "Control Parameter / Bifurcation Parameter",
+      "note": "The knob that tunes between order and chaos. A node in the 7‑core; connected to equations (3) and flow (4)."
+    },
+    "d": {
+      "interpretation": "Invariant Measure / Natural Measure",
+      "note": "The probability distribution of long‑term visitation. A node in the 7‑core; connected to chaotic region (b), attractor basin (f), and equations (3)."
+    },
+    "e": {
+      "interpretation": "Iterated Function System (IFS) / Recursive Algorithm",
+      "note": "A set of contractive maps whose attractor is a fractal. A node in the 7‑core; connected to equations (3) and chaotic region (b)."
+    },
+    "f": {
+      "interpretation": "Attractor Basin / Predictability Limit",
+      "note": "The set of initial conditions converging to a given attractor. A node in the 7‑core; connected to flow (4), invariant measure (d), control parameter (c), and equations (3)."
+    }
+  },
+  "resonance_mapping": {
+    "n": {
+      "interpretation": "Embedding dimension / Degrees of freedom",
+      "values": {
+        "n=0": "0‑dimensional — fixed point, no dynamics",
+        "n=1": "1‑dimensional — maps (logistic, tent), period‑doubling cascade",
+        "n=2": "2‑dimensional — Hénon map, forced oscillator, strange attractors in 2D maps",
+        "n=3": "3‑dimensional — Lorenz system, Rössler attractor, low‑dimensional chaos",
+        "n=4": "4‑dimensional — hyperchaos, coupled oscillators",
+        "n=5": "High‑dimensional — spatiotemporal chaos, turbulence"
+      },
+      "formula": "n = embedding dimension of the attractor (or minimal phase space dimension)"
+    },
+    "m": {
+      "interpretation": "Complexity / Lyapunov dimension / Fractal richness",
+      "values": {
+        "m=0": "No chaos — fixed point or limit cycle (Lyapunov exponents ≤ 0)",
+        "m=1": "Weak chaos — single positive Lyapunov exponent, low fractal dimension",
+        "m=2": "Moderate chaos — multiple positive exponents, moderately complex attractor",
+        "m=3": "Strong chaos — hyperchaos (2+ positive exponents), high fractal dimension",
+        "m=4": "Fully developed turbulence — extremely high dimension, complexity"
+      },
+      "formula": "m = floor(log₂(K)) where K = number of positive Lyapunov exponents + fractal dimension"
+    },
+    "phase": {
+      "interpretation": "Phase of the attractor / Angle on Poincaré section",
+      "formula": "φ = e^{2πi × (θ)} where θ is the normalized position on the attractor's fundamental cycle",
+      "special": "For chaotic systems, phase is not periodic; phase difference grows with Lyapunov exponent.",
+      "significance": "Phase encodes where the trajectory is in its cycle."
+    }
+  },
+  "view_modes": {
+    "trajectory": {
+      "description": "The Factor viewed as a single trajectory through phase space",
+      "phase_condition": "Phase as the current location along the orbit; evolves with time"
+    },
+    "attractor": {
+      "description": "The Factor viewed as the long-term attractor (set of all limit points)",
+      "phase_condition": "Phase as the invariant measure; not time‑dependent"
+    },
+    "bifurcation_diagram": {
+      "description": "The Factor viewed as a bifurcation diagram, parameter on one axis, state on the other",
+      "phase_condition": "Phase as the parameter value; branches represent periodic windows"
+    },
+    "phase_space": {
+      "description": "The Factor viewed as the full phase space with vector field",
+      "phase_condition": "Phase as the direction of the flow at each point"
+    }
+  },
+  "composition_guidance": {
+    "creating_anew": {
+      "default_stratum": "global",
+      "note": "When creating a chaotic system, start with the phase space (node a) and the equations (node 3), then explore trajectories (node 7) from various initial conditions (node 0). Use node c to vary parameters and node 9 to take Poincaré sections."
+    },
+    "translating_known": {
+      "logistic_map": "Map to node 2 as state x, node 4 as iteration x → r x (1‑x), node c as parameter r, node 5 as attractor (periodic or chaotic), node 8 as Feigenbaum δ",
+      "lorenz_system": "Map to node 2 as (x,y,z), node 3 as Lorenz equations, node 0 as initial condition, node a as ℝ³, node 5 as butterfly attractor, node y as Lyapunov exponents",
+      "henon_map": "Map to node 2 as (x,y), node 4 as map, node 5 as strange attractor, node 8 as embedding dimension 2",
+      "mandelbrot_set": "Map to node 0 as c (parameter), node 2 as initial z₀, node 4 as iteration z → z² + c, node 5 as the set of c for which orbit remains bounded, node f as the boundary (Julia set)"
+    },
+    "temporary_note": {
+      "type_binding": { "level": 0, "paradigm": "chaos_theory" },
+      "stratum": "global",
+      "resonance": {
+        "n": 3,
+        "m": 2,
+        "phase": { "type": "partial", "lyapunov_spectrum": [0.9, 0, -14.0], "dimension_known": true }
+      },
+      "special": "A chaotic system defined by its equations; Lyapunov exponents computed, but attractor structure not yet fully characterized."
+    }
+  },
+  "constraints": {
+    "deterministic_law": "Node 3 must define a deterministic rule; nondeterministic systems belong to probability or stochastic paradigms.",
+    "sensitivity": "If the system is chaotic, node y (Lyapunov exponent) must be positive.",
+    "fractal_dimension": "If node 5 is a strange attractor, node x (fractal dimension) must be non‑integer and > topological dimension.",
+    "bifurcation_parameter": "Node c (control parameter) may be used; varying it should induce qualitative changes in node 5.",
+    "closure_condition": "Node f (attractor basin) must be a closed set in phase space; for chaotic systems, the closure may be the entire attractor basin.",
+    "stratum_preference": "global for fully chaotic systems; trefoil_g for bifurcations and transitions; fig8 for systems with hyperbolic geometry (e.g., Smale horseshoe).",
+    "invariant_core": "The Chaos Theory paradigm respects the persistent skeleton from trefoil_i, which decomposes into five subsystems: (1) edge 0→z linking initial condition to topological entropy, (2) edge 8→7 linking embedding dimension to actualized trajectory, (3) 4‑cycle x→a→9→y→x linking fractal dimension–phase space–Poincaré section–Lyapunov exponent, (4) 4‑cycle 1→6→5→2→1 linking phase space boundary–bifurcation–attractor–state variable, and (5) 7‑node core {3,4,b,c,d,e,f} encoding the heart of chaotic dynamics: equations, flow, chaotic region, control parameter, invariant measure, IFS, and attractor basin."
+  }
+}
