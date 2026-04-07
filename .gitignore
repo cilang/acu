@@ -17,4 +17,5 @@ dist
 .obsidian/
 .tmp/
 .continue/
+.qwen/
 node_modules/
