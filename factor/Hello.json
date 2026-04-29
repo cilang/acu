@@ -1,0 +1,182 @@
+{
+  "namespace": "Hello",
+  "imports": [],
+  "version": "1.0.0",
+  "status": "partial",
+  "label": "Hello",
+  "definition": "",
+  "role": "",
+  "manifestation": "",
+  "cilang": {
+    "0": {
+      "label": "Node0",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "1": {
+      "label": "Node1",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "2": {
+      "label": "Node2",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "3": {
+      "label": "Node3",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "4": {
+      "label": "Node4",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "5": {
+      "label": "Node5",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "6": {
+      "label": "Node6",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "7": {
+      "label": "Node7",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "8": {
+      "label": "Node8",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "9": {
+      "label": "Node9",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "x": {
+      "label": "NodeX",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "y": {
+      "label": "NodeY",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "z": {
+      "label": "NodeZ",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "a": {
+      "label": "NodeA",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "b": {
+      "label": "NodeB",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "c": {
+      "label": "NodeC",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "d": {
+      "label": "NodeD",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "e": {
+      "label": "NodeE",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    },
+    "f": {
+      "label": "NodeF",
+      "definition": "",
+      "role": "",
+      "manifestation": "",
+      "value": 0,
+      "phase_offset": 0
+    }
+  },
+  "type_binding": {
+    "paradigm": "generic",
+    "resonance": {
+      "n": 2,
+      "m": 2,
+      "chirality": "right"
+    },
+    "quantization": {
+      "base": 19,
+      "formula": "19^n × 2^m"
+    },
+    "usepong_binding": {
+      "stratum": "global"
+    },
+    "view_mode": {
+      "default_mode": "knot"
+    }
+  }
+}

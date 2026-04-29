@@ -237,10 +237,7 @@
           "definition": {
             "description": "Ariadi is the 3‑sphere S³ containing a properly embedded 1‑dimensional structure, fixed as the torus knot T(19,2).",
             "components": {
-              "manifold": {
-                "name": "S³",
-                "property": "Fixed ambient space."
-              },
+              "manifold": { "name": "S³", "property": "Fixed ambient space." },
               "structure": {
                 "type": "Knot",
                 "name": "T(19,2)",
@@ -257,142 +254,27 @@
             "canonical_encoding": {
               "type": "planar_diagram",
               "crossings": [
-                [
-                  1,
-                  21,
-                  2,
-                  20
-                ],
-                [
-                  3,
-                  23,
-                  4,
-                  22
-                ],
-                [
-                  5,
-                  25,
-                  6,
-                  24
-                ],
-                [
-                  7,
-                  27,
-                  8,
-                  26
-                ],
-                [
-                  9,
-                  29,
-                  10,
-                  28
-                ],
-                [
-                  11,
-                  31,
-                  12,
-                  30
-                ],
-                [
-                  13,
-                  33,
-                  14,
-                  32
-                ],
-                [
-                  15,
-                  35,
-                  16,
-                  34
-                ],
-                [
-                  17,
-                  37,
-                  18,
-                  36
-                ],
-                [
-                  19,
-                  1,
-                  20,
-                  38
-                ],
-                [
-                  21,
-                  3,
-                  22,
-                  2
-                ],
-                [
-                  23,
-                  5,
-                  24,
-                  4
-                ],
-                [
-                  25,
-                  7,
-                  26,
-                  6
-                ],
-                [
-                  27,
-                  9,
-                  28,
-                  8
-                ],
-                [
-                  29,
-                  11,
-                  30,
-                  10
-                ],
-                [
-                  31,
-                  13,
-                  32,
-                  12
-                ],
-                [
-                  33,
-                  15,
-                  34,
-                  14
-                ],
-                [
-                  35,
-                  17,
-                  36,
-                  16
-                ],
-                [
-                  37,
-                  19,
-                  38,
-                  18
-                ]
+                [1, 21, 2, 20],
+                [3, 23, 4, 22],
+                [5, 25, 6, 24],
+                [7, 27, 8, 26],
+                [9, 29, 10, 28],
+                [11, 31, 12, 30],
+                [13, 33, 14, 32],
+                [15, 35, 16, 34],
+                [17, 37, 18, 36],
+                [19, 1, 20, 38],
+                [21, 3, 22, 2],
+                [23, 5, 24, 4],
+                [25, 7, 26, 6],
+                [27, 9, 28, 8],
+                [29, 11, 30, 10],
+                [31, 13, 32, 12],
+                [33, 15, 34, 14],
+                [35, 17, 36, 16],
+                [37, 19, 38, 18]
               ],
-              "signs": [
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1,
-                -1,
-                1
-              ],
+              "signs": [1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1],
               "edge_count": 38,
               "crossing_count": 19,
               "format": "Each crossing [a,b,c,d] with cyclic order a,b,c,d; sign +1 means a→b over c→d."
@@ -427,43 +309,14 @@
             "description": "Each of the 19 nodes (x, y, z, 0‑9a‑f) is a primitive that can be assigned a semantic label and definition per Factor.",
             "total_elements": 19,
             "node_types": {
-              "implicit": [
-                "x",
-                "y",
-                "z"
-              ],
-              "explicit": [
-                "0",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "f"
-              ]
+              "implicit": ["x", "y", "z"],
+              "explicit": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
             },
             "state_definition": {
               "applicability": "States apply only to explicit nodes. Implicit nodes (x,y,z) are always in state 0 (eternal context).",
               "explicit_nodes": {
-                "values": [
-                  -1,
-                  0,
-                  1
-                ],
-                "semantics": {
-                  "0": "Processing",
-                  "-1": "Potential",
-                  "+1": "Actualized"
-                }
+                "values": [-1, 0, 1],
+                "semantics": { "0": "Processing", "-1": "Potential", "+1": "Actualized" }
               }
             }
           },
@@ -581,14 +434,8 @@
             }
           },
           "transitions": {
-            "left_handed": {
-              "sequence": "-1 → 0 → +1 → -1",
-              "phase_shift": "decreases by 2π/3"
-            },
-            "right_handed": {
-              "sequence": "+1 → 0 → -1 → +1",
-              "phase_shift": "increases by 2π/3"
-            }
+            "left_handed": { "sequence": "-1 → 0 → +1 → -1", "phase_shift": "decreases by 2π/3" },
+            "right_handed": { "sequence": "+1 → 0 → -1 → +1", "phase_shift": "increases by 2π/3" }
           },
           "operations": {
             "reidemeister_1": "Self‑interaction: adds/removes full phase cycle (2π), preserves chirality.",
@@ -607,55 +454,24 @@
           },
           "formalism": {
             "type": "OneOf",
-            "options": [
-              "torus",
-              "satellite",
-              "hyperbolic"
-            ],
+            "options": ["torus", "satellite", "hyperbolic"],
             "default": "torus",
             "torus": {
               "description": "For T(p,q) knots. Default p=19, q=2.",
               "parameters": {
-                "quantum_depth": {
-                  "symbol": "n",
-                  "formula": "Q = 19ⁿ",
-                  "role": "Depth resolution"
-                },
-                "resonant_harmonic": {
-                  "symbol": "m",
-                  "formula": "R = 2ᵐ",
-                  "role": "Harmonic complexity"
-                },
-                "phase_factor": {
-                  "symbol": "φ",
-                  "formula": "φ = e^(2πi (n/19 + m/2))"
-                },
-                "combined_state": {
-                  "symbol": "Ψ",
-                  "formula": "Ψ = 19ⁿ × 2ᵐ × φ"
-                }
+                "quantum_depth": { "symbol": "n", "formula": "Q = 19ⁿ", "role": "Depth resolution" },
+                "resonant_harmonic": { "symbol": "m", "formula": "R = 2ᵐ", "role": "Harmonic complexity" },
+                "phase_factor": { "symbol": "φ", "formula": "φ = e^(2πi (n/19 + m/2))" },
+                "combined_state": { "symbol": "Ψ", "formula": "Ψ = 19ⁿ × 2ᵐ × φ" }
               },
               "resonant_states": [
-                {
-                  "condition": "n/19 + m/2 = 0",
-                  "interpretation": "Pure potential (phase π)"
-                },
-                {
-                  "condition": "n/19 + m/2 = 1",
-                  "interpretation": "Full actualization (phase 0)"
-                },
-                {
-                  "condition": "n/19 + m/2 = 1/2",
-                  "interpretation": "Transitional processing"
-                }
+                { "condition": "n/19 + m/2 = 0", "interpretation": "Pure potential (phase π)" },
+                { "condition": "n/19 + m/2 = 1", "interpretation": "Full actualization (phase 0)" },
+                { "condition": "n/19 + m/2 = 1/2", "interpretation": "Transitional processing" }
               ]
             },
-            "satellite": {
-              "description": "Placeholder for future expansion"
-            },
-            "hyperbolic": {
-              "description": "Placeholder for future expansion"
-            }
+            "satellite": { "description": "Placeholder for future expansion" },
+            "hyperbolic": { "description": "Placeholder for future expansion" }
           },
           "constraint": "Every Factor must declare its resonance class and provide valid parameters (n,m for torus)."
         },
@@ -704,13 +520,7 @@
                     },
                     "homotopy_level": {
                       "type": "string",
-                      "enum": [
-                        "contractible",
-                        "mere_proposition",
-                        "set",
-                        "groupoid",
-                        "infinity"
-                      ],
+                      "enum": ["contractible", "mere_proposition", "set", "groupoid", "infinity"],
                       "default": "set",
                       "description": "Default homotopy level for types that do not specify one explicitly."
                     }
@@ -723,10 +533,7 @@
                 "Initialise `type_binding.context` with any extra free‑form metadata.",
                 "Store the final parameters for template substitution in node definitions."
               ],
-              "outputs": {
-                "resolved_parameters": "object",
-                "context": "object (merged into type_binding.context)"
-              }
+              "outputs": { "resolved_parameters": "object", "context": "object (merged into type_binding.context)" }
             },
             {
               "step": 2,
@@ -745,44 +552,23 @@
                 "Attach these constraints to the node‑mapping targets (e.g., ‘node 8 must be a Circle HIT with a loop’).",
                 "If no TDA signature, skip – all nodes are free to follow the built‑in node mapping."
               ],
-              "outputs": {
-                "type_constraints": "list of per‑node type obligations (optional)"
-              }
+              "outputs": { "type_constraints": "list of per‑node type obligations (optional)" }
             },
             {
               "step": 3,
               "name": "Initialise Factor shell",
               "description": "Create the top‑level Factor record (except cilang and invariants) and prepare the namespace, version, and overall identity.",
               "inputs": [
-                {
-                  "name": "namespace",
-                  "type": "string"
-                },
-                {
-                  "name": "label",
-                  "type": "string"
-                },
-                {
-                  "name": "version",
-                  "type": "string"
-                },
-                {
-                  "name": "status",
-                  "type": "string",
-                  "enum": [
-                    "partial",
-                    "complete"
-                  ]
-                },
+                { "name": "namespace", "type": "string" },
+                { "name": "label", "type": "string" },
+                { "name": "version", "type": "string" },
+                { "name": "status", "type": "string", "enum": ["partial", "complete"] },
                 {
                   "name": "top_level_definition",
                   "type": "string",
                   "description": "Declarative statement of what the Factor IS."
                 },
-                {
-                  "name": "top_level_role",
-                  "type": "string"
-                },
+                { "name": "top_level_role", "type": "string" },
                 {
                   "name": "top_level_manifestation",
                   "type": "string",
@@ -795,24 +581,15 @@
                 "Prepare empty `imports` array (to be filled later).",
                 "Prepare `type_binding` with the resolved parameters and empty resonance/stratum for now."
               ],
-              "outputs": {
-                "factor_shell": "partial Factor JSON"
-              }
+              "outputs": { "factor_shell": "partial Factor JSON" }
             },
             {
               "step": 4,
               "name": "Instantiate Cilang node types",
               "description": "For each of the 19 nodes (x,y,z,0‑9a‑f), assign the fixed HoTT type using the embedded node mapping. Substitute constructor parameters into templates and respect TDA constraints if present.",
               "inputs": [
-                {
-                  "name": "resolved_parameters",
-                  "type": "object"
-                },
-                {
-                  "name": "type_constraints",
-                  "type": "list",
-                  "optional": true
-                }
+                { "name": "resolved_parameters", "type": "object" },
+                { "name": "type_constraints", "type": "list", "optional": true }
               ],
               "process": [
                 "For each node, use the `node_mapping` below as the master template.",
@@ -843,23 +620,11 @@
                         "optional": true,
                         "description": "HoTT constructor arguments – only needed when the Factor acts as a Type.",
                         "properties": {
-                          "univalence_axiom": {
-                            "type": "boolean",
-                            "default": true
-                          },
-                          "higher_inductives": {
-                            "type": "boolean",
-                            "default": true
-                          },
+                          "univalence_axiom": { "type": "boolean", "default": true },
+                          "higher_inductives": { "type": "boolean", "default": true },
                           "homotopy_level": {
                             "type": "string",
-                            "enum": [
-                              "contractible",
-                              "mere_proposition",
-                              "set",
-                              "groupoid",
-                              "infinity"
-                            ],
+                            "enum": ["contractible", "mere_proposition", "set", "groupoid", "infinity"],
                             "default": "set"
                           }
                         },
@@ -906,44 +671,23 @@
                       "Attach these constraints to the node‑mapping targets (e.g., ‘node 8 must be a Circle HIT with a loop’).",
                       "If no TDA signature, skip – all nodes are free to follow the built‑in node mapping."
                     ],
-                    "outputs": {
-                      "type_constraints": "list of per‑node type obligations (optional)"
-                    }
+                    "outputs": { "type_constraints": "list of per‑node type obligations (optional)" }
                   },
                   {
                     "step": 3,
                     "name": "Initialise Factor shell",
                     "description": "Create the top‑level Factor record (except cilang and invariants) and prepare the namespace, version, and overall identity.",
                     "inputs": [
-                      {
-                        "name": "namespace",
-                        "type": "string"
-                      },
-                      {
-                        "name": "label",
-                        "type": "string"
-                      },
-                      {
-                        "name": "version",
-                        "type": "string"
-                      },
-                      {
-                        "name": "status",
-                        "type": "string",
-                        "enum": [
-                          "partial",
-                          "complete"
-                        ]
-                      },
+                      { "name": "namespace", "type": "string" },
+                      { "name": "label", "type": "string" },
+                      { "name": "version", "type": "string" },
+                      { "name": "status", "type": "string", "enum": ["partial", "complete"] },
                       {
                         "name": "top_level_definition",
                         "type": "string",
                         "description": "Declarative statement of what the Factor IS."
                       },
-                      {
-                        "name": "top_level_role",
-                        "type": "string"
-                      },
+                      { "name": "top_level_role", "type": "string" },
                       {
                         "name": "top_level_manifestation",
                         "type": "string",
@@ -956,24 +700,15 @@
                       "Prepare empty `imports` array (to be filled later).",
                       "Prepare `type_binding` with the resolved `parameters` and/or `context` from Step 1, and empty resonance/stratum for now."
                     ],
-                    "outputs": {
-                      "factor_shell": "partial Factor JSON"
-                    }
+                    "outputs": { "factor_shell": "partial Factor JSON" }
                   },
                   {
                     "step": 4,
                     "name": "Instantiate Cilang node types",
                     "description": "For each of the 19 nodes (x,y,z,0‑9a‑f), assign the fixed HoTT type using the embedded node mapping. Substitute constructor parameters into templates and respect TDA constraints if present. If the Factor is a pure Term (no `parameters`), use the parent’s parameters or global defaults.",
                     "inputs": [
-                      {
-                        "name": "resolved_parameters",
-                        "type": "object|null"
-                      },
-                      {
-                        "name": "type_constraints",
-                        "type": "list",
-                        "optional": true
-                      }
+                      { "name": "resolved_parameters", "type": "object|null" },
+                      { "name": "type_constraints", "type": "list", "optional": true }
                     ],
                     "process": [
                       "For each node, use the `node_mapping` below as the master template.",
@@ -1264,14 +999,8 @@
                     "name": "Construct inhabitants (manifestations)",
                     "description": "For each node, provide a concrete HoTT term that inhabits the type given in `definition`. For Term‑mode Factors, the `context` may dictate specific terms (e.g., a character’s KeyRelationship becoming a specific identity path).",
                     "inputs": [
-                      {
-                        "name": "node_types",
-                        "type": "object"
-                      },
-                      {
-                        "name": "resolved_context",
-                        "type": "object|null"
-                      }
+                      { "name": "node_types", "type": "object" },
+                      { "name": "resolved_context", "type": "object|null" }
                     ],
                     "process": [
                       "For each explicit node (0‑f) and optionally for x,y,z, generate a `manifestation` term that belongs to the node’s `definition` type.",
@@ -1293,20 +1022,9 @@
                     "name": "Set resonance parameters",
                     "description": "Determine the homotopy depth (n) and HIT complexity (m), along with chirality, from the HITs used and the knot orientation. For Term‑mode Factors, the `context` may override n and m (e.g., a character’s rank in the spirit hierarchy).",
                     "inputs": [
-                      {
-                        "name": "complete_cilang",
-                        "type": "object"
-                      },
-                      {
-                        "name": "resolved_context",
-                        "type": "object|null",
-                        "optional": true
-                      },
-                      {
-                        "name": "paradigm_resonance_guidance",
-                        "type": "object",
-                        "optional": true
-                      }
+                      { "name": "complete_cilang", "type": "object" },
+                      { "name": "resolved_context", "type": "object|null", "optional": true },
+                      { "name": "paradigm_resonance_guidance", "type": "object", "optional": true }
                     ],
                     "process": [
                       "If `resolved_context` explicitly provides resonance values (n, m, chirality), use them after validation.",
@@ -1318,9 +1036,7 @@
                       "Set `resonance.q = 19^n`, `resonance.r = 2^m`.",
                       "Fill `type_binding.resonance`."
                     ],
-                    "outputs": {
-                      "resonance": "Resonance record (n,m,chirality,q,r,phase_arg)"
-                    }
+                    "outputs": { "resonance": "Resonance record (n,m,chirality,q,r,phase_arg)" }
                   },
                   {
                     "step": 7,
@@ -1349,11 +1065,7 @@
                         "optional": true,
                         "description": "Mapping node → { value: -1|0|1, phase_offset: Cyclic38 }. If not provided and `context` exists, try to derive from context (e.g., character mood)."
                       },
-                      {
-                        "name": "resolved_context",
-                        "type": "object|null",
-                        "optional": true
-                      }
+                      { "name": "resolved_context", "type": "object|null", "optional": true }
                     ],
                     "process": [
                       "Set `type_binding.usepong_binding.stratum` to the chosen stratum.",
@@ -1363,20 +1075,13 @@
                       "Implicit nodes (x,y,z) always stay at (0,0).",
                       "Record the ternary values and phase offsets in the cilang nodes."
                     ],
-                    "outputs": {
-                      "updated_cilang": "CilangAssignment with states and offsets"
-                    }
+                    "outputs": { "updated_cilang": "CilangAssignment with states and offsets" }
                   },
                   {
                     "step": 8,
                     "name": "Prove mandatory invariants and apply core constraints",
                     "description": "Verify that the Factor satisfies the topological and logical closure conditions. For Term‑mode Factors, additionally check that the `context` is well‑typed with respect to the `parameters` (if any).",
-                    "inputs": [
-                      {
-                        "name": "factor_candidate",
-                        "type": "object"
-                      }
-                    ],
+                    "inputs": [{ "name": "factor_candidate", "type": "object" }],
                     "process": [
                       "Check required nodes: 0,1,x,y,f must have complete definitions.",
                       "Check phase equalities: phase_offset + resonance phase for node 0 must equal that for node 1 (mod 2π).",
@@ -1400,15 +1105,8 @@
                     "name": "Handle inheritance (if any)",
                     "description": "If the Factor `inherits` from other Factors, verify monotonicity, namespace alignment, and phase propagation. The child inherits the parent’s `parameters` and may override them; inheriting a Term‑mode parent copies its context by default, but the child can supply its own context.",
                     "inputs": [
-                      {
-                        "name": "factor_candidate",
-                        "type": "object"
-                      },
-                      {
-                        "name": "parent_factors",
-                        "type": "array",
-                        "optional": true
-                      }
+                      { "name": "factor_candidate", "type": "object" },
+                      { "name": "parent_factors", "type": "array", "optional": true }
                     ],
                     "process": [
                       "For each parent namespace in `type_binding.inherits`, load the parent Factor.",
@@ -1419,9 +1117,7 @@
                       "Check topological invariants: the child’s stratum must contain all edges required by the parent’s invariants.",
                       "If conflicts, report violations; the candidate must be fixed or inheritance removed."
                     ],
-                    "outputs": {
-                      "inheritance_status": "pass | fail_with_violations"
-                    }
+                    "outputs": { "inheritance_status": "pass | fail_with_violations" }
                   },
                   {
                     "step": 10,
@@ -1431,28 +1127,12 @@
                       {
                         "name": "default_mode",
                         "type": "string",
-                        "enum": [
-                          "knot",
-                          "link",
-                          "braid"
-                        ],
+                        "enum": ["knot", "link", "braid"],
                         "default": "knot"
                       },
-                      {
-                        "name": "components",
-                        "type": "array",
-                        "optional": true
-                      },
-                      {
-                        "name": "strands",
-                        "type": "array",
-                        "optional": true
-                      },
-                      {
-                        "name": "open_ends",
-                        "type": "array",
-                        "optional": true
-                      }
+                      { "name": "components", "type": "array", "optional": true },
+                      { "name": "strands", "type": "array", "optional": true },
+                      { "name": "open_ends", "type": "array", "optional": true }
                     ],
                     "process": [
                       "If default_mode = 'knot', no further action; the whole Factor is a single closed component; phase closure is enforced globally.",
@@ -1460,19 +1140,14 @@
                       "If 'braid', define strands and open ends; phase closure is not enforced globally, only across interaction steps.",
                       "Store the chosen mode in `type_binding.view_mode`."
                     ],
-                    "outputs": {
-                      "view_mode": "ViewMode record"
-                    }
+                    "outputs": { "view_mode": "ViewMode record" }
                   },
                   {
                     "step": 11,
                     "name": "Expand sub‑factors (recursive generation)",
                     "description": "For any node that requires or allows sub‑factors, recursively invoke this workflow to create child Factors. The child inherits the parent’s `parameters` (if any) and must have a compatible `context`.",
                     "inputs": [
-                      {
-                        "name": "parent_factor",
-                        "type": "object"
-                      },
+                      { "name": "parent_factor", "type": "object" },
                       {
                         "name": "node_sub_factor_constraints",
                         "type": "object",
@@ -1500,39 +1175,25 @@
                     "step": 12,
                     "name": "Apply typographic and style constraints",
                     "description": "Polish the text fields (definition, role, manifestation) to obey the hard‑coded length and style rules. Preserve PascalCase Factor references.",
-                    "inputs": [
-                      {
-                        "name": "factor",
-                        "type": "object"
-                      }
-                    ],
+                    "inputs": [{ "name": "factor", "type": "object" }],
                     "process": [
                       "For each node and the Factor itself, enforce: definition ≤50 words, role ≤20 words, manifestation ≤40 words.",
                       "Ensure all PascalCase identifiers (labels, namespaces) are left untranslated; only `definition` and `manifestation` may be localised.",
                       "Adjust text as needed while preserving mathematical meaning."
                     ],
-                    "outputs": {
-                      "polished_factor": "Factor with refined prose"
-                    }
+                    "outputs": { "polished_factor": "Factor with refined prose" }
                   },
                   {
                     "step": 13,
                     "name": "Serialize and store",
                     "description": "Assemble the complete Factor JSON conforming to the Factor schema, validate it, and register it in the ACU Factor library.",
-                    "inputs": [
-                      {
-                        "name": "polished_factor",
-                        "type": "object"
-                      }
-                    ],
+                    "inputs": [{ "name": "polished_factor", "type": "object" }],
                     "process": [
                       "Validate the final object against the Factor JSON schema.",
                       "Add any missing metadata (timestamp, author).",
                       "Save to the Factor store (file system, database, or in‑memory)."
                     ],
-                    "outputs": {
-                      "factor_json": "Complete, valid Factor"
-                    }
+                    "outputs": { "factor_json": "Complete, valid Factor" }
                   }
                 ]
               },
@@ -1545,12 +1206,7 @@
               "step": 5,
               "name": "Construct inhabitants (manifestations)",
               "description": "For each node, provide a concrete HoTT term that inhabits the type given in `definition`. This anchors the abstract type to a semantic entity.",
-              "inputs": [
-                {
-                  "name": "node_types",
-                  "type": "object"
-                }
-              ],
+              "inputs": [{ "name": "node_types", "type": "object" }],
               "process": [
                 "For each explicit node (0‑f) and optionally for x,y,z, generate a `manifestation` term that belongs to the node’s `definition` type.",
                 "  - Example: if definition = S¹, manifestation could be `base` or `loop`.",
@@ -1570,15 +1226,8 @@
               "name": "Set resonance parameters",
               "description": "Determine the homotopy depth (n) and HIT complexity (m), along with chirality, from the HITs used and the knot orientation. The built‑in interpretation follows: n represents homotopy depth (n=0 → set, n=1 → groupoid, …; homotopy level = n‑2); m = total number of distinct path constructors across all HIT instances.",
               "inputs": [
-                {
-                  "name": "complete_cilang",
-                  "type": "object"
-                },
-                {
-                  "name": "paradigm_resonance_guidance",
-                  "type": "object",
-                  "optional": true
-                }
+                { "name": "complete_cilang", "type": "object" },
+                { "name": "paradigm_resonance_guidance", "type": "object", "optional": true }
               ],
               "process": [
                 "n = max { homotopy level of any non‑trivial HIT used } + 2 (capping at ∞ if needed).",
@@ -1588,23 +1237,14 @@
                 "Set `resonance.q = 19^n`, `resonance.r = 2^m`.",
                 "Fill `type_binding.resonance`."
               ],
-              "outputs": {
-                "resonance": "Resonance record (n,m,chirality,q,r,phase_arg)"
-              }
+              "outputs": { "resonance": "Resonance record (n,m,chirality,q,r,phase_arg)" }
             },
             {
               "step": 7,
               "name": "Select stratum and set initial states/phases",
               "description": "Choose the Usepong stratum (interaction grammar) and assign ternary values and phase offsets to explicit nodes based on the current narrative or system state.",
               "inputs": [
-                {
-                  "name": "stratum",
-                  "type": "string",
-                  "enum": [
-                    "trefoil",
-                    "global"
-                  ]
-                },
+                { "name": "stratum", "type": "string", "enum": ["trefoil", "global"] },
                 {
                   "name": "node_states",
                   "type": "object",
@@ -1619,20 +1259,13 @@
                 "Implicit nodes (x,y,z) always stay at (0,0).",
                 "Record the ternary values and phase offsets in the cilang nodes."
               ],
-              "outputs": {
-                "updated_cilang": "CilangAssignment with states and offsets"
-              }
+              "outputs": { "updated_cilang": "CilangAssignment with states and offsets" }
             },
             {
               "step": 8,
               "name": "Prove mandatory invariants and apply core constraints",
               "description": "Verify that the Factor satisfies the topological and logical closure conditions dictated by the framework and the built‑in HoTT constraints. The following requirements are now hard‑coded: nodes 0,1,x,y,f are always required; phase(0) must equal phase(1); phase(8) ≠ phase(9); definitions must be ≤50 words, roles ≤20 words, manifestations ≤40 words.",
-              "inputs": [
-                {
-                  "name": "factor_candidate",
-                  "type": "object"
-                }
-              ],
+              "inputs": [{ "name": "factor_candidate", "type": "object" }],
               "process": [
                 "Check required nodes: 0,1,x,y,f must have complete definitions.",
                 "Check phase equalities: phase_offset + resonance phase for node 0 must equal that for node 1 (mod 2π).",
@@ -1655,15 +1288,8 @@
               "name": "Handle inheritance (if any)",
               "description": "If the Factor `inherits` from other Factors, verify monotonicity, namespace alignment, and phase propagation according to the built‑in rules.",
               "inputs": [
-                {
-                  "name": "factor_candidate",
-                  "type": "object"
-                },
-                {
-                  "name": "parent_factors",
-                  "type": "array",
-                  "optional": true
-                }
+                { "name": "factor_candidate", "type": "object" },
+                { "name": "parent_factors", "type": "array", "optional": true }
               ],
               "process": [
                 "For each parent namespace in `type_binding.inherits`, load the parent Factor.",
@@ -1674,40 +1300,17 @@
                 "Check topological invariants: the child’s stratum must contain all edges required by the parent’s invariants.",
                 "If conflicts, report violations; the candidate must be fixed or inheritance removed."
               ],
-              "outputs": {
-                "inheritance_status": "pass | fail_with_violations"
-              }
+              "outputs": { "inheritance_status": "pass | fail_with_violations" }
             },
             {
               "step": 10,
               "name": "Optionally define view modes and components",
               "description": "Interpret the Factor as a closed knot, a link of subsystems, or an open braid. Built‑in interpretations: knot – closed HoTT system, global univalence, phase closure required; link – separate universe levels, per‑component phase closure; braid – open system, cubical rewrites, no closure.",
               "inputs": [
-                {
-                  "name": "default_mode",
-                  "type": "string",
-                  "enum": [
-                    "knot",
-                    "link",
-                    "braid"
-                  ],
-                  "default": "knot"
-                },
-                {
-                  "name": "components",
-                  "type": "array",
-                  "optional": true
-                },
-                {
-                  "name": "strands",
-                  "type": "array",
-                  "optional": true
-                },
-                {
-                  "name": "open_ends",
-                  "type": "array",
-                  "optional": true
-                }
+                { "name": "default_mode", "type": "string", "enum": ["knot", "link", "braid"], "default": "knot" },
+                { "name": "components", "type": "array", "optional": true },
+                { "name": "strands", "type": "array", "optional": true },
+                { "name": "open_ends", "type": "array", "optional": true }
               ],
               "process": [
                 "If default_mode = 'knot', no further action; the whole Factor is a single closed component; phase closure is enforced globally.",
@@ -1715,19 +1318,14 @@
                 "If 'braid', define strands and open ends; phase closure is not enforced globally, only across interaction steps.",
                 "Store the chosen mode in `type_binding.view_mode`."
               ],
-              "outputs": {
-                "view_mode": "ViewMode record"
-              }
+              "outputs": { "view_mode": "ViewMode record" }
             },
             {
               "step": 11,
               "name": "Expand sub‑factors (recursive generation)",
               "description": "For any node that requires or allows sub‑factors, recursively invoke this workflow to create child Factors using the node’s built‑in sub‑factor constraints.",
               "inputs": [
-                {
-                  "name": "parent_factor",
-                  "type": "object"
-                },
+                { "name": "parent_factor", "type": "object" },
                 {
                   "name": "node_sub_factor_constraints",
                   "type": "object",
@@ -1753,39 +1351,25 @@
               "step": 12,
               "name": "Apply typographic and style constraints",
               "description": "Polish the text fields (definition, role, manifestation) to obey the hard‑coded length and style rules. Preserve PascalCase Factor references.",
-              "inputs": [
-                {
-                  "name": "factor",
-                  "type": "object"
-                }
-              ],
+              "inputs": [{ "name": "factor", "type": "object" }],
               "process": [
                 "For each node and the Factor itself, enforce: definition ≤50 words, role ≤20 words, manifestation ≤40 words.",
                 "Ensure all PascalCase identifiers (labels, namespaces) are left untranslated; only `definition` and `manifestation` may be localised.",
                 "Adjust text as needed while preserving mathematical meaning."
               ],
-              "outputs": {
-                "polished_factor": "Factor with refined prose"
-              }
+              "outputs": { "polished_factor": "Factor with refined prose" }
             },
             {
               "step": 13,
               "name": "Serialize and store",
               "description": "Assemble the complete Factor JSON conforming to the Factor schema, validate it, and register it in the ACU Factor library.",
-              "inputs": [
-                {
-                  "name": "polished_factor",
-                  "type": "object"
-                }
-              ],
+              "inputs": [{ "name": "polished_factor", "type": "object" }],
               "process": [
                 "Validate the final object against the Factor JSON schema.",
                 "Add any missing metadata (timestamp, author).",
                 "Save to the Factor store (file system, database, or in‑memory)."
               ],
-              "outputs": {
-                "factor_json": "Complete, valid Factor"
-              }
+              "outputs": { "factor_json": "Complete, valid Factor" }
             }
           ]
         },
@@ -1796,14 +1380,8 @@
           "resonance_computation": {
             "description": "Compute a resonance value between two Factors A and B, indicating their degree of homotopy‑theoretic alignment. Higher resonance means the Factors share more equivalent structure and are thus ‘harmonically’ compatible.",
             "inputs": [
-              {
-                "name": "factor_A",
-                "type": "Factor"
-              },
-              {
-                "name": "factor_B",
-                "type": "Factor"
-              }
+              { "name": "factor_A", "type": "Factor" },
+              { "name": "factor_B", "type": "Factor" }
             ],
             "process": [
               "1. Retrieve both Factors’ Cilang assignments: the HoTT type `definition_A[n]` and term `manifestation_A[n]` for each node n, and similarly for B.",
@@ -1834,22 +1412,12 @@
           "combination": {
             "description": "Combine two Factors into a new Factor that represents their superposition or interaction product. Uses type‑theoretic constructions (sum, record merge, tensor product) and automatically simplifies via univalence.",
             "inputs": [
-              {
-                "name": "factor_A",
-                "type": "Factor"
-              },
-              {
-                "name": "factor_B",
-                "type": "Factor"
-              },
+              { "name": "factor_A", "type": "Factor" },
+              { "name": "factor_B", "type": "Factor" },
               {
                 "name": "combine_mode",
                 "type": "string",
-                "enum": [
-                  "superposition",
-                  "tensor_product",
-                  "reidemeister_merge"
-                ],
+                "enum": ["superposition", "tensor_product", "reidemeister_merge"],
                 "default": "superposition"
               }
             ],
@@ -1889,19 +1457,8 @@
           "transformation": {
             "description": "Apply a Reidemeister move (R1, R2, R3) to a single Factor, reinterpreted as operations on the HIT structure of the Factor’s type assignment. These preserve the topological invariants of the T(19,2) knot up to homotopy.",
             "inputs": [
-              {
-                "name": "factor",
-                "type": "Factor"
-              },
-              {
-                "name": "move",
-                "type": "string",
-                "enum": [
-                  "R1",
-                  "R2",
-                  "R3"
-                ]
-              },
+              { "name": "factor", "type": "Factor" },
+              { "name": "move", "type": "string", "enum": ["R1", "R2", "R3"] },
               {
                 "name": "location",
                 "type": "object",
@@ -1934,21 +1491,9 @@
           "narrative_transition": {
             "description": "Simulate a character arc or plot progression by applying a sequence of state changes within the Factor’s homotopy‑type framework. Uses path induction (J‑rule) and transport to move terms along paths induced by the narrative beat.",
             "inputs": [
-              {
-                "name": "factor",
-                "type": "Factor"
-              },
-              {
-                "name": "steps",
-                "type": "integer",
-                "minimum": 1,
-                "default": 1
-              },
-              {
-                "name": "chirality_follow",
-                "type": "boolean",
-                "default": true
-              }
+              { "name": "factor", "type": "Factor" },
+              { "name": "steps", "type": "integer", "minimum": 1, "default": 1 },
+              { "name": "chirality_follow", "type": "boolean", "default": true }
             ],
             "process": [
               "For each step:",
@@ -1994,96 +1539,26 @@
             "value_meanings": {
               "0": {
                 "label": "Processing",
-                "mood_keywords": [
-                  "neutral",
-                  "transitional",
-                  "in‑between",
-                  "contemplative"
-                ],
+                "mood_keywords": ["neutral", "transitional", "in‑between", "contemplative"],
                 "mood_weight": 0
               },
               "1": {
                 "label": "Actualized",
-                "mood_keywords": [
-                  "fulfilled",
-                  "present",
-                  "concrete",
-                  "resolution"
-                ],
+                "mood_keywords": ["fulfilled", "present", "concrete", "resolution"],
                 "mood_weight": 0.5
               },
               "-1": {
                 "label": "Potential",
-                "mood_keywords": [
-                  "longing",
-                  "anticipation",
-                  "unresolved",
-                  "absence"
-                ],
+                "mood_keywords": ["longing", "anticipation", "unresolved", "absence"],
                 "mood_weight": -0.5
               }
             },
             "mood_spectrum": {
-              "negative": {
-                "range": [
-                  -9.5,
-                  -3
-                ],
-                "moods": [
-                  "tension",
-                  "sadness",
-                  "fear",
-                  "anger",
-                  "despair"
-                ]
-              },
-              "mixed_negative": {
-                "range": [
-                  -3,
-                  -0.5
-                ],
-                "moods": [
-                  "unease",
-                  "melancholy",
-                  "irritation"
-                ]
-              },
-              "neutral": {
-                "range": [
-                  -0.5,
-                  0.5
-                ],
-                "moods": [
-                  "curiosity",
-                  "reflection",
-                  "calm",
-                  "stillness"
-                ]
-              },
-              "mixed_positive": {
-                "range": [
-                  0.5,
-                  3
-                ],
-                "moods": [
-                  "hope",
-                  "tenderness",
-                  "quiet joy"
-                ]
-              },
-              "positive": {
-                "range": [
-                  3,
-                  9.5
-                ],
-                "moods": [
-                  "joy",
-                  "peace",
-                  "passion",
-                  "elation",
-                  "ecstasy"
-                ]
-              }
+              "negative": { "range": [-9.5, -3], "moods": ["tension", "sadness", "fear", "anger", "despair"] },
+              "mixed_negative": { "range": [-3, -0.5], "moods": ["unease", "melancholy", "irritation"] },
+              "neutral": { "range": [-0.5, 0.5], "moods": ["curiosity", "reflection", "calm", "stillness"] },
+              "mixed_positive": { "range": [0.5, 3], "moods": ["hope", "tenderness", "quiet joy"] },
+              "positive": { "range": [3, 9.5], "moods": ["joy", "peace", "passion", "elation", "ecstasy"] }
             },
             "computation": "Sum the mood_weights of all explicit nodes (0‑f). Implicit nodes (x,y,z) do not contribute. Clamp between -9.5 and 9.5. Map to a specific mood within the corresponding spectrum band using a static table to ensure determinism."
           },
@@ -2282,20 +1757,12 @@
                   "beats": [
                     {
                       "description": "The universe is introduced through the warm amber light of the café (0 appears). Elara orders jasmine tea; her identity is established (1).",
-                      "foreground_nodes": [
-                        "0",
-                        "1"
-                      ],
-                      "background_nodes": [
-                        "x"
-                      ]
+                      "foreground_nodes": ["0", "1"],
+                      "background_nodes": ["x"]
                     },
                     {
                       "description": "Kian looks up; a memory begins to form (x→6).",
-                      "foreground_nodes": [
-                        "x",
-                        "6"
-                      ],
+                      "foreground_nodes": ["x", "6"],
                       "background_nodes": []
                     }
                   ],
@@ -2312,26 +1779,16 @@
                   "beats": [
                     {
                       "description": "Their interaction solidifies into a shared moment (6→f).",
-                      "foreground_nodes": [
-                        "6",
-                        "f"
-                      ],
-                      "background_nodes": [
-                        "2"
-                      ]
+                      "foreground_nodes": ["6", "f"],
+                      "background_nodes": ["2"]
                     },
                     {
                       "description": "A silent commitment is made (f→5). Neither can take it back.",
-                      "foreground_nodes": [
-                        "f",
-                        "5"
-                      ],
+                      "foreground_nodes": ["f", "5"],
                       "background_nodes": []
                     }
                   ],
-                  "obligatory_arcs_advanced": [
-                    "The Identity Solidification (start: 1→6)"
-                  ]
+                  "obligatory_arcs_advanced": ["The Identity Solidification (start: 1→6)"]
                 },
                 {
                   "scene_id": 3,
@@ -2342,30 +1799,18 @@
                   "beats": [
                     {
                       "description": "The cycle of care (8→y) becomes a lesson.",
-                      "foreground_nodes": [
-                        "8",
-                        "y"
-                      ],
+                      "foreground_nodes": ["8", "y"],
                       "background_nodes": []
                     },
                     {
                       "description": "The lesson expands into a narrative landscape (y→7), capturing all the paths they might take.",
-                      "foreground_nodes": [
-                        "y",
-                        "7"
-                      ],
+                      "foreground_nodes": ["y", "7"],
                       "background_nodes": []
                     },
                     {
                       "description": "Narrative settles into a new memory (7→x), closing the loop.",
-                      "foreground_nodes": [
-                        "7",
-                        "x"
-                      ],
-                      "background_nodes": [
-                        "0",
-                        "z"
-                      ]
+                      "foreground_nodes": ["7", "x"],
+                      "background_nodes": ["0", "z"]
                     }
                   ],
                   "obligatory_arcs_advanced": [
@@ -2397,33 +1842,21 @@
             "items": {
               "type": "object",
               "properties": {
-                "namespace": {
-                  "type": "string",
-                  "pattern": "^(?:[A-Z][A-Za-z0-9]*)(?:/[A-Z][A-Za-z0-9]*)*$"
-                },
-                "alias": {
-                  "type": "string",
-                  "description": "Optional local alias for the imported Factor."
-                },
+                "namespace": { "type": "string", "pattern": "^(?:[A-Z][A-Za-z0-9]*)(?:/[A-Z][A-Za-z0-9]*)*$" },
+                "alias": { "type": "string", "description": "Optional local alias for the imported Factor." },
                 "cilang": {
                   "type": "object",
                   "description": "Specific vertices to import, with optional local aliases.",
                   "patternProperties": {
                     "^[0-9a-fxyz]$": {
                       "type": "object",
-                      "properties": {
-                        "alias": {
-                          "type": "string"
-                        }
-                      },
+                      "properties": { "alias": { "type": "string" } },
                       "additionalProperties": false
                     }
                   }
                 }
               },
-              "required": [
-                "namespace"
-              ],
+              "required": ["namespace"],
               "additionalProperties": false
             },
             "description": "Other Factors that this Factor depends on for context. The AI MUST load all imported Factors to resolve names and avoid hallucination. This is NOT inheritance."
@@ -2435,10 +1868,7 @@
           },
           "status": {
             "type": "string",
-            "enum": [
-              "partial",
-              "complete"
-            ],
+            "enum": ["partial", "complete"],
             "default": "partial",
             "description": "Partial = some Cilang nodes undefined; complete = all 19 nodes fully defined."
           },
@@ -2463,10 +1893,7 @@
             "$ref": "#/$defs/cilangObject",
             "description": "Mapping for all 19 Cilang vertices (x,y,z,0‑9a‑f)."
           },
-          "type_binding": {
-            "$ref": "#/$defs/typeBinding",
-            "description": "Topological and paradigmatic settings."
-          }
+          "type_binding": { "$ref": "#/$defs/typeBinding", "description": "Topological and paradigmatic settings." }
         },
         "required": [
           "namespace",
@@ -2483,22 +1910,10 @@
         "additionalProperties": false,
         "allOf": [
           {
-            "if": {
-              "properties": {
-                "status": {
-                  "const": "complete"
-                }
-              }
-            },
+            "if": { "properties": { "status": { "const": "complete" } } },
             "then": {
               "properties": {
-                "cilang": {
-                  "patternProperties": {
-                    "^[0-9a-fxyz]$": {
-                      "$ref": "#/$defs/cilangComplete"
-                    }
-                  }
-                }
+                "cilang": { "patternProperties": { "^[0-9a-fxyz]$": { "$ref": "#/$defs/cilangComplete" } } }
               }
             }
           }
@@ -2512,22 +1927,12 @@
                 "pattern": "^[A-Z][a-zA-Z0-9]*$",
                 "description": "PascalCase semantic name for this node."
               },
-              "role": {
-                "type": "string"
-              },
-              "definition": {
-                "type": "string"
-              },
-              "manifestation": {
-                "type": "string"
-              },
+              "role": { "type": "string" },
+              "definition": { "type": "string" },
+              "manifestation": { "type": "string" },
               "value": {
                 "type": "integer",
-                "enum": [
-                  -1,
-                  0,
-                  1
-                ],
+                "enum": [-1, 0, 1],
                 "default": 0,
                 "description": "Ternary state: -1 = Potential, 0 = Processing, +1 = Actualized."
               },
@@ -2542,28 +1947,16 @@
                 "oneOf": [
                   {
                     "type": "object",
-                    "properties": {
-                      "namespace": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "namespace"
-                    ],
+                    "properties": { "namespace": { "type": "string" } },
+                    "required": ["namespace"],
                     "additionalProperties": false
                   },
                   {
                     "type": "array",
                     "items": {
                       "type": "object",
-                      "properties": {
-                        "namespace": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "namespace"
-                      ],
+                      "properties": { "namespace": { "type": "string" } },
+                      "required": ["namespace"],
                       "additionalProperties": false
                     },
                     "minItems": 1,
@@ -2577,29 +1970,14 @@
           },
           "cilangComplete": {
             "allOf": [
+              { "$ref": "#/$defs/cilangPartial" },
               {
-                "$ref": "#/$defs/cilangPartial"
-              },
-              {
-                "required": [
-                  "label",
-                  "definition",
-                  "role",
-                  "manifestation"
-                ],
+                "required": ["label", "definition", "role", "manifestation"],
                 "properties": {
-                  "label": {
-                    "minLength": 1
-                  },
-                  "role": {
-                    "minLength": 1
-                  },
-                  "definition": {
-                    "minLength": 1
-                  },
-                  "manifestation": {
-                    "minLength": 1
-                  }
+                  "label": { "minLength": 1 },
+                  "role": { "minLength": 1 },
+                  "definition": { "minLength": 1 },
+                  "manifestation": { "minLength": 1 }
                 }
               }
             ]
@@ -2608,37 +1986,21 @@
             "type": "object",
             "minProperties": 19,
             "maxProperties": 19,
-            "patternProperties": {
-              "^[0-9a-fxyz]$": {
-                "$ref": "#/$defs/cilangPartial"
-              }
-            },
+            "patternProperties": { "^[0-9a-fxyz]$": { "$ref": "#/$defs/cilangPartial" } },
             "unevaluatedProperties": false
           },
           "typeBinding": {
             "type": "object",
-            "required": [
-              "resonance",
-              "quantization",
-              "usepong_binding"
-            ],
+            "required": ["resonance", "quantization", "usepong_binding"],
             "properties": {
               "paradigm": {
-                "type": [
-                  "string",
-                  "null"
-                ],
+                "type": ["string", "null"],
                 "default": null,
                 "description": "Name of the Factor Paradigm used (e.g. 'HoTT'). Optional at runtime."
               },
               "inherits": {
-                "type": [
-                  "array",
-                  "null"
-                ],
-                "items": {
-                  "type": "string"
-                },
+                "type": ["array", "null"],
+                "items": { "type": "string" },
                 "default": null,
                 "description": "Parent Factors for topological inheritance."
               },
@@ -2646,21 +2008,11 @@
                 "type": "object",
                 "description": "Type‑former parameters – present when the Factor is (also) a Type. These are the HoTT constructor arguments (univalence, HITs, homotopy level) plus any extra type‑family parameters.",
                 "properties": {
-                  "univalence_axiom": {
-                    "type": "boolean"
-                  },
-                  "higher_inductives": {
-                    "type": "boolean"
-                  },
+                  "univalence_axiom": { "type": "boolean" },
+                  "higher_inductives": { "type": "boolean" },
                   "homotopy_level": {
                     "type": "string",
-                    "enum": [
-                      "contractible",
-                      "mere_proposition",
-                      "set",
-                      "groupoid",
-                      "infinity"
-                    ]
+                    "enum": ["contractible", "mere_proposition", "set", "groupoid", "infinity"]
                   }
                 },
                 "additionalProperties": true,
@@ -2672,81 +2024,30 @@
                 "additionalProperties": true,
                 "default": null
               },
-              "resonance": {
-                "$ref": "#/$defs/resonance"
-              },
-              "quantization": {
-                "$ref": "#/$defs/quantization"
-              },
-              "usepong_binding": {
-                "$ref": "#/$defs/usepongBinding"
-              },
-              "view_mode": {
-                "$ref": "#/$defs/viewMode"
-              }
+              "resonance": { "$ref": "#/$defs/resonance" },
+              "quantization": { "$ref": "#/$defs/quantization" },
+              "usepong_binding": { "$ref": "#/$defs/usepongBinding" },
+              "view_mode": { "$ref": "#/$defs/viewMode" }
             },
-            "anyOf": [
-              {
-                "required": [
-                  "parameters"
-                ]
-              },
-              {
-                "required": [
-                  "context"
-                ]
-              }
-            ],
+            "anyOf": [{ "required": ["parameters"] }, { "required": ["context"] }],
             "additionalProperties": false
           },
           "resonance": {
             "type": "object",
-            "required": [
-              "n",
-              "m",
-              "chirality"
-            ],
+            "required": ["n", "m", "chirality"],
             "properties": {
-              "n": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "m": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "chirality": {
-                "type": "string",
-                "enum": [
-                  "left",
-                  "right",
-                  "amphichiral"
-                ],
-                "default": "right"
-              },
-              "q": {
-                "type": "integer",
-                "description": "Computed Q = 19ⁿ"
-              },
-              "r": {
-                "type": "integer",
-                "description": "Computed R = 2ᵐ"
-              },
+              "n": { "type": "integer", "minimum": 0 },
+              "m": { "type": "integer", "minimum": 0 },
+              "chirality": { "type": "string", "enum": ["left", "right", "amphichiral"], "default": "right" },
+              "q": { "type": "integer", "description": "Computed Q = 19ⁿ" },
+              "r": { "type": "integer", "description": "Computed R = 2ᵐ" },
               "phase": {
                 "type": "object",
                 "properties": {
-                  "argument": {
-                    "type": "number"
-                  },
-                  "real": {
-                    "type": "number"
-                  },
-                  "imaginary": {
-                    "type": "number"
-                  },
-                  "simplified": {
-                    "type": "string"
-                  }
+                  "argument": { "type": "number" },
+                  "real": { "type": "number" },
+                  "imaginary": { "type": "number" },
+                  "simplified": { "type": "string" }
                 },
                 "additionalProperties": false
               }
@@ -2756,25 +2057,15 @@
           "quantization": {
             "type": "object",
             "properties": {
-              "base": {
-                "const": 19,
-                "default": 19
-              },
-              "formula": {
-                "type": "string",
-                "default": "19^n × 2^m"
-              },
-              "total_capacity": {
-                "type": "string"
-              }
+              "base": { "const": 19, "default": 19 },
+              "formula": { "type": "string", "default": "19^n × 2^m" },
+              "total_capacity": { "type": "string" }
             },
             "additionalProperties": false
           },
           "usepongBinding": {
             "type": "object",
-            "required": [
-              "stratum"
-            ],
+            "required": ["stratum"],
             "properties": {
               "stratum": {
                 "type": "string",
@@ -2792,54 +2083,24 @@
                   "global"
                 ]
               },
-              "satellite_id": {
-                "type": "string"
-              }
+              "satellite_id": { "type": "string" }
             },
             "additionalProperties": false
           },
           "viewMode": {
             "type": "object",
             "properties": {
-              "default_mode": {
-                "type": "string",
-                "enum": [
-                  "knot",
-                  "link",
-                  "braid"
-                ],
-                "default": "knot"
-              },
+              "default_mode": { "type": "string", "enum": ["knot", "link", "braid"], "default": "knot" },
               "components": {
                 "type": "array",
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "pattern": "^[0-9a-fxyz]$"
-                  }
-                }
+                "items": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-fxyz]$" } }
               },
               "strands": {
                 "type": "array",
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "pattern": "^[0-9a-fxyz]$"
-                  }
-                }
+                "items": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-fxyz]$" } }
               },
-              "open_ends": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "pattern": "^[0-9a-fxyz]$"
-                }
-              },
-              "description": {
-                "type": "string"
-              }
+              "open_ends": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-fxyz]$" } },
+              "description": { "type": "string" }
             },
             "additionalProperties": false
           }
@@ -2849,134 +2110,25 @@
     "data": {
       "probability_matrix": {
         "fig8": {
-          "0": {
-            "4": 0.3333,
-            "5": 0.3333,
-            "z": 0.6667,
-            "a": 0.3333,
-            "f": 0.3333
-          },
-          "1": {
-            "4": 0.3333,
-            "y": 0.3333,
-            "a": 0.3333,
-            "b": 0.3333,
-            "e": 0.6667
-          },
-          "2": {
-            "1": 0.6667,
-            "4": 0.3333,
-            "y": 0.3333,
-            "c": 0.3333,
-            "f": 0.3333
-          },
-          "3": {
-            "2": 0.3333,
-            "5": 0.3333,
-            "8": 0.3333,
-            "x": 0.3333,
-            "a": 0.3333,
-            "b": 0.3333
-          },
-          "4": {
-            "0": 0.3333,
-            "1": 0.3333,
-            "3": 0.6667,
-            "9": 0.3333,
-            "y": 0.3333
-          },
-          "5": {
-            "4": 0.3333,
-            "9": 0.3333,
-            "z": 0.3333,
-            "a": 0.3333,
-            "d": 0.3333,
-            "e": 0.3333
-          },
-          "6": {
-            "5": 0.6667,
-            "9": 0.3333,
-            "b": 0.3333,
-            "e": 0.3333,
-            "f": 0.3333
-          },
-          "7": {
-            "2": 0.3333,
-            "9": 0.6667,
-            "x": 0.6667,
-            "c": 0.3333
-          },
-          "8": {
-            "3": 0.3333,
-            "6": 0.3333,
-            "7": 0.6667,
-            "c": 0.6667
-          },
-          "9": {
-            "2": 0.6667,
-            "6": 0.3333,
-            "8": 0.3333,
-            "z": 0.3333,
-            "c": 0.3333
-          },
-          "x": {
-            "3": 0.3333,
-            "5": 0.3333,
-            "7": 0.6667,
-            "y": 0.3333,
-            "d": 0.3333
-          },
-          "y": {
-            "2": 0.3333,
-            "7": 0.3333,
-            "8": 0.6667,
-            "x": 0.6667
-          },
-          "z": {
-            "1": 0.6667,
-            "6": 0.3333,
-            "b": 0.3333,
-            "f": 0.6667
-          },
-          "a": {
-            "0": 0.3333,
-            "4": 0.6667,
-            "6": 0.3333,
-            "z": 0.6667
-          },
-          "b": {
-            "2": 0.3333,
-            "y": 0.3333,
-            "a": 0.3333,
-            "d": 0.6667,
-            "f": 0.3333
-          },
-          "c": {
-            "3": 0.3333,
-            "7": 0.3333,
-            "8": 0.6667,
-            "b": 0.6667
-          },
-          "d": {
-            "1": 0.3333,
-            "6": 0.3333,
-            "x": 0.3333,
-            "y": 0.3333,
-            "a": 0.3333,
-            "c": 0.3333
-          },
-          "e": {
-            "0": 1,
-            "3": 0.3333,
-            "d": 0.6667
-          },
-          "f": {
-            "0": 0.3333,
-            "5": 0.3333,
-            "6": 0.3333,
-            "9": 0.3333,
-            "e": 0.6667
-          }
+          "0": { "4": 0.3333, "5": 0.3333, "z": 0.6667, "a": 0.3333, "f": 0.3333 },
+          "1": { "4": 0.3333, "y": 0.3333, "a": 0.3333, "b": 0.3333, "e": 0.6667 },
+          "2": { "1": 0.6667, "4": 0.3333, "y": 0.3333, "c": 0.3333, "f": 0.3333 },
+          "3": { "2": 0.3333, "5": 0.3333, "8": 0.3333, "x": 0.3333, "a": 0.3333, "b": 0.3333 },
+          "4": { "0": 0.3333, "1": 0.3333, "3": 0.6667, "9": 0.3333, "y": 0.3333 },
+          "5": { "4": 0.3333, "9": 0.3333, "z": 0.3333, "a": 0.3333, "d": 0.3333, "e": 0.3333 },
+          "6": { "5": 0.6667, "9": 0.3333, "b": 0.3333, "e": 0.3333, "f": 0.3333 },
+          "7": { "2": 0.3333, "9": 0.6667, "x": 0.6667, "c": 0.3333 },
+          "8": { "3": 0.3333, "6": 0.3333, "7": 0.6667, "c": 0.6667 },
+          "9": { "2": 0.6667, "6": 0.3333, "8": 0.3333, "z": 0.3333, "c": 0.3333 },
+          "x": { "3": 0.3333, "5": 0.3333, "7": 0.6667, "y": 0.3333, "d": 0.3333 },
+          "y": { "2": 0.3333, "7": 0.3333, "8": 0.6667, "x": 0.6667 },
+          "z": { "1": 0.6667, "6": 0.3333, "b": 0.3333, "f": 0.6667 },
+          "a": { "0": 0.3333, "4": 0.6667, "6": 0.3333, "z": 0.6667 },
+          "b": { "2": 0.3333, "y": 0.3333, "a": 0.3333, "d": 0.6667, "f": 0.3333 },
+          "c": { "3": 0.3333, "7": 0.3333, "8": 0.6667, "b": 0.6667 },
+          "d": { "1": 0.3333, "6": 0.3333, "x": 0.3333, "y": 0.3333, "a": 0.3333, "c": 0.3333 },
+          "e": { "0": 1, "3": 0.3333, "d": 0.6667 },
+          "f": { "0": 0.3333, "5": 0.3333, "6": 0.3333, "9": 0.3333, "e": 0.6667 }
         },
         "global": {
           "0": {
@@ -4858,134 +4010,25 @@
           }
         },
         "trefoil_f": {
-          "0": {
-            "2": 0.25,
-            "x": 0.5,
-            "z": 0.5,
-            "b": 0.25
-          },
-          "1": {
-            "3": 0.25,
-            "4": 0.25,
-            "7": 0.25,
-            "9": 0.5,
-            "y": 0.25,
-            "a": 0.25,
-            "d": 0.25
-          },
-          "2": {
-            "1": 0.25,
-            "4": 0.25,
-            "9": 0.25,
-            "y": 0.25,
-            "c": 0.25,
-            "f": 0.75
-          },
-          "3": {
-            "2": 0.5,
-            "5": 0.25,
-            "z": 0.25,
-            "b": 0.75,
-            "e": 0.25
-          },
-          "4": {
-            "0": 0.25,
-            "1": 0.25,
-            "3": 0.5,
-            "6": 0.25,
-            "a": 0.25,
-            "d": 0.5
-          },
-          "5": {
-            "1": 0.25,
-            "4": 0.5,
-            "6": 0.5,
-            "x": 0.5,
-            "f": 0.25
-          },
-          "6": {
-            "2": 0.25,
-            "8": 0.5,
-            "b": 0.5,
-            "e": 0.25
-          },
-          "7": {
-            "3": 0.25,
-            "5": 0.5,
-            "6": 0.5,
-            "x": 0.5,
-            "d": 0.25
-          },
-          "8": {
-            "1": 0.5,
-            "5": 0.5,
-            "y": 1
-          },
-          "9": {
-            "0": 0.5,
-            "1": 0.25,
-            "2": 0.25,
-            "6": 0.5,
-            "y": 0.5
-          },
-          "x": {
-            "1": 0.25,
-            "4": 0.25,
-            "9": 0.25,
-            "z": 0.5,
-            "d": 0.25
-          },
-          "y": {
-            "0": 0.5,
-            "7": 0.5,
-            "8": 0.5
-          },
-          "z": {
-            "1": 0.25,
-            "4": 0.25,
-            "5": 0.25,
-            "8": 0.5,
-            "c": 0.25,
-            "f": 0.5
-          },
-          "a": {
-            "4": 0.25,
-            "7": 0.5,
-            "9": 0.5,
-            "c": 0.5,
-            "d": 0.25
-          },
-          "b": {
-            "0": 0.25,
-            "3": 0.25,
-            "a": 1,
-            "d": 0.5
-          },
-          "c": {
-            "2": 0.5,
-            "5": 0.25,
-            "9": 0.5,
-            "z": 0.25,
-            "e": 0.5
-          },
-          "d": {
-            "4": 0.25,
-            "7": 0.25,
-            "c": 1,
-            "f": 0.5
-          },
-          "e": {
-            "0": 0.5,
-            "3": 0.75,
-            "6": 0.25,
-            "a": 0.5
-          },
-          "f": {
-            "2": 0.25,
-            "5": 0.25,
-            "b": 0.5,
-            "e": 1
-          }
+          "0": { "2": 0.25, "x": 0.5, "z": 0.5, "b": 0.25 },
+          "1": { "3": 0.25, "4": 0.25, "7": 0.25, "9": 0.5, "y": 0.25, "a": 0.25, "d": 0.25 },
+          "2": { "1": 0.25, "4": 0.25, "9": 0.25, "y": 0.25, "c": 0.25, "f": 0.75 },
+          "3": { "2": 0.5, "5": 0.25, "z": 0.25, "b": 0.75, "e": 0.25 },
+          "4": { "0": 0.25, "1": 0.25, "3": 0.5, "6": 0.25, "a": 0.25, "d": 0.5 },
+          "5": { "1": 0.25, "4": 0.5, "6": 0.5, "x": 0.5, "f": 0.25 },
+          "6": { "2": 0.25, "8": 0.5, "b": 0.5, "e": 0.25 },
+          "7": { "3": 0.25, "5": 0.5, "6": 0.5, "x": 0.5, "d": 0.25 },
+          "8": { "1": 0.5, "5": 0.5, "y": 1 },
+          "9": { "0": 0.5, "1": 0.25, "2": 0.25, "6": 0.5, "y": 0.5 },
+          "x": { "1": 0.25, "4": 0.25, "9": 0.25, "z": 0.5, "d": 0.25 },
+          "y": { "0": 0.5, "7": 0.5, "8": 0.5 },
+          "z": { "1": 0.25, "4": 0.25, "5": 0.25, "8": 0.5, "c": 0.25, "f": 0.5 },
+          "a": { "4": 0.25, "7": 0.5, "9": 0.5, "c": 0.5, "d": 0.25 },
+          "b": { "0": 0.25, "3": 0.25, "a": 1, "d": 0.5 },
+          "c": { "2": 0.5, "5": 0.25, "9": 0.5, "z": 0.25, "e": 0.5 },
+          "d": { "4": 0.25, "7": 0.25, "c": 1, "f": 0.5 },
+          "e": { "0": 0.5, "3": 0.75, "6": 0.25, "a": 0.5 },
+          "f": { "2": 0.25, "5": 0.25, "b": 0.5, "e": 1 }
         },
         "trefoil_g": {
           "0": {
@@ -5028,15 +4071,7 @@
             "e": 0.1,
             "f": 0.3
           },
-          "3": {
-            "2": 1,
-            "5": 0.4,
-            "6": 0.05,
-            "z": 0.1,
-            "b": 0.3,
-            "e": 0.1,
-            "f": 0.05
-          },
+          "3": { "2": 1, "5": 0.4, "6": 0.05, "z": 0.1, "b": 0.3, "e": 0.1, "f": 0.05 },
           "4": {
             "0": 0.05,
             "1": 0.2,
@@ -5099,17 +4134,7 @@
             "d": 0.1,
             "f": 0.05
           },
-          "9": {
-            "0": 0.55,
-            "1": 0.1,
-            "2": 0.05,
-            "5": 0.25,
-            "6": 0.15,
-            "x": 0.25,
-            "y": 0.2,
-            "z": 0.25,
-            "b": 0.15
-          },
+          "9": { "0": 0.55, "1": 0.1, "2": 0.05, "5": 0.25, "6": 0.15, "x": 0.25, "y": 0.2, "z": 0.25, "b": 0.15 },
           "x": {
             "0": 0.35,
             "3": 0.05,
@@ -5148,16 +4173,7 @@
             "d": 0.15,
             "f": 0.1
           },
-          "a": {
-            "1": 0.1,
-            "2": 0.1,
-            "4": 0.15,
-            "5": 0.25,
-            "7": 0.3,
-            "9": 0.4,
-            "y": 0.1,
-            "c": 0.4
-          },
+          "a": { "1": 0.1, "2": 0.1, "4": 0.15, "5": 0.25, "7": 0.3, "9": 0.4, "y": 0.1, "c": 0.4 },
           "b": {
             "0": 0.05,
             "1": 0.05,
@@ -5184,229 +4200,51 @@
             "b": 0.3,
             "e": 0.4
           },
-          "d": {
-            "1": 0.15,
-            "4": 0.2,
-            "5": 0.05,
-            "7": 0.15,
-            "8": 0.2,
-            "y": 0.1,
-            "z": 0.05,
-            "c": 0.7,
-            "f": 0.35
-          },
-          "e": {
-            "2": 0.1,
-            "3": 0.5,
-            "4": 0.15,
-            "6": 0.4,
-            "z": 0.05,
-            "a": 0.45,
-            "d": 0.15
-          },
-          "f": {
-            "3": 0.3,
-            "5": 0.25,
-            "6": 0.1,
-            "7": 0.25,
-            "b": 0.35,
-            "c": 0.05,
-            "e": 0.7
-          }
+          "d": { "1": 0.15, "4": 0.2, "5": 0.05, "7": 0.15, "8": 0.2, "y": 0.1, "z": 0.05, "c": 0.7, "f": 0.35 },
+          "e": { "2": 0.1, "3": 0.5, "4": 0.15, "6": 0.4, "z": 0.05, "a": 0.45, "d": 0.15 },
+          "f": { "3": 0.3, "5": 0.25, "6": 0.1, "7": 0.25, "b": 0.35, "c": 0.05, "e": 0.7 }
         },
         "trefoil_h": {
-          "0": {
-            "8": 1,
-            "x": 1
-          },
-          "1": {
-            "5": 0.25,
-            "y": 1,
-            "d": 0.25
-          },
-          "2": {
-            "4": 0.5,
-            "c": 0.5,
-            "f": 1
-          },
-          "3": {
-            "2": 1,
-            "5": 0.5,
-            "b": 0.5
-          },
-          "4": {
-            "1": 0.5,
-            "6": 0.5,
-            "9": 0.5,
-            "a": 0.5
-          },
-          "5": {
-            "4": 1,
-            "7": 0.5,
-            "f": 0.5
-          },
-          "6": {
-            "2": 0.5,
-            "b": 1,
-            "e": 0.5
-          },
-          "7": {
-            "3": 0.5,
-            "6": 1,
-            "d": 0.5
-          },
-          "8": {
-            "1": 0.5,
-            "x": 0.5,
-            "y": 0.5,
-            "z": 0.5
-          },
-          "9": {
-            "0": 1,
-            "5": 0.25,
-            "x": 0.5,
-            "d": 0.25
-          },
-          "x": {
-            "9": 0.5,
-            "z": 1
-          },
-          "y": {
-            "0": 1,
-            "8": 0.5,
-            "9": 0.5
-          },
-          "z": {
-            "1": 0.5,
-            "5": 0.5,
-            "8": 0.5,
-            "d": 0.5
-          },
-          "a": {
-            "4": 0.5,
-            "7": 1,
-            "c": 0.5
-          },
-          "b": {
-            "3": 0.5,
-            "a": 1,
-            "d": 0.5
-          },
-          "c": {
-            "1": 0.5,
-            "2": 0.5,
-            "9": 0.5,
-            "e": 0.5
-          },
-          "d": {
-            "7": 0.5,
-            "c": 1,
-            "f": 0.5
-          },
-          "e": {
-            "3": 1,
-            "6": 0.5,
-            "a": 0.5
-          },
-          "f": {
-            "5": 0.5,
-            "b": 0.5,
-            "e": 1
-          }
+          "0": { "8": 1, "x": 1 },
+          "1": { "5": 0.25, "y": 1, "d": 0.25 },
+          "2": { "4": 0.5, "c": 0.5, "f": 1 },
+          "3": { "2": 1, "5": 0.5, "b": 0.5 },
+          "4": { "1": 0.5, "6": 0.5, "9": 0.5, "a": 0.5 },
+          "5": { "4": 1, "7": 0.5, "f": 0.5 },
+          "6": { "2": 0.5, "b": 1, "e": 0.5 },
+          "7": { "3": 0.5, "6": 1, "d": 0.5 },
+          "8": { "1": 0.5, "x": 0.5, "y": 0.5, "z": 0.5 },
+          "9": { "0": 1, "5": 0.25, "x": 0.5, "d": 0.25 },
+          "x": { "9": 0.5, "z": 1 },
+          "y": { "0": 1, "8": 0.5, "9": 0.5 },
+          "z": { "1": 0.5, "5": 0.5, "8": 0.5, "d": 0.5 },
+          "a": { "4": 0.5, "7": 1, "c": 0.5 },
+          "b": { "3": 0.5, "a": 1, "d": 0.5 },
+          "c": { "1": 0.5, "2": 0.5, "9": 0.5, "e": 0.5 },
+          "d": { "7": 0.5, "c": 1, "f": 0.5 },
+          "e": { "3": 1, "6": 0.5, "a": 0.5 },
+          "f": { "5": 0.5, "b": 0.5, "e": 1 }
         },
         "trefoil_i": {
-          "0": {
-            "a": 0.5,
-            "d": 0.5,
-            "z": 1
-          },
-          "1": {
-            "6": 1,
-            "9": 0.5,
-            "x": 0.5
-          },
-          "2": {
-            "1": 1,
-            "8": 0.5,
-            "y": 0.5
-          },
-          "3": {
-            "2": 0.5,
-            "8": 0.5,
-            "c": 1
-          },
-          "4": {
-            "b": 1,
-            "f": 1
-          },
-          "5": {
-            "2": 1,
-            "7": 0.5,
-            "e": 0.5
-          },
-          "6": {
-            "5": 1,
-            "8": 0.5,
-            "y": 0.5
-          },
-          "7": {
-            "0": 0.5,
-            "9": 0.5,
-            "e": 0.5,
-            "x": 0.5
-          },
-          "8": {
-            "2": 0.5,
-            "7": 1,
-            "a": 0.5
-          },
-          "9": {
-            "1": 0.5,
-            "5": 0.5,
-            "y": 1
-          },
-          "x": {
-            "7": 0.5,
-            "a": 1,
-            "z": 0.5
-          },
-          "y": {
-            "0": 0.5,
-            "6": 0.5,
-            "x": 1
-          },
-          "z": {
-            "1": 0.5,
-            "5": 0.5,
-            "8": 0.5,
-            "d": 0.5
-          },
-          "a": {
-            "0": 0.5,
-            "6": 0.5,
-            "9": 1
-          },
-          "b": {
-            "0": 0.5,
-            "d": 1,
-            "z": 0.5
-          },
-          "c": {
-            "4": 1,
-            "e": 1
-          },
-          "d": {
-            "3": 1,
-            "f": 1
-          },
-          "e": {
-            "4": 1,
-            "b": 1
-          },
-          "f": {
-            "3": 1,
-            "c": 1
-          }
+          "0": { "a": 0.5, "d": 0.5, "z": 1 },
+          "1": { "6": 1, "9": 0.5, "x": 0.5 },
+          "2": { "1": 1, "8": 0.5, "y": 0.5 },
+          "3": { "2": 0.5, "8": 0.5, "c": 1 },
+          "4": { "b": 1, "f": 1 },
+          "5": { "2": 1, "7": 0.5, "e": 0.5 },
+          "6": { "5": 1, "8": 0.5, "y": 0.5 },
+          "7": { "0": 0.5, "9": 0.5, "e": 0.5, "x": 0.5 },
+          "8": { "2": 0.5, "7": 1, "a": 0.5 },
+          "9": { "1": 0.5, "5": 0.5, "y": 1 },
+          "x": { "7": 0.5, "a": 1, "z": 0.5 },
+          "y": { "0": 0.5, "6": 0.5, "x": 1 },
+          "z": { "1": 0.5, "5": 0.5, "8": 0.5, "d": 0.5 },
+          "a": { "0": 0.5, "6": 0.5, "9": 1 },
+          "b": { "0": 0.5, "d": 1, "z": 0.5 },
+          "c": { "4": 1, "e": 1 },
+          "d": { "3": 1, "f": 1 },
+          "e": { "4": 1, "b": 1 },
+          "f": { "3": 1, "c": 1 }
         }
       }
     }
