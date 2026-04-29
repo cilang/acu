@@ -1,7 +1,0 @@
-{
-  "name": "ACU",
-  "version": "v0.8.5",
-  "perspective": "Information Layer",
-  "purpose": "Provide AI with complete topological framework and Factor schema for generating mathematically-constrained Factor",
-  "integration_level": "Full topological embedding including resonance harmonics"
-}
