@@ -1,0 +1,32 @@
+{
+  "role": "State Transition Logic Derived from Knot Crossings and Resonance",
+  "definition": {
+    "type": "Ternary Logic",
+    "states": {
+      "-1": "Potential (over‑crossing)",
+      "0": "Processing (crossing point)",
+      "+1": "Actualized (under‑crossing)"
+    },
+    "resonance_embedding": {
+      "phase_quantization": "Phase quantized in units of π/19 (38th roots of unity).",
+      "state_phase_correlation": {
+        "-1": "arg(φ) = π (mod 2π)",
+        "0": "arg(φ) in transition",
+        "+1": "arg(φ) = 0 (mod 2π)"
+      }
+    }
+  },
+  "transitions": {
+    "left_handed": { "sequence": "-1 → 0 → +1 → -1", "phase_shift": "decreases by 2π/3" },
+    "right_handed": { "sequence": "+1 → 0 → -1 → +1", "phase_shift": "increases by 2π/3" }
+  },
+  "operations": {
+    "reidemeister_1": "Self‑interaction: adds/removes full phase cycle (2π), preserves chirality.",
+    "reidemeister_2": "Pair interaction: cancels or creates opposite phases.",
+    "reidemeister_3": "Three‑way interaction: shifts phase by ±2π/3, can flip chirality."
+  },
+  "constraint": {
+    "phase_closure": "Sum of phase changes around any closed cycle = 0 mod 2π.",
+    "state_conservation": "Sum of states around any closed cycle = 0 mod 3."
+  }
+}

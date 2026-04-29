@@ -1,0 +1,23 @@
+{
+  "role": "The Primitive Entities (19 nodes)",
+  "definition": {
+    "description": "Each of the 19 nodes (x, y, z, 0‑9a‑f) is a primitive that can be assigned a semantic label and definition per Factor.",
+    "total_elements": 19,
+    "node_types": {
+      "implicit": ["x", "y", "z"],
+      "explicit": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
+    },
+    "state_definition": {
+      "applicability": "States apply only to explicit nodes. Implicit nodes (x,y,z) are always in state 0 (eternal context).",
+      "explicit_nodes": {
+        "values": [-1, 0, 1],
+        "semantics": {
+          "-1": "Potential",
+          "0": "Processing",
+          "+1": "Actualized"
+        }
+      }
+    }
+  },
+  "constraint": "The set of node IDs is invariant. Their semantic meaning is Factor‑specific and stored in the Factor's semantic mapping."
+}

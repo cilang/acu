@@ -1,0 +1,93 @@
+{
+  "role": "Grammar of Relationship",
+  "mandatory_edges": [
+    "x→6",
+    "6→f",
+    "f→5",
+    "5→e",
+    "e→4",
+    "4→d",
+    "d→3",
+    "3→c",
+    "c→2",
+    "2→b",
+    "b→1",
+    "1→a",
+    "a→0",
+    "0→9",
+    "9→z",
+    "z→8",
+    "8→y",
+    "y→7",
+    "7→x"
+  ],
+  "strata": {
+    "trefoil": {
+      "name": "Ur-Trefoil",
+      "description": "Complete aggregation of all 86 trefoil satellites (001‑086).",
+      "best_for": "Cosmic creation myths, meta‑canon establishment, universe source code, mathematical foundations.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil"
+    },
+    "trefoil_a": {
+      "name": "Canonical Trefoil",
+      "description": "Largest family (48 variants, 087‑134). Most mature, 'canonical' trefoil structure.",
+      "best_for": "Epic narratives, heroic journeys, cosmic myths, foundational stories.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil_a"
+    },
+    "trefoil_b": {
+      "name": "Canonical Trefoil",
+      "description": "Medium family (18 variants, 135‑152). 'Emerging' structures with invariant hexagon at lower weights.",
+      "best_for": "Coming‑of‑age stories, discovery‑focused narratives, exploration, first contact.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil_b"
+    },
+    "trefoil_c": {
+      "name": "Canonical Trefoil",
+      "description": "Large family (36 variants, 153‑188). Exceptionally strong coherence.",
+      "best_for": "Theological discourse, metaphysical inquiry, deep worldbuilding, philosophical fiction.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil_c"
+    },
+    "trefoil_d": {
+      "name": "Canonical Trefoil",
+      "description": "Large family (24 variants, 189‑212). Core‑centric with strong x→z but lighter peripheral connections.",
+      "best_for": "Character studies, memoirs, contemplative fiction, balanced reflective narratives.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil_d"
+    },
+    "trefoil_f": {
+      "name": "Canonical Trefoil",
+      "description": "Small family (4 variants, 213‑216). Invariant core: 8→y, b→a, d→c, f→e.",
+      "best_for": "Personal journeys, close relationships, interiority, intimate character‑focused narratives.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil_f"
+    },
+    "trefoil_g": {
+      "name": "Canonical Trefoil",
+      "description": "Large family (20 variants, 217‑236). Hierarchical merging from invariant skeleton to full connectivity.",
+      "best_for": "Rebellion, evolution, paradigm shifts, revolutionary narratives, transformation stories.",
+      "probability_matrix": "acu.data.probability_matrix.trefoil_g"
+    },
+    "trefoil_h": {
+      "name": "Canonical Trefoil",
+      "description": "Small family (4 variants, 237‑240). Directed tree as 7‑node component.",
+      "best_for": "Parables, fables, allegories, symbolic tales, pure‑form narratives.",
+      "probability_matrix": "acu.probability_matrix.trefoil_h"
+    },
+    "trefoil_i": {
+      "name": "Canonical Trefoil",
+      "description": "Chiral pair (2 variants, 241‑242). Persistent skeleton with 2‑2‑4‑4‑7 decomposition.",
+      "best_for": "Time‑travel stories, mirror‑worlds, duality, recursion, alternate timelines.",
+      "probability_matrix": "acu.probability_matrix.trefoil_i"
+    },
+    "fig8": {
+      "name": "Canonical Trefoil",
+      "description": "Hyperbolic family (3 variants, 243‑245). Persistent core: e→0.",
+      "best_for": "Surreal fiction, dream‑logic, psychological horror, avant‑garde, weird fiction.",
+      "probability_matrix": "acu.data.probability_matrix.fig8"
+    },
+    "global": {
+      "name": "Global Aggregate",
+      "description": "The complete aggregated adjacency over all 245 satellites.",
+      "best_for": "Meta‑narratives, systems where all possible connections coexist, or when the precise stratum is deliberately unspecified.",
+      "probability_matrix": "acu.data.probability_matrix.global"
+    }
+  },
+  "constraint": "A Factor must declare one stratum (or 'global') in its type_binding.usepong_binding."
+}

@@ -1,0 +1,226 @@
+{
+  "name": "Prose Generation Workflow - Chapter",
+  "description": "Step by step workflow for generating a chapter of prose from an ACU Chapter Factor, respecting stylistic parameters, era constraints, narrative structure, target word count, and preserving Factor references (PascalCase names).",
+  "steps": [
+    {
+      "step": 1,
+      "name": "Validate Input",
+      "description": "Ensure the input Factor is a valid Chapter paradigm and contains all required nodes with non‑empty manifestation fields.",
+      "input": [
+        {
+          "name": "chapter_factor",
+          "type": "Factor",
+          "required": true,
+          "description": "Factor with paradigm 'Chapter'"
+        }
+      ],
+      "process": [
+        "Check chapter_factor.type_binding.paradigm === 'Chapter'",
+        "Verify nodes x, y, z, 0, 1, 2, 3, 4, 5, f have non‑empty manifestation fields",
+        "Load stylistic parameters from chapter_factor.type_binding.context.parameters (use defaults if missing)",
+        "Load word_count_estimate from context (min, max)"
+      ],
+      "output": { "name": "validation_status", "type": "string", "description": "Pass/fail with errors" }
+    },
+    {
+      "step": 2,
+      "name": "Extract Structural Components",
+      "description": "Collect key narrative elements from the Factor's nodes.",
+      "input": [{ "name": "chapter_factor", "type": "Factor" }],
+      "process": [
+        "Extract Chapter identity (y.manifestation) → thematic anchor",
+        "Extract Scene associativity (x.manifestation) → scene ordering",
+        "Extract Narrative invertibility (z.manifestation) → foreshadowing hints",
+        "Collect micro‑beats (1–5) and optional nodes (6–9, a–e)",
+        "Extract micro‑highlight (0.manifestation)",
+        "Extract scene hook (f.manifestation)"
+      ],
+      "output": { "name": "components", "type": "object", "description": "Structured dictionary of extracted content" }
+    },
+    {
+      "step": 3,
+      "name": "Assemble Scene Order",
+      "description": "Determine the sequence of scenes using Scene Associativity or a default order.",
+      "input": [{ "name": "components", "type": "object" }],
+      "process": [
+        "If x.manifestation provides explicit scene order, use it",
+        "Otherwise default order: 1 (opening) → 2 (inciting) → 3 (attempt/failure) → 4 (turning point) → 5 (resolution)",
+        "Interleave optional nodes: atmospheric (6) at scene openings, internal reaction (7) after key beats, dialogue voice (8) within beats, thematic echo (9) before hook, transition cue (a) before hook, minor character action (b) where relevant, object focus (c) and setting micro‑detail (d) and temporal anchor (e) woven into descriptions"
+      ],
+      "output": { "name": "scene_plan", "type": "array", "description": "Ordered list of scenes with associated nodes" }
+    },
+    {
+      "step": 4,
+      "name": "Apply Stylistic Parameters",
+      "description": "Use context.parameters to control tone, descriptive intensity, dialogue density, etc.",
+      "input": [
+        { "name": "parameters", "type": "object", "description": "From chapter_factor.type_binding.context.parameters" }
+      ],
+      "process": [
+        "Map each parameter to prose generation rules (see table in description)",
+        "Apply tone (sardonic → wry, earnest → sincere, melancholic → somber)",
+        "Set descriptive intensity (low = minimal sensory detail, high = rich)",
+        "Set reflective depth (none → deep internal monologue)",
+        "Set dialogue density (frequency of quoted speech)",
+        "Enforce point of view (pov), tense, humor level, violence rating, emotional register, relationship phase, sensory focus, narrative distance, steam level, grovel quality"
+      ],
+      "output": { "name": "style_rules", "type": "object", "description": "Resolved style rules for generation" }
+    },
+    {
+      "step": 5,
+      "name": "Preserve Factor References",
+      "description": "Ensure that any reference to another Factor (character, location, concept, item, etc.) uses its exact PascalCase label. Do not translate these references, even when the surrounding text is in another language.",
+      "process": [
+        "Compile a whitelist of all Factor labels and namespaces that appear in the chapter's `imports` and any referenced `sub_factor` namespaces.",
+        "For every text field that will be used in prose (manifestations of all nodes, context fields, etc.), identify any substring that matches a known Factor label or the final segment of a namespace (e.g., 'Che', 'Sya', 'RoadOfPromise', 'HouseOfMystic', 'WhitePearl', 'DarkRaven', 'Jyestha').",
+        "Do not translate these substrings. Leave them exactly as they appear in the whitelist (case‑sensitive, PascalCase).",
+        "For location names that have a descriptive translation (e.g., 'RoadOfPromise' could be written as 'Jalan Janji' in narrative), the translation is allowed only as a descriptive addition, but the proper name must remain in PascalCase. When in doubt, prefer the PascalCase form.",
+        "For any PascalCase token that is not a common Indonesian word and is not in the whitelist, assume it is a Factor reference and do not translate it."
+      ],
+      "output": {
+        "name": "preserved_tokens",
+        "type": "array",
+        "description": "List of tokens that were kept unchanged"
+      }
+    },
+    {
+      "step": 6,
+      "name": "Determine Target Length and Adjust Style",
+      "description": "Use word_count_estimate to guide expansion or condensation of prose.",
+      "input": [
+        { "name": "word_count_estimate", "type": "object", "description": "{ min, max } from context" },
+        { "name": "style_rules", "type": "object" }
+      ],
+      "process": [
+        "If word_count_estimate.min > 2000, increase descriptive_intensity by one level (e.g., medium → high), increase reflective_depth, and ensure all optional nodes (6–9, a–e) are expanded fully",
+        "If word_count_estimate.max < 1500, decrease descriptive_intensity (e.g., high → medium), reduce reflective_depth, and optionally summarize or combine optional nodes",
+        "If no word_count_estimate provided, use default length (1500–2000 words) with moderate intensity",
+        "Store adjusted style_rules for generation"
+      ],
+      "output": {
+        "name": "adjusted_style_rules",
+        "type": "object",
+        "description": "Style rules tuned to meet word count target"
+      }
+    },
+    {
+      "step": 7,
+      "name": "Write Prose Sequentially",
+      "description": "Generate prose for each scene in order, following the adjusted style rules and interleaving components, while preserving Factor references.",
+      "input": [
+        { "name": "scene_plan", "type": "array" },
+        { "name": "adjusted_style_rules", "type": "object" },
+        { "name": "components", "type": "object" },
+        { "name": "preserved_tokens", "type": "array" }
+      ],
+      "process": [
+        "For each scene:",
+        "  - Write opening paragraph with temporal anchor (e.manifestation) and setting micro‑detail (d.manifestation) if present",
+        "  - Insert atmospheric details (6.manifestation) as sensory grounding",
+        "  - Write the beat using its manifestation as core dialogue/action",
+        "  - Insert internal reaction (7.manifestation) as italicized or separate paragraph",
+        "  - Insert dialogue voice (8.manifestation) where appropriate",
+        "  - Insert minor character action (b.manifestation) if relevant",
+        "  - Insert object focus (c.manifestation) as a concrete anchor",
+        "  - After the resolution beat (5), insert thematic echo (9.manifestation) as closing reflection",
+        "  - Insert transition cue (a.manifestation) to lead to next scene/chapter",
+        "  - End with scene hook (f.manifestation)",
+        "Apply adjusted style_rules during writing (e.g., expand descriptions if high intensity, keep terse if low)",
+        "While writing, ensure that any token in preserved_tokens is written exactly as given (PascalCase), not translated."
+      ],
+      "output": { "name": "draft_prose", "type": "string", "description": "Raw prose without formatting" }
+    },
+    {
+      "step": 8,
+      "name": "Insert the Micro‑Highlight",
+      "description": "Place the chapter's most memorable moment at the emotional peak.",
+      "input": [
+        { "name": "draft_prose", "type": "string" },
+        { "name": "micro_highlight", "type": "string", "description": "0.manifestation" }
+      ],
+      "process": [
+        "Locate the turning point beat (scene 4) or the emotional climax",
+        "Insert micro_highlight as a separate emphasised paragraph (italicized or blockquote)",
+        "Ensure it does not disrupt narrative flow",
+        "Preserve any Factor references inside micro_highlight"
+      ],
+      "output": { "name": "prose_with_highlight", "type": "string" }
+    },
+    {
+      "step": 9,
+      "name": "Foreshadowing Integration",
+      "description": "Embed narrative invertibility hints early in the chapter.",
+      "input": [
+        { "name": "prose_with_highlight", "type": "string" },
+        { "name": "foreshadowing_hints", "type": "string", "description": "z.manifestation" }
+      ],
+      "process": [
+        "Parse foreshadowing_hints for specific elements (e.g., object, phrase, event)",
+        "Insert subtle references in early scenes (atmospheric details, internal reactions)",
+        "If the chapter spans multiple scenes, pay off hints by the end (or leave for future chapters if appropriate)",
+        "Preserve any Factor references in foreshadowing hints"
+      ],
+      "output": { "name": "prose_with_foreshadowing", "type": "string" }
+    },
+    {
+      "step": 10,
+      "name": "Apply Era‑Appropriate Constraints",
+      "description": "Enforce 2005‑2006 technology and eastern minimal‑contact intimacy framework.",
+      "input": [
+        { "name": "prose_with_foreshadowing", "type": "string" },
+        { "name": "context", "type": "object", "description": "From chapter_factor.type_binding.context" }
+      ],
+      "process": [
+        "Ensure no physical touch unless explicitly allowed (eastern_minimal_contact)",
+        "Replace smartphones with Nokia SMS, landlines, analog clocks, physical objects",
+        "Remove anachronisms (social media, GPS, streaming, digital photos)",
+        "Add era‑appropriate details (CRT monitors, internet cafes, printed agendas, SMS delays)"
+      ],
+      "output": { "name": "constrained_prose", "type": "string" }
+    },
+    {
+      "step": 11,
+      "name": "Format as Markdown",
+      "description": "Apply markdown syntax for chapter title, scene breaks, thoughts, and highlights.",
+      "input": [
+        { "name": "constrained_prose", "type": "string" },
+        { "name": "chapter_label", "type": "string", "description": "chapter_factor.label" }
+      ],
+      "process": [
+        "Start with '## ' + chapter_label as title",
+        "Use '### ' for scene breaks (if multiple scenes)",
+        "Enclose internal thoughts in *italics*",
+        "Use '> ' for micro‑highlight if desired",
+        "Use '---' for major scene transitions"
+      ],
+      "output": { "name": "markdown_prose", "type": "string" }
+    },
+    {
+      "step": 12,
+      "name": "Post‑Processing and Word Count Verification",
+      "description": "Calculate metadata, verify word count against target, and optionally iterate.",
+      "input": [
+        { "name": "markdown_prose", "type": "string" },
+        { "name": "chapter_factor", "type": "Factor" },
+        { "name": "word_count_estimate", "type": "object" }
+      ],
+      "process": [
+        "Calculate word count of markdown_prose",
+        "If word count < word_count_estimate.min:",
+        "  - Increase descriptive intensity by one level, expand internal reactions, add more sensory details, and regenerate (go back to Step 6 with adjusted rules)",
+        "If word count > word_count_estimate.max:",
+        "  - Decrease descriptive intensity, tighten dialogue, reduce optional node expansions, and regenerate (go back to Step 6 with adjusted rules)",
+        "If within range, proceed",
+        "Estimate reading time (word count / 200 words per minute)",
+        "Extract character appearances from context.character_appearances or by scanning proper names",
+        "Extract locations used from context.locations or by scanning",
+        "Compile metadata object"
+      ],
+      "output": {
+        "name": "final_output",
+        "type": "object",
+        "description": "{ prose: markdown_prose, metadata: { word_count, reading_time_minutes, characters, locations, iterations } }"
+      }
+    }
+  ]
+}

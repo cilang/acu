@@ -1,0 +1,28 @@
+{
+  "role": "Resonance Interpretation Framework",
+  "definition": {
+    "description": "Resonance derived from knot complement geometry. Default class is torus (T(19,2))."
+  },
+  "formalism": {
+    "type": "OneOf",
+    "options": ["torus", "satellite", "hyperbolic"],
+    "default": "torus",
+    "torus": {
+      "description": "For T(p,q) knots. Default p=19, q=2.",
+      "parameters": {
+        "quantum_depth": { "symbol": "n", "formula": "Q = 19ⁿ", "role": "Depth resolution" },
+        "resonant_harmonic": { "symbol": "m", "formula": "R = 2ᵐ", "role": "Harmonic complexity" },
+        "phase_factor": { "symbol": "φ", "formula": "φ = e^(2πi (n/19 + m/2))" },
+        "combined_state": { "symbol": "Ψ", "formula": "Ψ = 19ⁿ × 2ᵐ × φ" }
+      },
+      "resonant_states": [
+        { "condition": "n/19 + m/2 = 0", "interpretation": "Pure potential (phase π)" },
+        { "condition": "n/19 + m/2 = 1", "interpretation": "Full actualization (phase 0)" },
+        { "condition": "n/19 + m/2 = 1/2", "interpretation": "Transitional processing" }
+      ]
+    },
+    "satellite": { "description": "Placeholder for future expansion" },
+    "hyperbolic": { "description": "Placeholder for future expansion" }
+  },
+  "constraint": "Every Factor must declare its resonance class and provide valid parameters (n,m for torus)."
+}

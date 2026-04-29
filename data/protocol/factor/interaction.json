@@ -1,0 +1,150 @@
+{
+  "name": "Factor Interaction Protocol",
+  "version": "1.0.0",
+  "description": "Procedures to combine, compare, and transform Factors using Homotopy Type Theory. All operations produce or manipulate terms of the Factor dependent record type. Interactions preserve topological invariants inherent in the T(19,2) knot scaffold.",
+  "resonance_computation": {
+    "description": "Compute a resonance value between two Factors A and B, indicating their degree of homotopy‑theoretic alignment. Higher resonance means the Factors share more equivalent structure and are thus ‘harmonically’ compatible.",
+    "inputs": [
+      { "name": "factor_A", "type": "Factor" },
+      { "name": "factor_B", "type": "Factor" }
+    ],
+    "process": [
+      "1. Retrieve both Factors’ Cilang assignments: the HoTT type `definition_A[n]` and term `manifestation_A[n]` for each node n, and similarly for B.",
+      "2. For each of the 19 nodes, compute the type‑equivalence strength:",
+      "   - If `definition_A[n] ≡ definition_B[n]` (syntactically identical), contribution = 1.0.",
+      "   - Else attempt to prove `IsEquiv( definition_A[n] ≃ definition_B[n] )`. If a witness is available, contribution = 0.8 (equivalent under univalence).",
+      "   - Otherwise, contribution = 0.2 (different types).",
+      "   Normalise the sum of contributions across all nodes to a base resonance component `R_types` ∈ [0,1].",
+      "3. For each node where the types are equivalent, compare the inhabiting terms:",
+      "   - Are there explicit paths (transport or equality) linking `manifestation_A[n]` to `manifestation_B[n]`? If yes, add +0.1 per node (up to +0.9).",
+      "   - This yields `R_terms`.",
+      "4. Factor in the homotopy depth alignment: compute `Δn = |n_A - n_B|` and `Δm = |m_A - m_B|`. Resonance penalty = (Δn + Δm) / (max_n + max_m + 1).",
+      "5. Check stratum compatibility: if both Factors use the same stratum (or compatible strata per the probability matrices), multiply by 1.0; else multiply by 0.5 (`S`).",
+      "6. Compute phase alignment: `φ_align = cos( phase_arg_A - phase_arg_B )`, mapped to [0,1] via (φ_align+1)/2.",
+      "7. Overall resonance R = clamp( (0.4*R_types + 0.3*R_terms + 0.3*φ_align) * S * (1 - depth_penalty) , 0, 1 ).",
+      "8. Return R and a qualitative interpretation:",
+      "   - R > 0.8 → ‘Univalent’ (isomorphic structures)",
+      "   - 0.5 ≤ R ≤ 0.8 → ‘Harmonic’ (strong overlap)",
+      "   - 0.3 ≤ R < 0.5 → ‘Dissonant’ (partial alignment)",
+      "   - R < 0.3 → ‘Orthogonal’ (almost no shared structure)."
+    ],
+    "outputs": {
+      "resonance_value": "number ∈ [0,1]",
+      "interpretation": "string",
+      "type_equivalences": "list of node-wise equivalences"
+    }
+  },
+  "combination": {
+    "description": "Combine two Factors into a new Factor that represents their superposition or interaction product. Uses type‑theoretic constructions (sum, record merge, tensor product) and automatically simplifies via univalence.",
+    "inputs": [
+      { "name": "factor_A", "type": "Factor" },
+      { "name": "factor_B", "type": "Factor" },
+      {
+        "name": "combine_mode",
+        "type": "string",
+        "enum": ["superposition", "tensor_product", "reidemeister_merge"],
+        "default": "superposition"
+      }
+    ],
+    "process": {
+      "for_superposition_mode": [
+        "- Create new namespace = A.namespace + '_' + B.namespace (or user‑specified).",
+        "- For each node n, define the new node type as a record type that merges the two definitions: `merge(A.def[n], B.def[n])`. This could be a Σ‑type over both definitions if they are independent, or a union type if they share common structure.",
+        "- Use univalence: if A.def[n] ≡ B.def[n], collapse to a single field.",
+        "- Combine manifestations: if types are identical, take the term `(manifest_A[n], manifest_B[n])`; if equivalent, transport one to the other.",
+        "- Resonance parameters: `n_new = max(n_A, n_B)`, `m_new = max(m_A, m_B)`, chirality = the dominant orientation (or amphichiral if opposite).",
+        "- Stratum: if both use same stratum, keep; else use 'global'.",
+        "- States: node value = ternary sum (mod 3) of A and B values for that node; phase_offset = sum mod 2π.",
+        "- Validate that invariants hold; if not, the combination is rejected or adjusted."
+      ],
+      "for_tensor_product_mode": [
+        "- Treat A and B as two independent subsystems in a link view.",
+        "- Create a new Factor that partitions nodes into two components (A's nodes and B's nodes). Resulting namespace = A.namespace + '⊗' + B.namespace.",
+        "- For each node that appears in both A and B, define a product type (A.def[n] × B.def[n]) and pair the terms.",
+        "- Resonance: `n_new = n_A + n_B`, `m_new = m_A + m_B` (additive depth).",
+        "- Stratum: automatically set to 'global' (or a new combined stratum if available).",
+        "- States: keep separate; the view_mode is set to 'link' with two components."
+      ],
+      "for_reidemeister_merge_mode": [
+        "- Apply a Reidemeister‑2 like simplification: cancel nodes that share opposite states and are connected by a mandatory edge.",
+        "- Identify nodes u,v such that value_A[u] = -value_B[u] (and same for v?), and there exists an edge u→v in the Usepong stratum with opposite phase contributions that can be annihilated.",
+        "- Remove those two nodes from the Cilang assignment (set their definitions to the unit type and manifestation to trivial), reducing the Factor's complexity.",
+        "- Adjust resonance m down by 2 (if two loop constructors cancelled).",
+        "- Must not remove required nodes (paradigm constraint).",
+        "- The remaining Factor is a new term of Factor."
+      ]
+    },
+    "outputs": {
+      "combined_factor": "Factor",
+      "simplification_applied": "list of univalence merges or Reidemeister cancellations"
+    }
+  },
+  "transformation": {
+    "description": "Apply a Reidemeister move (R1, R2, R3) to a single Factor, reinterpreted as operations on the HIT structure of the Factor’s type assignment. These preserve the topological invariants of the T(19,2) knot up to homotopy.",
+    "inputs": [
+      { "name": "factor", "type": "Factor" },
+      { "name": "move", "type": "string", "enum": ["R1", "R2", "R3"] },
+      {
+        "name": "location",
+        "type": "object",
+        "description": "Specify which nodes/edges are involved, or let the system choose based on the stratum."
+      }
+    ],
+    "process": {
+      "R1": {
+        "description": "Twist insertion or removal (self‑loop). Adds or removes a full phase cycle.",
+        "effect": "Select a node `u` that either: a) currently has `phase_offset = 0` and a HIT definition that can support an additional loop (e.g., it is a Circle or a HIT with a loop constructor). Add a new self‑edge in the `definition` type (via a HIT constructor `loop_u : u = u`), and increase `phase_offset` of u by 19 (π). If removing, delete the loop constructor and decrease phase_offset accordingly.",
+        "constraint": "The new loop must be compatible with the node’s type. After the move, phase closure must be recomputed and proven."
+      },
+      "R2": {
+        "description": "Cancel or create a pair of oppositely‑oriented edges between two nodes.",
+        "effect": "Identify two distinct nodes `u` and `v` that have a direct path `p : u = v` (from the stratum) and opposite states (one -1, one +1) and phase contributions that sum to π. If canceling, remove the path `p` from the HIT definition (set it to reflexivity) and remove the nodes if they become trivial (unit type). If creating, introduce a new path constructor `p` of type `u = v` and adjust states accordingly.",
+        "constraint": "Cannot remove required nodes or disconnect mandatory edges. The resulting Factor must still satisfy all invariants."
+      },
+      "R3": {
+        "description": "Three‑way braiding move. Shifts phase relations among three nodes forming a triangle in the stratum.",
+        "effect": "Given three nodes `a,b,c` with edges `a→b`, `b→c`, `c→a` (or any cyclic permutation) in the stratum, permute the over/under relations. Concretely, adjust the phase offsets of the three nodes by adding ±2π/3 each (mod 2π), and swap the chirality of the local interaction if needed. The transformation is equivalent to applying a 3‑cycle to the path constructors in the HIT fragment.",
+        "constraint": "The triangle must exist in the stratum with non‑zero probability (i.e., the HIT must allow this path structure)."
+      }
+    },
+    "outputs": {
+      "transformed_factor": "Factor",
+      "phase_shift_applied": "Cyclic38 (total phase change)",
+      "proof_of_invariance": "Witness that topological invariants are preserved"
+    }
+  },
+  "narrative_transition": {
+    "description": "Simulate a character arc or plot progression by applying a sequence of state changes within the Factor’s homotopy‑type framework. Uses path induction (J‑rule) and transport to move terms along paths induced by the narrative beat.",
+    "inputs": [
+      { "name": "factor", "type": "Factor" },
+      { "name": "steps", "type": "integer", "minimum": 1, "default": 1 },
+      { "name": "chirality_follow", "type": "boolean", "default": true }
+    ],
+    "process": [
+      "For each step:",
+      "  1. If chirality_follow, determine the transition direction from factor.type_binding.resonance.chirality:",
+      "     - Right‑handed: +1 → 0 → -1 → +1.",
+      "     - Left‑handed: -1 → 0 → +1 → -1.",
+      "  2. For each explicit node (0‑f) that is 'active' (value ≠ 0) or connected via a Usepong edge to an active node, apply the ternary transition:",
+      "     - e.g., if current value = +1 (right‑handed), next value = 0.",
+      "  3. Simultaneously, interpret the state change as a path `p_n : value_old = value_new` in a 3‑element type (Ternary). Transport the node’s `manifestation` along this path: `new_manifestation = transport p_n old_manifestation`.",
+      "     For example, moving from 'Potential' (-1) to 'Processing' (0) may replace a 'latent event' term with an 'in‑progress event' term.",
+      "  4. For nodes involved in a R3‑like triangle, update their phase_offsets by ±2π/3 according to the chirality and the local stratum pattern.",
+      "  5. Recompute the global phase closure witness and verify it remains 0 mod 2π. If it fails, the transition step is rejected (or automatically compensated by adjusting other phases).",
+      "  6. Append a narrative_step_log entry describing the changed nodes, new values, and transported terms."
+    ],
+    "outputs": {
+      "new_factor_state": "Factor (updated values, phases, and manifestations)",
+      "narrative_step_log": "list of { node, old_value, new_value, transported_term }"
+    }
+  },
+  "probability_matrix_usage": {
+    "description": "When a Factor does not bind to a specific satellite_id, the stratum’s probability matrix determines which edges exist concretely in the HIT of the Cilang assignment. In the HoTT context, this is realised as a probabilistic choice of which path constructors to include in the definition of the knot‑derived HIT.",
+    "process": [
+      "For any interaction requiring an edge u→v, look up P(u→v) in the stratum’s probability matrix (e.g., acu.data.probability_matrix.trefoil).",
+      "If P > random(0,1), the edge exists and a path constructor `p_{u,v} : node_u ≡ node_v` is added to the node types (or left available). Otherwise, the path is omitted (set to an empty type / unreachable).",
+      "During narrative transitions, edges with higher probability are more likely to be traversed (i.e., the state transition considers them as active connections).",
+      "This stochastic layer models the ‘narrative potential’ of certain connections, reflecting the resonant harmonics of the knot complement without over‑determining the structure."
+    ]
+  }
+}

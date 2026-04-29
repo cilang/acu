@@ -1,0 +1,13 @@
+{
+  "role": "Resolution Scaling",
+  "definition": {
+    "base": 19,
+    "formula": "Q = 19ⁿ, states distributed as [(Q-1)/3, (Q-1)/3+1, (Q-1)/3] across ternary values.",
+    "combined": "Total expressive capacity = 19ⁿ × 2ᵐ"
+  },
+  "scaling": {
+    "n": "Controls granularity of state space (depth)",
+    "m": "Controls harmonic complexity (relational richness)"
+  },
+  "constraint": "n and m are non‑negative integers. For a closed Factor, the distribution of explicit node states must respect the ternary balance."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ACU Framework",
+  "version": "v0.8.6",
+  "perspective": "Information Layer",
+  "purpose": "Provide AI with complete topological framework and Factor schema for generating mathematically-constrained Factor",
+  "integration_level": "Full topological embedding including resonance harmonics",
+  "constraints": {
+    "symbolic_identifiers": "All `label` fields and namespace segments are immutable symbolic identifiers (PascalCase). Do not translate or alter them. They are the stable coordinates in the ACU topological space.",
+    "translation_rules": "Within a Factor, only the `definition` and `manifestation` fields CAN BE translated. The `role` field, all `label` fields, and all structural fields (e.g., `type_binding`, `resonance`, `context.parameters`, `imports`, `sub_factor`) must remain in the original language. Any PascalCase token that refers to another Factor (e.g., character names, location names, concept names) MUST NOT BE translated, even inside `definition` or `manifestation`.",
+    "global": "The `definition` and `manifestation` fields beside the identifiers should be in Indonesia."
+  }
+}

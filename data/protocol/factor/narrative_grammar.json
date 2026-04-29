@@ -1,0 +1,211 @@
+{
+  "version": "1.0.0",
+  "description": "Bidirectional mapping between Factor state vectors and structured narrative plans. The grammar translates Cilang ternary values, phase offsets, stratum connectivity, resonance parameters, and topological invariants into a scene‑by‑scene blueprint. The language layer (prose) is applied separately and is not specified here, ensuring reversibility.",
+  "principles": {
+    "deterministic_core": "Identical Factor state sequences always produce identical scene plans for a given set of style parameters.",
+    "reversibility": "A complete scene plan can be parsed back into the sequence of Factor state vectors that generated it.",
+    "topology_faithful": "Every mapping rule is grounded in the T(19,2) knot, Usepong stratum, resonance, or HoTT invariants.",
+    "extensible": "New mappings can be added under a custom namespace without breaking the core specification."
+  },
+  "emotional_mapping": {
+    "description": "Maps the ternary state of each explicit Cilang node to a mood contribution, then computes a global scene mood.",
+    "value_meanings": {
+      "-1": { "label": "Potential", "mood_keywords": ["longing", "anticipation", "unresolved", "absence"], "mood_weight": -0.5 },
+      "0": { "label": "Processing", "mood_keywords": ["neutral", "transitional", "in‑between", "contemplative"], "mood_weight": 0.0 },
+      "1": { "label": "Actualized", "mood_keywords": ["fulfilled", "present", "concrete", "resolution"], "mood_weight": 0.5 }
+    },
+    "mood_spectrum": {
+      "negative": { "range": [-9.5, -3.0], "moods": ["tension", "sadness", "fear", "anger", "despair"] },
+      "mixed_negative": { "range": [-3.0, -0.5], "moods": ["unease", "melancholy", "irritation"] },
+      "neutral": { "range": [-0.5, 0.5], "moods": ["curiosity", "reflection", "calm", "stillness"] },
+      "mixed_positive": { "range": [0.5, 3.0], "moods": ["hope", "tenderness", "quiet joy"] },
+      "positive": { "range": [3.0, 9.5], "moods": ["joy", "peace", "passion", "elation", "ecstasy"] }
+    },
+    "computation": "Sum the mood_weights of all explicit nodes (0‑f). Implicit nodes (x,y,z) do not contribute. Clamp between -9.5 and 9.5. Map to a specific mood within the corresponding spectrum band using a static table to ensure determinism."
+  },
+  "pacing_mapping": {
+    "description": "Phase offset variance across explicit nodes determines narrative pace.",
+    "phase_variance_bands": {
+      "low": { "max_variance": 0.2, "pace": "slow", "description": "Detailed, immersive; longer sentences and scenes; emphasis on internal states." },
+      "medium": { "max_variance": 0.6, "pace": "moderate", "description": "Balanced narrative flow, mixing dialogue and description." },
+      "high": { "max_variance": 2.0, "pace": "fast", "description": "Urgent, clipped; short scenes and sentences; emphasis on external action." }
+    },
+    "computation": "Compute the circular variance of all explicit node phase_offsets (in units of π). Use the mean resultant length R̄ = |Σ e^(iφ_j)| / 16. Variance = 1 - R̄."
+  },
+  "interaction_patterns": {
+    "description": "Translates edges present in the chosen Usepong stratum into dramatic beats. Each edge corresponds to a template that can be instantiated with the semantic information of the involved nodes.",
+    "stratum_edge_semantics": {
+      "mandatory": "Always present in every scene; these edges ensure continuity and structural invariants.",
+      "high_probability": "Edge exists in the stratum with P ≥ 0.5. It is the likely main interaction of the scene.",
+      "low_probability": "Edge exists with P < 0.5. It provides subplot or background texture.",
+      "absent": "Edge has 0 probability; cannot be used directly, only via longer composite paths."
+    },
+    "mandatory_edge_templates": {
+      "x→6": "A memory becomes grounded in a concrete act, object, or sensory detail.",
+      "6→f": "A particular interaction leads to an overarching pattern or closure moment.",
+      "f→5": "Systemic closure prompts a definite proposition or irrevocable decision.",
+      "5→e": "A commitment is tested through computational/logical challenge (e.g., a defined test).",
+      "e→4": "The challenge reveals the true complexity level of the relationship/identity.",
+      "4→d": "Complexity is lifted into a suspended tension between opposites.",
+      "d→3": "Tension resolves into the formation of a new core bond (or breaks it).",
+      "3→c": "A bond is simplified, truncated to its essential, universal component.",
+      "c→2": "The truncated essence undergoes univalence: structural equivalence is recognized.",
+      "2→b": "Equivalence leads to a quotient/forgiveness: differences are identified as equal.",
+      "b→1": "Forgiveness reinforces or redefines identity.",
+      "1→a": "Identity clarifies mutual equivalence between two views.",
+      "a→0": "Mutual equivalence births a new universe of understanding.",
+      "0→9": "The new universe reveals a toroidal structure of multiple independent cycles.",
+      "9→z": "Dual cycles converge into a contractible truth.",
+      "z→8": "Truth gives rise to a new circle of care, beginning the cycle anew.",
+      "8→y": "A repeated care cycle becomes a lesson learned through reflection.",
+      "y→7": "Reflection expands into a full narrative groupoid of possible paths.",
+      "7→x": "The narrative landscape ultimately lodges in a new memory, closing the loop."
+    },
+    "optional_edge_templates": {
+      "description": "For edges that are not mandatory but exist in the stratum, generic templates are provided. Each edge u→v maps to a beat: '[Label of u] interacts with [Label of v]' instantiated by the node's role and definition.",
+      "template": "A moment where {u.role} encounters {v.role}."
+    },
+    "beat_generation": "For a scene, select a connected subgraph of the stratum containing at least all mandatory edges. High‑probability edges are foreground beats; low‑probability edges become secondary mentions."
+  },
+  "obligatory_elements": {
+    "description": "Topological invariants and required nodes translated into must‑appear narrative events across the entire story.",
+    "phase_closure": {
+      "requirement": "The sum of all phase changes over all scenes must be 0 (mod 2π) for knot view; for braid, explicit accumulation is reported. In narrative terms, the story must provide emotional resolution for all opened loops – every longing must be met, every tension released, unless the braid mode is active in which case open threads are intentional.",
+      "narrative_expression": "If the mode is knot, the final scene must mirror the opening scene with transposed emotional states. If a cycle cannot close, a character explicitly acknowledges the unresolved element."
+    },
+    "state_conservation": {
+      "requirement": "The sum of node values around any fundamental cycle equals 0 mod 3. In story terms, for every major conflict (negative valence), there must be an equal and opposite moment of harmony or compensation before the cycle completes.",
+      "narrative_expression": "Track the ‘emotional debt’ of each major character or relationship. The payoff must balance the debt, either through reunion, sacrifice, or acceptance of loss."
+    },
+    "core_invariant_arcs": [
+      { "invariant": "0→z", "arc_name": "The Universal Simplification", "description": "A moment where all complexity collapses into a single, undeniable truth.", "example": "The protagonist, after a labyrinth of deception, speaks the one sentence that changes everything." },
+      { "invariant": "8→7", "arc_name": "Routine Becomes Story", "description": "A repeated, seemingly mundane action is recognized as a defining narrative.", "example": "The protagonist’s daily walk to the station is revealed to be the thread stitching their entire life together." },
+      {
+        "invariant": "x→a→9→y→x",
+        "arc_name": "The Cycle of Reflection",
+        "description": "Memory (x) leads to equivalence (a), then expands into dual resonance (9), is interpreted (y), and returns to transformed memory (x). This cycle must appear at least once.",
+        "example": "A flashback (x) shows a parallel with the present (a), creating a double storyline (9) that teaches a lesson (y), changing the memory’s meaning (x)."
+      },
+      {
+        "invariant": "1→6→5→2→1",
+        "arc_name": "The Identity Solidification",
+        "description": "Identity (1) is tested through concrete interactions (6), leading to a commitment statement (5) that is acknowledged as structural equivalence (2), returning to a reinforced identity (1).",
+        "example": "A character’s self‑image is challenged by a series of events, they make a vow, realize that the challenge and the vow are the same shape, and emerge with a stronger sense of self."
+      },
+      {
+        "invariant": "7‑core strong connectivity",
+        "arc_name": "The Unbroken Web",
+        "description": "All major narrative threads must remain connected; no subplot can be completely severed from the main story.",
+        "example": "Even the most peripheral character’s actions must ultimately influence the core plot, or be shown to have been connected all along."
+      }
+    ],
+    "required_node_appearances": {
+      "0": { "name": "Universe", "requirement": "Must be explicitly introduced in the opening scene as the thematic container." },
+      "1": { "name": "Identity", "requirement": "Each major character must have a moment where their identity is defined or challenged." },
+      "x": { "name": "Transport/Memory", "requirement": "At least one clear moment of memory that carries emotional weight across time." },
+      "y": { "name": "PathInduction/Learning", "requirement": "A reflective turning point where a character derives a universal principle from a specific experience." },
+      "f": { "name": "Closure", "requirement": "The final scene must demonstrate that the story is ontologically complete; no loose threads essential to the theme." }
+    }
+  },
+  "resonance_complexity": {
+    "description": "Resonance parameters n and m determine the narrative complexity and number of parallel threads.",
+    "n_depth_levels": {
+      "0": "Simple, grounded narrative. Characters act without meta‑awareness of their own story structure (set level).",
+      "1": "Characters reflect on their own motivations and stories (groupoid: multiple interpretations of the same event exist).",
+      "2": "Nested narratives; stories within stories; characters become unreliable narrators (2‑groupoid).",
+      "3+": "Explicit philosophical, metafictional, or mathematical layers. The narrative may comment on its own construction."
+    },
+    "m_thread_count": { "0": "Single main plotline.", "1": "One major subplot or parallel arc running alongside the main plot.", "m": "Up to m distinct narrative threads (path constructors) appear, each with its own set of characters and resolution pattern." }
+  },
+  "view_mode_translation": {
+    "description": "The Factor’s view_mode governs the overall shape of the narrative arc.",
+    "knot": {
+      "structure": "circular",
+      "narrative_description": "The story ends where it began, but the characters and the world are transformed. In medias res openings, flashbacks, and thematic closure are typical. The final scene must echo the opening scene with the emotional states transposed.",
+      "example": "The story begins with a character alone in a room; it ends with them in the same room, but the meaning of being ‘alone’ has changed completely."
+    },
+    "link": {
+      "structure": "parallel",
+      "narrative_description": "Multiple independent storylines run contemporaneously, intersecting only at key plot points. Each component has its own arc, phase closure, and resolution. The final scenes weave the components together into a thematic whole.",
+      "example": "Three siblings in different cities each face a version of the same moral choice; their stories converge only in the final chapter."
+    },
+    "braid": {
+      "structure": "linear_accumulating",
+      "narrative_description": "Forward‑moving plot with accumulating tension. Phase is not forced to close; unresolved elements are intentional and may carry into a sequel. The emotional debt is acknowledged but not fully paid.",
+      "example": "A detective story that ends with the case solved but the protagonist’s personal life in ruins, with no reconciliation in sight."
+    }
+  },
+  "scene_generation_algorithm": {
+    "description": "Procedural steps to turn a sequence of Factor state vectors into a list of scene descriptions.",
+    "inputs": {
+      "state_sequence": "Array of objects, each containing: step number, full Cilang assignment (values + phase_offsets), type_binding.resonance, type_binding.usepong_binding, view_mode, and the Factor’s label/role/definition.",
+      "style_parameters": "Optional object controlling language tone, point of view, tense, etc. (belongs to the Language layer but may influence beat selection)."
+    },
+    "outputs": "Array of scene objects: { scene_id, title, mood, mood_intensity, pace, beats: [{ description, foreground_nodes, background_nodes }], obligatory_arcs_advanced: [arc_name] }",
+    "procedure": [
+      "Pre‑process: Load the Usepong stratum matrix and mandatory edge templates. Identify the required node appearances and invariant arcs.",
+      "For each state_vector:",
+      "  1. Mood: Sum explicit node mood_weights. Clamp to [-9.5,9.5]. Look up mood_spectrum to get a primary mood label and intensity (absolute distance from band center).",
+      "  2. Pace: Compute phase variance as described. Map to pace band (slow/medium/fast).",
+      "  3. Active edges: From the stratum probability matrix, select edges for this scene. All mandatory edges are always present. For non‑mandatory, sample according to probability, but guarantee at least one high‑probability edge is present.",
+      "  4. Beat generation: For each active edge, instantiate the corresponding template from interaction_patterns, using the node labels, roles, and definitions. If the edge is mandatory, use the specific mandatory_edge_templates. Otherwise, use the optional_edge_template, filling in u.label, v.label, u.role, v.role.",
+      "  5. Foreground/Background: Nodes with value ≠ 0 or with an active high‑probability edge are foreground. Others are background.",
+      "  6. Scene description: Assemble a one‑sentence summary of the scene that combines mood, primary beats, and narrative purpose. This is the scene description for the Language layer.",
+      "  7. Obligatory tracking: Check if any invariant arcs have been fully traversed in this scene (all required sub‑beats present). Note the arc advancement.",
+      "Post‑process: Ensure that by the final scene, all required nodes have appeared at least once, all invariant arcs have been completed (or intentionally left incomplete for braid), and phase closure (if knot) is narratively expressed. If not, insert bridging scenes or modify final beats to comply."
+    ],
+    "reversibility_specification": {
+      "description": "Guidelines for reconstructing a Factor state sequence from a narrative plan. A full reverse parser is beyond the core grammar, but the following rules enable manual or automated recovery.",
+      "rules": {
+        "mood_to_values": "A scene mood in the negative band implies most nodes are -1; positive implies +1; neutral implies 0. Use mood_intensity to estimate the proportion of nodes deviating from 0.",
+        "pace_to_phases": "Slow pace → low phase variance (most offsets similar). Fast pace → high variance. The actual variances recorded during generation can be used as targets.",
+        "beats_to_edges": "Each beat corresponds to an active edge u→v. Inverting the beat template recovers the edge. For mandatory edges, the recovery is deterministic. For optional edges, the co‑occurrence probabilities constrain possible stratum states.",
+        "obligatory_arcs_to_state_transitions": "Completion of an invariant arc forces certain node values and phases at that point. e.g., the 0→z arc implies node 0 and node z must have non‑zero interaction; often both become +1 temporarily.",
+        "closure_to_final_state": "For knot mode, the final scene must mirror the opening scene; thus the final state vector should be isomorphic to the initial state vector up to a global phase shift."
+      }
+    },
+    "example_mini_story": {
+      "title": "The Glance",
+      "factor": "Love/RomanticLove (Elara & Kian), trefoil_f stratum, knot view, n=2,m=4",
+      "scenes": [
+        {
+          "scene_id": 1,
+          "title": "The Café",
+          "mood": "curiosity",
+          "mood_intensity": 0.3,
+          "pace": "slow",
+          "beats": [
+            { "description": "The universe is introduced through the warm amber light of the café (0 appears). Elara orders jasmine tea; her identity is established (1).", "foreground_nodes": ["0", "1"], "background_nodes": ["x"] },
+            { "description": "Kian looks up; a memory begins to form (x→6).", "foreground_nodes": ["x", "6"], "background_nodes": [] }
+          ],
+          "obligatory_arcs_advanced": ["The Universal Simplification (begin: the café becomes the center of the universe)"]
+        },
+        {
+          "scene_id": 2,
+          "title": "The Shared Smile",
+          "mood": "hope",
+          "mood_intensity": 0.6,
+          "pace": "moderate",
+          "beats": [
+            { "description": "Their interaction solidifies into a shared moment (6→f).", "foreground_nodes": ["6", "f"], "background_nodes": ["2"] },
+            { "description": "A silent commitment is made (f→5). Neither can take it back.", "foreground_nodes": ["f", "5"], "background_nodes": [] }
+          ],
+          "obligatory_arcs_advanced": ["The Identity Solidification (start: 1→6)"]
+        },
+        {
+          "scene_id": 3,
+          "title": "The Reflection",
+          "mood": "quiet joy",
+          "mood_intensity": 0.8,
+          "pace": "slow",
+          "beats": [
+            { "description": "The cycle of care (8→y) becomes a lesson.", "foreground_nodes": ["8", "y"], "background_nodes": [] },
+            { "description": "The lesson expands into a narrative landscape (y→7), capturing all the paths they might take.", "foreground_nodes": ["y", "7"], "background_nodes": [] },
+            { "description": "Narrative settles into a new memory (7→x), closing the loop.", "foreground_nodes": ["7", "x"], "background_nodes": ["0", "z"] }
+          ],
+          "obligatory_arcs_advanced": ["The Cycle of Reflection (complete)", "The Universal Simplification (end: all collapses into the memory of the first glance)"]
+        }
+      ]
+    }
+  }
+}
