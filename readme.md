@@ -11,7 +11,7 @@
 
 ## Quick Start
 
-
+Use `dust/acu.json` as prompt header and ask AI to create a Factor about something, like `Love` for example, then ask it to produce prose based on the Factor or explain the Factor in Natural Language.
 
 ## 📜 License
 
