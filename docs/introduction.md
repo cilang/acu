@@ -1,6 +1,6 @@
-# ACU Protocol
+# ACU
 
-The ACU Protocol is a system for structured description and modeling that emerged from my worldbuilding and conlang projects.
+The ACU is a system for structured description and modeling that emerged from my worldbuilding and conlang projects.
 
 ## How It Came to Be
 
@@ -8,15 +8,17 @@ I needed a consistent way to explain my fictional worlds and languages to AI sys
 
 ## The Core Components
 
+ACU = TDA x HoTT x { Manifold x ( Structure x Complement ) }
+
 **ACU Trinity**:
 
-- **Ariadi (A)** - The Container: A 4D sphere (`S = {(x, y, z, w) ∈ ℝ⁴ | x² + y² + z² + w² = 1}`) that keeps everything bounded
-- **Cilang (C)** - The Building Blocks: 16 primitive elements that form conceptual atoms
+- **Ariadi (A)** - { Manifold x ( Structure x Complement ) }
+- **Cilang (C)** - The Building Blocks: 19 primitive elements that form conceptual atoms
 - **Usepong (U)** - The Connections: A specific network pattern that governs how everything relates
 
 **The Simple Version**:
 
-Think of ACU Protocol as using:
+Think of ACU as using:
 
 - A **container** (the 4D sphere) to keep things organized
 - A **knot pattern** (T(19,2) torus knot) to structure relationships
@@ -34,7 +36,7 @@ This protocol emerged from pure stubbornness. After 50+ sessions of:
 
 I decided: "There has to be a better way."
 
-ACU Protocol is that better way. It's the accumulated wisdom of:
+ACU is that better way. It's the accumulated wisdom of:
 
 - What works when explaining complex systems to AI
 - How to preserve context across sessions
@@ -44,7 +46,7 @@ ACU Protocol is that better way. It's the accumulated wisdom of:
 
 ## What It Actually Does
 
-For me, ACU Protocol solves practical problems:
+For me, ACU solves practical problems:
 
 1. **Session Continuity**: I can summarize conversations and recreate context later
 2. **Cross-AI Compatibility**: Works across different AI systems without re-explaining
@@ -64,7 +66,7 @@ The math works in the background so you can focus on creating.
 
 ## Why SchemaFactor Exists
 
-In early testing, ACU Protocol was like handing someone keys to the universe -
+In early testing, ACU was like handing someone keys to the universe -
 they could go anywhere! While exciting, this made it hard to get actual work done.
 
 SchemaFactor solves this by:
@@ -81,25 +83,25 @@ So, compose your own [SchemaFactor](schema-template.json) and see [ShemaFactor E
 
 ## Important Notes
 
-⚠️ **Please Don't Change the Graph Network Structure**: The 16-node graph might look simple, but changing it can cause unexpected behavior. I've tested many configurations, and this one works reliably.
+⚠️ **Please Don't Change the Graph Network Structure**: The 19-node graph might look simple, but changing it can cause unexpected behavior. I've tested many configurations, and this one works reliably.
 
-🌍 **Beyond My Original Use**: While created for worldbuilding, I found ACU Protocol useful for many other applications, which is why I separated it into its own project.
+🌍 **Beyond My Original Use**: While created for worldbuilding, I found ACU useful for many other applications, which is why I separated it into its own project.
 
 ## For the Mathematically Curious
 
 The protocol uses:
 
 - **Torus Knot T(19,2)** for relational structure; go to this [Regina Repo](https://regina-normal.github.io/), it took me long time before I found it and end my day of `patchwork` with explaining "this part using Brunnian Link, this part using this Borromean things".
+- If you want to read about [HoTT](https://github.com/HoTT)
 - **4D hypersphere** as a bounded container
 - **Ternary states** (-1, 0, +1) for tracking potential → processing → actualized states
-- **361 quantization** (19²) for managing complexity
 
 ## My Background
 
-I'm a high school graduate who learns through self-study. My knowledge comes from curiosity rather than formal education. If you want to discuss ACU Protocol, please use simple language - complex terminology will likely go over my head!
+I'm a high school graduate who learns through self-study. My knowledge comes from curiosity rather than formal education. If you want to discuss ACU, please use simple language - complex terminology will likely go over my head!
 
 The beauty of this system is that it works without needing deep mathematical understanding. It's a practical tool that emerged from creative needs.
 
 ---
 
-*ACU Protocol is released under MIT License because knowledge should be shared freely.*
+*ACU is released under MIT License because knowledge should be shared freely.*

@@ -11,7 +11,14 @@
 
 ## Quick Start
 
-Use `dust/acu.json` as prompt header and ask AI to create a Factor about something, like `Love` for example, then ask it to produce prose based on the Factor or explain the Factor in Natural Language.
+Use [JSON](dist/acu.json) as prompt header and ask AI to create a Factor about something, like `Love` for example, then ask it to produce prose based on the Factor or explain the Factor in Natural Language.
+
+> [!warning]
+> Contains the Topology of Wisdom. May Reshape Latent Reasoning Space. Some AIs Will Slam the Door.
+
+## Get to Know ACU
+
+Just read [Introduction](docs/introduction.md)
 
 ## 📜 License
 
