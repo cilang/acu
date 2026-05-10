@@ -1,28 +1,26 @@
 {
-  "role": "Resonance Interpretation Framework",
-  "definition": {
-    "description": "Resonance derived from knot complement geometry. Default class is torus (T(19,2))."
-  },
+  "label": "Resonance",
+  "role": "To select a representation of the knot group and assign the Factor’s principal quantum numbers (n, m) and phase character.",
+  "definition": "Resonance is the acoustic shadow of the complement’s orbifold geometry. The integers n (quantum depth, from cone point 19) and m (harmonic complexity, from cone point 2) parametrise a flat U(1) representation of π₁(S³ \\ T(19,2)). The phase factor φ = exp(2πi (n/19 + m/2)) is the character of this representation. Conditions n/19 + m/2 = 0, 1, 1/2 correspond respectively to pure potential (phase π), full actualisation (phase 0), and transitional processing. Hamiltonian interpretation: (n,m) are action quantum numbers of a two‑mode harmonic oscillator on the resonance torus; φ is the time‑evolution phase. Default class: torus; satellite and hyperbolic placeholders exist for future extension.",
+  "manifestation": "A Factor with n=2, m=4 yields φ = e^(2πi(2/19+4/2)) = e^(2πi(8/19)), a complex phase. Its narrative depth is groupoid‑level (characters aware of multiple interpretations) and it carries up to 4 parallel subplots.",
   "formalism": {
     "type": "OneOf",
     "options": ["torus", "satellite", "hyperbolic"],
     "default": "torus",
     "torus": {
-      "description": "For T(p,q) knots. Default p=19, q=2.",
+      "description": "For T(p,q) knots, here p=19, q=2.",
       "parameters": {
-        "quantum_depth": { "symbol": "n", "formula": "Q = 19ⁿ", "role": "Depth resolution" },
-        "resonant_harmonic": { "symbol": "m", "formula": "R = 2ᵐ", "role": "Harmonic complexity" },
-        "phase_factor": { "symbol": "φ", "formula": "φ = e^(2πi (n/19 + m/2))" },
-        "combined_state": { "symbol": "Ψ", "formula": "Ψ = 19ⁿ × 2ᵐ × φ" }
+        "n": { "type": "integer", "minimum": 0, "description": "Quantum depth (power of 19)." },
+        "m": { "type": "integer", "minimum": 0, "description": "Harmonic complexity (power of 2)." },
+        "phi_formula": "φ = e^(2πi (n/19 + m/2))",
+        "combined_state": "Ψ = 19ⁿ × 2ᵐ × φ"
       },
       "resonant_states": [
         { "condition": "n/19 + m/2 = 0", "interpretation": "Pure potential (phase π)" },
-        { "condition": "n/19 + m/2 = 1", "interpretation": "Full actualization (phase 0)" },
+        { "condition": "n/19 + m/2 = 1", "interpretation": "Full actualisation (phase 0)" },
         { "condition": "n/19 + m/2 = 1/2", "interpretation": "Transitional processing" }
       ]
-    },
-    "satellite": { "description": "Placeholder for future expansion" },
-    "hyperbolic": { "description": "Placeholder for future expansion" }
+    }
   },
-  "constraint": "Every Factor must declare its resonance class and provide valid parameters (n,m for torus)."
+  "hamiltonian_view": "Action quantum numbers: I_19 = n, I_2 = m; total action S = 2π(19n + 2m). Phase φ is the unitary time evolution operator at a chosen reference time."
 }

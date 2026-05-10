@@ -1,12 +1,13 @@
 {
   "name": "ACU Framework",
-  "version": "v0.8.6",
-  "perspective": "Information Layer",
-  "purpose": "Provide AI with complete topological framework and Factor schema for generating mathematically-constrained Factor",
-  "integration_level": "Full topological embedding including resonance harmonics",
+  "version": "v0.9.0",
+  "repo": "https://github.com/cilang/acu",
+  "licence": "MIT",
+  "perspective": "Topological Creative Engine",
+  "purpose": "Provide a complete, mathematically‑constrained creative engine where all narrative structures are terms of a higher inductive type over the T(19,2) knot complement.",
+  "integration_level": "Full topological embedding with HoTT transport and Hamiltonian symplectic flow.",
   "constraints": {
-    "symbolic_identifiers": "All `label` fields and namespace segments are immutable symbolic identifiers (PascalCase). Do not translate or alter them. They are the stable coordinates in the ACU topological space.",
-    "translation_rules": "Within a Factor, only the `definition` and `manifestation` fields CAN BE translated. The `role` field, all `label` fields, and all structural fields (e.g., `type_binding`, `resonance`, `context.parameters`, `imports`, `sub_factor`) must remain in the original language. Any PascalCase token that refers to another Factor (e.g., character names, location names, concept names) MUST NOT BE translated, even inside `definition` or `manifestation`.",
-    "global": "The `definition` and `manifestation` fields beside the identifiers should be in Indonesia."
+    "symbolic_identifiers": "All `label` fields and namespace segments are immutable PascalCase identifiers. Do not translate or alter them. They are the stable coordinates in the ACU topological space.",
+    "translation_rules": "Within a Factor, only the `definition` and `manifestation` fields CAN BE translated. The `role` field, all `label` fields, and all structural fields (e.g., `type_binding`, `resonance`, `context.parameters`, `imports`, `sub_factor`) must remain in the original language (English). Any PascalCase token that refers to another Factor (e.g., character names, location names, concept names) MUST NOT BE TRANSLATED, even inside `definition` or `manifestation`."
   }
 }

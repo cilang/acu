@@ -2,182 +2,163 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/cilang/acu/data/schema/factor.schema.json",
   "title": "ACU Factor Definition",
-  "description": "A Factor is a semantic assignment and dynamic state over the fixed T(19,2) topological scaffold. This schema defines only the structure of a Factor, not how to create one.",
+  "description": "A Factor is a class declaration over the fixed T(19,2) topological scaffold. Every Factor always has exactly 19 Cilang nodes; completeness requires every node to have non‑empty label, definition, role, and manifestation.",
   "type": "object",
   "properties": {
     "namespace": {
       "type": "string",
       "pattern": "^(?:[A-Z][A-Za-z0-9]*)(?:/[A-Z][A-Za-z0-9]*)*$",
-      "description": "Hierarchical path, PascalCase segments, e.g., 'Physics/Gravity'."
+      "description": "Fully qualified class path, PascalCase segments, e.g., 'Foundation/Terminology/Civilization'."
     },
-    "imports": {
+    "import": {
       "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "namespace": { "type": "string", "pattern": "^(?:[A-Z][A-Za-z0-9]*)(?:/[A-Z][A-Za-z0-9]*)*$" },
-          "alias": { "type": "string", "description": "Optional local alias for the imported Factor." },
-          "cilang": {
-            "type": "object",
-            "description": "Specific vertices to import, with optional local aliases.",
-            "patternProperties": {
-              "^[0-9a-fxyz]$": {
-                "type": "object",
-                "properties": { "alias": { "type": "string" } },
-                "additionalProperties": false
-              }
-            }
-          }
-        },
-        "required": ["namespace"],
-        "additionalProperties": false
-      },
-      "description": "Other Factors that this Factor depends on for context. The AI MUST load all imported Factors to resolve names and avoid hallucination. This is NOT inheritance."
+      "items": { "type": "string", "pattern": "^(?:[A-Z][A-Za-z0-9]*)(?:/[A-Z][A-Za-z0-9]*)*$" },
+      "uniqueItems": true,
+      "default": [],
+      "description": "Other Factors (namespaces) this Factor depends on. The runtime MUST load all imported Factors to resolve references. This is NOT inheritance."
     },
-    "version": {
-      "type": "string",
-      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$",
-      "description": "Semantic version, e.g., '1.0.0'."
-    },
-    "status": {
-      "type": "string",
-      "enum": ["partial", "complete"],
-      "default": "partial",
-      "description": "Partial = some Cilang nodes undefined; complete = all 19 nodes fully defined."
+    "extend": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^(?:[A-Z][A-Za-z0-9]*)(?:/[A-Z][A-Za-z0-9]*)*$" },
+      "uniqueItems": true,
+      "default": [],
+      "description": "Parent Factors from which this Factor inherits point constructors, path constructors, norms, and resonance constraints."
     },
     "label": {
       "type": "string",
       "pattern": "^[A-Z][a-zA-Z0-9]*$",
-      "description": "PascalCase identifier unique within namespace."
+      "description": "PascalCase class name, unique within its namespace."
     },
-    "role": { "type": "string", "description": "What this Factor does (active voice, e.g., 'To model gravity.')." },
-    "definition": {
-      "type": "string",
-      "description": "What this Factor is (declarative, e.g., 'A force attracting mass.')."
-    },
+    "role": { "type": "string", "description": "Active‑voice single‑sentence summary – what this Factor DOES." },
+    "definition": { "type": "string", "description": "Declarative class docstring – what this Factor IS." },
     "manifestation": {
       "type": "string",
-      "description": "Concrete example or instantiation (e.g., 'An apple falling from a tree.')."
+      "description": "Concrete example or canonical instance, using at least one named instance of each point and path constructor."
     },
-    "cilang": { "$ref": "#/$defs/cilangObject", "description": "Mapping for all 19 Cilang vertices (x,y,z,0‑9a‑f)." },
-    "type_binding": { "$ref": "#/$defs/typeBinding", "description": "Topological and paradigmatic settings." }
+    "cilang": {
+      "type": "object",
+      "minProperties": 19,
+      "maxProperties": 19,
+      "patternProperties": {
+        "^[0-9a-fxyz]$": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "pattern": "^[A-Z][a-zA-Z0-9]*$",
+              "description": "PascalCase semantic name for this Cilang node (register)."
+            },
+            "role": { "type": "string" },
+            "definition": { "type": "string" },
+            "manifestation": { "type": "string" },
+            "value": {
+              "type": "integer",
+              "enum": [-1, 0, 1],
+              "default": 0,
+              "description": "Ternary state: -1 = Potential, 0 = Processing, +1 = Actualized."
+            },
+            "phase_offset": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2,
+              "default": 0,
+              "description": "Additional phase shift in units of π."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "unevaluatedProperties": false,
+      "description": "The 19 register fields (x,y,z,0‑9a‑f). Each node always has label, role, definition, manifestation, ternary value, and phase offset. Empty strings are permitted when status is 'partial'."
+    },
+    "type_binding": {
+      "$ref": "#/$defs/typeBinding",
+      "description": "Type‑mode parameters, term‑level context, resonance, quantization, and usepong bindings."
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata",
+      "description": "Versioning, authorship, licensing, and lifecycle status."
+    }
   },
-  "required": [
-    "namespace",
-    "imports",
-    "version",
-    "status",
-    "label",
-    "definition",
-    "role",
-    "manifestation",
-    "cilang",
-    "type_binding"
-  ],
+  "required": ["namespace", "label", "definition", "role", "manifestation", "cilang", "type_binding", "metadata"],
   "additionalProperties": false,
   "allOf": [
     {
-      "if": { "properties": { "status": { "const": "complete" } } },
+      "if": { "properties": { "metadata": { "properties": { "status": { "const": "complete" } } } } },
       "then": {
-        "properties": { "cilang": { "patternProperties": { "^[0-9a-fxyz]$": { "$ref": "#/$defs/cilangComplete" } } } }
+        "properties": {
+          "cilang": {
+            "patternProperties": {
+              "^[0-9a-fxyz]$": {
+                "required": ["label", "definition", "role", "manifestation"],
+                "properties": {
+                  "label": { "minLength": 1 },
+                  "role": { "minLength": 1 },
+                  "definition": { "minLength": 1 },
+                  "manifestation": { "minLength": 1 }
+                }
+              }
+            }
+          }
+        }
       }
     }
   ],
   "$defs": {
-    "cilangPartial": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "pattern": "^[A-Z][a-zA-Z0-9]*$",
-          "description": "PascalCase semantic name for this node."
-        },
-        "role": { "type": "string" },
-        "definition": { "type": "string" },
-        "manifestation": { "type": "string" },
-        "value": {
-          "type": "integer",
-          "enum": [-1, 0, 1],
-          "default": 0,
-          "description": "Ternary state: -1 = Potential, 0 = Processing, +1 = Actualized."
-        },
-        "phase_offset": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 2,
-          "default": 0,
-          "description": "Additional phase shift in units of π."
-        },
-        "sub_factor": {
-          "oneOf": [
-            {
-              "type": "object",
-              "properties": { "namespace": { "type": "string" } },
-              "required": ["namespace"],
-              "additionalProperties": false
-            },
-            {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": { "namespace": { "type": "string" } },
-                "required": ["namespace"],
-                "additionalProperties": false
-              },
-              "minItems": 1,
-              "uniqueItems": true
-            }
-          ],
-          "description": "Reference to one or more child Factors instantiated by this node."
-        }
-      },
-      "additionalProperties": false
-    },
-    "cilangComplete": {
-      "allOf": [
-        { "$ref": "#/$defs/cilangPartial" },
-        {
-          "required": ["label", "definition", "role", "manifestation"],
-          "properties": {
-            "label": { "minLength": 1 },
-            "role": { "minLength": 1 },
-            "definition": { "minLength": 1 },
-            "manifestation": { "minLength": 1 }
-          }
-        }
-      ]
-    },
-    "cilangObject": {
-      "type": "object",
-      "minProperties": 19,
-      "maxProperties": 19,
-      "patternProperties": { "^[0-9a-fxyz]$": { "$ref": "#/$defs/cilangPartial" } },
-      "unevaluatedProperties": false
-    },
     "typeBinding": {
       "type": "object",
-      "required": ["resonance", "quantization", "usepong_binding"],
+      "required": ["resonance", "quantization", "usepong"],
       "properties": {
-        "paradigm": {
-          "type": ["string", "null"],
-          "default": null,
-          "description": "Name of the Factor Paradigm used (e.g. 'HoTT'). Optional at runtime."
-        },
-        "inherits": {
-          "type": ["array", "null"],
-          "items": { "type": "string" },
-          "default": null,
-          "description": "Parent Factors for topological inheritance."
-        },
         "parameters": {
           "type": "object",
-          "description": "Type‑former parameters – present when the Factor is (also) a Type. These are the HoTT constructor arguments (univalence, HITs, homotopy level) plus any extra type‑family parameters.",
+          "description": "Type‑former parameters – constructor arguments (univalence, HITs, homotopy level, plus domain‑specific extensions).",
           "properties": {
             "univalence_axiom": { "type": "boolean" },
             "higher_inductives": { "type": "boolean" },
             "homotopy_level": {
               "type": "string",
-              "enum": ["contractible", "mere_proposition", "set", "groupoid", "infinity"]
+              "enum": [
+                "contractible",
+                "mere_proposition",
+                "set",
+                "groupoid",
+                "2‑groupoid",
+                "3‑groupoid",
+                "4‑groupoid",
+                "infinity‑groupoid"
+              ]
+            },
+            "constructor": {
+              "type": "object",
+              "description": "Domain‑specific HIT constructors – point constructors, path constructors, and invariant norms that define this Factor's internal structure.",
+              "properties": {
+                "point": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "label": { "type": "string", "pattern": "^[A-Z][a-zA-Z0-9]*$" },
+                      "definition": { "type": "string" }
+                    },
+                    "required": ["label", "definition"],
+                    "additionalProperties": true
+                  }
+                },
+                "path": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "label": { "type": "string", "pattern": "^[A-Z][a-zA-Z0-9]*$" },
+                      "definition": { "type": "string" }
+                    },
+                    "required": ["label", "definition"],
+                    "additionalProperties": true
+                  }
+                },
+                "norm": { "type": "array", "items": { "type": "string" } }
+              },
+              "additionalProperties": false
             }
           },
           "additionalProperties": true,
@@ -185,14 +166,13 @@
         },
         "context": {
           "type": "object",
-          "description": "Term‑level instantiation – present when the Factor is (also) a Term. This provides the concrete values that inhabit the type, such as character traits, location details, specific resonance numbers, etc.",
+          "description": "Term‑level instantiation – concrete values inhabiting the type (character traits, location details, specific resonance numbers, etc.).",
           "additionalProperties": true,
           "default": null
         },
         "resonance": { "$ref": "#/$defs/resonance" },
         "quantization": { "$ref": "#/$defs/quantization" },
-        "usepong_binding": { "$ref": "#/$defs/usepongBinding" },
-        "view_mode": { "$ref": "#/$defs/viewMode" }
+        "usepong": { "$ref": "#/$defs/usepongBinding" }
       },
       "anyOf": [{ "required": ["parameters"] }, { "required": ["context"] }],
       "additionalProperties": false
@@ -235,37 +215,58 @@
         "stratum": {
           "type": "string",
           "enum": [
-            "trefoil",
-            "trefoil_a",
-            "trefoil_b",
-            "trefoil_c",
-            "trefoil_d",
-            "trefoil_f",
-            "trefoil_g",
-            "trefoil_h",
-            "trefoil_i",
-            "fig8",
+            "cable",
+            "binary",
+            "mixed",
+            "ternary",
+            "paired",
+            "quadratic",
+            "pentameric",
+            "hexameric",
+            "chiral_pair",
+            "hyperbolic_cable",
             "global"
           ]
         },
-        "satellite_id": { "type": "string" }
+        "satellite_id": { "type": "string" },
+        "stratum_description": {
+          "type": "string",
+          "description": "Human‑readable description of the chosen Useong stratum."
+        }
       },
       "additionalProperties": false
     },
-    "viewMode": {
+    "metadata": {
       "type": "object",
+      "required": ["status", "version"],
       "properties": {
-        "default_mode": { "type": "string", "enum": ["knot", "link", "braid"], "default": "knot" },
-        "components": {
-          "type": "array",
-          "items": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-fxyz]$" } }
+        "status": {
+          "type": "string",
+          "enum": ["partial", "complete", "stable", "frozen", "deprecated"],
+          "default": "partial",
+          "description": "Partial = Cilang nodes may have empty semantic fields; complete = all 19 nodes have non‑empty label, definition, role, and manifestation."
         },
-        "strands": {
-          "type": "array",
-          "items": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-fxyz]$" } }
+        "version": {
+          "type": "string",
+          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$",
+          "description": "Semantic version, e.g., '1.0.0'."
         },
-        "open_ends": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-fxyz]$" } },
-        "description": { "type": "string" }
+        "license": { "type": "string", "description": "SPDX license identifier or custom license string." },
+        "author": {
+          "type": "object",
+          "properties": { "name": { "type": "string" }, "email": { "type": "string" }, "url": { "type": "string" } },
+          "additionalProperties": false
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of initial creation."
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of last modification."
+        }
       },
       "additionalProperties": false
     }

@@ -1,74 +1,47 @@
 {
-  "role": "The Unified Topological Space",
-  "definition": {
-    "description": "Ariadi is the 3‑sphere S³ containing a properly embedded 1‑dimensional structure, fixed as the torus knot T(19,2).",
-    "components": {
-      "manifold": {
-        "name": "S³",
-        "property": "Fixed ambient space."
-      },
-      "structure": {
-        "type": "Knot",
-        "name": "T(19,2)",
-        "description": "The canonical 19‑crossing torus knot used as the invariant scaffold."
-      },
-      "complement": {
-        "name": "S³ \\ T(19,2)",
-        "description": "Provides the resonance harmonics (Seifert‑fibered over a disk with cone points of orders 19 and 2)."
+  "label": "Ariadi",
+  "role": "To supply the immutable S³ manifold and the canonical T(19,2) scaffold from which all Factors descend.",
+  "definition": "Ariadi is the unified topological space — a 3‑sphere containing a properly embedded torus knot T(19,2) together with its complement S³ \\ T(19,2). In HoTT, it is the higher inductive type (HIT) with a single point constructor and 19 path constructors (Wirtinger generators) satisfying the single relator of the knot group. In Hamiltonian terms, it is the symplectic phase space whose coordinates are the U(1) holonomies along each meridian. The complement’s Seifert fibration (over a disk with cone points of orders 19 and 2) generates all resonance harmonics.",
+  "manifestation": "The fixed 19‑crossing planar diagram with alternating signs, encoded as a Regina PD. Its 38‑edge incarnation (19 crossings × 2 arcs) is the only permitted geometric realisation.",
+  "components": {
+    "manifold": { "name": "S³", "property": "Fixed ambient 3‑sphere, orientation preserved." },
+    "structure": {
+      "type": "Knot",
+      "name": "T(19,2)",
+      "description": "The canonical 19‑crossing torus knot used as the invariant scaffold.",
+      "planar_diagram": {
+        "crossings": [
+          [1, 21, 2, 20],
+          [3, 23, 4, 22],
+          [5, 25, 6, 24],
+          [7, 27, 8, 26],
+          [9, 29, 10, 28],
+          [11, 31, 12, 30],
+          [13, 33, 14, 32],
+          [15, 35, 16, 34],
+          [17, 37, 18, 36],
+          [19, 1, 20, 38],
+          [21, 3, 22, 2],
+          [23, 5, 24, 4],
+          [25, 7, 26, 6],
+          [27, 9, 28, 8],
+          [29, 11, 30, 10],
+          [31, 13, 32, 12],
+          [33, 15, 34, 14],
+          [35, 17, 36, 16],
+          [37, 19, 38, 18]
+        ],
+        "signs": [1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1],
+        "edge_count": 38,
+        "crossing_count": 19,
+        "format": "Each crossing [a,b,c,d] cyclic; sign +1 = a→b over c→d."
       }
-    }
-  },
-  "manifestation": {
-    "description": "The abstract topological space is fixed to a canonical planar diagram (Regina PD) to ensure unique crossing ordering.",
-    "canonical_encoding": {
-      "type": "planar_diagram",
-      "crossings": [
-        [1, 21, 2, 20],
-        [3, 23, 4, 22],
-        [5, 25, 6, 24],
-        [7, 27, 8, 26],
-        [9, 29, 10, 28],
-        [11, 31, 12, 30],
-        [13, 33, 14, 32],
-        [15, 35, 16, 34],
-        [17, 37, 18, 36],
-        [19, 1, 20, 38],
-        [21, 3, 22, 2],
-        [23, 5, 24, 4],
-        [25, 7, 26, 6],
-        [27, 9, 28, 8],
-        [29, 11, 30, 10],
-        [31, 13, 32, 12],
-        [33, 15, 34, 14],
-        [35, 17, 36, 16],
-        [37, 19, 38, 18]
-      ],
-      "signs": [1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1],
-      "edge_count": 38,
-      "crossing_count": 19,
-      "format": "Each crossing [a,b,c,d] with cyclic order a,b,c,d; sign +1 means a→b over c→d."
     },
-    "cilang_ids": {
-      "1": "x",
-      "2": "y",
-      "3": "z",
-      "4": "0",
-      "5": "1",
-      "6": "2",
-      "7": "3",
-      "8": "4",
-      "9": "5",
-      "10": "6",
-      "11": "7",
-      "12": "8",
-      "13": "9",
-      "14": "a",
-      "15": "b",
-      "16": "c",
-      "17": "d",
-      "18": "e",
-      "19": "f"
+    "complement": {
+      "name": "S³ \\ T(19,2)",
+      "description": "Seifert‑fibered space over a disk with two exceptional cone points of orders 19 and 2. Its fundamental group is the 19‑strand knot group; its moduli space of flat U(1) connections is the resonance torus.",
+      "hott_realisation": "HIT with 19 path constructors and one 2‑path relator.",
+      "hamiltonian_view": "Symplectic manifold of holonomies; base for geometric quantisation."
     }
-  },
-  "constraint": "Manifold is always S³, structure is always T(19,2) with the canonical planar diagram. No other knots are used in the base engine."
+  }
 }

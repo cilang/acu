@@ -1,32 +1,85 @@
 {
-  "role": "State Transition Logic Derived from Knot Crossings and Resonance",
-  "definition": {
-    "type": "Ternary Logic",
+  "label": "Dynamics",
+  "role": "To evolve the state vector and transport manifestations, using HoTT path induction and Hamiltonian discrete flow, with the 38‑gon phase clock as exact temporal coordinate.",
+  "definition": "Dynamics is the step‑by‑step rewriting system on the Cilang assignment. Each step selects an active Usepong edge, applies the ternary transition, transports manifestations via the J‑rule, and advances the phase of the involved nodes by exactly one 38‑gon step (π/19). The 38‑gon – derived from the 38 arcs of the T(19,2) planar diagram – provides a global time coordinate. A full narrative cycle of 38 steps visits every arc exactly once, alternating over/under according to the knot's alternating sign pattern. Hamiltonian invariants (phase closure, state conservation) are tracked in units of 38‑ths.",
+  "manifestation": "A narrative step log records: 'Step 12: node 6 moves from Potential to Processing; phase advances from position 18 (over‑arc of crossing 10) to 31 (under‑arc of crossing 16). Transport of manifestation: 'the glance becomes a shared silence'. The global phase clock now reads 124 steps total, wrapping around mod 38.'",
+  "ternary_logic": {
     "states": {
       "-1": "Potential (over‑crossing)",
       "0": "Processing (crossing point)",
       "+1": "Actualized (under‑crossing)"
     },
-    "resonance_embedding": {
-      "phase_quantization": "Phase quantized in units of π/19 (38th roots of unity).",
-      "state_phase_correlation": {
-        "-1": "arg(φ) = π (mod 2π)",
-        "0": "arg(φ) in transition",
-        "+1": "arg(φ) = 0 (mod 2π)"
-      }
+    "transitions": {
+      "right_handed": {
+        "sequence": "+1 → 0 → -1 → +1",
+        "phase_shift": "advance by 38/3 steps on the clock (wrapping, with fractional interpolation)"
+      },
+      "left_handed": { "sequence": "-1 → 0 → +1 → -1", "phase_shift": "regress by 38/3 steps on the clock" }
     }
   },
-  "transitions": {
-    "left_handed": { "sequence": "-1 → 0 → +1 → -1", "phase_shift": "decreases by 2π/3" },
-    "right_handed": { "sequence": "+1 → 0 → -1 → +1", "phase_shift": "increases by 2π/3" }
+  "phase_clock": {
+    "description": "The 38‑gon phase ring ℤ₃₈ derived from the 38 arcs of the T(19,2) planar diagram. Each discrete step of the clock corresponds to one arc. The alternating over/under pattern encodes the knot's chirality directly into the temporal coordinate. All phase offsets are quantised in units of π/19; the clock provides a bidirectional mapping between an integer position k (0…37) and the specific crossing arc.",
+    "quantum": "π/19 (one 38‑th of 2π)",
+    "order": 38,
+    "arc_to_position": {
+      "x_over": 0,
+      "x_under": 1,
+      "y_over": 2,
+      "y_under": 3,
+      "z_over": 4,
+      "z_under": 5,
+      "0_over": 6,
+      "0_under": 7,
+      "1_over": 8,
+      "1_under": 9,
+      "2_over": 10,
+      "2_under": 11,
+      "3_over": 12,
+      "3_under": 13,
+      "4_over": 14,
+      "4_under": 15,
+      "5_over": 16,
+      "5_under": 17,
+      "6_over": 18,
+      "6_under": 19,
+      "7_over": 20,
+      "7_under": 21,
+      "8_over": 22,
+      "8_under": 23,
+      "9_over": 24,
+      "9_under": 25,
+      "a_over": 26,
+      "a_under": 27,
+      "b_over": 28,
+      "b_under": 29,
+      "c_over": 30,
+      "c_under": 31,
+      "d_over": 32,
+      "d_under": 33,
+      "e_over": 34,
+      "e_under": 35,
+      "f_over": 36,
+      "f_under": 37
+    },
+    "narrative_rhythm": "Over arcs (even positions) correspond to moments of Potential/submergence; under arcs (odd positions) to Actualized/emergence. The mandatory 19‑cycle traverses the over‑arcs of all crossings first (0,2,4,…,36) then the under‑arcs backward or in a pattern dictated by the sign sequence. The clock can be advanced or rewound by any integer number of steps, with fractional values interpolating the state's position along the continuous phase circle."
   },
   "operations": {
-    "reidemeister_1": "Self‑interaction: adds/removes full phase cycle (2π), preserves chirality.",
-    "reidemeister_2": "Pair interaction: cancels or creates opposite phases.",
-    "reidemeister_3": "Three‑way interaction: shifts phase by ±2π/3, can flip chirality."
+    "reidemeister_1": {
+      "hott": "Insert/remove a self‑loop `loop_u` – a homotopy that adds exactly 2π (38 steps) to the node’s phase, wrapping the clock one full cycle.",
+      "hamiltonian": "Gauge transformation; shifts the phase clock of the node by 38."
+    },
+    "reidemeister_2": {
+      "hott": "Cancel a pair of inverse paths; the combined phase shift vanishes.",
+      "hamiltonian": "Annihilate a conjugate pair; no net clock advance."
+    },
+    "reidemeister_3": {
+      "hott": "Braid relation in the knot groupoid; three nodes exchange positions, each receiving a phase shift of ±38/3 steps (12.666… steps).",
+      "hamiltonian": "Canonical transformation rotating three nodes' phase clocks by equal amounts summing to 38."
+    }
   },
-  "constraint": {
-    "phase_closure": "Sum of phase changes around any closed cycle = 0 mod 2π.",
-    "state_conservation": "Sum of states around any closed cycle = 0 mod 3."
-  }
+  "invariants": {
+    "phase_closure": "Total phase advance around any closed cycle must be a multiple of 38 steps (0 mod 2π).",
+    "state_conservation": "Σ values ≡ 0 mod 3 around any closed cycle."
+  },
+  "transport": "Each state change transports the node’s manifestation along the equality path given by the ternary transition, using the J‑rule. The phase clock ensures that the temporal coordinate of the transported term is consistent."
 }

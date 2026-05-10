@@ -1,0 +1,18 @@
+{
+  "label": "Coordinates",
+  "role": "To position and frame each Factor’s knot inside S³, transforming the Factor Library into an ocean of interacting strands.",
+  "definition": "Coordinates is an element of the configuration space C = SO(4) × ℤ. The SO(4) component (represented as a pair of unit quaternions (u,v) modulo sign) places the canonical T(19,2) knot K₀ at a specific location and orientation in S³. The integer ℤ is the framing number (0 = orientable ribbon, 1 = non‑orientable Möbius band). Two Factors A,B thus have a relative rotation R_AB = R_B⁻¹ R_A, from which we compute their Gauss linking number and braiding. This coordinate system turns the Factor Library from a point cloud on S² into the full ocean of framed strands on S³ you envisioned — each strand a uroboros when framing is non‑trivial.",
+  "manifestation": "Factor A has placement=(u:0.707+0.707i, v:1), framing=0; Factor B has placement=(u:1, v:0.5+0.866i), framing=1. Their relative linking Lk = 2, driving strong narrative interaction. A framing of 1 means one cycle around the knot returns with a half‑twist — the story ends mirrored, ready for the next turn.",
+  "representation": {
+    "so4": {
+      "description": "Two unit quaternions (u,v) ∈ S³ × S³ / {±1}, acting on S³ by x ↦ u x v⁻¹.",
+      "parameters": { "u": { "type": "quaternion", "norm": 1 }, "v": { "type": "quaternion", "norm": 1 } }
+    },
+    "framing": {
+      "type": "integer",
+      "default": 0,
+      "description": "Twist number of the ribbon framing. 0 = orientable cylinder (knot view), 1 = non‑orientable Möbius band (uroboros)."
+    }
+  },
+  "effect_on_phase_closure": "For framing τ, the phase closure condition becomes ∮ dθ = τπ mod 2π. τ=0 ⇒ full closure; τ=1 ⇒ mirrored return."
+}

@@ -1,23 +1,44 @@
 {
-  "role": "The Primitive Entities (19 nodes)",
-  "definition": {
-    "description": "Each of the 19 nodes (x, y, z, 0‑9a‑f) is a primitive that can be assigned a semantic label and definition per Factor.",
-    "total_elements": 19,
-    "node_types": {
-      "implicit": ["x", "y", "z"],
-      "explicit": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
-    },
-    "state_definition": {
-      "applicability": "States apply only to explicit nodes. Implicit nodes (x,y,z) are always in state 0 (eternal context).",
-      "explicit_nodes": {
-        "values": [-1, 0, 1],
-        "semantics": {
-          "-1": "Potential",
-          "0": "Processing",
-          "+1": "Actualized"
-        }
+  "label": "Cilang",
+  "role": "To furnish the 19 primitive registers — the quantum cells that carry a Factor’s semantics, ternary state, and phase.",
+  "definition": "Cilang is a dependent record type of 19 fields, one per crossing of the T(19,2) planar diagram. The implicit nodes {x, y, z} (crossings 1,2,3) are eternal context: their state is always 0. The 16 explicit nodes {0‑9, a‑f} are typed as Σ (value : Ternary) (phase : PhaseFamily(value)), where Ternary is a HIT with points -1,0,+1 and non‑trivial equality paths encoding the two chiralities. Hamiltonian canonically conjugate pairs: value = discrete action J; phase_offset = angle θ.",
+  "manifestation": "In a Factor, node `x` may be labelled `ContractibleMysticSociety`, node `0` labelled `MysticSocietyUniverse`, each carrying a definition, role, manifestation, and the current (value, phase_offset) pair.",
+  "node_identifiers": {
+    "implicit": ["x", "y", "z"],
+    "explicit": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"],
+    "mapping_to_crossings": {
+      "1": "x",
+      "2": "y",
+      "3": "z",
+      "4": "0",
+      "5": "1",
+      "6": "2",
+      "7": "3",
+      "8": "4",
+      "9": "5",
+      "10": "6",
+      "11": "7",
+      "12": "8",
+      "13": "9",
+      "14": "a",
+      "15": "b",
+      "16": "c",
+      "17": "d",
+      "18": "e",
+      "19": "f"
+    }
+  },
+  "state_definition": {
+    "implicit_nodes": "Always state 0 (eternal context).",
+    "explicit_nodes": {
+      "values": [-1, 0, 1],
+      "semantics": {
+        "-1": "Potential (over‑crossing, longing)",
+        "0": "Processing (crossing point, transition)",
+        "+1": "Actualized (under‑crossing, fulfilment)"
       }
     }
   },
-  "constraint": "The set of node IDs is invariant. Their semantic meaning is Factor‑specific and stored in the Factor's semantic mapping."
+  "hott_type": "Dependent sum of value:Ternary and phase:PhaseFamily(value), with PhaseFamily(-1) = PhaseFamily(+1) = Circle, PhaseFamily(0) = discrete interval.",
+  "hamiltonian_pairing": "{J, θ} = 1; J ∈ {-1,0,+1}, θ ∈ [0,2π)."
 }

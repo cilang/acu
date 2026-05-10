@@ -1,0 +1,23 @@
+{
+  "label": "HamiltonianHoTTBridge",
+  "role": "To unify the symplectic flow of narrative states with the homotopy‑theoretic transport of meaning.",
+  "definition": "The Bridge establishes the exact correspondence between the Hamiltonian formalism and HoTT. The phase space is the dependent sum type over the Cilang assignment. The Hamiltonian H = Σ_{edges} J_uv sin(θ_u - θ_v + chirality) is derived from the Usepong stratum. Each narrative step is simultaneously a solution of Hamilton’s discrete equations and an application of the J‑rule (path induction). The two fundamental invariants — phase closure (∮ dθ = 0 mod 2π) and state conservation (Σ value = 0 mod 3) — are propositions in the factor type that must be proven after every transformation. Reidemeister moves are symplectomorphisms that preserve the Poisson brackets.",
+  "manifestation": "After a transition, the bridge automatically computes the new Hamiltonian energy, checks the phase closure condition, and transports all dependent terms. The invariant witness is logged.",
+  "components": {
+    "phase_space": "Dependent sum type over Cilang: Σ (value: Ternary) (phase: PhaseFamily(value)), 16 explicit cells.",
+    "hamiltonian": {
+      "formula": "H = Σ_{edges} J_ij sin(θ_i - θ_j + chirality_ij)",
+      "coupling_matrix": "Derived from the selected Usepong stratum’s probability matrix."
+    },
+    "transport_rule": "J‑rule (path induction): given a proof p : value_old = value_new, obtain a function transporting the manifestation.",
+    "canonical_transformations": {
+      "R1": "Loop insertion: adds 2π to a node's phase, preserves Poisson brackets.",
+      "R2": "Pair annihilation: removes conjugate paths, reduces the Hamiltonian.",
+      "R3": "Braid: cyclic permutation of three nodes' phases by ±2π/3, symplectic."
+    },
+    "invariants": {
+      "phase_closure": "Type-level proposition ∮ dθ ≡ 0 (mod 2π).",
+      "state_conservation": "Type-level proposition Σ value ≡ 0 (mod 3)."
+    }
+  }
+}

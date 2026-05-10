@@ -1,0 +1,103 @@
+{
+  "scope": "Decoding: Transform a complete Factor (and optional state trajectory) into a structured, human‑readable interpretation that respects all topological and Hamiltonian invariants.",
+  "name": "Interpretation Protocol",
+  "label": "Interpretation",
+  "role": "To decode a Factor’s topological skeleton, resonance, and state evolution into a coherent narrative structure, including mood, pace, obligatory arcs, and closure conditions.",
+  "definition": "Interpretation is the decoding operation on the ACU type. Given a Factor F (which is a term of the HoTT type derived from T(19,2)) and an optional time‑series of Cilang states, it infers the three possible topological readings (knot, link, braid), selects the most natural one using the closure law, framing, and Hamiltonian flow, then applies the stratum‑specific edge semantics to generate a scene‑by‑scene blueprint of dramatic beats, emotional cadences, and invariant obligations. The output is a structured `interpretation_plan` that any narrative grammar can render into prose.",
+  "manifestation": "A fantasy society Factor (MysticSociety) with framing τ=0, stratum=binary, n=2, m=4, in knot mode, is decoded into a cyclic story where the final scene mirrors the opening; the Hamiltonian ensures all emotional debts are paid; the mandatory Usepong cycle provides the backbone of scenes, while binary edges add heroic‑journey beats.",
+  "inputs": {
+    "factor": {
+      "type": "object",
+      "description": "A complete ACU Factor with populated cilang, type_binding (resonance, quantization, usepong, hamiltonian_hoTT_bridge, parameters, context), coordinates, and metadata. Must be at least 'complete' status."
+    },
+    "state_sequence": {
+      "type": "array",
+      "optional": true,
+      "description": "An optional list of state vectors (step index, cilang values, phase_offsets) representing a narrative trajectory. If omitted, the protocol analyses the static Factor and provides generic narrative guidelines."
+    },
+    "user_preference": {
+      "type": "string",
+      "enum": ["knot", "link", "braid", "auto"],
+      "default": "auto",
+      "description": "Explicit override or 'auto' to let the protocol decide based on the Factor's topology and Hamiltonian invariants."
+    }
+  },
+  "process": [
+    {
+      "name": "determine_interpretation_mode",
+      "description": "Select the structural mode (knot, link, braid) using the Factor's closure law (node f), coordinate framing, and the Hamiltonian phase closure tendency.",
+      "action": [
+        "If user_preference ≠ 'auto', adopt it.",
+        "Otherwise:",
+        "  • Extract the Factor's Closure node (f) definition. If it implies a strictly closed system (e.g., 'all stories must end where they began'), knot is favoured.",
+        "  • Check coordinate.framing: τ=0 suggests an orientable ribbon → knot; τ=1 (Möbius) suggests a half‑twist return → braid (or a knot with mirrored return).",
+        "  • Consult the Hamiltonian phase closure: if the Hamiltonian's ground state naturally forces ∮ dθ = 0 mod 2π for all cycles, knot is appropriate. If the stratum allows open cycles, braid is plausible.",
+        "  • If the Factor's HIT includes multiple disconnected components (by Usepong graph partitioning) that do not share cycles, link is suggested.",
+        "  • Default to 'knot' if no strong signal."
+      ]
+    },
+    {
+      "name": "compute_invariant_requirements",
+      "description": "Translate the topological invariants (phase closure, state conservation) into narrative obligations that must be fulfilled.",
+      "action": [
+        "Phase closure: For knot mode, the sum of all phase shifts over the story must be 0 mod 2π. In narrative terms, every opened emotional thread must be closed; the final state must be a rotated version of the initial one.",
+        "For braid mode, phase closure is intentionally violated; the residual phase shift is recorded as 'emotional debt' that carries forward.",
+        "For link mode, each connected component of the Usepong graph is examined independently; each must satisfy its own closure within its own arc.",
+        "State conservation: Σ values ≡ 0 mod 3 for any closed cycle. This imposes a balancing of positive/negative actions – e.g., for every betrayal (negative state) there must be a proportional act of loyalty (positive state) before the cycle ends."
+      ]
+    },
+    {
+      "name": "extract_narrative_elements",
+      "description": "Use the Cilang semantic mapping, Usepong stratum edges, and Hamiltonian coupling to generate the fundamental building blocks of the narrative.",
+      "action": [
+        "For each Cilang node (0‑f), retrieve its label, role, definition, manifestation. These become the 'characters', 'concepts', or 'forces' of the story, with the manifestations becoming canonical examples.",
+        "From the chosen Usepong stratum, extract the mandatory 19‑edge cycle and the high‑probability satellite edges. The mandatory cycle defines the spine: each edge maps to a specific dramatic beat template (e.g., 'x→6' = a memory becomes a concrete act). The optional edges become secondary subplots or character interactions, weighted by their probability.",
+        "From the Hamiltonian bridge, read the coupling constants J_uv. High J edges correspond to intense, high‑stakes beats; low J edges are subtle, background events.",
+        "The resonance parameters (n,m) determine depth and multiplicity: n controls the meta‑awareness (0 = straightforward, 1 = reflective, 2 = nested stories), m controls the number of parallel threads.",
+        "The coordinate placement (SO(4) + framing) determines the global 'shape' of the narrative: identity placement (u=v=1) and framing 0 give a standard cyclic tale; a rotated placement may imply a different focalization, and Möbius framing (τ=1) forces a twisted return where the ending mirrors but inverts the beginning."
+      ]
+    },
+    {
+      "name": "generate_static_interpretation",
+      "description": "If no state sequence is provided, produce a static narrative blueprint – a set of generic scenes and character arcs that satisfy the invariants.",
+      "action": [
+        "Construct a default state sequence that respects the Hamiltonian flow: beginning in a balanced state (all explicit nodes at 0, or following the crossing signs), then applying the mandatory cycle transitions step by step until a full cycle completes. This creates a template story loop.",
+        "For each mandatory edge, instantiate its beat template using the node semantics. For knot mode, arrange the beats in a circular structure: the first beat (x→6) is the opening, the last (7→x) is the closing memory.",
+        "For link mode, decompose the Usepong graph into connected components and generate separate loops for each, then interlace them.",
+        "For braid mode, allow the state sequence to drift from closure; the last beat leaves a highlighted 'residual phase' that suggests a sequel.",
+        "Check that each invariant normal (node 5) appears as an explicit scene where the law is stated or tested, and that the computational aspect (node e) is manifested as a recurring motif (a ledger, a tracker).",
+        "Include obligatory arcs: the Universal Simplification (0→z), the Cycle of Reflection (x→a→9→y→x), etc., as must‑include plot points."
+      ],
+      "output": "A `narrative_blueprint` object containing a list of scene templates (with mood, pace, beat descriptions, and foreground/background nodes) and a set of arc advancement markers."
+    },
+    {
+      "name": "generate_dynamic_interpretation",
+      "description": "If a state_sequence is provided, analyse its trajectory step‑by‑step, tracking invariants and generating precise scene descriptions.",
+      "action": [
+        "For each state vector in the sequence:",
+        "  • Compute the global mood from the explicit node values (sum of mood_weights, clamped to mood_spectrum bands).",
+        "  • Compute the pace from phase variance (circular variance of phase_offsets).",
+        "  • Determine which Usepong edges are 'active' (nodes that changed state or have high probability in the stratum).",
+        "  • Instantiate beat templates for each active edge, using the current node manifestations (which may have been transported from previous steps).",
+        "  • Track the accumulation of phase shift and state sum to detect when a cycle is closed and the invariant satisfied.",
+        "  • Log any invariant violations and propose corrective beats.",
+        "After processing all steps, for knot mode, verify that total phase shift ≡ 0 mod 2π and total value sum ≡ 0 mod 3; adjust final beat if necessary.",
+        "For braid mode, record the residual phase and value imbalance as 'unresolved tension' and suggest how it could seed the next story."
+      ],
+      "output": "A `dynamic_interpretation` object containing a scene‑by‑scene list (same fields as blueprint) plus invariant checkpoints and a final summary."
+    }
+  ],
+  "outputs": {
+    "interpretation_mode": "The selected or auto‑detected mode: 'knot', 'link', or 'braid'.",
+    "mode_rationale": "Explanation of why the mode was chosen, referencing topological features and Hamiltonian analysis.",
+    "closure_conditions": "Specific closure rules for the chosen mode (e.g., phase closure amount, state sum target).",
+    "narrative_blueprint": "Present if no state_sequence given. A static array of generic scenes.",
+    "dynamic_interpretation": "Present if state_sequence given. A detailed scene list with invariant tracking.",
+    "invariant_summary": "A report on phase closure, state conservation, and whether all obligatory arcs have been advanced."
+  },
+  "notes": {
+    "default_behaviour": "When no state_sequence is provided, the protocol synthesizes a default Hamiltonian cycle to produce a template story. This template can then be refined by a human author or passed to the Narrative Grammar for prose generation.",
+    "extensibility": "Additional interpretation modes (e.g., 'tapestry', 'fractal') can be added as sub‑types of the core three. The protocol is designed to accommodate new invariants and new stratum families without breaking existing decoders.",
+    "narrative_grammar_integration": "The output of Interpretation (especially the dynamic_interpretation scene list) is the direct input to the Narrative Grammar specialized decoder. The grammar only needs to convert each scene’s mood, pace, and beat templates into actual prose using style parameters – no topological reasoning is required at that stage."
+  }
+}

@@ -1,5 +1,8 @@
 {
-  "role": "Grammar of Relationship",
+  "label": "Usepong",
+  "role": "To define the symplectic graph of relationships — the knot’s backbone and the complement’s allowed satellite edges.",
+  "definition": "Usepong is the family of adjacency matrices derived from the knot complement. The mandatory 19‑cycle (x→6→f→…→7→x) is the knot’s meridian — a closed path of type x = x in the HoTT groupoid. The ten satellite strata (cable, binary, mixed, ternary, paired, quadratic, pentameric, hexameric, chiral_pair, hyperbolic_cable) correspond to distinct trefoil companions embedded in the complement. Each stratum is an adjacency matrix whose entries are the probabilities of existence for an additional path constructor. Only these 245 satellite configurations are topologically possible; they form the exhaustive set of 'grammatically correct' extra connections. In the Hamiltonian, these edges become interaction coupling constants J_uv.",
+  "manifestation": "A Factor binds to one stratum (e.g., 'binary') and a specific satellite_id (e.g., '089'). The mandatory cycle always appears; the optional edges from the probability matrix (e.g., 1↔a with weight 0.3125) are sampled to generate dramatic beats.",
   "mandatory_edges": [
     "x→6",
     "6→f",
@@ -22,72 +25,62 @@
     "7→x"
   ],
   "strata": {
-    "trefoil": {
-      "name": "Ur-Trefoil",
-      "description": "Complete aggregation of all 86 trefoil satellites (001‑086).",
-      "best_for": "Cosmic creation myths, meta‑canon establishment, universe source code, mathematical foundations.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil"
+    "cable": {
+      "satellite_count": 86,
+      "best_for": "Cosmic creation myths, meta‑canon establishment.",
+      "probability_matrix": "acu.data.probability_matrix.cable"
     },
-    "trefoil_a": {
-      "name": "Canonical Trefoil",
-      "description": "Largest family (48 variants, 087‑134). Most mature, 'canonical' trefoil structure.",
-      "best_for": "Epic narratives, heroic journeys, cosmic myths, foundational stories.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil_a"
+    "binary": {
+      "satellite_count": 48,
+      "best_for": "Epic narratives, heroic journeys.",
+      "probability_matrix": "acu.data.probability_matrix.binary"
     },
-    "trefoil_b": {
-      "name": "Canonical Trefoil",
-      "description": "Medium family (18 variants, 135‑152). 'Emerging' structures with invariant hexagon at lower weights.",
-      "best_for": "Coming‑of‑age stories, discovery‑focused narratives, exploration, first contact.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil_b"
+    "mixed": {
+      "satellite_count": 18,
+      "best_for": "Coming‑of‑age stories, exploration.",
+      "probability_matrix": "acu.data.probability_matrix.mixed"
     },
-    "trefoil_c": {
-      "name": "Canonical Trefoil",
-      "description": "Large family (36 variants, 153‑188). Exceptionally strong coherence.",
-      "best_for": "Theological discourse, metaphysical inquiry, deep worldbuilding, philosophical fiction.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil_c"
+    "ternary": {
+      "satellite_count": 36,
+      "best_for": "Theological discourse, metaphysical inquiry.",
+      "probability_matrix": "acu.data.probability_matrix.ternary"
     },
-    "trefoil_d": {
-      "name": "Canonical Trefoil",
-      "description": "Large family (24 variants, 189‑212). Core‑centric with strong x→z but lighter peripheral connections.",
-      "best_for": "Character studies, memoirs, contemplative fiction, balanced reflective narratives.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil_d"
+    "paired": {
+      "satellite_count": 24,
+      "best_for": "Character studies, memoirs.",
+      "probability_matrix": "acu.data.probability_matrix.paired"
     },
-    "trefoil_f": {
-      "name": "Canonical Trefoil",
-      "description": "Small family (4 variants, 213‑216). Invariant core: 8→y, b→a, d→c, f→e.",
-      "best_for": "Personal journeys, close relationships, interiority, intimate character‑focused narratives.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil_f"
+    "quadratic": {
+      "satellite_count": 4,
+      "best_for": "Personal journeys, intimate relationships.",
+      "probability_matrix": "acu.data.probability_matrix.quadratic"
     },
-    "trefoil_g": {
-      "name": "Canonical Trefoil",
-      "description": "Large family (20 variants, 217‑236). Hierarchical merging from invariant skeleton to full connectivity.",
-      "best_for": "Rebellion, evolution, paradigm shifts, revolutionary narratives, transformation stories.",
-      "probability_matrix": "acu.data.probability_matrix.trefoil_g"
+    "pentameric": {
+      "satellite_count": 20,
+      "best_for": "Rebellion, revolution, paradigm shifts.",
+      "probability_matrix": "acu.data.probability_matrix.pentameric"
     },
-    "trefoil_h": {
-      "name": "Canonical Trefoil",
-      "description": "Small family (4 variants, 237‑240). Directed tree as 7‑node component.",
-      "best_for": "Parables, fables, allegories, symbolic tales, pure‑form narratives.",
-      "probability_matrix": "acu.probability_matrix.trefoil_h"
+    "hexameric": {
+      "satellite_count": 4,
+      "best_for": "Parables, fables, allegories.",
+      "probability_matrix": "acu.data.probability_matrix.hexameric"
     },
-    "trefoil_i": {
-      "name": "Canonical Trefoil",
-      "description": "Chiral pair (2 variants, 241‑242). Persistent skeleton with 2‑2‑4‑4‑7 decomposition.",
-      "best_for": "Time‑travel stories, mirror‑worlds, duality, recursion, alternate timelines.",
-      "probability_matrix": "acu.probability_matrix.trefoil_i"
+    "chiral_pair": {
+      "satellite_count": 2,
+      "best_for": "Time‑travel, mirror‑worlds, recursion.",
+      "probability_matrix": "acu.data.probability_matrix.chiral_pair"
     },
-    "fig8": {
-      "name": "Canonical Trefoil",
-      "description": "Hyperbolic family (3 variants, 243‑245). Persistent core: e→0.",
-      "best_for": "Surreal fiction, dream‑logic, psychological horror, avant‑garde, weird fiction.",
-      "probability_matrix": "acu.data.probability_matrix.fig8"
+    "hyperbolic_cable": {
+      "satellite_count": 3,
+      "best_for": "Surreal fiction, dream‑logic, psychological horror.",
+      "probability_matrix": "acu.data.probability_matrix.hyperbolic_cable"
     },
     "global": {
-      "name": "Global Aggregate",
-      "description": "The complete aggregated adjacency over all 245 satellites.",
-      "best_for": "Meta‑narratives, systems where all possible connections coexist, or when the precise stratum is deliberately unspecified.",
+      "satellite_count": 245,
+      "description": "Aggregate of all satellites. Use when the precise stratum is unspecified or for meta‑narratives.",
       "probability_matrix": "acu.data.probability_matrix.global"
     }
   },
-  "constraint": "A Factor must declare one stratum (or 'global') in its type_binding.usepong_binding."
+  "hott_realisation": "Each stratum introduces a family of 2‑paths (homotopies) between compositions of the base meridian. The probability matrix is the normalised volume of the space of those 2‑paths.",
+  "hamiltonian_realisation": "Each edge u→v supplies a term J_uv sin(θ_u - θ_v + chirality) in the Hamiltonian. The mandatory cycle provides the kinetic term; the satellite edges are the interaction potential."
 }

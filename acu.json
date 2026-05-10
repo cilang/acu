@@ -1,5 +1,4 @@
 {
-  "system_prompt": { "$ref": "data/system_prompt.json" },
   "acu": {
     "info": { "$ref": "data/meta.json" },
     "protocol": {
@@ -9,13 +8,17 @@
         "usepong": { "$ref": "data/protocol/core/usepong.json" },
         "dynamics": { "$ref": "data/protocol/core/dynamics.json" },
         "resonance": { "$ref": "data/protocol/core/resonance.json" },
-        "quantization": { "$ref": "data/protocol/core/quantization.json" }
+        "quantization": { "$ref": "data/protocol/core/quantization.json" },
+        "coordinate_system": { "$ref": "data/protocol/core/coordinates.json" },
+        "hamiltonian_hott_bridge": { "$ref": "data/protocol/core/hamiltonian_hott_bridge.json" },
+        "homologicalism": { "$ref": "data/protocol/core/homology_and_cohomology.json" }
       },
       "factor": {
-        "generation": { "$ref": "data/protocol/factor/generation.json" },
-        "interaction": { "$ref": "data/protocol/factor/interaction.json" }
-      },
-      "prose": { "narrative_grammar": { "$ref": "data/protocol/factor/narrative_grammar.json" } }
+        "factorization": { "$ref": "data/protocol/factor/factorization.json" },
+        "interaction": { "$ref": "data/protocol/factor/interaction.json" },
+        "interpretation": { "$ref": "data/protocol/factor/interpretation.json" },
+        "narrative_grammar": { "$ref": "data/protocol/factor/narrative_grammar.json" }
+      }
     },
     "schema": { "factor": { "$ref": "data/schema/factor.schema.json" } },
     "data": {}

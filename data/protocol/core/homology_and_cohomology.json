@@ -1,0 +1,6 @@
+{
+  "label": "HomologyAndCohomology",
+  "role": "To provide the algebraic invariants that guarantee the topological integrity of the complement's resonance chamber.",
+  "definition": "The complement S³ \\ T(19,2) has homology groups H₁ ≅ ℤ, H₂ ≅ ℤ, and a cohomology ring H*(X) ≅ ℤ[x]/(x², 19x, 2x). These invariants enforce that every Cilang state vector winds around the meridian with the correct multiplicity, and that the phase closure condition ∮ dθ ≡ 0 mod 2π is equivalent to the vanishing of the first homology class of the cycle.",
+  "manifestation": "A full 38‑step narrative cycle corresponds to one generator of H₁. The resonance quantized depth n contributes 19ⁿ to the capacity, reflecting the 19‑fold meridian, and the harmonic m contributes 2ᵐ, reflecting the 2‑fold longitude."
+}

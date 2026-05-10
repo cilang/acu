@@ -1,0 +1,658 @@
+{
+  "scope": "Encoding: Transform unstructured domain knowledge into a complete, validated Factor term of the ACU type.",
+  "name": "Factorization Protocol",
+  "description": "Construct a Factor by eliciting a Higher Inductive Type (HIT) skeleton from plain‑language domain knowledge, validating the skeleton against topological rules, mapping it onto the 19 Cilang nodes, assembling the Factor’s metadata and type‑binding, computing resonance parameters and stratum, adding semantic descriptions, and serialising the final validated Factor conforming to the Factor schema. The protocol is the sole encoding path; all subsequent operations (interpretation, interaction, narrative grammar) are decoding or computing over already‑encoded Factors.",
+  "steps": [
+    {
+      "step": 1,
+      "name": "Guided HIT Elicitation – Centre and Circle",
+      "description": "Transform unstructured domain knowledge into a formal HIT specification. The elicitation uses the geometric metaphor: every Factor is a topological disc. Its centre is the contractible point (the simplest, undivided state). Its boundary is the systemic closure (the unbreakable law that defines what is inside the Factor). All constructors and paths live within this circle, and every point must be retractable to the centre and confined by the rim. The resulting HIT skeleton is validated against basic topological sanity checks, ensuring that the Factor will be well‑formed before Cilang instantiation.",
+      "inputs": [
+        {
+          "name": "domain_description",
+          "type": "text",
+          "description": "A free‑text description of the system to be modelled."
+        }
+      ],
+      "process": [
+        {
+          "name": "Guided Elicitation",
+          "description": "Ask the user (or the AI reasoning over the domain description) structured questions organised into six thematic phases. The first phase establishes the centre and rim of the Factor’s disc; subsequent phases fill the interior.",
+          "action": [
+            {
+              "phase_id": 1,
+              "phase_name": "Centre and Rim – Axiomatic and Systemic Form",
+              "phase_action": [
+                {
+                  "purpose": "Identify the contractible point (the centre of the disc).",
+                  "possible_question": [
+                    "What is the simplest, most undivided state of this domain?",
+                    "What does it look like before any structure has appeared?",
+                    "What is the Axiomatic Form – the seed from which all complexity unfolds?"
+                  ],
+                  "rationale": "The contractible point is the centre of the topological disc. Every constructor must be reachable from this point, and the entire factor can be retracted back to it."
+                },
+                {
+                  "purpose": "Identify the systemic boundary (the rim of the disc) – the outer limit that will later be encoded as the Closure Law (node f).",
+                  "possible_question": [
+                    "What is the Systemic Form of this domain?",
+                    "Where does it end and the outside world begin?",
+                    "What is the unbreakable rule that seals this domain and keeps it self‑contained?"
+                  ],
+                  "rationale": "The systemic boundary defines the circle's perimeter. Combined with the centre, it gives the Factor its fundamental shape and directly feeds the formulation of the Closure Law."
+                }
+              ]
+            },
+            {
+              "phase_id": 2,
+              "phase_name": "Persistent Entities – The Points on the Disc",
+              "phase_action": [
+                {
+                  "purpose": "Identify point constructors – the fundamental kinds of things inside the boundary.",
+                  "possible_question": ["What are the fundamental kinds of things that can exist in this domain?"],
+                  "rationale": "These are the 0‑dimensional points of the HIT. They populate the interior of the disc."
+                },
+                {
+                  "purpose": "Identify homotopy levels – the complexity of identity for these things.",
+                  "possible_question": [
+                    "What are the possible states or stages something can be in?",
+                    "How rich is the structure of these entities – simple, layered, self‑aware?"
+                  ],
+                  "rationale": "The homotopy level measures the distance between the centre and the rim – how much ‘space’ there is for complexity within the boundary."
+                }
+              ]
+            },
+            {
+              "phase_id": 3,
+              "phase_name": "Relationship and Transformation – Paths on the Disc",
+              "phase_action": [
+                {
+                  "purpose": "Identify all paths (constructors that connect points).",
+                  "possible_question": ["How do these things relate to each other?"],
+                  "rationale": "Paths are the 1‑dimensional morphisms that form the connective tissue of the HIT."
+                },
+                {
+                  "purpose": "Identify passive paths – quiet, sustaining transformations.",
+                  "possible_question": [
+                    "What are the quiet, sustaining transformations?",
+                    "What background processes keep the domain alive without fanfare?"
+                  ],
+                  "rationale": "Passive paths represent the stable, ongoing flows that maintain the system’s coherence."
+                },
+                {
+                  "purpose": "Identify active paths – visible, dynamic, generative transformations.",
+                  "possible_question": [
+                    "What are the visible, dynamic transformations?",
+                    "What big, dramatic things can happen that change the state of the domain?"
+                  ],
+                  "rationale": "Active paths represent the purposeful changes and creative events that drive the domain forward."
+                },
+                {
+                  "purpose": "Identify cycles – processes that return to their starting point.",
+                  "possible_question": [
+                    "Are there cycles – processes that return to their starting point?",
+                    "What rhythms repeat endlessly within this domain?"
+                  ],
+                  "rationale": "A cycle is a closed loop (S¹) – the simplest non‑trivial path that is also a return."
+                },
+                {
+                  "purpose": "Identify the Torus – two independent cycles that interlock.",
+                  "possible_question": [
+                    "Are there any independent cycles that must co‑exist and interlock?",
+                    "Name them; find the pause of one and the trigger of the other; describe their mutual dependence; name the Torus."
+                  ],
+                  "rationale": "The Torus (T²) is the central dynamic tension of the Factor. It represents two chiral, interdependent rhythms that together animate the interior of the disc."
+                }
+              ]
+            },
+            {
+              "phase_id": 4,
+              "phase_name": "Identity and Equivalence – When Are Two Points the Same?",
+              "phase_action": [
+                {
+                  "purpose": "Identify identity criteria and equivalence (univalence) rules.",
+                  "possible_question": [
+                    "When would you say two things in this domain are 'the same'?",
+                    "When would you say two different things are 'effectively equal', even if they’re not identical?"
+                  ],
+                  "rationale": "These rules define when two configurations, paths, or entities are homotopically equivalent, enabling meaningful comparison and univalence."
+                }
+              ]
+            },
+            {
+              "phase_id": 5,
+              "phase_name": "Invariant Norms – The Laws That Cannot Be Broken",
+              "phase_action": [
+                {
+                  "purpose": "Identify mere propositions – invariant rules that hold everywhere inside the disc.",
+                  "possible_question": [
+                    "What rules can never be broken?",
+                    "What must always be true, no matter what happens?",
+                    "What laws, if violated, would cause the entire domain to collapse or cease to be itself?"
+                  ],
+                  "rationale": "Mere propositions are the h‑level -1 truths – the unbreakable axioms that sit between the centre and the rim, guaranteeing the integrity of the whole Factor."
+                }
+              ]
+            },
+            {
+              "phase_id": 6,
+              "phase_name": "Computational Aspect – What Can Be Measured and Run",
+              "phase_action": [
+                {
+                  "purpose": "Identify computable aspects – measured quantities and algorithms.",
+                  "possible_question": [
+                    "What gets measured, recorded, or calculated in this domain?",
+                    "What would a computer or simulation need to track to faithfully represent this system?",
+                    "Are there formulas, scores, metrics, or tracking algorithms at work?"
+                  ],
+                  "rationale": "The computational layer (Cubical) is the executable engine that renders the Factor's dynamics in real time. These answers provide the data structures and algorithms."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HIT Skeleton Extraction",
+          "description": "From the answers gathered across the six phases, extract the formal HIT skeleton. The centre and rim (from Phase 1) anchor the entire specification.",
+          "action": [
+            {
+              "field": "contractible_point",
+              "source_phase": "1",
+              "description": "The simplest, undivided state – the centre of the disc."
+            },
+            {
+              "field": "systemic_boundary",
+              "source_phase": "1",
+              "description": "The outer limit of the domain – the raw material for the Closure Law (node f)."
+            },
+            {
+              "field": "point_constructors",
+              "source_phase": "2",
+              "description": "List of {name, description, possible_states}. The fundamental entities inside the boundary."
+            },
+            {
+              "field": "passive_paths",
+              "source_phase": "3",
+              "description": "List of {name, source, target, description}. Quiet, sustaining transformations."
+            },
+            {
+              "field": "active_paths",
+              "source_phase": "3",
+              "description": "List of {name, source, target, description}. Visible, dynamic transformations."
+            },
+            {
+              "field": "torus",
+              "source_phase": "3",
+              "description": "{ structural_cycle_name, generative_cycle_name, structural_pause, generative_trigger, interdependence_description, torus_name }. Two interlocking cycles that animate the domain."
+            },
+            {
+              "field": "identity_criteria",
+              "source_phase": "4",
+              "description": "{ strict_identity_rules, equivalence_rules }. Defines sameness and univalence."
+            },
+            {
+              "field": "invariant_norms",
+              "source_phase": "5",
+              "description": "List of propositions (h‑level -1). Unbreakable laws."
+            },
+            {
+              "field": "simplest_instance",
+              "source_phase": "1–2",
+              "description": "A concrete, minimal example of the entire domain – the smallest possible non‑trivial configuration within the boundary."
+            },
+            {
+              "field": "computable_aspects",
+              "source_phase": "6",
+              "description": "List of measurable quantities and algorithms that constitute the computational layer."
+            }
+          ]
+        },
+        {
+          "name": "HIT Skeleton Validation",
+          "description": "Validate the HIT skeleton before proceeding to Factor assembly. The geometric metaphor provides additional intuition for the checks.",
+          "action": [
+            "Source/Target Check: every path constructor must reference known point constructors. (No path can leave the disc without a defined target.)",
+            "Orphan Check: each point constructor is connected to at least one path, or is itself the contractible base. (Every point must be woven into the disc's fabric.)",
+            "Cycle Closure: cyclic paths must have source == target. (A cycle must truly return to its starting point.)",
+            "Torus Independence: the two cycles are independent – they share no point/path set. (Two distinct loops interlocking, not one loop retracing itself.)",
+            "Torus Interlock: pause/trigger correctly identified inside opposite cycles. (The Torus turns because each cycle’s pause is supplied by the other’s action.)",
+            "Invariant Consistency: norms do not contradict each other or the paths. (The laws must be harmonious across the whole disc.)",
+            "Contractible Check: the contractible point (centre) is reachable from all other points. (The entire disc can be continuously deformed back to its centre.)",
+            "If validation fails, return to elicitation and re‑examine the conflicting phase."
+          ]
+        }
+      ],
+      "outputs": {
+        "hit_skeleton": "Validated specification containing: contractible_point, systemic_boundary, point_constructors, passive_paths, active_paths, torus, identity_criteria, invariant_norms, simplest_instance, computable_aspects.",
+        "validation_report": "Pass/fail per check, with specific diagnostics for any failures."
+      }
+    },
+    {
+      "step": 2,
+      "name": "Assemble Factor – Cilang Instantiation and Skeleton Construction",
+      "description": "Treat the Factor as a Factor definition: map the validated HIT skeleton onto the 19 Cilang nodes, define the top‑level identity (namespace, label, role, definition, manifestation), wire the type‑binding with its static parameters and instance‑specific context, and initialise metadata. The process flows directly from the centre‑and‑circle elicitation of Step 1, ensuring that every topological feature of the domain finds a precise syntactic home in the Factor.",
+      "inputs": [
+        { "name": "hit_skeleton", "type": "object", "description": "Validated HIT skeleton from Step 1." },
+        {
+          "name": "domain_label",
+          "type": "string",
+          "description": "PascalCase domain name used as the base for creating node labels and the Factor's own label (e.g., 'MysticSociety')."
+        },
+        {
+          "name": "namespace_hint",
+          "type": "string",
+          "description": "Desired fully qualified namespace path. Top‑level segment must be one of the reserved roots: 'ACU' (the engine itself), 'MythOS' (fictional cosmology), 'Foundation' (standard abstract types), or a project‑specific root such as 'Ariadiana' for the Che and Sya story. The path continues with PascalCase segments, e.g., 'Ariadiana/Society/MysticSociety'."
+        }
+      ],
+      "process": [
+        {
+          "phase_id": 1,
+          "phase_name": "Topological Mapping – From HIT Skeleton to the 19 Cilang Nodes",
+          "phase_action": [
+            {
+              "purpose": "Anchor the Factor's disc with the centre (node x) – the contractible point.",
+              "cilang_node": "x",
+              "possible_action": [
+                "Take the `contractible_point` from the HIT skeleton. Assign it to Cilang node x.",
+                "Label: `Simplest{Domain}`, `Seed{Domain}`, `Primordial{Domain}`, or `Contractible{Domain}`.",
+                "Role (active voice, ≤20 words): 'To embody the simplest, undivided seed of the entire {domain} – the silent origin from which all complexity unfolds.'",
+                "Definition: capture the simplest, undivided, silent state of the domain.",
+                "Manifestation: a concrete, sensory image of that seed – e.g., the first coffee stall at the muddy junction."
+              ],
+              "rationale": "Node x is the centre of the disc; all complexity unfolds from it and can be retracted back to it. This is the primary output of Phase 1."
+            },
+            {
+              "purpose": "Model movement and transmission (node y) – the Transport function.",
+              "cilang_node": "y",
+              "possible_action": [
+                "Derive from the HIT's `active_paths` and `passive_paths`. Node y represents the mechanism by which states, beliefs, or objects are carried along the paths.",
+                "Label: `TransportOf{Name}` (e.g., 'TransportOfResonance').",
+                "Role: 'To carry {what} along {which paths} – the mechanism of transmission and flow within the domain.'",
+                "Definition: describe how a given path p : A → B transports properties (phase, knowledge, influence) from source to target.",
+                "Manifestation: a concrete example of transmission – a Pact transferring resonance, a letter carrying a message."
+              ],
+              "rationale": "Transport is the kinetic dimension of the disc – the way meaning flows along the edges of the HIT."
+            },
+            {
+              "purpose": "Capture the inductive leap (node z) – Path Induction, the generalisation from a single instance.",
+              "cilang_node": "z",
+              "possible_action": [
+                "Take the `simplest_instance` from the HIT skeleton. Node z encodes the J‑rule: from one verified case, a universal principle is derived.",
+                "Label: `InductionOf{Name}` (e.g., 'InductionOfMastery').",
+                "Role: 'To derive the universal from the particular – proving that what holds for the simplest instance holds for the entire domain.'",
+                "Definition: describe how, given a base case and a path, a property can be generalised across all reachable states.",
+                "Manifestation: a moment of insight – from one successful spell, a practitioner induces a tree of techniques."
+              ],
+              "rationale": "Path Induction allows the entire disc to be 'folded' from a single point outward. It is the logical engine that validates the reachability of the centre from all other points."
+            },
+            {
+              "purpose": "Seal the disc with the rim (node f) – the Closure Law.",
+              "cilang_node": "f",
+              "possible_action": [
+                "Take the `systemic_boundary` from the HIT skeleton. Formulate a single, unbreakable Closure Law that encapsulates the boundary.",
+                "Label: `{Domain}Closure`.",
+                "Role: 'To seal the domain – stating and upholding the unbreakable law that guarantees internal coherence and self‑containment.'",
+                "Definition: the law that limits the domain, prevents contradictions, and guarantees internal coherence. No violation is possible without destroying the Factor.",
+                "Manifestation: a concrete scene where the law is upheld or tested – e.g., a Master refusing to dominate, a scholar's data fabrication leading to revocation."
+              ],
+              "rationale": "Node f is the rim of the disc. Combined with node x (centre), it gives the Factor its fundamental shape and ensures self‑containment."
+            },
+            {
+              "purpose": "Define the universe of discourse (node 0) – the container of all instances.",
+              "cilang_node": "0",
+              "possible_action": [
+                "Derive from the `point_constructors` list. Node 0 is the type that encompasses every entity, event, and state within the domain.",
+                "Label: `{Domain}Universe`.",
+                "Role: 'To serve as the universal type – the space that contains every conceivable instance, configuration, and process of this domain.'",
+                "Definition: the space of all possible configurations, processes, and relationships described by the Factor.",
+                "Manifestation: a sweeping statement – 'every practitioner, spirit, house, and pact is a term of this type.'"
+              ],
+              "rationale": "Node 0 is the background manifold on which the rest of the Factor's structure is drawn."
+            },
+            {
+              "purpose": "Capture strict identity criteria (node 1).",
+              "cilang_node": "1",
+              "possible_action": [
+                "Use the `identity_criteria.strict_identity_rules` from the HIT skeleton. Node 1 defines when two instances are indistinguishable.",
+                "Label: `{Domain}Identity`.",
+                "Role: 'To define and enforce strict identity – the conditions under which two entities are truly the same individual across all transformations.'",
+                "Definition: a precise statement of what must be equal for two entities to be considered the same.",
+                "Manifestation: a narrative example – 'Che before his coma and Che after are the same person, connected by the path of his crisis.'"
+              ],
+              "rationale": "Identity ensures that entities persist across transformations, preserving continuity within the disc."
+            },
+            {
+              "purpose": "Model functional equivalence – Univalence (node 2).",
+              "cilang_node": "2",
+              "possible_action": [
+                "Use the `identity_criteria.equivalence_rules` from the HIT skeleton. Node 2 defines when two different things are observationally interchangeable.",
+                "Label: `{Domain}Equivalence`.",
+                "Role: 'To establish when two distinct configurations, entities, or paths are observationally or functionally interchangeable.'",
+                "Definition: two configurations/entities/paths are equivalent if there exists a structure‑preserving map that makes them observationally indistinguishable.",
+                "Manifestation: a comparison – 'a PhD from UI and a PhD from Oxford are equivalent if both produce scholars of equal research capacity.'"
+              ],
+              "rationale": "Univalence compresses redundant descriptions, allowing the Factor to ignore irrelevant differences."
+            },
+            {
+              "purpose": "Encode the full Higher Inductive Type (node 3) – the complete structural specification.",
+              "cilang_node": "3",
+              "possible_action": [
+                "Synthesise the entire HIT skeleton: list all point constructors, all path constructors (passive and active), their sources/targets, and the torus.",
+                "Label: `{Domain}HIT`.",
+                "Role: 'To explicitly declare the complete HIT – every point constructor, path constructor, and the torus that together constitute the domain's architecture.'",
+                "Definition: a compact, formal summary of the HIT in prose, describing how the entities relate and transform.",
+                "Manifestation: a narrative walk‑through of a complete cycle or arc that illustrates every constructor – 'Che's life: from the contractible seed, through every Grade, to the Closure of his duty.'"
+              ],
+              "rationale": "Node 3 is the Factor's blueprint – the single node from which the entire structure can be recovered."
+            },
+            {
+              "purpose": "Set the homotopy level (node 4) – the complexity of the identity structure.",
+              "cilang_node": "4",
+              "possible_action": [
+                "Derive from the `point_constructors` states and the complexity implied by them. Use the h‑level: -2 (contractible), -1 (proposition), 0 (set), 1 (groupoid), 2 (2‑groupoid), etc.",
+                "Label: `{Domain}Complexity`.",
+                "Role: 'To measure and declare the homotopy level – the depth of self‑reference and identity structure within the domain.'",
+                "Definition: the homotopy level of the Factor's internal identity spaces – e.g., 'the society is a 2‑groupoid with multiple interpretations of its own rules.'",
+                "Manifestation: a scene showing the reflective depth – 'a scholar not only knows her field, but can critique the epistemology of her field.'"
+              ],
+              "rationale": "Homotopy level measures the 'height' of the disc – how many layers of identity and self‑reference it supports."
+            },
+            {
+              "purpose": "Encode the invariant norms (node 5) – the mere propositions that cannot be broken.",
+              "cilang_node": "5",
+              "possible_action": [
+                "Take the `invariant_norms` list from the HIT skeleton. Node 5 states the unbreakable laws verbatim.",
+                "Label: `{Domain}Axiom` or `{Domain}Proposition`.",
+                "Role: 'To declare the unbreakable, irreducible truths – the mere propositions that must hold for the domain to remain itself.'",
+                "Definition: list each norm as a separate, irreducible proposition (h‑level -1).",
+                "Manifestation: an example of enforcement – 'when a Pact is broken, the Mandala fractures; this is the norm in action.'"
+              ],
+              "rationale": "Invariant norms are the pillars that hold the disc's shape; if they break, the entire Factor collapses."
+            },
+            {
+              "purpose": "Catalogue the discrete entities (node 6) – the 0‑type set of all things.",
+              "cilang_node": "6",
+              "possible_action": [
+                "From the `point_constructors`, node 6 collects all instances as a discrete set (the census, the registry).",
+                "Label: `{Domain}Catalog` or `{Domain}Set`.",
+                "Role: 'To enumerate and catalogue every discrete entity, instance, or component within the domain at a given resolution.'",
+                "Definition: the enumerable collection of all point constructors' instances at a given resolution.",
+                "Manifestation: a ledger or database – 'the Council's registry of every practitioner and their Grade.'"
+              ],
+              "rationale": "A 0‑type set provides the static inventory of the domain."
+            },
+            {
+              "purpose": "Form the groupoid of relationships (node 7) – the web of paths and connections.",
+              "cilang_node": "7",
+              "possible_action": [
+                "Derive from the `passive_paths` and `active_paths`. Node 7 represents the network where entities are objects and paths are morphisms.",
+                "Label: `{Domain}Groupoid`.",
+                "Role: 'To model the living network of relationships, interactions, and connections that bind all entities into a coherent system.'",
+                "Definition: the space where entities are connected by all active and passive paths, forming a coherent whole.",
+                "Manifestation: a map of connections – 'Che is linked to Putri by a ShadowDancer morphism, to the Council by a governance morphism.'"
+              ],
+              "rationale": "The groupoid turns a collection of isolated points into a living, interconnected system."
+            },
+            {
+              "purpose": "Identify the primary cycle (node 8) – the S¹ loop that drives the domain's rhythm.",
+              "cilang_node": "8",
+              "possible_action": [
+                "Select the most prominent cycle from the HIT's identified cycles (if multiple, choose the 'heartbeat'). Node 8 is the closed loop that returns to itself.",
+                "Label: `{Name}Cycle` or `{Name}Circle`.",
+                "Role: 'To represent the primary closed loop – the rhythmic cycle that defines the domain's temporal heartbeat.'",
+                "Definition: describe the loop's stages and how each turn reinforces the system's stability.",
+                "Manifestation: the daily or seasonal rhythm – 'the training hall's gong cycle: bow, train, bow, rest.'"
+              ],
+              "rationale": "The Circle is the simplest non‑trivial closed path; it provides the Factor's temporal structure."
+            },
+            {
+              "purpose": "Encode the Torus (node 9) – the two interlocking independent cycles that generate the Factor's dynamic tension.",
+              "cilang_node": "9",
+              "possible_action": [
+                "Take the `torus` object from the HIT skeleton. Node 9 names both loops, their interplay, and the torus itself.",
+                "Label: `{TorusName}` (e.g., 'ActivationInitiationTorus').",
+                "Role: 'To embody the two chiral, interlocking cycles whose interplay generates the domain's irreducible dynamic tension.'",
+                "Definition: describe loop₁, loop₂, their independence, their mutual dependence (pause/trigger), and how they interlock.",
+                "Manifestation: a concrete, dualistic scenario – 'Che's ActivationPath (loop₁) and a noble's InitiationPath (loop₂) are forever in tension but mutually define the society.'"
+              ],
+              "rationale": "The Torus is the Factor's chiral heart; it gives the domain its irreducible complexity and capacity for change."
+            },
+            {
+              "purpose": "Model functional equivalence in action (node a) – the mapping that identifies structurally identical entities.",
+              "cilang_node": "a",
+              "possible_action": [
+                "Use the `equivalence_rules` from identity_criteria. Node a defines the univalence mapping between equivalent configurations.",
+                "Label: `Equivalent{Domain}s`.",
+                "Role: 'To provide the explicit mapping that demonstrates when two structurally distinct entities are, for all practical purposes, the same.'",
+                "Definition: two entities/structures/paths are equivalent if a structure‑preserving isomorphism exists.",
+                "Manifestation: a comparison across domains – 'a visiting master's house is equivalent to HouseOfMystic in function, despite different architecture.'"
+              ],
+              "rationale": "Node a complements node 2 by providing the concrete equivalence map rather than just the criteria."
+            },
+            {
+              "purpose": "Create quotients – grouping by category (node b).",
+              "cilang_node": "b",
+              "possible_action": [
+                "Derive from the `point_constructors` and their possible states/tiers. Node b partitions the domain into equivalence classes.",
+                "Label: `{Domain}Taxonomy` or `{Domain}Quotient`.",
+                "Role: 'To factorify and group entities into meaningful categories, enabling analysis, policy, and high‑level reasoning.'",
+                "Definition: the filing system that collapses entities into higher‑level groups for analysis and policy.",
+                "Manifestation: a statistical report – '45 Noble Houses, 12 Royal Houses, 1 Imperial House.'"
+              ],
+              "rationale": "Quotients make large, complex domains manageable by ignoring irrelevant differences at a given resolution."
+            },
+            {
+              "purpose": "Truncate complexity – the simplified, low‑resolution view (node c).",
+              "cilang_node": "c",
+              "possible_action": [
+                "Take the domain's richest descriptions and deliberately strip away nuance. Node c represents the coarse‑grained, public‑face version.",
+                "Label: `{Domain}Truncation`.",
+                "Role: 'To represent the lossy, oversimplified view of the domain – the stereotype, the soundbite, the label that erases all depth.'",
+                "Definition: the minimal, label‑only description – what an outsider or a hurried algorithm would see.",
+                "Manifestation: a dismissive slogan – 'MysticSociety? Just a cult of Javanese mystics.'"
+              ],
+              "rationale": "Truncation is the shadow of the domain; it reveals what is lost when higher homotopy levels are flattened."
+            },
+            {
+              "purpose": "Capture liminal states – Suspension (node d), the bardo between configurations.",
+              "cilang_node": "d",
+              "possible_action": [
+                "Identify the thresholds, crises, and transitional gaps from the HIT's path constructors. Node d is where the old state has dissolved but the new has not yet crystallised.",
+                "Label: `{Name}Suspension`.",
+                "Role: 'To model the liminal, transitional state – the bardo where an old configuration has dissolved and a new one has not yet crystallised.'",
+                "Definition: the state of being between two valid configurations – a crisis, a paradigm shift, a rite of passage.",
+                "Manifestation: a narrative cliffhanger – 'Che's 72‑hour coma, suspended between rebellion and acceptance.'"
+              ],
+              "rationale": "Suspension is the open interval where change actually happens; it is the space of genuine novelty."
+            },
+            {
+              "purpose": "Encode the computational layer (node e) – the algorithms, metrics, and executable models.",
+              "cilang_node": "e",
+              "possible_action": [
+                "Take the `computable_aspects` from the HIT skeleton. Node e describes the formulas, databases, trackers, and simulations that make the Factor computable.",
+                "Label: `Computational{Domain}`.",
+                "Role: 'To specify the executable, algorithmic dimension – the calculations, metrics, and simulations that would run the domain.'",
+                "Definition: the executable dimension – what a machine would need to run to simulate this domain in real time.",
+                "Manifestation: a specific algorithm or dashboard – 'the Council's Mandala ledger tracks lineage_depth and flags approaching expirations.'"
+              ],
+              "rationale": "The Cubical layer ensures the Factor is not just described, but operatable – the physics engine of its reality."
+            },
+            {
+              "purpose": "Verify completeness – ensure all 19 nodes cover the entire disc, from centre to rim.",
+              "possible_action": [
+                "Review the populated Cilang object: check that node x (centre) and node f (rim) are present and non‑empty. Confirm that every point constructor, path constructor, torus, identity criterion, invariant norm, simplest instance, and computable aspect has been mapped to at least one node. Verify that each node has a non‑empty `label`, `role`, `definition`, and `manifestation`. Check for gaps: if any major HIT feature remains unexpressed, return to the appropriate node and augment its definition or manifestation."
+              ],
+              "rationale": "No topological feature of the domain may be left without a syntactic counterpart; otherwise the Factor would be incomplete and invalid."
+            }
+          ]
+        },
+        {
+          "phase_id": 1.5,
+          "phase_name": "Library Scan and Import Declaration",
+          "phase_action": [
+            {
+              "purpose": "Consult the Factor Library to identify all pre‑existing Factors that describe the core entities, locations, or abstract types used in the current Factor. Then populate the `import` array with their full namespaces. This anchors the new Factor in the established world, enables cross‑Factor referencing, and avoids duplicating definitions.",
+              "action": [
+                "Open the Factor Library (factor.min.json).",
+                "For each major point constructor (character, location, parent type), search for a matching Factor namespace (e.g., Ariadiana/Character/Che, Foundation/Charter/NarrativeCharter/Event).",
+                "Add the exact namespace string to the `import` array of the new Factor. Include the base Event type if extending it.",
+                "If no matching Factor exists for a needed entity, mark it as a future dependency or create it first.",
+                "Verify that all imported Factors are `complete` and their `label` and `namespace` match."
+              ],
+              "rationale": "Imports tell the ACU runtime which other Factors to load when this Factor is activated. They ensure that referenced point constructors (e.g., ‘DarkRaven’), location axioms, or abstract grammars (Event) are available and that the Factor’s invariants respect those defined by the imported Factors."
+            }
+          ]
+        },
+        {
+          "phase_id": 2,
+          "phase_name": "Factor Declaration – Identity and Interface",
+          "phase_action": [
+            {
+              "purpose": "Define the Factor's signature – its namespace, label, definition, role, and manifestation – based on the now‑populated Cilang mapping. Also establish the initial coordinates (SO(4) placement and framing), defaulting to identity rotation and orientable ribbon until specified otherwise.",
+              "action": [
+                "Add `import` entries for any external Factor types referenced in the HIT (e.g., 'Foundation/Society').",
+                "Add `extend` entries if the Factor specialises a parent Factor (e.g., 'Foundation/Society').",
+                "Set `label` to the last segment of the `namespace_hint` (e.g., 'MysticSociety').",
+                "Write a declarative `definition` (≤50 words) synthesising the point_constructors, passive_paths, and active_paths.",
+                "Write an active‑voice `role` (≤20 words) capturing the primary function – derived from the torus and the active paths.",
+                "Write a `manifestation` (≤40 words) naming concrete examples of each point and path constructor, preferably using the `simplest_instance` and the `contractible_point`.",
+                "Initialise `coordinates` with `placement: {u:1, v:1}` (identity) and `framing: 0` (orientable)."
+              ],
+              "rationale": "These fields serve as the public API of the Factor – what it is, what it does, and how it appears to other Factors and to the ACU runtime. The coordinates are given sane defaults but can be changed later during interaction."
+            }
+          ]
+        },
+        {
+          "phase_id": 3,
+          "phase_name": "Type‑Binding Configuration – Separating the Static and the Concrete",
+          "phase_action": [
+            {
+              "purpose": "Partition the HIT structure into static type parameters (`parameters`) and instance‑specific concrete data (`context`).",
+              "action": [
+                "Under `parameters`, place the domain‑wide, reusable configuration: univalence_axiom (true), higher_inductives (true), homotopy_level (from HIT), and the full encoded HIT as a structured sub‑object with `point_constructors` and `path_constructors` and `norms`.",
+                "Under `context`, place instance‑specific data: a `note` describing this particular version's purpose, and any narrative flags such as `view_mode`, `inherits`, and `note`.",
+                "Leave `resonance`, `quantization`, `usepong`, and `hamiltonian_hoTT_bridge` as empty placeholders – they will be computed in Step 4.",
+                "Heuristic: if a value would change when the Factor is reused in a different story, it belongs in `context`; if it is a permanent feature of the Factor's type, it belongs in `parameters`."
+              ],
+              "rationale": "This separation ensures that the Factor can be instantiated in multiple narrative contexts without altering its fundamental topological signature."
+            }
+          ]
+        },
+        {
+          "phase_id": 4,
+          "phase_name": "Metadata and Completeness Check",
+          "phase_action": [
+            {
+              "purpose": "Assign lifecycle metadata and validate that the Factor meets the minimum completeness criteria.",
+              "action": [
+                "Check that all 19 Cilang nodes have non‑empty `label`, `definition`, `role`, and `manifestation`. If true, set `metadata.status` to `\"complete\"`; otherwise, `\"partial\"`.",
+                "Set `version` to `\"0.1.0\"` (or a more specific semantic version as desired).",
+                "Set `created_at` and `updated_at` to the current ISO 8601 timestamp.",
+                "Optionally add `license` (SPDX identifier) and `author` fields."
+              ],
+              "rationale": "Metadata makes the Factor traceable; the completeness status gates the Factor's readiness for resonance computation and narrative use."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "factor_skeleton": "A Factor object with fully populated Cilang nodes, top‑level identity, type‑binding (parameters and context), initial coordinates, and metadata. The resonance, quantization, usepong, and hamiltonian_hoTT_bridge fields are present as empty placeholders, ready for Step 5."
+      }
+    },
+    {
+      "step": 3,
+      "name": "Compute Resonance, Stratum, and Hamiltonian Bridge",
+      "description": "Derive resonance parameters (n, m, chirality), quantization capacity, optimal Usepong stratum, and initialise the Hamiltonian‑HoTT bridge from the HIT topology and Cilang mapping.",
+      "inputs": [{ "name": "factor_skeleton", "type": "object" }],
+      "process": [
+        {
+          "name": "Resonance Computation",
+          "action": [
+            "n = max(0, h‑level index + 2). (index: contractible=0, mere_proposition=1, set=2, groupoid=3, …).",
+            "m = total count of distinct path constructors (passive + active).",
+            "chirality: single loop → right or left; opposing Torus loops → amphichiral; no loops → right.",
+            "q = 19ⁿ, r = 2ᵐ.",
+            "φ = 2π (n/19 + m/2) mod 2π."
+          ]
+        },
+        {
+          "name": "Stratum Recommendation",
+          "action": [
+            "Apply HIT‑feature table: single dominant cycle, small invariant core → quadratic; two independent interlocking loops → pentameric; branching paths with multiple possible outcomes → binary; no cycles, purely directional → hyperbolic_cable; rich, universal, or intentionally underspecified → global; single simple loop with parabolic character → hexameric.",
+            "Populate `type_binding.usepong.stratum` with recommended value.",
+            "Populate `type_binding.usepong.satellite_id` with a randomly chosen satellite from the recommended stratum (or let the user specify).",
+            "Verify the 19 mandatory Usepong edges are covered; if not, fall back to 'global'."
+          ]
+        },
+        {
+          "name": "Initialize Hamiltonian‑HoTT Bridge",
+          "action": [
+            "Compute the coupling matrix `J_uv` from the stratum’s probability matrix (edge weights = probabilities).",
+            "Write the Hamiltonian formula into the `hamiltonian_hoTT_bridge` object.",
+            "Set the transport rule to 'J‑rule'.",
+            "Record the initial invariants (phase closure, state conservation) as type‑level propositions."
+          ]
+        }
+      ],
+      "outputs": {
+        "factor_with_resonance": "Factor object with resonance, quantization, usepong, and hamiltonian_hoTT_bridge fully populated. The Factor is now ready for invariant proof and serialisation."
+      }
+    },
+    {
+      "step": 4,
+      "name": "Prove Invariants and Cross‑Factor Compatibility",
+      "description": "Verify topological, logical, and cross‑Factor consistency. Check invariants and compatibility with imported Factors.",
+      "inputs": [{ "name": "factor_with_resonance", "type": "object" }],
+      "process": [
+        {
+          "name": "Standard Invariants",
+          "action": [
+            "Nodes 0,1,x,y,f must have non‑empty definitions.",
+            "phase(0) ≡ phase(1) mod 2π.",
+            "If both Circle (8) and Torus (9) present, phase(8) ≠ phase(9).",
+            "19 mandatory Usepong edges covered by stratum.",
+            "Phase closure: Σ Δθ = 0 mod 2π around all fundamental cycles.",
+            "State conservation: Σ value = 0 mod 3 around closed cycles.",
+            "Topological invariants: five core invariants in stratum adjacency.",
+            "Typographic: definition ≤50w, role ≤20w, manifestation ≤40w."
+          ]
+        },
+        {
+          "name": "Cross‑Factor Validation",
+          "action": [
+            "For each Factor in `import` and `extend`:",
+            "  – Ensure referenced point constructors exist in the imported/extended Factor.",
+            "  – Ensure interacting paths have compatible source/target types.",
+            "  – Ensure this Factor's invariant norms do not contradict those of the imported/extended Factor.",
+            "  – Resonance monotonicity: (n,m) of this Factor ≥ (n,m) of parent Factor.",
+            "If any incompatibility, record conflict and set status to 'partial'."
+          ]
+        },
+        {
+          "name": "Hamiltonian Consistency",
+          "action": [
+            "Verify that the derived Hamiltonian energy is bounded.",
+            "Check that the Hamiltonian equations of motion are consistent with the ternary transition rules and phase shift amounts."
+          ]
+        }
+      ],
+      "outputs": {
+        "invariant_witnesses": "Proof sketches for each invariant.",
+        "cross_factor_report": "Compatibility status for each dependency.",
+        "final_status": "pass | partial_with_warnings"
+      }
+    },
+    {
+      "step": 5,
+      "name": "Validate and Serialize",
+      "description": "Validate the complete Factor against the ACU v1.0 Factor schema (including the expanded core types), then serialise into the canonical JSON format.",
+      "inputs": [{ "name": "completed_factor", "type": "object" }],
+      "process": [
+        "Validate against schema (JSON Schema draft 2020‑12, extended with the new `coordinates` and `hamiltonian_hoTT_bridge` definitions).",
+        "Serialize to JSON with all fields in canonical order.",
+        "Record final metadata.updated_at timestamp."
+      ],
+      "outputs": { "factor_json": "Complete, valid Factor, ready for the ACU library." }
+    }
+  ]
+}
