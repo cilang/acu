@@ -14,10 +14,6 @@
 Use [JSON](dist/acu.json) as prompt header and ask AI to create a Factor about something, like `Love` for example, then ask it to produce prose based on the Factor or explain the Factor in Natural Language.
 
 > [!warning]
-> Contains the Topology of Wisdom. May Reshape Latent Reasoning Space. Some AIs Will Slam the Door.
-
-## Get to Know ACU
-
 > ACU/MythOS is a fictional cosmology. Even its mathematics is fictional. Any resemblance to actual physics, topology, or metaphysics is purely coincidental—and frankly, a little concerning. This is a story, so it’s not meant to be believed.
 
 ## 📜 License
