@@ -18,7 +18,7 @@ Use [JSON](dist/acu.json) as prompt header and ask AI to create a Factor about s
 
 ## Get to Know ACU
 
-Just read [Introduction](docs/introduction.md)
+> ACU/MythOS is a fictional cosmology. Even its mathematics is fictional. Any resemblance to actual physics, topology, or metaphysics is purely coincidental—and frankly, a little concerning. This is a story, so it’s not meant to be believed.
 
 ## 📜 License
 
